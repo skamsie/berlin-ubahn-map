@@ -699,7 +699,7 @@
         .style('text-decoration', function(d) {
           return d.closed ? 'line-through' : 'none';
         })
-        .style('font-size', 1.96 * lineWidth + 'px')
+        .style('font-size', 2.1 * lineWidth + 'px')
         .style('-webkit-user-select', 'none')
         .attr('class', function(d) {
           return d.marker

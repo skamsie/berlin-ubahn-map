@@ -62,6 +62,159 @@
         "lat": 52.5602382,
         "lon": 13.3346178
       }
+    },
+    "Rehberge": {
+      "id": 3854167532,
+      "name": "Rehberge",
+      "label": "Rehberge",
+      "position": {
+        "lat": 52.5566893,
+        "lon": 13.3409843
+      }
+    },
+    "Seestraße": {
+      "id": 3772787174,
+      "name": "Seestraße",
+      "label": "Seestraße",
+      "position": {
+        "lat": 52.5498029,
+        "lon": 13.3531176
+      }
+    },
+    "Leopoldplatz": {
+      "id": 3772836700,
+      "name": "Leopoldplatz",
+      "label": " Leopoldplatz",
+      "position": {
+        "lat": 52.5463833,
+        "lon": 13.3591672
+      }
+    },
+    "Wedding": {
+      "id": 2924245392,
+      "name": "Wedding",
+      "label": "Wedding",
+      "position": {
+        "lat": 52.5430625,
+        "lon": 13.3650375
+      }
+    },
+    "Nauener Platz": {
+      "id": 3933566460,
+      "name": "Nauener Platz",
+      "label": "Nauener Platz",
+      "position": {
+        "lat": 52.5514056,
+        "lon": 13.3671696
+      }
+    },
+    "Osloer Straße": {
+      "id": 3983548303,
+      "name": "Osloer Straße",
+      "label": "Osloer Straße",
+      "position": {
+        "lat": 52.5571597,
+        "lon": 13.3732715
+      }
+    },
+    "Amrumer Straße": {
+      "id": 29045595,
+      "name": "Amrumer Straße",
+      "label": "Amrumer Straße",
+      "position": {
+        "lat": 52.5423332,
+        "lon": 13.3501546
+      }
+    },
+    "Reinickendorfer Straße": {
+      "id": 5198810677,
+      "name": "Reinickendorfer Straße",
+      "label": "Reinickendorfer Straße",
+      "position": {
+        "lat": 52.5400429,
+        "lon": 13.3702888
+      }
+    },
+    "Westhafen": {
+      "id": 3876909306,
+      "name": "Westhafen",
+      "label": "Westhafen",
+      "position": {
+        "lat": 52.536735,
+        "lon": 13.3425741
+      }
+    },
+    "Birkenstraße": {
+      "id": 3959201657,
+      "name": "Birkenstraße",
+      "label": "Birkenstraße",
+      "position": {
+        "lat": 52.5323818,
+        "lon": 13.3413533
+      }
+    },
+    "Schwartzkopffstraße": {
+      "id": 3906729688,
+      "name": "Schwartzkopffstraße",
+      "label": "Schwartzkopffstraße",
+      "position": {
+        "lat": 52.5351574,
+        "lon": 13.377318
+      }
+    },
+    "Naturkundemuseum": {
+      "id": 5116771727,
+      "name": "Naturkundemuseum",
+      "label": "Naturkundemuseum",
+      "position": {
+        "lat": 52.5310582,
+        "lon": 13.3824489
+      }
+    },
+    "Oranienburger Tor": {
+      "id": 3928759793,
+      "name": "Oranienburger Tor",
+      "label": "Oranienburger Tor",
+      "position": {
+        "lat": 52.5255998,
+        "lon": 13.3873583
+      }
+    },
+    "Friedrichstraße": {
+      "id": 3869306768,
+      "name": "Friedrichstraße",
+      "label": "Friedrichstraße",
+      "position": {
+        "lat": 52.5202635,
+        "lon": 13.3882862
+      }
+    },
+    "Französische Straße": {
+      "id": 29058259,
+      "name": "Französische Straße",
+      "label": "Französische\nStraße",
+      "position": {
+        "lat": 52.5148248,
+        "lon": 13.3891706
+      }
+    },
+    "Stadtmitte": {
+      "id": 3352091173,
+      "name": "Stadtmitte",
+      "label": "Stadtmitte",
+      "position": {
+        "lat": 52.5121459,
+        "lon": 13.3905632
+      }
+    },
+    "Kochstraße": {
+      "id": 5116771809,
+      "name": "Kochstraße",
+      "label": "Kochstraße",
+      "position": {
+        "lat": 52.5060447,
+        "lon": 13.3906125
+      }
     }
   },
 
@@ -106,6 +259,112 @@
           "coords": [54, 21],
           "name": "Afrikanische Straße",
           "labelPos": "SW"
+        },
+        {
+          "coords": [58, 17],
+          "name": "Rehberge",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [62, 13],
+          "name": "Seestraße",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [66, 9],
+          "name": "Leopoldplatz",
+          "labelPos": "E",
+          "marker": "interchange"
+        },
+        {
+          "coords": [71, 4],
+          "name": "Wedding",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [76, -1],
+          "name": "Reinickendorfer Straße",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [81, -6],
+          "name": "Schwartzkopffstraße",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [86, -11],
+          "name": "Naturkundemuseum",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [91, -16],
+          "name": "Oranienburger Tor",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [96, -21],
+          "name": "Friedrichstraße",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [100, -25]
+        },
+        {
+          "coords": [101, -27]
+        },
+        {
+          "coords": [101, -30],
+          "name": "Französische Straße",
+          "labelPos": "W"
+        },
+        {
+          "coords": [101, -36],
+          "name": "Stadtmitte",
+          "labelPos": "W",
+          "marker": "interchange"
+        },
+        {
+          "coords": [101, -42],
+          "name": "Kochstraße",
+          "labelPos": "W"
+        }
+      ]
+    },
+    {
+      "name": "U9",
+      "label": "U9",
+      "color": "#ff6600",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [78, 21],
+          "name": "Osloer Straße",
+          "labelPos": "NE",
+          "marker": "interchange"
+        },
+        {
+          "coords": [72, 15],
+          "name": "Nauener Platz",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [66, 9],
+          "name": "Leopoldplatz"
+        },
+        {
+          "coords": [60, 3],
+          "name": "Amrumer Straße",
+          "labelPos": "NW"
+        },
+        {
+          "coords": [54, -3],
+          "name": "Westhafen",
+          "labelPos": "NW"
+        },
+        {
+          "coords": [48, -9],
+          "name": "Birkenstraße",
+          "labelPos": "NW"
         }
       ]
     }

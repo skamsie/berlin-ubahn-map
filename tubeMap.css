@@ -24,3 +24,7 @@ text {
 :focus {
   outline: 0;
 }
+
+tspan {
+  white-space: pre;
+}
