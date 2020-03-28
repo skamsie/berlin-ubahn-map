@@ -215,6 +215,24 @@
         "lat": 52.5060447,
         "lon": 13.3906125
       }
+    },
+    "Hallesches Tor": {
+      "id": 3854590997,
+      "name": "Hallesches Tor",
+      "label": " Hallesches Tor",
+      "position": {
+        "lat": 52.4977596,
+        "lon": 13.3906496
+      }
+    },
+    "Mehringdamm": {
+      "id": 3949521962,
+      "name": "Mehringdamm",
+      "label": "Mehringdamm",
+      "position": {
+        "lat": 52.4941308,
+        "lon": 13.3886168
+      }
     }
   },
 
@@ -327,6 +345,19 @@
           "coords": [101, -42],
           "name": "Kochstraße",
           "labelPos": "W"
+        },
+        {
+          "coords": [101, -48],
+          "name": "Hallesches Tor",
+          "labelPos": "E",
+          "labelAngle": -45,
+          "marker": "interchange"
+        },
+        {
+          "coords": [101, -56],
+          "name": "Mehringdamm",
+          "labelPos": "W",
+          "marker": "interchange"
         }
       ]
     },

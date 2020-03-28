@@ -412,6 +412,7 @@
           shiftX: marker.shiftX,
           shiftY: marker.shiftY,
           labelPos: station.labelPos,
+          labelAngle: station.labelAngle
         });
       });
     });
@@ -693,6 +694,11 @@
         .attr('text-anchor', function(d) {
           return textPos(d).textAnchor;
         })
+        .attr('transform', function(d) {
+          var _x = xScale(d.x + d.labelShiftX) + textPos(d).pos[0];
+          var _y = yScale(d.y + d.labelShiftY) - textPos(d).pos[1];
+          return "rotate(" + d.labelAngle + "," + _x + "," + _y + ")"
+        })
         .style('display', function(d) {
           return d.hide !== true ? 'block' : 'none';
         })
@@ -739,6 +745,7 @@
 
           station.x = d.coords[0];
           station.y = d.coords[1];
+          station.labelAngle = (d.labelAngle === undefined) ? 0 : d.labelAngle;
 
           if (station.labelPos === undefined) {
             station.labelPos = d.labelPos;
@@ -782,6 +789,7 @@
               line: line.name,
               color: line.color,
               labelPos: d.labelPos,
+              labelAngle: d.labelAngle,
               marker: d.hasOwnProperty('marker') ? d.marker : 'station',
               shiftX: d.hasOwnProperty('shiftCoords')
                 ? d.shiftCoords[0]
