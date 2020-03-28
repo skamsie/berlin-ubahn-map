@@ -26,6 +26,42 @@
         "lat": 52.575692,
         "lon": 13.2961132
       }
+    },
+    "Otisstraße": {
+      "id": 3859009452,
+      "name": "Otisstraße",
+      "label": "Otisstraße",
+      "position": {
+        "lat": 52.5710338,
+        "lon": 13.3029254
+      }
+    },
+    "Scharnweberstraße": {
+      "id": 3858932763,
+      "name": "Scharnweberstraße",
+      "label": "Scharnweberstraße",
+      "position": {
+        "lat": 52.5668172,
+        "lon": 13.3126219
+      }
+    },
+    "Kurt-Schumacher-Platz": {
+      "id": 3858818979,
+      "name": "Kurt-Schumacher-Platz",
+      "label": "Kurt-Schumacher-Platz",
+      "position": {
+        "lat": 52.5632274,
+        "lon": 13.327129
+      }
+    },
+    "Afrikanische Straße": {
+      "id": 3858579923,
+      "name": "Afrikanische Straße",
+      "label": "Afrikanische Straße",
+      "position": {
+        "lat": 52.5602382,
+        "lon": 13.3346178
+      }
     }
   },
 
@@ -37,27 +73,39 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [0, -20],
+          "coords": [30, 45],
           "name": "Alt-Tegel",
           "labelPos": "SW"
         },
         {
-          "coords": [-4, -16],
+          "coords": [34, 41],
           "name": "Borsigwerke",
-          "marker": "interchange",
-          "labelPos": "E"
+          "labelPos": "SW"
         },
         {
-          "coords": [-8, -12],
+          "coords": [38, 37],
           "name": "Holzhauser Straße",
-          "marker": "interchange",
-          "labelPos": "NE"
+          "labelPos": "SW"
         },
         {
-          "coords": [-9, -10]
+          "coords": [42, 33],
+          "name": "Otisstraße",
+          "labelPos": "SW"
         },
         {
-          "coords": [-9, -2]
+          "coords": [46, 29],
+          "name": "Scharnweberstraße",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [50, 25],
+          "name": "Kurt-Schumacher-Platz",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [54, 21],
+          "name": "Afrikanische Straße",
+          "labelPos": "SW"
         }
       ]
     }
