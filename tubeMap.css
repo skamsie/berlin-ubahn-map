@@ -1,0 +1,22 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+text {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+:focus {
+  outline: 0;
+}

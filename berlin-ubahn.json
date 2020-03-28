@@ -1,0 +1,65 @@
+{
+  "stations": {
+    "Alt-Tegel": {
+      "id": 5718454109,
+      "name": "Alt-Tegel",
+      "label": "Alt-Tegel",
+      "position": {
+        "lat": 52.5894565,
+        "lon": 13.2837514
+      }
+    },
+    "Borsigwerke": {
+      "id": 3862380796,
+      "name": "Borsigwerke",
+      "label": "Borsigwerke",
+      "position":{
+        "lat": 52.5818407,
+        "lon": 13.2905918
+      }
+    },
+    "Holzhauser Straße": {
+      "id": 3859032226,
+      "name": "Holzhauser Straße",
+      "label": "Holzhauser Straße",
+      "position": {
+        "lat": 52.575692,
+        "lon": 13.2961132
+      }
+    }
+  },
+
+  "lines": [
+    {
+      "name": "U6",
+      "label": "U6",
+      "color": "#993367",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [0, -20],
+          "name": "Alt-Tegel",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [-4, -16],
+          "name": "Borsigwerke",
+          "marker": "interchange",
+          "labelPos": "E"
+        },
+        {
+          "coords": [-8, -12],
+          "name": "Holzhauser Straße",
+          "marker": "interchange",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [-9, -10]
+        },
+        {
+          "coords": [-9, -2]
+        }
+      ]
+    }
+  ]
+}
