@@ -3,7 +3,7 @@
     "Alt-Tegel": {
       "id": 5718454109,
       "name": "Alt-Tegel",
-      "label": "Alt-Tegel",
+      "label": "Alt-Tegel ",
       "position": {
         "lat": 52.5894565,
         "lon": 13.2837514
@@ -111,7 +111,7 @@
     "Osloer Straße": {
       "id": 3983548303,
       "name": "Osloer Straße",
-      "label": "Osloer Straße",
+      "label": " Osloer Straße",
       "position": {
         "lat": 52.5571597,
         "lon": 13.3732715
@@ -129,7 +129,7 @@
     "Reinickendorfer Straße": {
       "id": 5198810677,
       "name": "Reinickendorfer Straße",
-      "label": "Reinickendorfer Straße",
+      "label": "Reinickendorfer\nStraße",
       "position": {
         "lat": 52.5400429,
         "lon": 13.3702888
@@ -228,7 +228,7 @@
     "Mehringdamm": {
       "id": 3949521962,
       "name": "Mehringdamm",
-      "label": "Mehringdamm",
+      "label": "Mehringdamm ",
       "position": {
         "lat": 52.4941308,
         "lon": 13.3886168
@@ -305,6 +305,168 @@
         "lat": 52.4396754,
         "lon": 13.3875138
       }
+    },
+    "Franz-Neumann-Platz": {
+      "id": 3895235324,
+      "name": "Franz-Neumann-Platz",
+      "label": "Franz-Neumann-Platz",
+      "position": {
+        "lat": 52.5645392,
+        "lon": 13.3639236
+      }
+    },
+    "Residenzstraße": {
+      "id": 3895051317,
+      "name": "Residenzstraße",
+      "label": "Residenzstraße",
+      "position": {
+        "lat": 52.5711895,
+        "lon": 13.3604739
+      }
+    },
+    "Paracelsus-Bad": {
+      "id": 3894910680,
+      "name": "Paracelsus-Bad",
+      "label": "Paracelsus-Bad",
+      "position": {
+        "lat": 52.5742433,
+        "lon": 13.348511
+      }
+    },
+    "Lindauer Allee": {
+      "id": 29190897,
+      "name": "Lindauer Allee",
+      "label": "Lindauer Allee",
+      "position": {
+        "lat": 52.5754161,
+        "lon": 13.3384251
+      }
+    },
+    "Karl-Bonhoeffer-Nervenklinik": {
+      "id": 5219721338,
+      "name": "Karl-Bonhoeffer-Nervenklinik",
+      "label": "Karl-Bonhoeffer-Nervenklinik",
+      "position": {
+        "lat": 52.5786231,
+        "lon": 13.3335031
+      }
+    },
+    "Rathaus Reinickendorf": {
+      "id": 107606908,
+      "name": "Rathaus Reinickendorf",
+      "label": "Rathaus Reinickendorf",
+      "position": {
+        "lat": 52.5883733,
+        "lon": 13.3259254
+      }
+    },
+    "Wittenau": {
+      "id": 5219721339,
+      "name": "Wittenau",
+      "label": " Wittenau",
+      "position": {
+        "lat": 52.5956412,
+        "lon": 13.3347115
+      }
+    },
+    "Pankstraße": {
+      "id": 3933855829,
+      "name": "Pankstraße",
+      "label": "Pankstraße",
+      "position": {
+        "lat": 52.5522617,
+        "lon": 13.3814583
+      }
+    },
+    "Gesundbrunnen": {
+      "id": 2461322542,
+      "name": "Gesundbrunnen",
+      "label": "Gesundbrunnen",
+      "position": {
+        "lat": 52.5488223,
+        "lon": 13.3883057
+      }
+    },
+    "Voltastraße": {
+      "id": 3844356478,
+      "name": "Voltastraße",
+      "label": "Voltastraße",
+      "position": {
+        "lat": 52.5422898,
+        "lon": 13.392876
+      }
+    },
+    "Bernauer Straße": {
+      "id": 5713944071,
+      "name": "Bernauer Straße",
+      "label": "Bernauer Straße",
+      "position": {
+        "lat": 52.5374381,
+        "lon": 13.3966175
+      }
+    },
+    "Rosenthaler Platz": {
+      "id": 1498939809,
+      "name": "Rosenthaler Platz",
+      "label": "Rosenthaler Platz",
+      "position": {
+        "lat": 52.5298999,
+        "lon": 13.4011206
+      }
+    },
+    "Weinmeisterstraße": {
+      "id": 3867910440,
+      "name": "Weinmeisterstraße",
+      "label": "Weinmeisterstraße",
+      "position": {
+        "lat": 52.5254666,
+        "lon": 13.4050194
+      }
+    },
+    "Alexanderplatz": {
+      "id": 4598414751,
+      "name": "Alexanderplatz",
+      "label": "Alexanderplatz ",
+      "position": {
+        "lat": 52.5215849,
+        "lon": 13.4139082
+      }
+    },
+    "Jannowitzbrücke": {
+      "id": 29494301,
+      "name": "Jannowitzbrücke",
+      "label": "Jannowitzbrücke",
+      "position": {
+        "lat": 52.5153554,
+        "lon": 13.4181732
+      }
+    },
+    "Heinrich-Heine-Straße": {
+      "id": 5713678269,
+      "name": "Heinrich-Heine-Straße",
+      "label": "Heinrich-Heine-Straße",
+      "position": {
+        "lat": 52.5104484,
+        "lon": 13.4160272
+      }
+    },
+    "Moritzplatz": {
+      "id": 3844467019,
+      "name": "Moritzplatz",
+      "label": "Moritzplatz",
+      "position": {
+        "lat": 52.5036623,
+        "lon": 13.4107479
+      }
+    },
+    "Kottbusser Tor": {
+      "id": 3900136339,
+      "name": "Kottbusser Tor",
+      "label": "Kottbusser\nTor",
+      "position": {
+        "lat": 52.4989853,
+        "lon": 13.4183107
+      }
     }
   },
 
@@ -318,7 +480,8 @@
         {
           "coords": [30, 45],
           "name": "Alt-Tegel",
-          "labelPos": "SW"
+          "labelPos": "W",
+          "marker": "interchange"
         },
         {
           "coords": [34, 41],
@@ -408,68 +571,179 @@
           "labelPos": "W"
         },
         {
-          "coords": [101, -36],
+          "coords": [101, -39],
           "name": "Stadtmitte",
           "labelPos": "W",
           "marker": "interchange"
         },
         {
-          "coords": [101, -42],
+          "coords": [101, -45],
           "name": "Kochstraße",
           "labelPos": "W"
         },
         {
-          "coords": [101, -48],
+          "coords": [101, -53],
           "name": "Hallesches Tor",
           "labelPos": "E",
           "labelAngle": -45,
           "marker": "interchange"
         },
         {
-          "coords": [101, -56],
+          "coords": [101, -61],
           "name": "Mehringdamm",
           "labelPos": "W",
           "marker": "interchange"
         },
         {
-          "coords": [101, -66],
+          "coords": [101, -68],
           "name": "Platz der Luftbrücke",
           "labelPos": "E"
         },
         {
-          "coords": [101, -72],
+          "coords": [101, -74],
           "name": "Paradestraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -78],
+          "coords": [101, -80],
           "name": "Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -84],
+          "coords": [101, -86],
           "name": "Alt-Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -90],
+          "coords": [101, -92],
           "name": "Kaiserin-Augusta-Straße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -96],
+          "coords": [101, -98],
           "name": "Ullsteinstraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -102],
+          "coords": [101, -104],
           "name": "Westphalweg",
           "labelPos": "E"
         },
         {
-          "coords": [101, -108],
+          "coords": [101, -110],
           "name": "Alt Mariendorf",
+          "labelPos": "E",
+          "marker": "interchange"
+        }
+      ]
+    },
+    {
+      "name": "U8",
+      "label": "U8",
+      "color": "#080080",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [52, 51],
+          "name": "Wittenau",
+          "labelPos": "E",
+          "marker": "interchange"
+        },
+        {
+          "coords": [56, 47],
+          "name": "Rathaus Reinickendorf",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [60, 43],
+          "name": "Karl-Bonhoeffer-Nervenklinik",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [64, 39],
+          "name": "Lindauer Allee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [68, 35],
+          "name": "Paracelsus-Bad",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [72, 31],
+          "name": "Residenzstraße",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [76, 27],
+          "name": "Franz-Neumann-Platz",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [80, 23],
+          "name": "Osloer Straße",
+          "labelPos": "E",
+          "marker": "interchange"
+        },
+        {
+          "coords": [86, 17],
+          "name": "Pankstraße",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [93, 10],
+          "name": "Gesundbrunnen",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [100, 3],
+          "name": "Voltastraße",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [107, -4],
+          "name": "Bernauer Straße",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [114, -11],
+          "name": "Rosenthaler Platz",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [121, -18],
+          "name": "Weinmeisterstraße",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [129, -26],
+          "name": "Alexanderplatz",
+          "labelPos": "SW",
+          "marker": "interchange"
+        },
+        {
+          "coords": [135, -32]
+        },
+        {
+          "coords": [136, -34],
+          "name": "Jannowitzbrücke",
           "labelPos": "E"
+        },
+        {
+          "coords": [136, -40],
+          "name": "Heinrich-Heine-Straße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [136, -46],
+          "name": "Moritzplatz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [136, -53],
+          "name": "Kottbusser Tor",
+          "labelPos": "E",
+          "marker": "interchange"
         }
       ]
     },
@@ -480,13 +754,13 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [78, 21],
+          "coords": [80, 23],
           "name": "Osloer Straße",
-          "labelPos": "NE",
+          "labelPos": "E",
           "marker": "interchange"
         },
         {
-          "coords": [72, 15],
+          "coords": [73, 16],
           "name": "Nauener Platz",
           "labelPos": "SE"
         },

@@ -576,7 +576,7 @@
         })
         .attr('fill', 'none')
         .attr('stroke-width', function(d) {
-          return d.highlighted ? lineWidth * 1.3 : lineWidth;
+          return d.highlighted ? lineWidth * 1.3 : lineWidth * 1.1;
         })
         .classed('line', true);
     }
@@ -708,7 +708,7 @@
         .style('text-decoration', function(d) {
           return d.closed ? 'line-through' : 'none';
         })
-        .style('font-size', 2.1 * lineWidth + 'px')
+        .style('font-size', 2.4 * lineWidth + 'px')
         .style('-webkit-user-select', 'none')
         .attr('class', function(d) {
           return d.marker

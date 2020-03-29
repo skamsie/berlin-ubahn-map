@@ -17,8 +17,8 @@
     <div id="tube-map"></div>
     <script>
       var container = d3.select('#tube-map');
-      var width = 3000;
-      var height = 2000;
+      var width = 10000;
+      var height = 6000;
 
       var map = d3
         .tubeMap()
@@ -41,12 +41,12 @@
 
         zoom = d3
           .zoom()
-          .scaleExtent([0.2, 1])
+          .scaleExtent([0.08, 1])
           .on('zoom', zoomed);
 
         var zoomContainer = svg.call(zoom);
-        var initialScale = 0.5;
-        var initialTranslate = [0, 0];
+        var initialScale = 0.2;
+        var initialTranslate = [-1000, 0];
 
         zoom.scaleTo(zoomContainer, initialScale);
         zoom.translateTo(
