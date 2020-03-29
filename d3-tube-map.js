@@ -673,6 +673,9 @@
         .attr('id', function(d) {
           return d.name;
         })
+        .attr('class', function(d) {
+          return d.marker[0].marker
+        })
         .classed('label', true)
         .on('click', function() {
           var label = d3.select(this);

@@ -1,6 +1,12 @@
 @font-face {
   font-family: "M+ 2p";
+  src: url("fonts/mplus-2p-regular.ttf");
+}
+
+@font-face {
+  font-family: "M+ 2p";
   src: url("fonts/mplus-2p-medium.ttf");
+  font-weight: bold;
 }
 
 html,
@@ -27,4 +33,8 @@ text {
 
 tspan {
   white-space: pre;
+}
+
+.label.interchange {
+  font-weight: bold;
 }
