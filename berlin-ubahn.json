@@ -939,17 +939,17 @@
           "name": "Leopoldplatz"
         },
         {
-          "coords": [60, 3],
+          "coords": [58, 1],
           "name": "Amrumer Straße",
           "labelPos": "NW"
         },
         {
-          "coords": [54, -3],
+          "coords": [50, -7],
           "name": "Westhafen",
           "labelPos": "NW"
         },
         {
-          "coords": [48, -9],
+          "coords": [42, -15],
           "name": "Birkenstraße",
           "labelPos": "NW"
         }
