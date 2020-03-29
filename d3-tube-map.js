@@ -708,7 +708,7 @@
         .style('text-decoration', function(d) {
           return d.closed ? 'line-through' : 'none';
         })
-        .style('font-size', 2.4 * lineWidth + 'px')
+        .style('font-size', 2.6 * lineWidth + 'px')
         .style('-webkit-user-select', 'none')
         .attr('class', function(d) {
           return d.marker
@@ -848,7 +848,7 @@
 
       switch (data.labelPos.toLowerCase()) {
         case 'n':
-          pos = [0, 2.1 * lineWidth * (numLines - 1) + offset];
+          pos = [0, 2.1 * lineWidth * (numLines - 0.5) + offset];
           textAnchor = 'middle';
           alignmentBaseline = 'baseline';
           break;

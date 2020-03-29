@@ -467,10 +467,180 @@
         "lat": 52.4989853,
         "lon": 13.4183107
       }
+    },
+    "Hausvogteiplatz": {
+      "id": 3947836158,
+      "name": "Hausvogteiplatz",
+      "label": "Hausvogtei-\nplatz",
+      "position": {
+        "lat": 52.5133502,
+        "lon": 13.395591
+      }
+    },
+    "Spittelmarkt": {
+      "id": 3904674211,
+      "name": "Spittelmarkt",
+      "label": "Spittelmarkt",
+      "position": {
+        "lat": 52.5112959,
+        "lon": 13.4041155
+      }
+    },
+    "Märkisches Museum": {
+      "id": 4940731304,
+      "name": "Märkisches Museum",
+      "label": "Märkisches\nMuseum",
+      "position": {
+        "lat": 52.5123348,
+        "lon": 13.4101754
+      }
+    },
+    "Klosterstraße": {
+      "id": 3876077784,
+      "name": "Klosterstraße",
+      "label": "Klosterstraße",
+      "position": {
+        "lat": 52.5172347,
+        "lon": 13.4124323
+      }
+    },
+    "Rosa-Luxemburg-Platz": {
+      "id": 5219756617,
+      "name": "Rosa-Luxemburg-Platz",
+      "label": "Rosa-Luxemburg-\nPlatz",
+      "position": {
+        "lat": 52.5276951,
+        "lon": 13.4104868
+      }
+    },
+    "Senefelderplatz": {
+      "id": 3916325095,
+      "name": "Senefelderplatz",
+      "label": "Senefelderplatz",
+      "position": {
+        "lat": 52.5323899,
+        "lon": 13.4126861
+      }
+    },
+    "Eberswalder Straße": {
+      "id": 5713678270,
+      "name": "Eberswalder Straße",
+      "label": "Eberswalder Straße",
+      "position": {
+        "lat": 52.5415154,
+        "lon": 13.4121769
+      }
+    },
+    "Schönhauser Allee": {
+      "id": 5219721336,
+      "name": "Schönhauser Allee",
+      "label": "Schönhauser Allee",
+      "position": {
+        "lat": 52.5494885,
+        "lon": 13.4137114
+      }
+    },
+    "Vinetastraße": {
+      "id": 3896661775,
+      "name": "Vinetastraße",
+      "label": "Vinetastraße",
+      "position": {
+        "lat": 52.5593248,
+        "lon": 13.413278
+      }
+    },
+    "Pankow": {
+      "id": 5220107618,
+      "name": "Pankow",
+      "label": "Pankow",
+      "position": {
+        "lat": 52.56678,
+        "lon": 13.4117203
+      }
     }
   },
 
   "lines": [
+    {
+      "name": "U2",
+      "label": "U2",
+      "color": "#ff0000",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [101, -39],
+          "name": "Stadtmitte",
+          "labelPos": "NW",
+          "marker": "interchange"
+        },
+        {
+          "coords": [109, -39],
+          "name": "Hausvogteiplatz",
+          "labelPos": "N"
+        },
+        {
+          "coords": [115, -39],
+          "name": "Spittelmarkt",
+          "labelPos": "S"
+        },
+        {
+          "coords": [120, -39]
+        },
+        {
+          "coords": [122, -38]
+        },
+        {
+          "coords": [124, -36],
+          "name": "Märkisches Museum",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [128, -32],
+          "name": "Klosterstraße",
+          "labelPos": "NW"
+        },
+        {
+          "coords": [129, -30]
+        },
+        {
+          "coords": [129, -26],
+          "name": "Alexanderplatz",
+          "labelPos": "W",
+          "marker": "interchange"
+        },
+        {
+          "coords": [129, -14],
+          "name": "Rosa-Luxemburg-Platz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [129, -8],
+          "name": "Senefelderplatz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [129, -2],
+          "name": "Eberswalder Straße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [129, 4],
+          "name": "Schönhauser Allee",
+          "labelPos": "E"
+        },
+        {
+          "coords": [129, 10],
+          "name": "Vinetastraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [129, 16],
+          "name": "Pankow",
+          "labelPos": "E",
+          "marker": "interchange"
+        }
+      ]
+    },
     {
       "name": "U6",
       "label": "U6",
@@ -577,60 +747,60 @@
           "marker": "interchange"
         },
         {
-          "coords": [101, -45],
+          "coords": [101, -48],
           "name": "Kochstraße",
           "labelPos": "W"
         },
         {
-          "coords": [101, -53],
+          "coords": [101, -56],
           "name": "Hallesches Tor",
           "labelPos": "E",
           "labelAngle": -45,
           "marker": "interchange"
         },
         {
-          "coords": [101, -61],
+          "coords": [101, -64],
           "name": "Mehringdamm",
           "labelPos": "W",
           "marker": "interchange"
         },
         {
-          "coords": [101, -68],
+          "coords": [101, -70],
           "name": "Platz der Luftbrücke",
           "labelPos": "E"
         },
         {
-          "coords": [101, -74],
+          "coords": [101, -76],
           "name": "Paradestraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -80],
+          "coords": [101, -82],
           "name": "Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -86],
+          "coords": [101, -88],
           "name": "Alt-Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -92],
+          "coords": [101, -94],
           "name": "Kaiserin-Augusta-Straße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -98],
+          "coords": [101, -100],
           "name": "Ullsteinstraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -104],
+          "coords": [101, -106],
           "name": "Westphalweg",
           "labelPos": "E"
         },
         {
-          "coords": [101, -110],
+          "coords": [101, -112],
           "name": "Alt Mariendorf",
           "labelPos": "E",
           "marker": "interchange"
@@ -646,7 +816,7 @@
         {
           "coords": [52, 51],
           "name": "Wittenau",
-          "labelPos": "E",
+          "labelPos": "NE",
           "marker": "interchange"
         },
         {
@@ -718,29 +888,29 @@
         {
           "coords": [129, -26],
           "name": "Alexanderplatz",
-          "labelPos": "SW",
+          "labelPos": "W",
           "marker": "interchange"
         },
         {
-          "coords": [135, -32]
+          "coords": [136, -33]
         },
         {
-          "coords": [136, -34],
+          "coords": [137, -35],
           "name": "Jannowitzbrücke",
           "labelPos": "E"
         },
         {
-          "coords": [136, -40],
+          "coords": [137, -42],
           "name": "Heinrich-Heine-Straße",
           "labelPos": "E"
         },
         {
-          "coords": [136, -46],
+          "coords": [137, -49],
           "name": "Moritzplatz",
           "labelPos": "E"
         },
         {
-          "coords": [136, -53],
+          "coords": [137, -56],
           "name": "Kottbusser Tor",
           "labelPos": "E",
           "marker": "interchange"
