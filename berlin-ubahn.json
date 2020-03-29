@@ -557,6 +557,177 @@
         "lat": 52.56678,
         "lon": 13.4117203
       }
+    },
+    "Schillingstraße": {
+      "id": 3876218098,
+      "name": "Schillingstraße",
+      "label": "Schillingstraße",
+      "position": {
+        "lat": 52.52079,
+        "lon": 13.4211125
+      }
+    },
+    "Strausberger Platz": {
+      "id": 3846589198,
+      "name": "Strausberger Platz",
+      "label": "Strausberger Platz",
+      "position": {
+        "lat": 52.5180981,
+        "lon": 13.4315264
+      }
+    },
+    "Weberwiese": {
+      "id": 3846755695,
+      "name": "Weberwiese",
+      "label": "Weberwiese",
+      "position": {
+        "lat": 52.5167465,
+        "lon": 13.4447135
+      }
+    },
+    "Frankfurter Tor": {
+      "id": 3876349058,
+      "name": "Frankfurter Tor",
+      "label": "Frankfurter Tor",
+      "position": {
+        "lat": 52.515818,
+        "lon": 13.4539745
+      }
+    },
+    "Samariterstraße": {
+      "id": 3935369912,
+      "name": "Samariterstraße",
+      "label": "Samariterstraße",
+      "position": {
+        "lat": 52.5147399,
+        "lon": 13.4644405
+      }
+    },
+    "Frankfurter Allee": {
+      "id": 3799307108,
+      "name": "Frankfurter Allee",
+      "label": "Frankfurter Allee",
+      "position": {
+        "lat": 52.5136227,
+        "lon": 13.4754364
+      }
+    },
+    "Magdalenenstraße": {
+      "id": 3933477401,
+      "name": "Magdalenenstraße",
+      "label": "Magdalenenstraße",
+      "position": {
+        "lat": 52.5124541,
+        "lon": 13.4870792
+      }
+    },
+    "Lichtenberg": {
+      "id": 3950105985,
+      "name": "Lichtenberg",
+      "label": "Lichtenberg",
+      "position": {
+        "lat": 52.5111151,
+        "lon": 13.4986022
+      }
+    },
+    "Friedrichsfelde": {
+      "id": 193661797,
+      "name": "Friedrichsfelde",
+      "label": "Friedrichsfelde",
+      "position": {
+        "lat": 52.5061644,
+        "lon": 13.5128387
+      }
+    },
+    "Tierpark": {
+      "id": 4598319045,
+      "name": "Tierpark",
+      "label": "Tierpark",
+      "position": {
+        "lat": 52.4977241,
+        "lon": 13.5229595
+      }
+    },
+    "Biesdorf-Süd": {
+      "id": 557840857,
+      "name": "Biesdorf-Süd",
+      "label": "Biesdorf-Süd",
+      "position": {
+        "lat": 52.4996047,
+        "lon": 13.5465321
+      }
+    },
+    "Elsterwerdaer Platz": {
+      "id": 557830030,
+      "name": "Elsterwerdaer Platz",
+      "label": "Elsterwerdaer Platz",
+      "position": {
+        "lat": 52.5052929,
+        "lon": 13.560878
+      }
+    },
+    "Wuhletal": {
+      "id": null,
+      "name": "Wuhletal",
+      "label": "Wuhletal",
+      "position": {
+        "lat": 52.512844,
+        "lon": 13.575842
+      }
+    },
+    "Kaulsdorf-Nord": {
+      "id": 3933477399,
+      "name": "Kaulsdorf-Nord",
+      "label": "Kaulsdorf-Nord",
+      "position": {
+        "lat": 52.5211535,
+        "lon": 13.5889176
+      }
+    },
+    "Kienberg (Gärten der Welt)": {
+      "id": 3933477404,
+      "name": "Kienberg (Gärten der Welt)",
+      "label": "Kienberg (Gärten der Welt)",
+      "position": {
+        "lat": 52.5286152,
+        "lon": 13.5906369
+      }
+    },
+    "Cottbusser Platz": {
+      "id": 3933477396,
+      "name": "Cottbusser Platz",
+      "label": "Cottbusser Platz",
+      "position": {
+        "lat": 52.5338331,
+        "lon": 13.5964015
+      }
+    },
+    "Hellersdorf": {
+      "id": 4788379937,
+      "name": "Hellersdorf",
+      "label": "Hellersdorf",
+      "position": {
+        "lat": 52.5366883,
+        "lon": 13.606672
+      }
+    },
+    "Louis-Lewin-Straße": {
+      "id": 4788379933,
+      "name": "Louis-Lewin-Straße",
+      "label": "Louis-Lewin-Straße",
+      "position": {
+        "lat": 52.538977,
+        "lon": 13.6183463
+      }
+    },
+    "Hönow": {
+      "id": 3935470812,
+      "name": "Hönow",
+      "label": "Hönow",
+      "position": {
+        "lat": 52.5384335,
+        "lon": 13.633123
+      }
     }
   },
 
@@ -609,34 +780,163 @@
           "labelBold": true
         },
         {
-          "coords": [129, -14],
+          "coords": [129, -10],
           "name": "Rosa-Luxemburg-Platz",
           "labelPos": "E"
         },
         {
-          "coords": [129, -8],
+          "coords": [129, -2],
           "name": "Senefelderplatz",
           "labelPos": "E"
         },
         {
-          "coords": [129, -2],
+          "coords": [129, 6],
           "name": "Eberswalder Straße",
           "labelPos": "E"
         },
         {
-          "coords": [129, 4],
+          "coords": [129, 14],
           "name": "Schönhauser Allee",
           "labelPos": "E"
         },
         {
-          "coords": [129, 10],
+          "coords": [129, 22],
           "name": "Vinetastraße",
           "labelPos": "E"
         },
         {
-          "coords": [129, 16],
+          "coords": [129, 30],
           "name": "Pankow",
           "labelPos": "E",
+          "labelBold": true
+        }
+      ]
+    },
+    {
+      "name": "U5",
+      "label": "U5",
+      "color": "#993301",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [129, -26],
+          "name": "Alexanderplatz",
+          "labelPos": "W",
+          "labelBold": true
+        },
+        {
+          "coords": [136, -26],
+          "name": "Schillingstraße",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [143, -26],
+          "name": "Strausberger Platz",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [150, -26],
+          "name": "Weberwiese",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [157, -26],
+          "name": "Frankfurter Tor",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [164, -26],
+          "name": "Samariterstraße",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [171, -26],
+          "name": "Frankfurter Allee",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [178, -26],
+          "name": "Magdalenenstraße",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [185, -26],
+          "name": "Lichtenberg",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [192, -26],
+          "name": "Friedrichsfelde",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [199, -26],
+          "name": "Tierpark",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [206, -26],
+          "name": "Biesdorf-Süd",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [213, -26],
+          "name": "Elsterwerdaer Platz",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [220, -26],
+          "name": "Wuhletal",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [227, -26],
+          "name": "Kaulsdorf-Nord",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [234, -26],
+          "name": "Kienberg (Gärten der Welt)",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [241, -26],
+          "name": "Cottbusser Platz",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [248, -26],
+          "name": "Hellersdorf",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [255, -26],
+          "name": "Louis-Lewin-Straße",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [262, -26],
+          "name": "Hönow",
+          "labelPos": "NE",
+          "labelAngle": -45,
           "labelBold": true
         }
       ]

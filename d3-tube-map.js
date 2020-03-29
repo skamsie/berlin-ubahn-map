@@ -478,7 +478,7 @@
         })
         .attr('fill', 'none')
         .attr('stroke-width', function(d) {
-          return d.highlighted ? lineWidth * 1.3 : lineWidth * 1.1;
+          return d.highlighted ? lineWidth * 1.4 : lineWidth * 1.2;
         })
         .classed('line', true);
     }
@@ -544,7 +544,7 @@
         .text(function(d) {
           return d.label;
         })
-        .attr('fill', '#10137E')
+        .attr('fill', 'black')
         .attr('dy', 0)
         .attr('x', function(d) {
           return xScale(d.x + d.labelShiftX) + textPos(d).pos[0];
