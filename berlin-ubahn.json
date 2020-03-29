@@ -233,6 +233,78 @@
         "lat": 52.4941308,
         "lon": 13.3886168
       }
+    },
+    "Platz der Luftbrücke": {
+      "id": 3887567777,
+      "name": "Platz der Luftbrücke",
+      "label": "Platz der Luftbrücke",
+      "position": {
+        "lat": 52.4860843,
+        "lon": 13.3859508
+      }
+    },
+    "Paradestraße": {
+      "id": 3949521963,
+      "name": "Paradestraße",
+      "label": "Paradestraße",
+      "position": {
+        "lat": 52.4780189,
+        "lon": 13.3862561
+      }
+    },
+    "Tempelhof": {
+      "id": 5679382211,
+      "name": "Tempelhof",
+      "label": "Tempelhof",
+      "position": {
+        "lat": 52.469568,
+        "lon": 13.385629
+      }
+    },
+    "Alt-Tempelhof": {
+      "id": 3948690912,
+      "name": "Alt-Tempelhof",
+      "label": "Alt-Tempelhof",
+      "position": {
+        "lat": 52.4655217,
+        "lon": 13.3856299
+      }
+    },
+    "Kaiserin-Augusta-Straße": {
+      "id": 3898068655,
+      "name": "Kaiserin-Augusta-Straße",
+      "label": "Kaiserin-Augusta-Straße",
+      "position": {
+        "lat": 52.4599764,
+        "lon": 13.3846346
+      }
+    },
+    "Ullsteinstraße": {
+      "id": 3948690916,
+      "name": "Ullsteinstraße",
+      "label": "Ullsteinstraße",
+      "position": {
+        "lat": 52.4537449,
+        "lon": 13.3844659
+      }
+    },
+    "Westphalweg": {
+      "id": 3898404805,
+      "name": "Westphalweg",
+      "label": "Westphalweg",
+      "position": {
+        "lat": 52.4462674,
+        "lon": 13.3856905
+      }
+    },
+    "Alt Mariendorf": {
+      "id": 3884823930,
+      "name": "Alt Mariendorf",
+      "label": "Alt-Mariendorf",
+      "position": {
+        "lat": 52.4396754,
+        "lon": 13.3875138
+      }
     }
   },
 
@@ -358,6 +430,46 @@
           "name": "Mehringdamm",
           "labelPos": "W",
           "marker": "interchange"
+        },
+        {
+          "coords": [101, -66],
+          "name": "Platz der Luftbrücke",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -72],
+          "name": "Paradestraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -78],
+          "name": "Tempelhof",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -84],
+          "name": "Alt-Tempelhof",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -90],
+          "name": "Kaiserin-Augusta-Straße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -96],
+          "name": "Ullsteinstraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -102],
+          "name": "Westphalweg",
+          "labelPos": "E"
+        },
+        {
+          "coords": [101, -108],
+          "name": "Alt Mariendorf",
+          "labelPos": "E"
         }
       ]
     },
