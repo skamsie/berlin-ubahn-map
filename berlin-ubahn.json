@@ -571,7 +571,7 @@
           "coords": [101, -39],
           "name": "Stadtmitte",
           "labelPos": "NW",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [109, -39],
@@ -606,7 +606,7 @@
           "coords": [129, -26],
           "name": "Alexanderplatz",
           "labelPos": "W",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [129, -14],
@@ -637,7 +637,7 @@
           "coords": [129, 16],
           "name": "Pankow",
           "labelPos": "E",
-          "marker": "interchange"
+          "labelBold": true
         }
       ]
     },
@@ -651,7 +651,7 @@
           "coords": [30, 45],
           "name": "Alt-Tegel",
           "labelPos": "W",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [34, 41],
@@ -697,7 +697,7 @@
           "coords": [66, 9],
           "name": "Leopoldplatz",
           "labelPos": "E",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [71, 4],
@@ -744,7 +744,7 @@
           "coords": [101, -39],
           "name": "Stadtmitte",
           "labelPos": "W",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [101, -48],
@@ -756,13 +756,13 @@
           "name": "Hallesches Tor",
           "labelPos": "E",
           "labelAngle": -45,
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [101, -64],
           "name": "Mehringdamm",
           "labelPos": "W",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [101, -70],
@@ -803,7 +803,7 @@
           "coords": [101, -112],
           "name": "Alt Mariendorf",
           "labelPos": "E",
-          "marker": "interchange"
+          "labelBold": true
         }
       ]
     },
@@ -817,7 +817,7 @@
           "coords": [52, 51],
           "name": "Wittenau",
           "labelPos": "NE",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [56, 47],
@@ -853,7 +853,7 @@
           "coords": [80, 23],
           "name": "Osloer Straße",
           "labelPos": "E",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [86, 17],
@@ -889,7 +889,7 @@
           "coords": [129, -26],
           "name": "Alexanderplatz",
           "labelPos": "W",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [136, -33]
@@ -913,7 +913,7 @@
           "coords": [137, -56],
           "name": "Kottbusser Tor",
           "labelPos": "E",
-          "marker": "interchange"
+          "labelBold": true
         }
       ]
     },
@@ -927,7 +927,7 @@
           "coords": [80, 23],
           "name": "Osloer Straße",
           "labelPos": "E",
-          "marker": "interchange"
+          "labelBold": true
         },
         {
           "coords": [73, 16],

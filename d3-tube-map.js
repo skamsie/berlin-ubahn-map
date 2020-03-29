@@ -1,83 +1,18 @@
-// http://www.pubmap.co.uk/ Version 1.2.1. Copyright 2020 John Walley.
+// This file is a modfied version of John Valley's d3-tube-map
+// https://github.com/johnwalley/d3-tube-map
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3')) :
   typeof define === 'function' && define.amd ? define(['exports', 'd3'], factory) :
   (global = global || self, factory(global.d3 = global.d3 || {}, global.d3));
 }(this, (function (exports, d3) { 'use strict';
 
-  function interchange(lineWidth) {
+  function trainStop(lineWidth) {
     return d3.arc()
       .innerRadius(0)
       .outerRadius(1.25 * lineWidth)
       .startAngle(0)
       .endAngle(2 * Math.PI);
-  }
-
-  function station(
-    d,
-    xScale,
-    yScale,
-    lineWidthMultiplier,
-    lineWidthTickRatio
-  ) {
-    var dir;
-    var sqrt2 = Math.sqrt(2);
-
-    var lineFunction = d3.line()
-      .x(function(d) {
-        return xScale(d[0]);
-      })
-      .y(function(d) {
-        return yScale(d[1]);
-      });
-
-    switch (d.labelPos.toLowerCase()) {
-      case 'n':
-        dir = [0, 1];
-        break;
-      case 'ne':
-        dir = [1 / sqrt2, 1 / sqrt2];
-        break;
-      case 'e':
-        dir = [1, 0];
-        break;
-      case 'se':
-        dir = [1 / sqrt2, -1 / sqrt2];
-        break;
-      case 's':
-        dir = [0, -1];
-        break;
-      case 'sw':
-        dir = [-1 / sqrt2, -1 / sqrt2];
-        break;
-      case 'w':
-        dir = [-1, 0];
-        break;
-      case 'nw':
-        dir = [-1 / sqrt2, 1 / sqrt2];
-        break;
-    }
-
-    return lineFunction([
-      [
-        d.x +
-          d.shiftX * lineWidthMultiplier +
-          (lineWidthMultiplier / 2.05) * dir[0],
-        d.y +
-          d.shiftY * lineWidthMultiplier +
-          (lineWidthMultiplier / 2.05) * dir[1],
-      ],
-      [
-        d.x +
-          d.shiftX * lineWidthMultiplier +
-          (lineWidthMultiplier / 2) * dir[0] +
-          (lineWidthMultiplier / lineWidthTickRatio) * dir[0],
-        d.y +
-          d.shiftY * lineWidthMultiplier +
-          (lineWidthMultiplier / 2) * dir[1] +
-          (lineWidthMultiplier / lineWidthTickRatio) * dir[1],
-      ],
-    ]);
   }
 
   function line(data, xScale, yScale, lineWidth, lineWidthTickRatio) {
@@ -384,40 +319,8 @@
     return stations;
   };
 
-  Stations.prototype.interchanges = function() {
-    var interchangeStations = this.toArray();
-
-    return interchangeStations.filter(function(station) {
-      return station.marker[0].marker === 'interchange';
-    });
-  };
-
-  Stations.prototype.normalStations = function() {
-    var stations = this.toArray();
-
-    var stationStations = stations.filter(function(station) {
-      return station.marker[0].marker !== 'interchange';
-    });
-
-    var stationMarkers = [];
-
-    stationStations.forEach(function(station) {
-      station.marker.forEach(function(marker) {
-        stationMarkers.push({
-          name: station.name,
-          line: marker.line,
-          x: station.x,
-          y: station.y,
-          color: marker.color,
-          shiftX: marker.shiftX,
-          shiftY: marker.shiftY,
-          labelPos: station.labelPos,
-          labelAngle: station.labelAngle
-        });
-      });
-    });
-
-    return stationMarkers;
+  Stations.prototype.allStations = function() {
+    return this.toArray();
   };
 
   function stationList(stations) {
@@ -512,7 +415,6 @@
         }
 
         drawLines();
-        drawInterchanges();
         drawStations();
         drawLabels();
       });
@@ -581,15 +483,14 @@
         .classed('line', true);
     }
 
-    function drawInterchanges() {
+    function drawStations() {
       var fgColor = '#000000';
       var bgColor = '#ffffff';
 
       gMap
         .append('g')
-        .attr('class', 'interchanges')
         .selectAll('path')
-        .data(_data.stations.interchanges())
+        .data(_data.stations.allStations())
         .enter()
         .append('g')
         .attr('id', function(d) {
@@ -601,65 +502,25 @@
           listeners.call('click', this, name);
         })
         .append('path')
-        .attr('d', interchange(lineWidth))
+        .attr('d', trainStop(lineWidth))
         .attr('transform', function(d) {
           return (
             'translate(' +
-            xScale(d.x + d.marker[0].shiftX * lineWidthMultiplier) +
+            xScale(d.x + d.shiftX * lineWidthMultiplier) +
             ',' +
-            yScale(d.y + d.marker[0].shiftY * lineWidthMultiplier) +
+            yScale(d.y + d.shiftY * lineWidthMultiplier) +
             ')'
           );
         })
-        .attr('stroke-width', lineWidth / 2)
+        .attr('stroke-width', lineWidth / 4)
         .attr('fill', function(d) {
           return d.visited ? fgColor : bgColor;
         })
         .attr('stroke', function(d) {
           return d.visited ? bgColor : fgColor;
         })
-        .classed('interchange', true)
+        .classed('train-stop', true)
         .style('cursor', 'pointer');
-    }
-
-    function drawStations() {
-      gMap
-        .append('g')
-        .attr('class', 'stations')
-        .selectAll('path')
-        .data(_data.stations.normalStations())
-        .enter()
-        .append('g')
-        .attr('id', function(d) {
-          return d.name;
-        })
-        .on('click', function() {
-          var label = d3.select(this);
-          var name = label.attr('id');
-          listeners.call('click', this, name);
-        })
-        .append('path')
-        .attr('d', function(d) {
-          return station(
-            d,
-            xScale,
-            yScale,
-            lineWidthMultiplier,
-            lineWidthTickRatio
-          );
-        })
-        .attr('stroke', function(d) {
-          return d.color;
-        })
-        .attr('stroke-width', lineWidth / lineWidthTickRatio)
-        .attr('fill', 'none')
-        .attr('class', function(d) {
-          return d.line;
-        })
-        .attr('id', function(d) {
-          return d.name;
-        })
-        .classed('station', true);
     }
 
     function drawLabels() {
@@ -672,9 +533,6 @@
         .append('g')
         .attr('id', function(d) {
           return d.name;
-        })
-        .attr('class', function(d) {
-          return d.marker[0].marker
         })
         .classed('label', true)
         .on('click', function() {
@@ -702,6 +560,9 @@
           var _y = yScale(d.y + d.labelShiftY) - textPos(d).pos[1];
           return "rotate(" + d.labelAngle + "," + _x + "," + _y + ")"
         })
+        .attr('class', function(d) {
+          return d.labelBold ? "bold-label" : ""
+        })
         .style('display', function(d) {
           return d.hide !== true ? 'block' : 'none';
         })
@@ -710,13 +571,6 @@
         })
         .style('font-size', 2.6 * lineWidth + 'px')
         .style('-webkit-user-select', 'none')
-        .attr('class', function(d) {
-          return d.marker
-            .map(function(marker) {
-              return marker.line;
-            })
-            .join(' ');
-        })
         .classed('highlighted', function(d) {
           return d.visited;
         })
@@ -749,6 +603,7 @@
           station.x = d.coords[0];
           station.y = d.coords[1];
           station.labelAngle = (d.labelAngle === undefined) ? 0 : d.labelAngle;
+          station.labelBold = d.hasOwnProperty('labelBold')
 
           if (station.labelPos === undefined) {
             station.labelPos = d.labelPos;
@@ -786,21 +641,12 @@
           station.visited = false;
 
           if (!d.hide) {
-            station.marker = station.marker || [];
-
-            station.marker.push({
-              line: line.name,
-              color: line.color,
-              labelPos: d.labelPos,
-              labelAngle: d.labelAngle,
-              marker: d.hasOwnProperty('marker') ? d.marker : 'station',
-              shiftX: d.hasOwnProperty('shiftCoords')
+            station.shiftX = d.hasOwnProperty('shiftCoords')
                 ? d.shiftCoords[0]
-                : line.shiftCoords[0],
-              shiftY: d.hasOwnProperty('shiftCoords')
+                : line.shiftCoords[0]
+            station.shiftY = d.hasOwnProperty('shiftCoords')
                 ? d.shiftCoords[1]
-                : line.shiftCoords[1],
-            });
+                : line.shiftCoords[1]
           }
         }
       });
