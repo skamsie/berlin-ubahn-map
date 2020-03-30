@@ -102,7 +102,7 @@
     "Nauener Platz": {
       "id": 3933566460,
       "name": "Nauener Platz",
-      "label": "Nauener Platz",
+      "label": "Nauener\nPlatz",
       "position": {
         "lat": 52.5514056,
         "lon": 13.3671696
@@ -728,10 +728,147 @@
         "lat": 52.5384335,
         "lon": 13.633123
       }
+    },
+    "Prinzenstraße": {
+      "id": 3881590700,
+      "name": "Prinzenstraße",
+      "label": " Prinzenstraße",
+      "position": {
+        "lat": 52.4983972,
+        "lon": 13.40591
+      }
+    },
+    "Görlitzer Bahnhof": {
+      "id": 3875882001,
+      "name": "Görlitzer Bahnhof",
+      "label": "Görlitzer Bahnhof",
+      "position": {
+        "lat": 52.4992628,
+        "lon": 13.4280355
+      }
+    },
+    "Schlesisches Tor": {
+      "id": 3876481637,
+      "name": "Schlesisches Tor",
+      "label": "Schlesisches Tor",
+      "position": {
+        "lat": 52.5008341,
+        "lon": 13.4414625
+      }
+    },
+    "Schlesisches Tor 2": {
+      "id": 3876481637,
+      "name": "Schlesisches Tor",
+      "label": "",
+      "position": {
+        "lat": 52.5008341,
+        "lon": 13.4414625
+      }
+    },
+    "Warschauer Straße": {
+      "id": 3870914569,
+      "name": "Warschauer Straße",
+      "label": "Warschauer Straße",
+      "position": {
+        "lat": 52.505014,
+        "lon": 13.4490065
+      }
+    },
+    "Warschauer Straße 2": {
+      "id": 3870914569,
+      "name": "Warschauer Straße",
+      "label": "",
+      "position": {
+        "lat": 52.505014,
+        "lon": 13.4490065
+      }
+    },
+    "Möckernbrücke": {
+      "id": 3933855823,
+      "name": "Möckernbrücke",
+      "label": "Möckernbrücke",
+      "position": {
+        "lat": 52.4986927,
+        "lon": 13.383123
+      }
     }
   },
 
   "lines": [
+    {
+      "name": "U1",
+      "label": "U1",
+      "color": "#008200",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [88, -60],
+          "name": "Möckernbrücke",
+          "labelPos": "N",
+          "labelBold": true
+        },
+        {
+          "coords": [101, -60],
+          "name": "Hallesches Tor",
+          "labelPos": "NE",
+          "labelAngle": -45,
+          "labelBold": true
+        },
+        {
+          "coords": [119, -60],
+          "name": "Prinzenstraße",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [137, -60],
+          "name": "Kottbusser Tor",
+          "labelPos": "SE",
+          "labelBold": true
+        },
+        {
+          "coords": [147, -60],
+          "name": "Görlitzer Bahnhof",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [157, -60],
+          "name": "Schlesisches Tor",
+          "labelPos": "NE",
+          "labelAngle": -45,
+          "stationSymbol": "double"
+        },
+        {
+          "coords": [167, -60],
+          "name": "Warschauer Straße",
+          "labelPos": "NE",
+          "labelAngle": -45,
+          "labelBold": true,
+          "stationSymbol": "double"
+        }
+      ]
+    },
+    {
+      "name": "U3",
+      "label": "U3",
+      "color": "#008280",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [157, -62],
+          "name": "Schlesisches Tor 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [167, -62],
+          "name": "Warschauer Straße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        }
+      ]
+    },
     {
       "name": "U2",
       "label": "U2",
@@ -1052,55 +1189,55 @@
           "labelPos": "W"
         },
         {
-          "coords": [101, -56],
+          "coords": [101, -60],
           "name": "Hallesches Tor",
-          "labelPos": "E",
+          "labelPos": "NE",
           "labelAngle": -45,
           "labelBold": true
         },
         {
-          "coords": [101, -64],
+          "coords": [101, -68],
           "name": "Mehringdamm",
           "labelPos": "W",
           "labelBold": true
         },
         {
-          "coords": [101, -70],
+          "coords": [101, -78],
           "name": "Platz der Luftbrücke",
           "labelPos": "E"
         },
         {
-          "coords": [101, -76],
+          "coords": [101, -84],
           "name": "Paradestraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -82],
+          "coords": [101, -90],
           "name": "Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -88],
+          "coords": [101, -96],
           "name": "Alt-Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -94],
+          "coords": [101, -102],
           "name": "Kaiserin-Augusta-Straße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -100],
+          "coords": [101, -108],
           "name": "Ullsteinstraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -106],
+          "coords": [101, -114],
           "name": "Westphalweg",
           "labelPos": "E"
         },
         {
-          "coords": [101, -112],
+          "coords": [101, -120],
           "name": "Alt Mariendorf",
           "labelPos": "E",
           "labelBold": true
@@ -1210,9 +1347,9 @@
           "labelPos": "E"
         },
         {
-          "coords": [137, -56],
+          "coords": [137, -60],
           "name": "Kottbusser Tor",
-          "labelPos": "E",
+          "labelPos": "SE",
           "labelBold": true
         }
       ]
@@ -1232,7 +1369,7 @@
         {
           "coords": [73, 16],
           "name": "Nauener Platz",
-          "labelPos": "SE"
+          "labelPos": "NW"
         },
         {
           "coords": [66, 9],

@@ -319,8 +319,20 @@
     return stations;
   };
 
-  Stations.prototype.allStations = function() {
-    return this.toArray();
+  Stations.prototype.doubleStations = function() {
+    var doubles = this.toArray();
+
+    return doubles.filter(function(station) {
+      return station.stationSymbol === 'double';
+    });
+  };
+
+  Stations.prototype.normalStations = function() {
+    var singles = this.toArray();
+
+    return singles.filter(function(station) {
+      return station.stationSymbol === 'single';
+    });
   };
 
   function stationList(stations) {
@@ -417,6 +429,7 @@
         drawLines();
         drawStations();
         drawLabels();
+        drawPills();
       });
     }
 
@@ -477,10 +490,52 @@
           return d.color;
         })
         .attr('fill', 'none')
-        .attr('stroke-width', function(d) {
-          return d.highlighted ? lineWidth * 1.4 : lineWidth * 1.2;
-        })
+        .attr('stroke-width', lineWidth * 1.3)
         .classed('line', true);
+    }
+
+    function drawPills() {
+      var fgColor = '#000000';
+      var bgColor = '#ffffff';
+
+      gMap
+        .append('g')
+        .selectAll('path')
+        .data(_data.stations.doubleStations())
+        .enter()
+        .append('g')
+        .append('rect')
+        .attr("rx", 14)
+        .attr("ry", 14)
+        .attr('width', 50)
+        .attr('height', 120)
+        .attr('stroke-width', 7)
+        .attr('id', function(d) {
+          return d.name;
+        })
+        .attr('transform', function(d) {
+          var offset = 0.8
+          return (
+            'translate(' +
+            xScale(d.x + d.shiftX * lineWidthMultiplier - offset) +
+            ',' +
+            yScale(d.y + d.shiftY * lineWidthMultiplier + offset) +
+            ')'
+          );
+        })
+        .attr('fill', function(d) {
+          return d.visited ? fgColor : bgColor;
+        })
+        .on('click', function() {
+          var label = d3.select(this);
+          var name = label.attr('id');
+          listeners.call('click', this, name);
+        })
+        .attr('stroke', function(d) {
+          return d.visited ? bgColor : fgColor;
+        })
+        .classed('train-stop', true)
+        .style('cursor', 'pointer');
     }
 
     function drawStations() {
@@ -490,7 +545,7 @@
       gMap
         .append('g')
         .selectAll('path')
-        .data(_data.stations.allStations())
+        .data(_data.stations.normalStations())
         .enter()
         .append('g')
         .attr('id', function(d) {
@@ -602,8 +657,9 @@
 
           station.x = d.coords[0];
           station.y = d.coords[1];
-          station.labelAngle = (d.labelAngle === undefined) ? 0 : d.labelAngle;
-          station.labelBold = d.hasOwnProperty('labelBold')
+          station.labelAngle = d.hasOwnProperty('labelAngle') ? d.labelAngle : 0;
+          station.labelBold = d.hasOwnProperty('labelBold') ? d.labelBold : false
+          station.stationSymbol = d.hasOwnProperty('stationSymbol') ? d.stationSymbol : 'single'
 
           if (station.labelPos === undefined) {
             station.labelPos = d.labelPos;
