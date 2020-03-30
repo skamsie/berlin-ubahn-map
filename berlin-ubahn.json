@@ -102,7 +102,7 @@
     "Nauener Platz": {
       "id": 3933566460,
       "name": "Nauener Platz",
-      "label": "Nauener\nPlatz",
+      "label": "Nauener\nPlatz ",
       "position": {
         "lat": 52.5514056,
         "lon": 13.3671696
@@ -220,6 +220,15 @@
       "id": 3854590997,
       "name": "Hallesches Tor",
       "label": " Hallesches Tor",
+      "position": {
+        "lat": 52.4977596,
+        "lon": 13.3906496
+      }
+    },
+    "Hallesches Tor 2": {
+      "id": 3854590997,
+      "name": "Hallesches Tor",
+      "label": "",
       "position": {
         "lat": 52.4977596,
         "lon": 13.3906496
@@ -462,7 +471,16 @@
     "Kottbusser Tor": {
       "id": 3900136339,
       "name": "Kottbusser Tor",
-      "label": "Kottbusser\nTor",
+      "label": "Kottbusser\nTor\n\n\n",
+      "position": {
+        "lat": 52.4989853,
+        "lon": 13.4183107
+      }
+    },
+    "Kottbusser Tor 2": {
+      "id": 3900136339,
+      "name": "Kottbusser Tor",
+      "label": "",
       "position": {
         "lat": 52.4989853,
         "lon": 13.4183107
@@ -738,10 +756,28 @@
         "lon": 13.40591
       }
     },
+    "Prinzenstraße 2": {
+      "id": 3881590700,
+      "name": "Prinzenstraße",
+      "label": "",
+      "position": {
+        "lat": 52.4983972,
+        "lon": 13.40591
+      }
+    },
     "Görlitzer Bahnhof": {
       "id": 3875882001,
       "name": "Görlitzer Bahnhof",
       "label": "Görlitzer Bahnhof",
+      "position": {
+        "lat": 52.4992628,
+        "lon": 13.4280355
+      }
+    },
+    "Görlitzer Bahnhof 2": {
+      "id": 3875882001,
+      "name": "Görlitzer Bahnhof",
+      "label": "",
       "position": {
         "lat": 52.4992628,
         "lon": 13.4280355
@@ -791,6 +827,33 @@
         "lat": 52.4986927,
         "lon": 13.383123
       }
+    },
+    "Möckernbrücke 2": {
+      "id": 3933855823,
+      "name": "Möckernbrücke",
+      "label": "",
+      "position": {
+        "lat": 52.4986927,
+        "lon": 13.383123
+      }
+    },
+    "Möckernbrücke 3": {
+      "id": 3933855823,
+      "name": "Möckernbrücke",
+      "label": "",
+      "position": {
+        "lat": 52.4986927,
+        "lon": 13.383123
+      }
+    },
+    "Gneisenaustraße": {
+      "id": 259845849,
+      "name": "Gneisenaustraße",
+      "label": "Gneisenaustraße",
+      "position": {
+        "lat": 52.4912895,
+        "lon": 13.3958247
+      }
     }
   },
 
@@ -812,35 +875,38 @@
           "name": "Hallesches Tor",
           "labelPos": "NE",
           "labelAngle": -45,
-          "labelBold": true
+          "labelBold": true,
+          "stationSymbol": false
         },
         {
           "coords": [119, -60],
           "name": "Prinzenstraße",
           "labelPos": "NE",
-          "labelAngle": -45
+          "labelAngle": -45,
+          "stationSymbol": "double"
         },
         {
           "coords": [137, -60],
           "name": "Kottbusser Tor",
-          "labelPos": "SE",
+          "labelPos": "NE",
           "labelBold": true
         },
         {
-          "coords": [147, -60],
+          "coords": [151, -60],
           "name": "Görlitzer Bahnhof",
           "labelPos": "NE",
-          "labelAngle": -45
+          "labelAngle": -45,
+          "stationSymbol": "double"
         },
         {
-          "coords": [157, -60],
+          "coords": [161, -60],
           "name": "Schlesisches Tor",
           "labelPos": "NE",
           "labelAngle": -45,
           "stationSymbol": "double"
         },
         {
-          "coords": [167, -60],
+          "coords": [171, -60],
           "name": "Warschauer Straße",
           "labelPos": "NE",
           "labelAngle": -45,
@@ -856,13 +922,44 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [157, -62],
+          "coords": [88, -62],
+          "name": "Möckernbrücke 2",
+          "labelPos": "N",
+          "labelBold": true
+        },
+        {
+          "coords": [101, -62],
+          "name": "Hallesches Tor 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [119, -62],
+          "name": "Prinzenstraße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [137, -62],
+          "name": "Kottbusser Tor 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "stationSymbol": false
+        },
+        {
+          "coords": [151, -62],
+          "name": "Görlitzer Bahnhof 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [161, -62],
           "name": "Schlesisches Tor 2",
           "labelPos": "NE",
           "stationSymbol": false
         },
         {
-          "coords": [167, -62],
+          "coords": [171, -62],
           "name": "Warschauer Straße 2",
           "labelPos": "NE",
           "stationSymbol": false
@@ -1193,54 +1290,92 @@
           "name": "Hallesches Tor",
           "labelPos": "NE",
           "labelAngle": -45,
-          "labelBold": true
+          "labelBold": true,
+          "stationSymbol": "double"
         },
         {
-          "coords": [101, -68],
+          "coords": [101, -70],
           "name": "Mehringdamm",
           "labelPos": "W",
           "labelBold": true
         },
         {
-          "coords": [101, -78],
+          "coords": [101, -82],
           "name": "Platz der Luftbrücke",
           "labelPos": "E"
         },
         {
-          "coords": [101, -84],
+          "coords": [101, -88],
           "name": "Paradestraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -90],
+          "coords": [101, -94],
           "name": "Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -96],
+          "coords": [101, -100],
           "name": "Alt-Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -102],
+          "coords": [101, -106],
           "name": "Kaiserin-Augusta-Straße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -108],
+          "coords": [101, -112],
           "name": "Ullsteinstraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -114],
+          "coords": [101, -118],
           "name": "Westphalweg",
           "labelPos": "E"
         },
         {
-          "coords": [101, -120],
+          "coords": [101, -124],
           "name": "Alt Mariendorf",
           "labelPos": "E",
           "labelBold": true
+        }
+      ]
+    },
+    {
+      "name": "U7",
+      "label": "U7",
+      "color": "#00cfcd",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [88, -64],
+          "name": "Möckernbrücke 3",
+          "labelPos": "N"
+        },
+        {
+          "coords": [94, -64]
+        },
+        {
+          "coords": [96, -65]
+        },
+        {
+          "coords": [101, -70],
+          "name": "Mehringdamm",
+          "labelPos": "N",
+          "labelBold": true
+        },
+        {
+          "coords": [109, -78]
+        },
+        {
+          "coords": [111, -79]
+        },
+        {
+          "coords": [114, -79],
+          "name": "Gneisenaustraße",
+          "labelPos": "NE",
+          "labelAngle": -45
         }
       ]
     },
@@ -1349,8 +1484,9 @@
         {
           "coords": [137, -60],
           "name": "Kottbusser Tor",
-          "labelPos": "SE",
-          "labelBold": true
+          "labelPos": "NE",
+          "labelBold": true,
+          "stationSymbol": "double"
         }
       ]
     },
