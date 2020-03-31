@@ -219,7 +219,7 @@
     "Hallesches Tor": {
       "id": 3854590997,
       "name": "Hallesches Tor",
-      "label": " Hallesches Tor",
+      "label": "Hallesches Tor",
       "position": {
         "lat": 52.4977596,
         "lon": 13.3906496
@@ -1232,6 +1232,132 @@
         "lat": 52.4568021,
         "lon": 13.3209192
       }
+    },
+    "Konstanzer Straße": {
+      "id": 3918542874,
+      "name": "Konstanzer Straße",
+      "label": "Konstanzer Straße",
+      "position": {
+        "lat": 52.4945315,
+        "lon": 13.3090745
+      }
+    },
+    "Adenauerplatz": {
+      "id": 3931919580,
+      "name": "Adenauerplatz",
+      "label": "Adenauerplatz",
+      "position": {
+        "lat": 52.5000028,
+        "lon": 13.3073226
+      }
+    },
+    "Wilmersdorfer Straße": {
+      "id": 5176114617,
+      "name": "Wilmersdorfer Straße",
+      "label": "Wilmersdorfer Straße",
+      "position": {
+        "lat": 52.5066749,
+        "lon": 13.3066372
+      }
+    },
+    "Ernst-Reuter-Platz": {
+      "id": 29123764,
+      "name": "Ernst-Reuter-Platz",
+      "label": "Ernst-Reuter-\nPlatz",
+      "position": {
+        "lat": 52.5118853,
+        "lon": 13.3221613
+      }
+    },
+    "Bismarckstraße": {
+      "id": 31207787,
+      "name": "Bismarckstraße",
+      "label": "Bismarckstraße",
+      "position": {
+        "lat": 52.5115148,
+        "lon": 13.3052393
+      }
+    },
+    "Richard-Wagner-Platz": {
+      "id": 31207789,
+      "name": "Richard-Wagner-Platz",
+      "label": "Richard-Wagner-Platz",
+      "position": {
+        "lat": 52.517387,
+        "lon": 13.306588
+      }
+    },
+    "Mierendorffplatz": {
+      "id": 5219756618,
+      "name": "Mierendorffplatz",
+      "label": "Mierendorffplatz",
+      "position": {
+        "lat": 52.5263437,
+        "lon": 13.3047721
+      }
+    },
+    "Jungfernheide": {
+      "id": 4644994619,
+      "name": "Jungfernheide",
+      "label": "Jungfernheide",
+      "position": {
+        "lat": 52.5307879,
+        "lon": 13.3006301
+      }
+    },
+    "Jakob-Kaiser-Platz": {
+      "id": 5176114547,
+      "name": "Jakob-Kaiser-Platz",
+      "label": "Jakob-Kaiser-Platz",
+      "position": {
+        "lat": 52.5362794,
+        "lon": 13.2933009
+      }
+    },
+    "Halemweg": {
+      "id": 5183375797,
+      "name": "Halemweg",
+      "label": "Halemweg",
+      "position": {
+        "lat": 52.5366262,
+        "lon": 13.2861036
+      }
+    },
+    "Sophie-Charlotte-Platz": {
+      "id": 3900580952,
+      "name": "Sophie-Charlotte-Platz",
+      "label": "Sophie-Charlotte-Platz",
+      "position": {
+        "lat": 52.5109137,
+        "lon": 13.2963306
+      }
+    },
+    "Siemensdamm": {
+      "id": 4512633105,
+      "name": "Siemensdamm",
+      "label": "Siemensdamm",
+      "position": {
+        "lat": 52.5367748,
+        "lon": 13.2727638
+      }
+    },
+    "Rohrdamm": {
+      "id": 5330823481,
+      "name": "Rohrdamm",
+      "label": "Rohrdamm",
+      "position": {
+        "lat": 52.5369951,
+        "lon": 13.262306
+      }
+    },
+    "Paulsternstraße": {
+      "id": 5183375788,
+      "name": "Paulsternstraße",
+      "label": "Paulsternstraße",
+      "position": {
+        "lat": 52.5379819,
+        "lon": 13.2478176
+      }
     }
   },
 
@@ -1243,7 +1369,7 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [-12, -60],
+          "coords": [-10, -60],
           "name": "Uhlandstraße",
           "labelPos": "NE",
           "labelBold": true,
@@ -1298,6 +1424,7 @@
           "labelPos": "NE",
           "labelAngle": -45,
           "labelBold": true,
+          "labelShiftCoords": [1.5, 0],
           "stationSymbol": false
         },
         {
@@ -1320,6 +1447,7 @@
           "name": "Görlitzer Bahnhof",
           "labelPos": "NE",
           "labelAngle": -45,
+          "labelBold": true,
           "stationSymbol": "double"
         },
         {
@@ -1327,6 +1455,7 @@
           "name": "Schlesisches Tor",
           "labelPos": "NE",
           "labelAngle": -45,
+          "labelBold": true,
           "stationSymbol": "double"
         },
         {
@@ -1452,6 +1581,26 @@
       "color": "#ff0000",
       "shiftCoords": [0, 0],
       "nodes": [
+        {
+          "coords": [-43, -41],
+          "name": "Sophie-Charlotte-Platz",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [-22, -41],
+          "name": "Bismarckstraße",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelShiftCoords": [1.5, 0],
+          "labelAngle": -45
+        },
+        {
+          "coords": [-4, -41],
+          "name": "Ernst-Reuter-Platz",
+          "labelPos": "N",
+          "labelShiftCoords": [0, 0.5]
+        },
         {
           "coords": [6, -51],
           "name": "Zoologischer Garten",
@@ -1864,6 +2013,7 @@
           "labelPos": "NE",
           "labelAngle": -45,
           "labelBold": true,
+          "labelShiftCoords": [1.5, 0],
           "stationSymbol": "double"
         },
         {
@@ -1921,6 +2071,80 @@
       "color": "#00cfcd",
       "shiftCoords": [0, 0],
       "nodes": [
+        {
+          "coords": [-58, -6],
+          "name": "Paulsternstraße",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-51, -6],
+          "name": "Rohrdamm",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-44, -6],
+          "name": "Siemensdamm",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-37, -6],
+          "name": "Halemweg",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-30, -6],
+          "name": "Jakob-Kaiser-Platz",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-26, -10],
+          "name": "Jungfernheide",
+          "labelPos": "E"
+        },
+        {
+          "coords": [-23, -13]
+        },
+        {
+          "coords": [-22, -15]
+        },
+        {
+          "coords": [-22, -17],
+          "name": "Mierendorffplatz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [-22, -25],
+          "name": "Richard-Wagner-Platz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [-22, -41],
+          "name": "Bismarckstraße",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelShiftCoords": [1.5, 0],
+          "labelAngle": -45
+        },
+        {
+          "coords": [-22, -53],
+          "name": "Wilmersdorfer Straße",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-22, -64],
+          "name": "Adenauerplatz",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-22, -75],
+          "name": "Konstanzer Straße",
+          "labelPos": "W"
+        },
         {
           "coords": [-8, -89],
           "name": "Fehrbelliner Platz",
@@ -2192,7 +2416,7 @@
         {
           "coords": [26, -31],
           "name": "Turmstraße",
-          "labelPos": "SE"
+          "labelPos": "NW"
         },
         {
           "coords": [16, -41],
