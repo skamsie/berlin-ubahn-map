@@ -909,22 +909,40 @@
         "lon": 13.3749852
       }
     },
-    "Gleisdreieck": {
-      "id": 2102139395,
-      "name": "Gleisdreieck",
-      "label": "",
+    "Kurfürstenstraße": {
+      "id": 3906622702,
+      "name": "Kurfürstenstraße",
+      "label": "Kurfürstenstraße",
       "position": {
-        "lat": 52.4995261,
-        "lon": 13.3740318
+        "lat": 52.4999599,
+        "lon": 13.3619411
       }
     },
-    "Gleisdreieck 2": {
+    "Kurfürstenstraße 2": {
+      "id": 3906622702,
+      "name": "Kurfürstenstraße",
+      "label": "",
+      "position": {
+        "lat": 52.4999599,
+        "lon": 13.3619411
+      }
+    },
+    "Gleisdreieck": {
       "id": 2102139395,
       "name": "Gleisdreieck",
       "label": "Gleisdreieck",
       "position": {
         "lat": 52.4995261,
         "lon": 13.3740318
+      }
+    },
+    "Bülowstraße": {
+      "id": 3946122064,
+      "name": "Bülowstraße",
+      "label": "Bülowstraße",
+      "position": {
+        "lat": 52.4975858,
+        "lon": 13.3632209
       }
     }
   },
@@ -937,10 +955,11 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [59, -60],
-          "name": "Gleisdreieck",
-          "labelPos": "SE",
-          "labelBold": true
+          "coords": [47, -60],
+          "name": "Kurfürstenstraße",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45
         },
         {
           "coords": [88, -60],
@@ -1000,10 +1019,9 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [59, -62],
-          "name": "Gleisdreieck 2",
-          "labelPos": "SE",
-          "labelBold": true
+          "coords": [47, -62],
+          "name": "Kurfürstenstraße 2",
+          "labelPos": "NE"
         },
         {
           "coords": [88, -62],
@@ -1057,10 +1075,29 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [59, -60],
+          "coords": [47, -64],
+          "name": "Bülowstraße",
+          "labelPos": "S"
+        },
+        {
+          "coords": [60, -64]
+        },
+        {
+          "coords": [61, -63],
+          "dir": "E"
+        },
+        {
+          "coords": [61, -60],
           "name": "Gleisdreieck",
-          "labelPos": "SE",
-          "labelBold": true
+          "labelPos": "E",
+          "labelBold": true,
+          "stationSymbol": "double"
+        },
+        {
+          "coords": [61, -59]
+        },
+        {
+          "coords": [62, -57]
         },
         {
           "coords": [68, -51],

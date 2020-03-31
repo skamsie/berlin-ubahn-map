@@ -490,7 +490,7 @@
           return d.color;
         })
         .attr('fill', 'none')
-        .attr('stroke-width', lineWidth * 1.3)
+        .attr('stroke-width', lineWidth * 1.4)
         .classed('line', true);
     }
 
