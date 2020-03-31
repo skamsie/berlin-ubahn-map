@@ -1412,10 +1412,84 @@
         "lat": 52.4762696,
         "lon": 13.4393375
       }
+    },
+    "Brandenburger Tor": {
+      "id": 3862767512,
+      "name": "Brandenburger Tor",
+      "label": "Brandenburger\nTor",
+      "position": {
+        "lat": 52.5166047,
+        "lon": 13.3809897
+      }
+    },
+    "Bundestag": {
+      "id": 4213705914,
+      "name": "Bundestag",
+      "label": "Bundestag",
+      "position": {
+        "lat": 52.5201123,
+        "lon": 13.3729545
+      }
+    },
+    "Hauptbahnhof": {
+      "id": 3856100108,
+      "name": "Hauptbahnhof",
+      "label": "Hauptbahnhof",
+      "position": {
+        "lat": 52.5252819,
+        "lon": 13.3701242
+      }
     }
   },
 
   "lines": [
+    {
+      "name": "U55",
+      "label": "U55",
+      "color": "#993301",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [70, -25],
+          "name": "Brandenburger Tor",
+          "labelPos": "S",
+          "labelBold": true
+        },
+        {
+          "coords": [65, -20],
+          "name": "Bundestag",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [60, -15],
+          "name": "Hauptbahnhof",
+          "labelPos": "SW",
+          "labelBold": true
+        }
+      ]
+    },
+    {
+      "name": "U5-U55",
+      "label": "U5-U55",
+      "color": "#993301",
+      "dotted": true,
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [128, -25],
+          "name": "Alexanderplatz",
+          "labelPos": "NW",
+          "labelBold": true,
+          "labelShiftCoords": [-2, 0.5]
+        },
+        {
+          "coords": [70, -25],
+          "name": "Brandenburger Tor",
+          "labelPos": "S",
+          "labelBold": true
+        }
+      ]
+    },
     {
       "name": "U1",
       "label": "U1",
@@ -1760,8 +1834,9 @@
         {
           "coords": [128, -26],
           "name": "Alexanderplatz",
-          "labelPos": "W",
-          "labelBold": true
+          "labelPos": "NW",
+          "labelBold": true,
+          "labelShiftCoords": [-2, 0.5]
         },
         {
           "coords": [128, -10],
@@ -1831,8 +1906,9 @@
         {
           "coords": [128, -25],
           "name": "Alexanderplatz",
-          "labelPos": "W",
-          "labelBold": true
+          "labelPos": "NW",
+          "labelBold": true,
+          "labelShiftCoords": [-1.8, 0.5]
         },
         {
           "coords": [137, -25],
@@ -2037,7 +2113,8 @@
         {
           "coords": [96, -21],
           "name": "Friedrichstraße",
-          "labelPos": "SW"
+          "labelPos": "SW",
+          "labelShiftCoords": [0, 0.8]
         },
         {
           "coords": [100, -25]
@@ -2409,18 +2486,21 @@
         {
           "coords": [114, -11],
           "name": "Rosenthaler Platz",
-          "labelPos": "SW"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [121, -18],
           "name": "Weinmeisterstraße",
-          "labelPos": "SW"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [128, -25],
           "name": "Alexanderplatz",
-          "labelPos": "W",
-          "labelBold": true
+          "labelPos": "NW",
+          "labelBold": true,
+          "labelShiftCoords": [-2, 0.5]
         },
         {
           "coords": [137, -34],

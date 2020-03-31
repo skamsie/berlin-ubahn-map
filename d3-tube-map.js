@@ -491,8 +491,11 @@
         })
         .attr('fill', 'none')
         .attr('stroke-width', lineWidth * 1.4)
-        //.style("stroke-linecap", "round")
-        //.style("stroke-dasharray", ("60, 60"))
+        .style("stroke-linecap", "round")
+        .style("stroke-dasharray", function(d) {
+          var dotted_values = d.dotted ? ("40, 55") : ("0, 0")
+          return dotted_values
+        })
         .classed('line', true);
     }
 
@@ -725,6 +728,7 @@
         var lineObj = {
           name: line.name,
           title: line.label,
+          dotted: line.hasOwnProperty("dotted") && line.dotted ? true : false,
           stations: [],
           color: line.color,
           shiftCoords: line.shiftCoords,
