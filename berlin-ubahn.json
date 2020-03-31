@@ -471,7 +471,7 @@
     "Kottbusser Tor": {
       "id": 3900136339,
       "name": "Kottbusser Tor",
-      "label": "Kottbusser\nTor\n\n\n",
+      "label": "Kottbusser\nTor",
       "position": {
         "lat": 52.4989853,
         "lon": 13.4183107
@@ -990,6 +990,24 @@
         "lon": 13.3430005
       }
     },
+    "Wittenbergplatz 2": {
+      "id": 3957757604,
+      "name": "Wittenbergplatz",
+      "label": "",
+      "position": {
+        "lat": 52.5017976,
+        "lon": 13.3430005
+      }
+    },
+    "Wittenbergplatz 3": {
+      "id": 3957757604,
+      "name": "Wittenbergplatz",
+      "label": "",
+      "position": {
+        "lat": 52.5017976,
+        "lon": 13.3430005
+      }
+    },
     "Yorckstraße": {
       "id": 174817813,
       "name": "Yorckstraße",
@@ -1034,6 +1052,15 @@
         "lat": 52.4672622,
         "lon": 13.4314659
       }
+    },
+    "Kleistpark": {
+      "id": 5099979652,
+      "name": "Kleistpark",
+      "label": "Kleistpark",
+      "position": {
+        "lat": 52.4903665,
+        "lon": 13.3602198
+      }
     }
   },
 
@@ -1045,18 +1072,20 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [26, -60],
+          "coords": [24, -60],
           "name": "Wittenbergplatz",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle": -45
+          "labelAngle": -45,
+          "stationSymbol": "triple"
         },
         {
           "coords": [36, -60],
           "name": "Nollendorfplatz",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle": -45
+          "labelAngle": -45,
+          "stationSymbol": "triple"
         },
         {
           "coords": [48, -60],
@@ -1076,7 +1105,8 @@
           "coords": [90, -60],
           "name": "Möckernbrücke",
           "labelPos": "N",
-          "labelBold": true
+          "labelBold": true,
+          "stationSymbol": "triple"
         },
         {
           "coords": [101, -60],
@@ -1091,13 +1121,15 @@
           "name": "Prinzenstraße",
           "labelPos": "NE",
           "labelAngle": -45,
+          "labelBold": true,
           "stationSymbol": "double"
         },
         {
           "coords": [137, -60],
           "name": "Kottbusser Tor",
           "labelPos": "NE",
-          "labelBold": true
+          "labelBold": true,
+          "labelShiftCoords": [0, 2]
         },
         {
           "coords": [152, -60],
@@ -1130,11 +1162,20 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [24, -64],
+          "name": "Wittenbergplatz 3",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45,
+          "stationSymbol": false
+        },
+        {
           "coords": [36, -64],
           "name": "Nollendorfplatz 3",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle": -45
+          "labelAngle": -45,
+          "stationSymbol": false
         },
         {
           "coords": [48, -64],
@@ -1185,7 +1226,8 @@
         {
           "coords": [109, -39],
           "name": "Hausvogteiplatz",
-          "labelPos": "N"
+          "labelPos": "N",
+          "labelShiftCoords": [0, 0.5]
         },
         {
           "coords": [115, -39],
@@ -1254,11 +1296,20 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [24, -62],
+          "name": "Wittenbergplatz 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45,
+          "stationSymbol": false
+        },
+        {
           "coords": [36, -62],
           "name": "Nollendorfplatz 2",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle": -45
+          "labelAngle": -45,
+          "stationSymbol": false
         },
         {
           "coords": [48, -62],
@@ -1276,7 +1327,8 @@
           "coords": [90, -62],
           "name": "Möckernbrücke 2",
           "labelPos": "N",
-          "labelBold": true
+          "labelBold": true,
+          "stationSymbol": false
         },
         {
           "coords": [101, -62],
@@ -1326,7 +1378,8 @@
         {
           "coords": [36, -64],
           "name": "Nollendorfplatz 3",
-          "labelPos": "NE"
+          "labelPos": "NE",
+          "stationSymbol": false
         },
         {
           "coords": [36, -76],
@@ -1638,6 +1691,11 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [64, -85],
+          "name": "Kleistpark",
+          "labelPos": "SE"
+        },
+        {
           "coords": [73, -76],
           "name": "Yorckstraße",
           "labelPos": "SE"
@@ -1654,7 +1712,8 @@
         {
           "coords": [90, -64],
           "name": "Möckernbrücke 3",
-          "labelPos": "N"
+          "labelPos": "N",
+          "stationSymbol": false
         },
         {
           "coords": [94, -64]

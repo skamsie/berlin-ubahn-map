@@ -10,7 +10,7 @@
   function trainStop(lineWidth) {
     return d3.arc()
       .innerRadius(0)
-      .outerRadius(1.25 * lineWidth)
+      .outerRadius(1.35 * lineWidth)
       .startAngle(0)
       .endAngle(2 * Math.PI);
   }
@@ -319,11 +319,11 @@
     return stations;
   };
 
-  Stations.prototype.doubleStations = function() {
+  Stations.prototype.longStations = function() {
     var doubles = this.toArray();
 
     return doubles.filter(function(station) {
-      return station.stationSymbol === 'double';
+      return station.stationSymbol !== 'single' && station.stationSymbol;
     });
   };
 
@@ -346,8 +346,8 @@
     var xScale = d3.scaleLinear();
     var yScale = d3.scaleLinear();
     var lineWidth;
-    var lineWidthMultiplier = 0.8;
-    var lineWidthTickRatio = 3 / 2;
+    var lineWidthMultiplier = 0.7;
+    var lineWidthTickRatio = 1;
     var svg;
     var _data;
     var gMap;
@@ -429,7 +429,7 @@
         drawLines();
         drawStations();
         drawLabels();
-        drawPills();
+        drawLongStations();
       });
     }
 
@@ -490,26 +490,34 @@
           return d.color;
         })
         .attr('fill', 'none')
-        .attr('stroke-width', lineWidth * 1.4)
+        .attr('stroke-width', lineWidth * 1.5)
+        //.style("stroke-linecap", "round")
+        //.style("stroke-dasharray", ("60, 60"))
         .classed('line', true);
     }
 
-    function drawPills() {
+    function drawLongStations(stationSymbol) {
       var fgColor = '#000000';
       var bgColor = '#ffffff';
 
       gMap
         .append('g')
         .selectAll('path')
-        .data(_data.stations.doubleStations())
+        .data(_data.stations.longStations())
         .enter()
         .append('g')
         .append('rect')
         .attr("rx", 14)
         .attr("ry", 14)
-        .attr('width', 50)
-        .attr('height', 120)
-        .attr('stroke-width', 7)
+        .attr('width', lineWidth * 2.4)
+        .attr('height', function(d) {
+          if (d.stationSymbol === 'double') {
+            return (2.6 * lineWidth * 2) - (lineWidthTickRatio * 2)
+          } else {
+            return (2.7 * lineWidth * 3) - (lineWidthTickRatio * 3)
+          }
+        })
+        .attr('stroke-width', lineWidth / 4)
         .attr('id', function(d) {
           return d.name;
         })
@@ -624,7 +632,7 @@
         .style('text-decoration', function(d) {
           return d.closed ? 'line-through' : 'none';
         })
-        .style('font-size', 2.6 * lineWidth + 'px')
+        .style('font-size', 3 * lineWidth + 'px')
         .style('-webkit-user-select', 'none')
         .classed('highlighted', function(d) {
           return d.visited;
