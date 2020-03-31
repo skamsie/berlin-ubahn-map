@@ -936,6 +936,15 @@
         "lon": 13.3740318
       }
     },
+    "Gleisdreieck 2": {
+      "id": 2102139395,
+      "name": "Gleisdreieck",
+      "label": "",
+      "position": {
+        "lat": 52.4995261,
+        "lon": 13.3740318
+      }
+    },
     "Bülowstraße": {
       "id": 3946122064,
       "name": "Bülowstraße",
@@ -943,6 +952,60 @@
       "position": {
         "lat": 52.4975858,
         "lon": 13.3632209
+      }
+    },
+    "Nollendorfplatz": {
+      "id": 3901824902,
+      "name": "Nollendorfplatz",
+      "label": "Nollendorfplatz",
+      "position": {
+        "lat": 52.4995972,
+        "lon": 13.3537297
+      }
+    },
+    "Nollendorfplatz 2": {
+      "id": 3901824902,
+      "name": "Nollendorfplatz",
+      "label": "",
+      "position": {
+        "lat": 52.4995972,
+        "lon": 13.3537297
+      }
+    },
+    "Nollendorfplatz 3": {
+      "id": 3901824902,
+      "name": "Nollendorfplatz",
+      "label": "",
+      "position": {
+        "lat": 52.4995972,
+        "lon": 13.3537297
+      }
+    },
+    "Wittenbergplatz": {
+      "id": 3957757604,
+      "name": "Wittenbergplatz",
+      "label": "Wittenbergplatz",
+      "position": {
+        "lat": 52.5017976,
+        "lon": 13.3430005
+      }
+    },
+    "Yorckstraße": {
+      "id": 174817813,
+      "name": "Yorckstraße",
+      "label": "Yorckstraße",
+      "position": {
+        "lat": 52.4929715,
+        "lon": 13.3706891
+      }
+    },
+    "Viktoria-Luise-Platz": {
+      "id": 5134716875,
+      "name": "Viktoria-Luise-Platz",
+      "label": "Viktoria-Luise-Platz",
+      "position": {
+        "lat": 52.4961755,
+        "lon": 13.3431855
       }
     }
   },
@@ -955,14 +1018,35 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [47, -60],
-          "name": "Kurfürstenstraße",
+          "coords": [26, -60],
+          "name": "Wittenbergplatz",
           "labelPos": "NE",
           "labelBold": true,
           "labelAngle": -45
         },
         {
-          "coords": [88, -60],
+          "coords": [36, -60],
+          "name": "Nollendorfplatz",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45
+        },
+        {
+          "coords": [48, -60],
+          "name": "Kurfürstenstraße",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45,
+          "stationSymbol": "double"
+        },
+        {
+          "coords": [61, -60],
+          "name": "Gleisdreieck",
+          "labelPos": "E",
+          "labelShiftCoords": [0, -4]
+        },
+        {
+          "coords": [90, -60],
           "name": "Möckernbrücke",
           "labelPos": "N",
           "labelBold": true
@@ -1013,69 +1097,20 @@
       ]
     },
     {
-      "name": "U3",
-      "label": "U3",
-      "color": "#008280",
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [47, -62],
-          "name": "Kurfürstenstraße 2",
-          "labelPos": "NE"
-        },
-        {
-          "coords": [88, -62],
-          "name": "Möckernbrücke 2",
-          "labelPos": "N",
-          "labelBold": true
-        },
-        {
-          "coords": [101, -62],
-          "name": "Hallesches Tor 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [119, -62],
-          "name": "Prinzenstraße 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [137, -62],
-          "name": "Kottbusser Tor 2",
-          "labelPos": "NE",
-          "labelBold": true,
-          "stationSymbol": false
-        },
-        {
-          "coords": [151, -62],
-          "name": "Görlitzer Bahnhof 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [161, -62],
-          "name": "Schlesisches Tor 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [171, -62],
-          "name": "Warschauer Straße 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        }
-      ]
-    },
-    {
       "name": "U2",
       "label": "U2",
       "color": "#ff0000",
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [47, -64],
+          "coords": [36, -64],
+          "name": "Nollendorfplatz 3",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45
+        },
+        {
+          "coords": [48, -64],
           "name": "Bülowstraße",
           "labelPos": "S"
         },
@@ -1089,7 +1124,7 @@
         {
           "coords": [61, -60],
           "name": "Gleisdreieck",
-          "labelPos": "E",
+          "labelPos": "SE",
           "labelBold": true,
           "stationSymbol": "double"
         },
@@ -1182,6 +1217,94 @@
           "name": "Pankow",
           "labelPos": "E",
           "labelBold": true
+        }
+      ]
+    },
+    {
+      "name": "U3",
+      "label": "U3",
+      "color": "#008280",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [36, -62],
+          "name": "Nollendorfplatz 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45
+        },
+        {
+          "coords": [48, -62],
+          "name": "Kurfürstenstraße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [61, -62],
+          "name": "Gleisdreieck 2",
+          "labelPos": "E",
+          "stationSymbol": false
+        },
+        {
+          "coords": [90, -62],
+          "name": "Möckernbrücke 2",
+          "labelPos": "N",
+          "labelBold": true
+        },
+        {
+          "coords": [101, -62],
+          "name": "Hallesches Tor 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [119, -62],
+          "name": "Prinzenstraße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [137, -62],
+          "name": "Kottbusser Tor 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "stationSymbol": false
+        },
+        {
+          "coords": [151, -62],
+          "name": "Görlitzer Bahnhof 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [161, -62],
+          "name": "Schlesisches Tor 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [171, -62],
+          "name": "Warschauer Straße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        }
+      ]
+    },
+    {
+      "name": "U4",
+      "label": "U4",
+      "color": "#feff00",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [36, -64],
+          "name": "Nollendorfplatz 3",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [36, -76],
+          "name": "Viktoria-Luise-Platz",
+          "labelPos": "E"
         }
       ]
     },
@@ -1488,7 +1611,21 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [88, -64],
+          "coords": [73, -76],
+          "name": "Yorckstraße",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [82, -67]
+        },
+        {
+          "coords": [84, -65]
+        },
+        {
+          "coords": [86, -64]
+        },
+        {
+          "coords": [90, -64],
           "name": "Möckernbrücke 3",
           "labelPos": "N"
         },
