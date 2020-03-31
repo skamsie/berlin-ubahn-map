@@ -1358,6 +1358,60 @@
         "lat": 52.5379819,
         "lon": 13.2478176
       }
+    },
+    "Haselhorst": {
+      "id": 5220114129,
+      "name": "Haselhorst",
+      "label": "Haselhorst",
+      "position": {
+        "lat": 52.5387183,
+        "lon": 13.2330942
+      }
+    },
+    "Zitadelle": {
+      "id": 5183374155,
+      "name": "Zitadelle",
+      "label": "Zitadelle",
+      "position": {
+        "lat": 52.537652,
+        "lon": 13.2175358
+      }
+    },
+    "Altstadt Spandau": {
+      "id": 5726082246,
+      "name": "Altstadt Spandau",
+      "label": "Altstadt Spandau",
+      "position": {
+        "lat": 52.5388381,
+        "lon": 13.2062573
+      }
+    },
+    "Rathaus Spandau": {
+      "id": 4989868817,
+      "name": "Rathaus Spandau",
+      "label": "Rathaus Spandau",
+      "position": {
+        "lat": 52.5351709,
+        "lon": 13.1997742
+      }
+    },
+    "Rathaus Neukölln": {
+      "id": 5171026794,
+      "name": "Rathaus Neukölln",
+      "label": "Rathaus Neukölln",
+      "position": {
+        "lat": 52.4816522,
+        "lon": 13.4341793
+      }
+    },
+    "Karl-Marx-Straße": {
+      "id": 3918711741,
+      "name": "Karl-Marx-Straße",
+      "label": "Karl-Marx-Straße",
+      "position": {
+        "lat": 52.4762696,
+        "lon": 13.4393375
+      }
     }
   },
 
@@ -2072,6 +2126,31 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [-86, -6],
+          "name": "Rathaus Spandau",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle":-45
+        },
+        {
+          "coords": [-79, -6],
+          "name": "Altstadt Spandau",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-72, -6],
+          "name": "Zitadelle",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
+          "coords": [-65, -6],
+          "name": "Haselhorst",
+          "labelPos": "NE",
+          "labelAngle":-45
+        },
+        {
           "coords": [-58, -6],
           "name": "Paulsternstraße",
           "labelPos": "NE",
@@ -2238,7 +2317,24 @@
           "coords": [137, -79],
           "name": "Hermannplatz",
           "labelPos": "NE",
-          "labelBold": true
+          "labelBold": true,
+          "labelShiftCoords": [0, 0.5]
+        },
+        {
+          "coords": [150, -79]
+        },
+        {
+          "coords": [152, -80]
+        },
+        {
+          "coords": [158, -86],
+          "name": "Rathaus Neukölln",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -92],
+          "name": "Karl-Marx-Straße",
+          "labelPos": "NE"
         }
       ]
     },
