@@ -493,8 +493,8 @@
         .attr('stroke-width', lineWidth * 1.4)
         .style("stroke-linecap", "round")
         .style("stroke-dasharray", function(d) {
-          var dotted_values = d.dotted ? ("40, 55") : ("0, 0")
-          return dotted_values
+          var dashed_values = d.dashed ? ("40, 55") : ("0, 0")
+          return dashed_values
         })
         .classed('line', true);
     }
@@ -728,7 +728,7 @@
         var lineObj = {
           name: line.name,
           title: line.label,
-          dotted: line.hasOwnProperty("dotted") && line.dotted ? true : false,
+          dashed: line.hasOwnProperty("dashed") && line.dashed ? true : false,
           stations: [],
           color: line.color,
           shiftCoords: line.shiftCoords,

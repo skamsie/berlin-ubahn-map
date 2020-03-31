@@ -1439,6 +1439,96 @@
         "lat": 52.5252819,
         "lon": 13.3701242
       }
+    },
+    "Neukölln": {
+      "id": 3865616067,
+      "name": "Neukölln",
+      "label": "Neukölln",
+      "position": {
+        "lat": 52.4685956,
+        "lon": 13.4418203
+      }
+    },
+    "Grenzallee": {
+      "id": 3851450060,
+      "name": "Grenzallee",
+      "label": "Grenzallee",
+      "position": {
+        "lat": 52.4628825,
+        "lon": 13.4447716
+      }
+    },
+    "Blaschkoallee": {
+      "id": 3959389239,
+      "name": "Blaschkoallee",
+      "label": "Blaschkoallee",
+      "position": {
+        "lat": 52.4520801,
+        "lon": 13.4492022
+      }
+    },
+    "Parchimer Allee": {
+      "id": 5171026799,
+      "name": "Parchimer Allee",
+      "label": "Parchimer Allee",
+      "position": {
+        "lat": 52.4447743,
+        "lon": 13.4495999
+      }
+    },
+    "Britz-Süd": {
+      "id": 3856551765,
+      "name": "Britz-Süd",
+      "label": "Britz-Süd",
+      "position": {
+        "lat": 52.4377918,
+        "lon": 13.4481868
+      }
+    },
+    "Johannisthaler Chaussee": {
+      "id": 3856551767,
+      "name": "Johannisthaler Chaussee",
+      "label": "Johannisthaler Chaussee",
+      "position": {
+        "lat": 52.4293213,
+        "lon": 13.4533376
+      }
+    },
+    "Lipschitzallee": {
+      "id": 3856551769,
+      "name": "Lipschitzallee",
+      "label": "Lipschitzallee",
+      "position": {
+        "lat": 52.4246425,
+        "lon": 13.4626984
+      }
+    },
+    "Wutzkyallee": {
+      "id": 6555763842,
+      "name": "Wutzkyallee",
+      "label": "Wutzkyallee",
+      "position": {
+        "lat": 52.4233264,
+        "lon": 13.4745668
+      }
+    },
+    "Zwickauer Damm": {
+      "id": 3856551777,
+      "name": "Zwickauer Damm",
+      "label": "Zwickauer Damm",
+      "position": {
+        "lat": 52.4233803,
+        "lon": 13.4839403
+      }
+    },
+    "Rudow": {
+      "id": 3856551771,
+      "name": "Rudow",
+      "label": "Rudow",
+      "position": {
+        "lat": 52.41617,
+        "lon": 13.4953978
+      }
     }
   },
 
@@ -1472,7 +1562,7 @@
       "name": "U5-U55",
       "label": "U5-U55",
       "color": "#993301",
-      "dotted": true,
+      "dashed": true,
       "shiftCoords": [0, 0],
       "nodes": [
         {
@@ -2412,6 +2502,63 @@
           "coords": [164, -92],
           "name": "Karl-Marx-Straße",
           "labelPos": "NE"
+        },
+        {
+          "coords": [164, -98],
+          "name": "Neukölln",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -104],
+          "name": "Grenzallee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -110],
+          "name": "Blaschkoallee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -116],
+          "name": "Parchimer Allee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -122],
+          "name": "Britz-Süd",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -128],
+          "name": "Johannisthaler Chaussee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [164, -130]
+        },
+        {
+          "coords": [165, -132]
+        },
+        {
+          "coords": [168, -135],
+          "name": "Lipschitzallee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [173, -140],
+          "name": "Wutzkyallee",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [178, -145],
+          "name": "Zwickauer Damm",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [183, -150],
+          "name": "Rudow",
+          "labelPos": "NE",
+          "labelBold": true
         }
       ]
     },
