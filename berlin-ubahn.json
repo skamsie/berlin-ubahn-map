@@ -1007,6 +1007,33 @@
         "lat": 52.4961755,
         "lon": 13.3431855
       }
+    },
+    "Boddinstraße": {
+      "id": 3846415853,
+      "name": "Boddinstraße",
+      "label": "Boddinstraße",
+      "position": {
+        "lat": 52.4801685,
+        "lon": 13.425281
+      }
+    },
+    "Leinestraße": {
+      "id": 3846471665,
+      "name": "Leinestraße",
+      "label": "Leinestraße",
+      "position": {
+        "lat": 52.4729787,
+        "lon": 13.4283545
+      }
+    },
+    "Hermannstraße": {
+      "id": 31048718,
+      "name": "Hermannstraße",
+      "label": "Hermannstraße",
+      "position": {
+        "lat": 52.4672622,
+        "lon": 13.4314659
+      }
     }
   },
 
@@ -1073,21 +1100,21 @@
           "labelBold": true
         },
         {
-          "coords": [151, -60],
+          "coords": [152, -60],
           "name": "Görlitzer Bahnhof",
           "labelPos": "NE",
           "labelAngle": -45,
           "stationSymbol": "double"
         },
         {
-          "coords": [161, -60],
+          "coords": [164, -60],
           "name": "Schlesisches Tor",
           "labelPos": "NE",
           "labelAngle": -45,
           "stationSymbol": "double"
         },
         {
-          "coords": [171, -60],
+          "coords": [176, -60],
           "name": "Warschauer Straße",
           "labelPos": "NE",
           "labelAngle": -45,
@@ -1271,19 +1298,19 @@
           "stationSymbol": false
         },
         {
-          "coords": [151, -62],
+          "coords": [152, -62],
           "name": "Görlitzer Bahnhof 2",
           "labelPos": "NE",
           "stationSymbol": false
         },
         {
-          "coords": [161, -62],
+          "coords": [164, -62],
           "name": "Schlesisches Tor 2",
           "labelPos": "NE",
           "stationSymbol": false
         },
         {
-          "coords": [171, -62],
+          "coords": [176, -62],
           "name": "Warschauer Straße 2",
           "labelPos": "NE",
           "stationSymbol": false
@@ -1562,42 +1589,42 @@
           "labelBold": true
         },
         {
-          "coords": [101, -82],
+          "coords": [101, -86],
           "name": "Platz der Luftbrücke",
           "labelPos": "E"
         },
         {
-          "coords": [101, -88],
+          "coords": [101, -92],
           "name": "Paradestraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -94],
+          "coords": [101, -98],
           "name": "Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -100],
+          "coords": [101, -104],
           "name": "Alt-Tempelhof",
           "labelPos": "E"
         },
         {
-          "coords": [101, -106],
+          "coords": [101, -110],
           "name": "Kaiserin-Augusta-Straße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -112],
+          "coords": [101, -116],
           "name": "Ullsteinstraße",
           "labelPos": "E"
         },
         {
-          "coords": [101, -118],
+          "coords": [101, -122],
           "name": "Westphalweg",
           "labelPos": "E"
         },
         {
-          "coords": [101, -124],
+          "coords": [101, -128],
           "name": "Alt Mariendorf",
           "labelPos": "E",
           "labelBold": true
@@ -1776,12 +1803,28 @@
         {
           "coords": [137, -70],
           "name": "Schönleinstraße",
-          "labelPos": "NE"
+          "labelPos": "E"
         },
         {
           "coords": [137, -79],
           "name": "Hermannplatz",
           "labelPos": "NE",
+          "labelBold": true
+        },
+        {
+          "coords": [137, -86],
+          "name": "Boddinstraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [137, -92],
+          "name": "Leinestraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [137, -98],
+          "name": "Hermannstraße",
+          "labelPos": "E",
           "labelBold": true
         }
       ]
