@@ -490,13 +490,13 @@
           return d.color;
         })
         .attr('fill', 'none')
-        .attr('stroke-width', lineWidth * 1.5)
+        .attr('stroke-width', lineWidth * 1.4)
         //.style("stroke-linecap", "round")
         //.style("stroke-dasharray", ("60, 60"))
         .classed('line', true);
     }
 
-    function drawLongStations(stationSymbol) {
+    function drawLongStations() {
       var fgColor = '#000000';
       var bgColor = '#ffffff';
 

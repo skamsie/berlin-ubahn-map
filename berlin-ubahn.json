@@ -1061,6 +1061,177 @@
         "lat": 52.4903665,
         "lon": 13.3602198
       }
+    },
+    "Turmstraße": {
+      "id": 4440948591,
+      "name": "Turmstraße",
+      "label": "Turmstraße",
+      "position": {
+        "lat": 52.5261489,
+        "lon": 13.3412971
+      }
+    },
+    "Zoologischer Garten": {
+      "id": 29046450,
+      "name": "Zoologischer Garten",
+      "label": "Zoologischer Garten",
+      "position": {
+        "lat": 52.5058669,
+        "lon": 13.3330236
+      }
+    },
+    "Hansaplatz": {
+      "id": 3957897529,
+      "name": "Hansaplatz",
+      "label": "Hansaplatz",
+      "position": {
+        "lat": 52.518008,
+        "lon": 13.3420365
+      }
+    },
+    "Kurfürstendamm": {
+      "id": 29046970,
+      "name": "Kurfürstendamm",
+      "label": "Kurfürsten-\ndamm",
+      "position": {
+        "lat": 52.5038223,
+        "lon": 13.3314365
+      }
+    },
+    "Augsburger Straße": {
+      "id": 5162689183,
+      "name": "Augsburger Straße",
+      "label": "Augsburger Straße",
+      "position": {
+        "lat": 52.5004423,
+        "lon": 13.3364644
+      }
+    },
+    "Spichernstraße": {
+      "id": 5162689571,
+      "name": "Spichernstraße",
+      "label": "Spichernstraße",
+      "position": {
+        "lat": 52.4964453,
+        "lon": 13.3310091
+      }
+    },
+    "Uhlandstraße": {
+      "id": 3957757603,
+      "name": "Uhlandstraße",
+      "label": "Uhlandstraße",
+      "position": {
+        "lat": 52.5028118,
+        "lon": 13.3266968
+      }
+    },
+    "Bayerischer Platz": {
+      "id": 29833469,
+      "name": "Bayerischer Platz",
+      "label": "Bayerischer\nPlatz",
+      "position": {
+        "lat": 52.4885755,
+        "lon": 13.3405436
+      }
+    },
+    "Eisenacher Straße": {
+      "id": 76474606,
+      "name": "Eisenacher Straße",
+      "label": "Eisenacher Straße",
+      "position": {
+        "lat": 52.4895529,
+        "lon": 13.3501694
+      }
+    },
+    "Hohenzollernplatz": {
+      "id": 5162689220,
+      "name": "Hohenzollernplatz",
+      "label": "Hohenzollernplatz",
+      "position": {
+        "lat": 52.4940847,
+        "lon": 13.3247547
+      }
+    },
+    "Fehrbelliner Platz": {
+      "id": 5162689572,
+      "name": "Fehrbelliner Platz",
+      "label": "Fehrbelliner Platz",
+      "position": {
+        "lat": 52.4905442,
+        "lon": 13.3151361
+      }
+    },
+    "Berliner Straße": {
+      "id": 29046979,
+      "name": "Berliner Straße",
+      "label": "Berliner Straße",
+      "position": {
+        "lat": 52.4873298,
+        "lon": 13.3310103
+      }
+    },
+    "Güntzelstraße": {
+      "id": 29046976,
+      "name": "Güntzelstraße",
+      "label": "Güntzelstraße",
+      "position": {
+        "lat": 52.4920843,
+        "lon": 13.3310064
+      }
+    },
+    "Bundesplatz": {
+      "id": 5324318370,
+      "name": "Bundesplatz",
+      "label": "Bundesplatz",
+      "position": {
+        "lat": 52.4776476,
+        "lon": 13.3285001
+      }
+    },
+    "Blissestraße": {
+      "id": 3959653399,
+      "name": "Blissestraße",
+      "label": "Blissestraße",
+      "position": {
+        "lat": 52.4864895,
+        "lon": 13.3205449
+      }
+    },
+    "Friedrich-Wilhelm-Platz": {
+      "id": 29046999,
+      "name": "Friedrich-Wilhelm-Platz",
+      "label": "Friedrich-Wilhelm-Platz",
+      "position": {
+        "lat": 52.4721217,
+        "lon": 13.3287301
+      }
+    },
+    "Walther-Schreiber-Platz": {
+      "id": 29047043,
+      "name": "Walther-Schreiber-Platz",
+      "label": "Walther-Schreiber-Platz",
+      "position": {
+        "lat": 52.4653254,
+        "lon": 13.3282601
+      }
+    },
+    "Schloßstraße": {
+      "id": 29047045,
+      "name": "Schloßstraße",
+      "label": "Schloßstraße",
+      "position": {
+        "lat": 52.461481,
+        "lon": 13.3250946
+      }
+    },
+    "Rathaus Steglitz": {
+      "id": 29047047,
+      "name": "Rathaus Steglitz",
+      "label": "Rathaus Steglitz",
+      "position": {
+        "lat": 52.4568021,
+        "lon": 13.3209192
+      }
     }
   },
 
@@ -1072,7 +1243,20 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [24, -60],
+          "coords": [-12, -60],
+          "name": "Uhlandstraße",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45
+        },
+        {
+          "coords": [6, -60],
+          "name": "Kurfürstendamm",
+          "labelPos": "SW",
+          "labelBold": true
+        },
+        {
+          "coords": [25, -60],
           "name": "Wittenbergplatz",
           "labelPos": "NE",
           "labelBold": true,
@@ -1156,13 +1340,133 @@
       ]
     },
     {
+      "name": "U3",
+      "label": "U3",
+      "color": "#008280",
+      "shiftCoords": [0, 0],
+      "nodes": [
+        {
+          "coords": [-8, -89],
+          "name": "Fehrbelliner Platz",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-1, -82],
+          "name": "Hohenzollernplatz",
+          "labelPos": "NW",
+          "labelAngle": 45
+        },
+        {
+          "coords": [6, -75],
+          "name": "Spichernstraße",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [12, -69],
+          "name": "Augsburger Straße",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [18, -63]
+        },
+        {
+          "coords": [20, -62]
+        },
+        {
+          "coords": [25, -62],
+          "name": "Wittenbergplatz 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45,
+          "stationSymbol": false
+        },
+        {
+          "coords": [36, -62],
+          "name": "Nollendorfplatz 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelAngle": -45,
+          "stationSymbol": false
+        },
+        {
+          "coords": [48, -62],
+          "name": "Kurfürstenstraße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [61, -62],
+          "name": "Gleisdreieck 2",
+          "labelPos": "E",
+          "stationSymbol": false
+        },
+        {
+          "coords": [90, -62],
+          "name": "Möckernbrücke 2",
+          "labelPos": "N",
+          "labelBold": true,
+          "stationSymbol": false
+        },
+        {
+          "coords": [101, -62],
+          "name": "Hallesches Tor 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [119, -62],
+          "name": "Prinzenstraße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [137, -62],
+          "name": "Kottbusser Tor 2",
+          "labelPos": "NE",
+          "labelBold": true,
+          "stationSymbol": false
+        },
+        {
+          "coords": [152, -62],
+          "name": "Görlitzer Bahnhof 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [164, -62],
+          "name": "Schlesisches Tor 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        },
+        {
+          "coords": [176, -62],
+          "name": "Warschauer Straße 2",
+          "labelPos": "NE",
+          "stationSymbol": false
+        }
+      ]
+    },
+    {
       "name": "U2",
       "label": "U2",
       "color": "#ff0000",
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [24, -64],
+          "coords": [6, -51],
+          "name": "Zoologischer Garten",
+          "labelPos": "E",
+          "labelBold": true,
+          "labelShiftCoords": [1, 0]
+        },
+        {
+          "coords": [18, -63]
+        },
+        {
+          "coords": [20, -64]
+        },
+        {
+          "coords": [25, -64],
           "name": "Wittenbergplatz 3",
           "labelPos": "NE",
           "labelBold": true,
@@ -1290,86 +1594,6 @@
       ]
     },
     {
-      "name": "U3",
-      "label": "U3",
-      "color": "#008280",
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [24, -62],
-          "name": "Wittenbergplatz 2",
-          "labelPos": "NE",
-          "labelBold": true,
-          "labelAngle": -45,
-          "stationSymbol": false
-        },
-        {
-          "coords": [36, -62],
-          "name": "Nollendorfplatz 2",
-          "labelPos": "NE",
-          "labelBold": true,
-          "labelAngle": -45,
-          "stationSymbol": false
-        },
-        {
-          "coords": [48, -62],
-          "name": "Kurfürstenstraße 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [61, -62],
-          "name": "Gleisdreieck 2",
-          "labelPos": "E",
-          "stationSymbol": false
-        },
-        {
-          "coords": [90, -62],
-          "name": "Möckernbrücke 2",
-          "labelPos": "N",
-          "labelBold": true,
-          "stationSymbol": false
-        },
-        {
-          "coords": [101, -62],
-          "name": "Hallesches Tor 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [119, -62],
-          "name": "Prinzenstraße 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [137, -62],
-          "name": "Kottbusser Tor 2",
-          "labelPos": "NE",
-          "labelBold": true,
-          "stationSymbol": false
-        },
-        {
-          "coords": [152, -62],
-          "name": "Görlitzer Bahnhof 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [164, -62],
-          "name": "Schlesisches Tor 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        },
-        {
-          "coords": [176, -62],
-          "name": "Warschauer Straße 2",
-          "labelPos": "NE",
-          "stationSymbol": false
-        }
-      ]
-    },
-    {
       "name": "U4",
       "label": "U4",
       "color": "#feff00",
@@ -1382,9 +1606,16 @@
           "stationSymbol": false
         },
         {
-          "coords": [36, -76],
+          "coords": [36, -78],
           "name": "Viktoria-Luise-Platz",
           "labelPos": "E"
+        },
+        {
+          "coords": [36, -89],
+          "name": "Bayerischer Platz",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelShiftCoords": [0, 2]
         }
       ]
     },
@@ -1691,6 +1922,40 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [-8, -89],
+          "name": "Fehrbelliner Platz",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-1, -89],
+          "name": "Blissestraße",
+          "labelPos": "S"
+        },
+        {
+          "coords": [6, -89],
+          "name": "Berliner Straße",
+          "labelPos": "NE",
+          "labelBold": true
+        },
+        {
+          "coords": [36, -89],
+          "name": "Bayerischer Platz",
+          "labelPos": "NE",
+          "labelBold": true,
+          "labelShiftCoords": [0, 2]
+        },
+        {
+          "coords": [47, -89],
+          "name": "Eisenacher Straße",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [59, -89]
+        },
+        {
+          "coords": [61, -88]
+        },
+        {
           "coords": [64, -85],
           "name": "Kleistpark",
           "labelPos": "SE"
@@ -1910,19 +2175,84 @@
           "name": "Leopoldplatz"
         },
         {
-          "coords": [58, 1],
+          "coords": [56, -1],
           "name": "Amrumer Straße",
           "labelPos": "NW"
         },
         {
-          "coords": [50, -7],
+          "coords": [46, -11],
           "name": "Westhafen",
           "labelPos": "NW"
         },
         {
-          "coords": [42, -15],
+          "coords": [36, -21],
           "name": "Birkenstraße",
           "labelPos": "NW"
+        },
+        {
+          "coords": [26, -31],
+          "name": "Turmstraße",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [16, -41],
+          "name": "Hansaplatz",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [6, -51],
+          "name": "Zoologischer Garten",
+          "labelPos": "E",
+          "labelBold": true,
+          "labelShiftCoords": [1, 0]
+        },
+        {
+          "coords": [6, -60],
+          "name": "Kurfürstendamm",
+          "labelPos": "SW",
+          "labelBold": true
+        },
+        {
+          "coords": [6, -75],
+          "name": "Spichernstraße",
+          "labelPos": "SE"
+        },
+        {
+          "coords": [6, -83],
+          "name": "Güntzelstraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [6, -89],
+          "name": "Berliner Straße",
+          "labelPos": "NE",
+          "labelBold": true
+        },
+        {
+          "coords": [6, -95],
+          "name": "Bundesplatz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [6, -101],
+          "name": "Friedrich-Wilhelm-Platz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [6, -107],
+          "name": "Walther-Schreiber-Platz",
+          "labelPos": "E"
+        },
+        {
+          "coords": [6, -113],
+          "name": "Schloßstraße",
+          "labelPos": "E"
+        },
+        {
+          "coords": [6, -119],
+          "name": "Rathaus Steglitz",
+          "labelPos": "E",
+          "labelBold": true
         }
       ]
     }
