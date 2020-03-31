@@ -507,7 +507,7 @@
     "Märkisches Museum": {
       "id": 4940731304,
       "name": "Märkisches Museum",
-      "label": "Märkisches\nMuseum",
+      "label": "Märki-\nsches\nMuseum",
       "position": {
         "lat": 52.5123348,
         "lon": 13.4101754
@@ -854,6 +854,78 @@
         "lat": 52.4912895,
         "lon": 13.3958247
       }
+    },
+    "Südstern": {
+      "id": 129730678,
+      "name": "Südstern",
+      "label": "Südstern",
+      "position": {
+        "lat": 52.4892983,
+        "lon": 13.4076671
+      }
+    },
+    "Schönleinstraße": {
+      "id": 3844501316,
+      "name": "Schönleinstraße",
+      "label": "Schönleinstraße",
+      "position": {
+        "lat": 52.4930552,
+        "lon": 13.4220572
+      }
+    },
+    "Hermannplatz": {
+      "id": 5171026793,
+      "name": "Hermannplatz",
+      "label": "Hermannplatz",
+      "position": {
+        "lat": 52.4862857,
+        "lon": 13.4245531
+      }
+    },
+    "Mohrenstraße": {
+      "id": 3870475231,
+      "name": "Mohrenstraße",
+      "label": "Mohrenstraße",
+      "position": {
+        "lat": 52.5117915,
+        "lon": 13.3850915
+      }
+    },
+    "Potsdamer Platz": {
+      "id": 3854591000,
+      "name": "Potsdamer Platz",
+      "label": "Potsdamer Platz",
+      "position": {
+        "lat": 52.5091586,
+        "lon": 13.3782147
+      }
+    },
+    "Mendelssohn-Bartholdy-Park": {
+      "id": 3933855820,
+      "name": "Mendelssohn-Bartholdy-Park",
+      "label": " Mendelssohn-\n Bartholdy-Park",
+      "position": {
+        "lat": 52.5039086,
+        "lon": 13.3749852
+      }
+    },
+    "Gleisdreieck": {
+      "id": 2102139395,
+      "name": "Gleisdreieck",
+      "label": "",
+      "position": {
+        "lat": 52.4995261,
+        "lon": 13.3740318
+      }
+    },
+    "Gleisdreieck 2": {
+      "id": 2102139395,
+      "name": "Gleisdreieck",
+      "label": "Gleisdreieck",
+      "position": {
+        "lat": 52.4995261,
+        "lon": 13.3740318
+      }
     }
   },
 
@@ -864,6 +936,12 @@
       "color": "#008200",
       "shiftCoords": [0, 0],
       "nodes": [
+        {
+          "coords": [59, -60],
+          "name": "Gleisdreieck",
+          "labelPos": "SE",
+          "labelBold": true
+        },
         {
           "coords": [88, -60],
           "name": "Möckernbrücke",
@@ -922,6 +1000,12 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [59, -62],
+          "name": "Gleisdreieck 2",
+          "labelPos": "SE",
+          "labelBold": true
+        },
+        {
           "coords": [88, -62],
           "name": "Möckernbrücke 2",
           "labelPos": "N",
@@ -973,6 +1057,27 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [59, -60],
+          "name": "Gleisdreieck",
+          "labelPos": "SE",
+          "labelBold": true
+        },
+        {
+          "coords": [68, -51],
+          "name": "Mendelssohn-Bartholdy-Park",
+          "labelPos": "E"
+        },
+        {
+          "coords": [74, -45],
+          "name": "Potsdamer Platz",
+          "labelPos": "NW"
+        },
+        {
+          "coords": [80, -39],
+          "name": "Mohrenstraße",
+          "labelPos": "NW"
+        },
+        {
           "coords": [101, -39],
           "name": "Stadtmitte",
           "labelPos": "NW",
@@ -1005,41 +1110,38 @@
           "labelPos": "NW"
         },
         {
-          "coords": [129, -30]
-        },
-        {
-          "coords": [129, -26],
+          "coords": [128, -26],
           "name": "Alexanderplatz",
           "labelPos": "W",
           "labelBold": true
         },
         {
-          "coords": [129, -10],
+          "coords": [128, -10],
           "name": "Rosa-Luxemburg-Platz",
           "labelPos": "E"
         },
         {
-          "coords": [129, -2],
+          "coords": [128, -2],
           "name": "Senefelderplatz",
           "labelPos": "E"
         },
         {
-          "coords": [129, 6],
+          "coords": [128, 6],
           "name": "Eberswalder Straße",
           "labelPos": "E"
         },
         {
-          "coords": [129, 14],
+          "coords": [128, 14],
           "name": "Schönhauser Allee",
           "labelPos": "E"
         },
         {
-          "coords": [129, 22],
+          "coords": [128, 22],
           "name": "Vinetastraße",
           "labelPos": "E"
         },
         {
-          "coords": [129, 30],
+          "coords": [128, 30],
           "name": "Pankow",
           "labelPos": "E",
           "labelBold": true
@@ -1053,121 +1155,121 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [129, -26],
+          "coords": [128, -25],
           "name": "Alexanderplatz",
           "labelPos": "W",
           "labelBold": true
         },
         {
-          "coords": [136, -26],
+          "coords": [137, -25],
           "name": "Schillingstraße",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [143, -26],
+          "coords": [144, -25],
           "name": "Strausberger Platz",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [150, -26],
+          "coords": [151, -25],
           "name": "Weberwiese",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [157, -26],
+          "coords": [158, -25],
           "name": "Frankfurter Tor",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [164, -26],
+          "coords": [165, -25],
           "name": "Samariterstraße",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [171, -26],
+          "coords": [172, -25],
           "name": "Frankfurter Allee",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [178, -26],
+          "coords": [179, -25],
           "name": "Magdalenenstraße",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [185, -26],
+          "coords": [186, -25],
           "name": "Lichtenberg",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [192, -26],
+          "coords": [193, -25],
           "name": "Friedrichsfelde",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [199, -26],
+          "coords": [200, -25],
           "name": "Tierpark",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [206, -26],
+          "coords": [207, -25],
           "name": "Biesdorf-Süd",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [213, -26],
+          "coords": [214, -25],
           "name": "Elsterwerdaer Platz",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [220, -26],
+          "coords": [221, -25],
           "name": "Wuhletal",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [227, -26],
+          "coords": [228, -25],
           "name": "Kaulsdorf-Nord",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [234, -26],
+          "coords": [235, -25],
           "name": "Kienberg (Gärten der Welt)",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [241, -26],
+          "coords": [242, -25],
           "name": "Cottbusser Platz",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [248, -26],
+          "coords": [249, -25],
           "name": "Hellersdorf",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [255, -26],
+          "coords": [256, -25],
           "name": "Louis-Lewin-Straße",
           "labelPos": "NE",
           "labelAngle": -45
         },
         {
-          "coords": [262, -26],
+          "coords": [263, -25],
           "name": "Hönow",
           "labelPos": "NE",
           "labelAngle": -45,
@@ -1376,6 +1478,18 @@
           "name": "Gneisenaustraße",
           "labelPos": "NE",
           "labelAngle": -45
+        },
+        {
+          "coords": [126, -79],
+          "name": "Südstern",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [137, -79],
+          "name": "Hermannplatz",
+          "labelPos": "NE",
+          "labelBold": true
         }
       ]
     },
@@ -1458,16 +1572,13 @@
           "labelPos": "SW"
         },
         {
-          "coords": [129, -26],
+          "coords": [128, -25],
           "name": "Alexanderplatz",
           "labelPos": "W",
           "labelBold": true
         },
         {
-          "coords": [136, -33]
-        },
-        {
-          "coords": [137, -35],
+          "coords": [137, -34],
           "name": "Jannowitzbrücke",
           "labelPos": "E"
         },
@@ -1487,6 +1598,17 @@
           "labelPos": "NE",
           "labelBold": true,
           "stationSymbol": "double"
+        },
+        {
+          "coords": [137, -70],
+          "name": "Schönleinstraße",
+          "labelPos": "NE"
+        },
+        {
+          "coords": [137, -79],
+          "name": "Hermannplatz",
+          "labelPos": "NE",
+          "labelBold": true
         }
       ]
     },
