@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="./tubeMap.css" />
     <script src="d3.v5.js"></script>
     <script src="d3-tube-map.js"></script>
+    <script src="check_mobile.js"></script>
 
     <meta charset="utf-8"/>
 
@@ -16,20 +17,16 @@
   <body>
     <div id="tube-map"></div>
     <script>
+      var isMobile = window.mobileAndTabletcheck()
       var container = d3.select('#tube-map');
-      var width = 10000;
-      var height = 6000;
+
+      var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
+      var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
       var map = d3
         .tubeMap()
         .width(width)
         .height(height)
-        .margin({
-          top: 20,
-          right: 20,
-          bottom: 40,
-          left: 100,
-        })
         .on('click', function(name) {
           console.log(name);
         });
@@ -41,12 +38,12 @@
 
         zoom = d3
           .zoom()
-          .scaleExtent([0.1, 0.7])
+          .scaleExtent([0.7, 5])
           .on('zoom', zoomed);
 
         var zoomContainer = svg.call(zoom);
-        var initialScale = 0.28;
-        var initialTranslate = [3000, 0];
+        var initialScale = 1;
+        var initialTranslate = [0, height / 25];
 
         zoom.scaleTo(zoomContainer, initialScale);
         zoom.translateTo(

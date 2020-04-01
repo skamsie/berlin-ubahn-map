@@ -493,7 +493,8 @@
         .attr('stroke-width', lineWidth * 1.4)
         .style("stroke-linecap", "round")
         .style("stroke-dasharray", function(d) {
-          var dashed_values = d.dashed ? ("40, 55") : ("0, 0")
+          var spaces = lineWidth * 2.7
+          var dashed_values = d.dashed ? (spaces, spaces + lineWidth) : (0, 0)
           return dashed_values
         })
         .classed('line', true);
@@ -510,15 +511,12 @@
         .enter()
         .append('g')
         .append('rect')
-        .attr("rx", 14)
-        .attr("ry", 14)
+        .attr("rx", lineWidth)
+        .attr("ry", lineWidth)
         .attr('width', lineWidth * 2.4)
         .attr('height', function(d) {
-          if (d.stationSymbol === 'double') {
-            return (2.6 * lineWidth * 2) - (lineWidthTickRatio * 2)
-          } else {
-            return (2.7 * lineWidth * 3) - (lineWidthTickRatio * 3)
-          }
+          var multiplier = d.stationSymbol === 'double' ? 5 : 8
+          return lineWidth * multiplier
         })
         .attr('stroke-width', lineWidth / 4)
         .attr('id', function(d) {

@@ -29,6 +29,10 @@ body {
   overflow: hidden;
 }
 
+#tube-map {
+  background-color: "#F9F9FA";
+}
+
 text {
   font-family: 'M+ 2p', sans-serif;
   font-size: 14px;
