@@ -1326,7 +1326,7 @@
     "Sophie-Charlotte-Platz": {
       "id": 3900580952,
       "name": "Sophie-Charlotte-Platz",
-      "label": "Sophie-Charlotte-Platz",
+      "label": "Sophie-Charlotte-\nPlatz",
       "position": {
         "lat": 52.5109137,
         "lon": 13.2963306
@@ -1628,6 +1628,51 @@
         "lat": 52.4434481,
         "lon": 13.2413921
       }
+    },
+    "Kaiserdamm": {
+      "id": 316021790,
+      "name": "Kaiserdamm",
+      "label": "Kaiserdamm",
+      "position": {
+        "lat": 52.5100921,
+        "lon": 13.2831263
+      }
+    },
+    "Theodor-Heuss-Platz": {
+      "id": 29123754,
+      "name": "Theodor-Heuss-Platz",
+      "label": "Theodor-Heuss-Platz",
+      "position": {
+        "lat": 52.5099869,
+        "lon": 13.2722217
+      }
+    },
+    "Neu-Westend": {
+      "id": 29123761,
+      "name": "Neu-Westend",
+      "label": "Neu-Westend",
+      "position": {
+        "lat": 52.5162154,
+        "lon": 13.2592357
+      }
+    },
+    "Olympia-Stadion": {
+      "id": 5713678268,
+      "name": "Olympia-Stadion",
+      "label": "Olympia-Stadion",
+      "position": {
+        "lat": 52.5168643,
+        "lon": 13.2504479
+      }
+    },
+    "Ruhleben": {
+      "id": 27586255,
+      "name": "Ruhleben",
+      "label": "Ruhleben",
+      "position": {
+        "lat": 52.5256744,
+        "lon": 13.2414191
+      }
     }
   },
 
@@ -1795,17 +1840,20 @@
           "coords": [-53, -134],
           "name": "Krumme Lanke",
           "labelPos": "W",
-          "labelBold": true
+          "labelBold": true,
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-48, -129],
           "name": "Onkel Toms Hütte",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-43, -124],
           "name": "Oskar-Helene-Heim",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-38, -119],
@@ -1816,27 +1864,33 @@
         {
           "coords": [-33, -114],
           "name": "Dahlem-Dorf",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-28, -109],
           "name": "Podbielskiallee",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
+
         },
         {
           "coords": [-23, -104],
           "name": "Breitenbachplatz",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-18, -99],
           "name": "Rüdesheimer Platz",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-13, -94],
           "name": "Heidelberger Platz",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.5, 0]
         },
         {
           "coords": [-8, -89],
@@ -1948,11 +2002,42 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [-43, -41],
-          "name": "Sophie-Charlotte-Platz",
+          "coords": [-86, -41],
+          "name": "Ruhleben",
           "labelPos": "NE",
           "labelBold": true,
           "labelAngle": -45
+        },
+        {
+          "coords": [-77, -41],
+          "name": "Olympia-Stadion",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [-68, -41],
+          "name": "Neu-Westend",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [-59, -41],
+          "name": "Theodor-Heuss-Platz",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [-50, -41],
+          "name": "Kaiserdamm",
+          "labelPos": "NE",
+          "labelAngle": -45
+        },
+        {
+          "coords": [-41, -41],
+          "name": "Sophie-Charlotte-Platz",
+          "labelPos": "NE",
+          "labelAngle": -45,
+          "labelShiftCoords": [0.5, 0.5]
         },
         {
           "coords": [-22, -41],
@@ -2881,7 +2966,9 @@
         },
         {
           "coords": [66, 9],
-          "name": "Leopoldplatz"
+          "name": "Leopoldplatz",
+          "labelPos": "E",
+          "labelBold": true
         },
         {
           "coords": [56, -1],
