@@ -1529,6 +1529,105 @@
         "lat": 52.41617,
         "lon": 13.4953978
       }
+    },
+    "Rathaus Schöneberg": {
+      "id": 5134482957,
+      "name": "Rathaus Schöneberg",
+      "label": "Rathaus Schöneberg",
+      "position": {
+        "lat": 52.4831773,
+        "lon": 13.341972
+      }
+    },
+    "Innsbrucker Platz": {
+      "id": 29497638,
+      "name": "Innsbrucker Platz",
+      "label": "Innsbrucker Platz",
+      "position": {
+        "lat": 52.478987,
+        "lon": 13.3436736
+      }
+    },
+    "Heidelberger Platz": {
+      "id": 5162689184,
+      "name": "Heidelberger Platz",
+      "label": "Heidelberger Platz",
+      "position": {
+        "lat": 52.4797961,
+        "lon": 13.3128835
+      }
+    },
+    "Rüdesheimer Platz": {
+      "id": 5149137347,
+      "name": "Rüdesheimer Platz",
+      "label": "Rüdesheimer Platz",
+      "position": {
+        "lat": 52.4732464,
+        "lon": 13.314415
+      }
+    },
+    "Breitenbachplatz": {
+      "id": 3959895235,
+      "name": "Breitenbachplatz",
+      "label": "Breitenbachplatz",
+      "position": {
+        "lat": 52.4670266,
+        "lon": 13.3088711
+      }
+    },
+    "Podbielskiallee": {
+      "id": 5160531362,
+      "name": "Podbielskiallee",
+      "label": "Podbielskiallee",
+      "position": {
+        "lat": 52.4641033,
+        "lon": 13.2957519
+      }
+    },
+    "Dahlem-Dorf": {
+      "id": 3846748389,
+      "name": "Dahlem-Dorf",
+      "label": "Dahlem-Dorf",
+      "position": {
+        "lat": 52.4574096,
+        "lon": 13.2897049
+      }
+    },
+    "Freie Universität (Thielplatz)": {
+      "id": 3955368095,
+      "name": "Freie Universität (Thielplatz)",
+      "label": "Freie Universität\n(Thielplatz)",
+      "position": {
+        "lat": 52.4510388,
+        "lon": 13.281744
+      }
+    },
+    "Oskar-Helene-Heim": {
+      "id": 3955368093,
+      "name": "Oskar-Helene-Heim",
+      "label": "Oskar-Helene-Heim",
+      "position": {
+        "lat": 52.4503608,
+        "lon": 13.2690711
+      }
+    },
+    "Onkel Toms Hütte": {
+      "id": 3955368088,
+      "name": "Onkel Toms Hütte",
+      "label": "Onkel Toms Hütte",
+      "position": {
+        "lat": 52.4498912,
+        "lon": 13.2530752
+      }
+    },
+    "Krumme Lanke": {
+      "id": 3872477458,
+      "name": "Krumme Lanke",
+      "label": "Krumme Lanke",
+      "position": {
+        "lat": 52.4434481,
+        "lon": 13.2413921
+      }
     }
   },
 
@@ -1693,9 +1792,58 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [-53, -134],
+          "name": "Krumme Lanke",
+          "labelPos": "W",
+          "labelBold": true
+        },
+        {
+          "coords": [-48, -129],
+          "name": "Onkel Toms Hütte",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-43, -124],
+          "name": "Oskar-Helene-Heim",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-38, -119],
+          "name": "Freie Universität (Thielplatz)",
+          "labelPos": "W",
+          "labelShiftCoords": [-1, 1]
+        },
+        {
+          "coords": [-33, -114],
+          "name": "Dahlem-Dorf",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-28, -109],
+          "name": "Podbielskiallee",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-23, -104],
+          "name": "Breitenbachplatz",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-18, -99],
+          "name": "Rüdesheimer Platz",
+          "labelPos": "W"
+        },
+        {
+          "coords": [-13, -94],
+          "name": "Heidelberger Platz",
+          "labelPos": "W"
+        },
+        {
           "coords": [-8, -89],
           "name": "Fehrbelliner Platz",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelBold": true,
+          "labelShiftCoords": [-1, 0]
         },
         {
           "coords": [-1, -82],
@@ -1803,6 +1951,7 @@
           "coords": [-43, -41],
           "name": "Sophie-Charlotte-Platz",
           "labelPos": "NE",
+          "labelBold": true,
           "labelAngle": -45
         },
         {
@@ -1974,7 +2123,7 @@
           "stationSymbol": false
         },
         {
-          "coords": [36, -78],
+          "coords": [36, -77],
           "name": "Viktoria-Luise-Platz",
           "labelPos": "E"
         },
@@ -1984,6 +2133,17 @@
           "labelPos": "NE",
           "labelBold": true,
           "labelShiftCoords": [0, 2]
+        },
+        {
+          "coords": [36, -98],
+          "name": "Rathaus Schöneberg",
+          "labelPos": "E"
+        },
+        {
+          "coords": [36, -107],
+          "name": "Innsbrucker Platz",
+          "labelPos": "E",
+          "labelBold":true
         }
       ]
     },
@@ -2394,7 +2554,9 @@
         {
           "coords": [-8, -89],
           "name": "Fehrbelliner Platz",
-          "labelPos": "W"
+          "labelPos": "W",
+          "labelBold": true,
+          "labelShiftCoords": [-1, 0]
         },
         {
           "coords": [-1, -89],
