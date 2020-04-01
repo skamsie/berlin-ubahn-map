@@ -1735,7 +1735,12 @@
           "name": "Uhlandstraße",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle": -45
+          "labelAngle": -45,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U1.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -4.5,
+          "lineLabelShiftY": 2.2
         },
         {
           "coords": [6, -60],
@@ -1826,7 +1831,12 @@
           "labelPos": "NE",
           "labelAngle": -45,
           "labelBold": true,
-          "stationSymbol": "double"
+          "stationSymbol": "double",
+          "lineLabel": true,
+          "lineLabelPath": "labels/U1.svg",
+          "lineLabelPos": "E",
+          "lineLabelShiftX": 1,
+          "lineLabelShiftY": 2.4
         }
       ]
     },
@@ -1841,7 +1851,12 @@
           "name": "Krumme Lanke",
           "labelPos": "W",
           "labelBold": true,
-          "labelShiftCoords": [-0.5, 0]
+          "labelShiftCoords": [-0.5, 0],
+          "lineLabel": true,
+          "lineLabelPath": "labels/U3.svg",
+          "lineLabelPos": "E",
+          "lineLabelShiftX": 1,
+          "lineLabelShiftY": 1.6
         },
         {
           "coords": [-48, -129],
@@ -1991,7 +2006,12 @@
           "coords": [176, -62],
           "name": "Warschauer Straße 2",
           "labelPos": "NE",
-          "stationSymbol": false
+          "stationSymbol": false,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U3.svg",
+          "lineLabelPos": "E",
+          "lineLabelShiftX": 1,
+          "lineLabelShiftY": 1.6
         }
       ]
     },
@@ -2372,7 +2392,12 @@
           "coords": [30, 45],
           "name": "Alt-Tegel",
           "labelPos": "W",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U6.svg",
+          "lineLabelPos": "N",
+          "lineLabelShiftX": -2,
+          "lineLabelShiftY": 3
         },
         {
           "coords": [34, 41],
@@ -2527,7 +2552,12 @@
           "coords": [101, -128],
           "name": "Alt Mariendorf",
           "labelPos": "E",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U6.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -4.5,
+          "lineLabelShiftY": 2
         }
       ]
     },

@@ -319,6 +319,14 @@
     return stations;
   };
 
+  Stations.prototype.labeledStations = function() {
+    var doubles = this.toArray();
+
+    return doubles.filter(function(station) {
+      return station.lineLabel === true
+    });
+  };
+
   Stations.prototype.longStations = function() {
     var doubles = this.toArray();
 
@@ -428,8 +436,9 @@
 
         drawLines();
         drawStations();
-        drawLabels();
         drawLongStations();
+        drawLineLabels();
+        drawLabels();
       });
     }
 
@@ -587,6 +596,30 @@
         .style('cursor', 'pointer');
     }
 
+    function drawLineLabels() {
+      gMap
+        .selectAll('image')
+        .data(_data.stations.labeledStations())
+        .enter()
+        .append('g')
+        .attr('id', function(d) {
+          return d.name;
+        })
+        .append('image')
+        .attr('xlink:href', function(d) {
+          return d.lineLabelPath;
+        })
+        .attr('width', lineWidth * 6)
+        .attr('height', lineWidth * 6)
+        .attr('dy', 0)
+        .attr('x', function(d) {
+          return xScale(d.x + d.lineLabelShiftX) + lineLabelPos(d).pos[0];
+        })
+        .attr('y', function(d) {
+          return yScale(d.y + d.lineLabelShiftY) - lineLabelPos(d).pos[1];
+        })
+    }
+
     function drawLabels() {
       gMap
         .append('g')
@@ -670,21 +703,17 @@
           station.labelBold = d.hasOwnProperty('labelBold') ? d.labelBold : false
           station.stationSymbol = d.hasOwnProperty('stationSymbol') ? d.stationSymbol : 'single'
 
-          if (station.labelPos === undefined) {
-            station.labelPos = d.labelPos;
-            station.labelShiftX = d.hasOwnProperty('labelShiftCoords')
-              ? d.labelShiftCoords[0]
-              : d.hasOwnProperty('shiftCoords')
-              ? d.shiftCoords[0]
-              : line.shiftCoords[0];
-            station.labelShiftY = d.hasOwnProperty('labelShiftCoords')
-              ? d.labelShiftCoords[1]
-              : d.hasOwnProperty('shiftCoords')
-              ? d.shiftCoords[1]
-              : line.shiftCoords[1];
+          if (d.lineLabel === true) {
+            station.lineLabel = true
+            station.lineLabelPos = d.lineLabelPos
+            station.lineLabelPath = d.lineLabelPath
+            station.lineLabelShiftX = d.lineLabelShiftX || 0
+            station.lineLabelShiftY = d.lineLabelShiftY || 0
+          } else {
+            station.lineLabel = false
           }
 
-          if (d.hasOwnProperty('canonical')) {
+          if (station.labelPos === undefined) {
             station.labelPos = d.labelPos;
             station.labelShiftX = d.hasOwnProperty('labelShiftCoords')
               ? d.labelShiftCoords[0]
@@ -749,6 +778,14 @@
     }
 
     function textPos(data) {
+      return itemPos(data, "labelPos")
+    }
+
+    function lineLabelPos(data) {
+      return itemPos(data, "lineLabelPos")
+    }
+
+    function itemPos(data, item) {
       var pos;
       var textAnchor;
       var alignmentBaseline;
@@ -758,7 +795,7 @@
 
       var sqrt2 = Math.sqrt(2);
 
-      switch (data.labelPos.toLowerCase()) {
+      switch (data[item].toLowerCase()) {
         case 'n':
           pos = [0, 2.1 * lineWidth * (numLines - 0.5) + offset];
           textAnchor = 'middle';
