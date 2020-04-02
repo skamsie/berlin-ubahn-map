@@ -4,24 +4,69 @@
     <script src="d3.v5.js"></script>
     <script src="d3-tube-map.js"></script>
     <script src="check_mobile.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="utf-8"/>
   </head>
 
   <body>
-    <div id="tube-map"></div>
+    <div id="container">
+      <div id="sidebar">
+        <button id="close-button">x</button>
+        <div id="sidebar-content"> </div>
+      </div>
+
+      <div id="tube-map"></div>
+    </div>
+
     <script>
       var isMobile = window.mobileAndTabletcheck()
       var container = d3.select('#tube-map');
 
       var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
+
+      $(document).ready(function() {
+        $("#close-button").click(function() {
+          $("#sidebar").hide();
+        });
+      });
+
       var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
+
+      function getWikiData(stationName) {
+        var wikiStation = stationName.replace(" ", "_").concat("_(Berlin_U-Bahn)")
+        console.log(wikiStation)
+        $.ajax({
+          url: 'https://en.wikipedia.org/w/api.php',
+          data: {
+            action: 'query',
+            titles: wikiStation,
+            redirects: 1,
+            pithumbsize: 400,
+            exsectionformat: "raw",
+            prop: 'extracts|pageimages',
+            format: 'json'
+          },
+          dataType: 'jsonp',
+          success: function(resp) {
+            var wikiImage = resp.query.pages[Object.keys(resp.query.pages)].thumbnail.source
+            var wikiSummary = resp.query.pages[Object.keys(resp.query.pages)[0]].extract
+            var formattedwikiSummary = wikiSummary
+              .split('<span id="References">References</span></h2>')[0]
+              .split('<span id="Gallery">Gallery</span></h2>')[0]
+            console.log(resp)
+            console.log(wikiSummary)
+            $("#sidebar").show();
+            $('#sidebar-content').html('<img src=' + '"' + wikiImage + '">' + formattedwikiSummary)
+          }
+        });
+      }
 
       var map = d3
         .tubeMap()
         .width(width)
         .height(height)
         .on('click', function(name) {
-          console.log(name);
+          getWikiData(name)
         });
 
       d3.json('./berlin-ubahn.json').then(function(data) {
@@ -48,6 +93,32 @@
         function zoomed() {
           svg.select('g').attr('transform', d3.event.transform.toString());
         }
+ $(document).ready(function(){
+        $('#btn').click(function() {
+            $.ajax({
+                url: 'https://en.wikipedia.org/w/api.php',
+                data: {
+                  action: 'query',
+                  titles: 'Potsdamer_Platz_(Berlin_U-Bahn)',
+                  redirects: 1,
+                  pithumbsize: 400,
+                  exsectionformat: "raw",
+                  prop: 'extracts|pageimages',
+                  format: 'json'
+                },
+                dataType: 'jsonp',
+                success: function(resp) {
+                  var wikiImage = resp.query.pages[Object.keys(resp.query.pages)].thumbnail.source
+                  var wikiSummary = resp.query.pages[Object.keys(resp.query.pages)[0]].extract
+                  var formattedwikiSummary = wikiSummary.split('<span id="References">References</span></h2>')[0]
+                  console.log(resp)
+                  console.log(wikiSummary)
+                  $('#sidebar-content').html('<img src=' + '"' + wikiImage + '">' + formattedwikiSummary)
+                }
+            });
+        });
+    });
+
       });
     </script>
   </body>

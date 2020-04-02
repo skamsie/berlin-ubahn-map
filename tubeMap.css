@@ -55,3 +55,34 @@ tspan {
 .label:hover {
   color: red;
 }
+
+
+#container {
+  position: relative;
+}
+
+#sidebar {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background-color: #f6f6f6;
+  overflow: auto;
+  border-right: 2px solid lightgray;
+  opacity: 0.97;
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#sidebar-content {
+  font-family: "Roboto Mono";
+  padding: 30px 30px 100px 30px;
+}
+
+.hidden {
+  display: none;
+}
