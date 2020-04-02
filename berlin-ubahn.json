@@ -2211,7 +2211,12 @@
           "coords": [128, 30],
           "name": "Pankow",
           "labelPos": "E",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U2.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -4.5,
+          "lineLabelShiftY": 2.2
         }
       ]
     },

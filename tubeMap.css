@@ -1,20 +1,25 @@
 @font-face {
   font-family: "M+ 2p";
   src: url("fonts/mplus-2p-regular.ttf");
+  font-weight: 400;
 }
 
-/*
 @font-face {
   font-family: "M+ 2p";
   src: url("fonts/mplus-2p-medium.ttf");
-  font-weight: bold;
+  font-weight: 500;
 }
-*/
 
 @font-face {
   font-family: "M+ 2p";
   src: url("fonts/mplus-2p-bold.ttf");
-  font-weight: bold;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "M+ 2p";
+  src: url("fonts/mplus-2p-heavy.ttf");
+  font-weight: 800;
 }
 
 html,
@@ -47,6 +52,6 @@ tspan {
   white-space: pre;
 }
 
-.bold-label {
-  font-weight: bold;
+.label:hover {
+  color: red;
 }

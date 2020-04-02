@@ -1,6 +1,8 @@
 // This file is a modfied version of John Valley's d3-tube-map
 // https://github.com/johnwalley/d3-tube-map
 
+var BOLD_ON_HOVER = true;
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3')) :
   typeof define === 'function' && define.amd ? define(['exports', 'd3'], factory) :
@@ -642,6 +644,23 @@
           return d.label;
         })
         .attr('fill', 'black')
+        .style('font-size', 3 * lineWidth + 'px')
+        .style('font-weight', function (d) {
+          return d.labelBold ? '700' : '400'
+        })
+        .on('mouseover', function () {
+          if (BOLD_ON_HOVER) {
+            d3.select(this)
+              .style('font-weight', '800')
+          }
+        })
+        .on('mouseout', function (d) {
+          if (BOLD_ON_HOVER) {
+            var fontWeight = d.labelBold ? '700' : '400'
+            d3.select(this)
+              .style('font-weight', fontWeight)
+          }
+        })
         .attr('dy', 0)
         .attr('x', function(d) {
           return xScale(d.x + d.labelShiftX) + textPos(d).pos[0];
@@ -666,7 +685,6 @@
         .style('text-decoration', function(d) {
           return d.closed ? 'line-through' : 'none';
         })
-        .style('font-size', 3 * lineWidth + 'px')
         .style('-webkit-user-select', 'none')
         .classed('highlighted', function(d) {
           return d.visited;
