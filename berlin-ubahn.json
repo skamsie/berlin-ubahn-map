@@ -2026,7 +2026,12 @@
           "name": "Ruhleben",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle": -45
+          "labelAngle": -45,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U2.svg",
+          "lineLabelPos": "S",
+          "lineLabelShiftX": -2,
+          "lineLabelShiftY": 0
         },
         {
           "coords": [-77, -41],

@@ -1,7 +1,7 @@
 // This file is a modfied version of John Valley's d3-tube-map
 // https://github.com/johnwalley/d3-tube-map
 
-var BOLD_ON_HOVER = true;
+var HIGHLIGHT_ON_HOVER = true;
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3')) :
@@ -551,10 +551,18 @@ var BOLD_ON_HOVER = true;
           var name = label.attr('id');
           listeners.call('click', this, name);
         })
+        .on('mouseover', function (d) {
+          toggleHighlight(this, d)
+        })
+        .on('mouseout', function (d) {
+          toggleHighlight(this, d)
+        })
         .attr('stroke', function(d) {
           return d.visited ? bgColor : fgColor;
         })
-        .classed('train-stop', true)
+        .attr('class', function(d) {
+          return 'station ' + classFromName(d.name)
+        })
         .style('cursor', 'pointer');
     }
 
@@ -594,7 +602,15 @@ var BOLD_ON_HOVER = true;
         .attr('stroke', function(d) {
           return d.visited ? bgColor : fgColor;
         })
-        .classed('train-stop', true)
+        .on('mouseover', function (d) {
+          toggleHighlight(this, d)
+        })
+        .on('mouseout', function (d) {
+          toggleHighlight(this, d)
+        })
+        .attr('class', function(d) {
+          return 'station ' + classFromName(d.name)
+        })
         .style('cursor', 'pointer');
     }
 
@@ -625,7 +641,6 @@ var BOLD_ON_HOVER = true;
     function drawLabels() {
       gMap
         .append('g')
-        .attr('class', 'labels')
         .selectAll('text')
         .data(_data.stations.toArray())
         .enter()
@@ -648,18 +663,11 @@ var BOLD_ON_HOVER = true;
         .style('font-weight', function (d) {
           return d.labelBold ? '700' : '400'
         })
-        .on('mouseover', function () {
-          if (BOLD_ON_HOVER) {
-            d3.select(this)
-              .style('font-weight', '800')
-          }
+        .on('mouseover', function (d) {
+          toggleHighlight(this, d)
         })
         .on('mouseout', function (d) {
-          if (BOLD_ON_HOVER) {
-            var fontWeight = d.labelBold ? '700' : '400'
-            d3.select(this)
-              .style('font-weight', fontWeight)
-          }
+          toggleHighlight(this, d)
         })
         .attr('dy', 0)
         .attr('x', function(d) {
@@ -677,7 +685,8 @@ var BOLD_ON_HOVER = true;
           return "rotate(" + d.labelAngle + "," + _x + "," + _y + ")"
         })
         .attr('class', function(d) {
-          return d.labelBold ? "bold-label" : ""
+          var boldLabel = d.labelBold ? "bold-label" : ""
+          return 'label ' + boldLabel + ' ' + classFromName(d.name)
         })
         .style('display', function(d) {
           return d.hide !== true ? 'block' : 'none';
@@ -827,7 +836,7 @@ var BOLD_ON_HOVER = true;
         case 'e':
           pos = [offset, 0];
           textAnchor = 'start';
-          alignmentBaseline = 'middle';
+          alignmentBaseline = 'baseline';
           break;
         case 'se':
           pos = [offset / sqrt2, -offset / sqrt2];
@@ -847,7 +856,7 @@ var BOLD_ON_HOVER = true;
         case 'w':
           pos = [-offset, 0];
           textAnchor = 'end';
-          alignmentBaseline = 'middle';
+          alignmentBaseline = 'baseline';
           break;
         case 'nw':
           pos = [
@@ -864,6 +873,50 @@ var BOLD_ON_HOVER = true;
         textAnchor: textAnchor,
         alignmentBaseline: alignmentBaseline,
       };
+    }
+
+    function classFromName(currentName) {
+      return currentName.replace(/[()0-9 ]/g,'');
+    }
+
+    function toggleHighlight(element, d) {
+      if (HIGHLIGHT_ON_HOVER !== true) {
+        return;
+      }
+
+      var thisElement = d3.select(element)
+      var otherElementClass = thisElement.classed('label') ? 'station' : 'label'
+      var classNames = '.' + otherElementClass + '.' + classFromName(d.name)
+
+      if(otherElementClass == 'station') {
+        if (thisElement.attr('highlighted') === 'true') {
+          thisElement
+            .style('text-decoration', 'none')
+            .attr('highlighted', 'false')
+          d3.selectAll(classNames)
+            .attr('fill', 'white')
+        } else {
+          thisElement
+            .attr('highlighted', 'true')
+            .style('text-decoration', 'underline')
+          d3.selectAll(classNames)
+            .attr('fill', 'black')
+        }
+      } else {
+        if (thisElement.attr('highlighted') === 'true') {
+          thisElement
+            .attr('fill', 'white')
+            .attr('highlighted', 'false')
+          d3.selectAll(classNames)
+            .style('text-decoration', 'none')
+        } else {
+          d3.selectAll(classNames)
+            .style('text-decoration', 'underline')
+          thisElement
+            .attr('highlighted', 'true')
+            .attr('fill', 'black')
+        }
+      }
     }
 
     // Render line breaks for svg text
