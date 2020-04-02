@@ -627,8 +627,8 @@ var HIGHLIGHT_ON_HOVER = true;
         .attr('xlink:href', function(d) {
           return d.lineLabelPath;
         })
-        .attr('width', lineWidth * 6)
-        .attr('height', lineWidth * 6)
+        .attr('width', lineWidth * 5.2)
+        .attr('height', lineWidth * 5.2)
         .attr('dy', 0)
         .attr('x', function(d) {
           return xScale(d.x + d.lineLabelShiftX) + lineLabelPos(d).pos[0];
@@ -834,7 +834,7 @@ var HIGHLIGHT_ON_HOVER = true;
           alignmentBaseline = 'baseline';
           break;
         case 'e':
-          pos = [offset, 0];
+          pos = [offset, -2];
           textAnchor = 'start';
           alignmentBaseline = 'baseline';
           break;
@@ -854,7 +854,7 @@ var HIGHLIGHT_ON_HOVER = true;
           alignmentBaseline = 'hanging';
           break;
         case 'w':
-          pos = [-offset, 0];
+          pos = [-offset, -2];
           textAnchor = 'end';
           alignmentBaseline = 'baseline';
           break;

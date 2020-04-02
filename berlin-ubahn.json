@@ -1698,7 +1698,12 @@
           "coords": [60, -15],
           "name": "Hauptbahnhof",
           "labelPos": "SW",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U55.svg",
+          "lineLabelPos": "N",
+          "lineLabelShiftX": -2,
+          "lineLabelShiftY": 2.5
         }
       ]
     },
@@ -1720,7 +1725,11 @@
           "coords": [70, -25],
           "name": "Brandenburger Tor",
           "labelPos": "S",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U55.svg",
+          "lineLabelPos": "NE",
+          "lineLabelShiftY": 2.5
         }
       ]
     },
@@ -1762,7 +1771,12 @@
           "labelPos": "NE",
           "labelBold": true,
           "labelAngle": -45,
-          "stationSymbol": "triple"
+          "stationSymbol": "triple",
+          "lineLabel": true,
+          "lineLabelPath": "labels/U4.svg",
+          "lineLabelPos": "SW",
+          "lineLabelShiftX": -4.2,
+          "lineLabelShiftY": -3.2
         },
         {
           "coords": [48, -60],
@@ -2220,7 +2234,7 @@
           "lineLabel": true,
           "lineLabelPath": "labels/U2.svg",
           "lineLabelPos": "W",
-          "lineLabelShiftX": -4.5,
+          "lineLabelShiftX": -4,
           "lineLabelShiftY": 2.2
         }
       ]
@@ -2258,7 +2272,11 @@
           "coords": [36, -107],
           "name": "Innsbrucker Platz",
           "labelPos": "E",
-          "labelBold":true
+          "labelBold":true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U4.svg",
+          "lineLabelPos": "S",
+          "lineLabelShiftX": -2.2
         }
       ]
     },
@@ -2388,7 +2406,12 @@
           "name": "Hönow",
           "labelPos": "NE",
           "labelAngle": -45,
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U5.svg",
+          "lineLabelPos": "S",
+          "lineLabelShiftX": -2.2,
+          "lineLabelShiftY": 0
         }
       ]
     },
@@ -2458,7 +2481,7 @@
         {
           "coords": [71, 4],
           "name": "Wedding",
-          "labelPos": "SW"
+          "labelPos": "E"
         },
         {
           "coords": [76, -1],
@@ -2468,7 +2491,7 @@
         {
           "coords": [81, -6],
           "name": "Schwartzkopffstraße",
-          "labelPos": "SW"
+          "labelPos": "E"
         },
         {
           "coords": [86, -11],
@@ -2566,7 +2589,7 @@
           "lineLabel": true,
           "lineLabelPath": "labels/U6.svg",
           "lineLabelPos": "W",
-          "lineLabelShiftX": -4.5,
+          "lineLabelShiftX": -4,
           "lineLabelShiftY": 2
         }
       ]
@@ -2582,7 +2605,12 @@
           "name": "Rathaus Spandau",
           "labelPos": "NE",
           "labelBold": true,
-          "labelAngle":-45
+          "labelAngle":-45,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U7.svg",
+          "lineLabelPos": "S",
+          "lineLabelShiftX": -2.2,
+          "lineLabelShiftY": 0
         },
         {
           "coords": [-79, -6],
@@ -2845,7 +2873,11 @@
           "coords": [183, -150],
           "name": "Rudow",
           "labelPos": "NE",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U7.svg",
+          "lineLabelPos": "S",
+          "lineLabelShiftX": -2.2
         }
       ]
     },
@@ -2859,7 +2891,12 @@
           "coords": [52, 51],
           "name": "Wittenau",
           "labelPos": "NE",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U8.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -4,
+          "lineLabelShiftY": 2.5
         },
         {
           "coords": [56, 47],
@@ -2934,7 +2971,12 @@
           "name": "Alexanderplatz",
           "labelPos": "NW",
           "labelBold": true,
-          "labelShiftCoords": [-2, 0.5]
+          "labelShiftCoords": [-2, 0.5],
+          "lineLabel": true,
+          "lineLabelPath": "labels/U5.svg",
+          "lineLabelPos": "NE",
+          "lineLabelShiftX": 0,
+          "lineLabelShiftY": 3.2
         },
         {
           "coords": [137, -34],
@@ -2983,7 +3025,12 @@
           "coords": [137, -98],
           "name": "Hermannstraße",
           "labelPos": "E",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U8.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -4,
+          "lineLabelShiftY": 2.5
         }
       ]
     },
@@ -2997,7 +3044,12 @@
           "coords": [80, 23],
           "name": "Osloer Straße",
           "labelPos": "E",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U9.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -5.5,
+          "lineLabelShiftY": 2.5
         },
         {
           "coords": [73, 16],
@@ -3088,7 +3140,12 @@
           "coords": [6, -119],
           "name": "Rathaus Steglitz",
           "labelPos": "E",
-          "labelBold": true
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U9.svg",
+          "lineLabelPos": "W",
+          "lineLabelShiftX": -4,
+          "lineLabelShiftY": 2.5
         }
       ]
     }
