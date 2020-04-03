@@ -52,11 +52,6 @@ tspan {
   white-space: pre;
 }
 
-.label:hover {
-  color: red;
-}
-
-
 #container {
   position: relative;
 }
@@ -80,7 +75,18 @@ img {
 
 #sidebar-content {
   font-family: "Roboto Mono";
-  padding: 30px 30px 100px 30px;
+  padding: 10px 30px 100px 30px;
+  overflow-wrap: break-word;
+  font-size: 15px;
+}
+
+a:link, a:visited,
+a:hover, a:active {
+  color: black;
+}
+
+#sidebar-content a {
+  font-size: 12px;
 }
 
 .hidden {

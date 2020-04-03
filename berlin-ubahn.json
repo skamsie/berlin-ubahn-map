@@ -88,7 +88,9 @@
       "position": {
         "lat": 52.5463833,
         "lon": 13.3591672
-      }
+      },
+      "wiki_cache": true
+
     },
     "Wedding": {
       "id": 2924245392,
@@ -454,6 +456,7 @@
       "id": 5713678269,
       "name": "Heinrich-Heine-Straße",
       "label": "Heinrich-Heine-Straße",
+      "wiki_cache": true,
       "position": {
         "lat": 52.5104484,
         "lon": 13.4160272

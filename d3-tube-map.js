@@ -649,10 +649,8 @@ var HIGHLIGHT_ON_HOVER = true;
           return d.name;
         })
         .classed('label', true)
-        .on('click', function() {
-          var label = d3.select(this);
-          var name = label.attr('id');
-          listeners.call('click', this, name);
+        .on('click', function(d) {
+          listeners.call('click', this, d);
         })
         .append('text')
         .text(function(d) {

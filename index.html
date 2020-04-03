@@ -32,33 +32,51 @@
 
       var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
-      function getWikiData(stationName) {
-        var wikiStation = stationName.replace(" ", "_").concat("_(Berlin_U-Bahn)")
-        console.log(wikiStation)
-        $.ajax({
-          url: 'https://en.wikipedia.org/w/api.php',
-          data: {
-            action: 'query',
-            titles: wikiStation,
-            redirects: 1,
-            pithumbsize: 400,
-            exsectionformat: "raw",
-            prop: 'extracts|pageimages',
-            format: 'json'
-          },
-          dataType: 'jsonp',
-          success: function(resp) {
-            var wikiImage = resp.query.pages[Object.keys(resp.query.pages)].thumbnail.source
-            var wikiSummary = resp.query.pages[Object.keys(resp.query.pages)[0]].extract
-            var formattedwikiSummary = wikiSummary
-              .split('<span id="References">References</span></h2>')[0]
-              .split('<span id="Gallery">Gallery</span></h2>')[0]
-            console.log(resp)
-            console.log(wikiSummary)
-            $("#sidebar").show();
-            $('#sidebar-content').html('<img src=' + '"' + wikiImage + '">' + formattedwikiSummary)
-          }
-        });
+      function getWikiData(station) {
+        var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)")
+
+        if (station.wiki_cache === true) {
+          $.ajax({
+            url: 'articles/' + station.name + '.html',
+            success: function(data) {
+              $("#sidebar").show();
+              $('#sidebar-content').html(data)
+            }
+          });
+        }
+
+        else {
+          $.ajax({
+            url: 'https://en.wikipedia.org/w/api.php',
+            data: {
+              action: 'query',
+              titles: wikiStation,
+              redirects: 1,
+              pithumbsize: 400,
+              exsectionformat: "raw",
+              prop: 'extracts|pageimages|info',
+              inprop: 'url',
+              format: 'json'
+            },
+            dataType: 'jsonp',
+            success: function(data) {
+              var resp = data.query.pages[Object.keys(data.query.pages)];
+              var wikiImage = resp.thumbnail.source
+              var wikiText = resp.extract
+              var wikiUrl = resp.fullurl
+
+              var formattedWikiText = wikiText
+                .split('<h2><span id="References">References</span></h2>')[0]
+                .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
+              $("#sidebar").show();
+              $('#sidebar-content').html(
+                '<h1>U Bahn ' + station.name + '</h1>' +
+                '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
+                '<a href="' + wikiUrl + '">' + wikiUrl + '</a>'
+              )
+            }
+          });
+        }
       }
 
       var map = d3
@@ -93,32 +111,6 @@
         function zoomed() {
           svg.select('g').attr('transform', d3.event.transform.toString());
         }
- $(document).ready(function(){
-        $('#btn').click(function() {
-            $.ajax({
-                url: 'https://en.wikipedia.org/w/api.php',
-                data: {
-                  action: 'query',
-                  titles: 'Potsdamer_Platz_(Berlin_U-Bahn)',
-                  redirects: 1,
-                  pithumbsize: 400,
-                  exsectionformat: "raw",
-                  prop: 'extracts|pageimages',
-                  format: 'json'
-                },
-                dataType: 'jsonp',
-                success: function(resp) {
-                  var wikiImage = resp.query.pages[Object.keys(resp.query.pages)].thumbnail.source
-                  var wikiSummary = resp.query.pages[Object.keys(resp.query.pages)[0]].extract
-                  var formattedwikiSummary = wikiSummary.split('<span id="References">References</span></h2>')[0]
-                  console.log(resp)
-                  console.log(wikiSummary)
-                  $('#sidebar-content').html('<img src=' + '"' + wikiImage + '">' + formattedwikiSummary)
-                }
-            });
-        });
-    });
-
       });
     </script>
   </body>
