@@ -1,25 +1,43 @@
 @font-face {
   font-family: "M+ 2p";
-  src: url("fonts/mplus-2p-regular.ttf");
+  src: url("../fonts/mplus-2p-regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "M+ 2p";
-  src: url("fonts/mplus-2p-medium.ttf");
+  src: url("../fonts/mplus-2p-medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "M+ 2p";
-  src: url("fonts/mplus-2p-bold.ttf");
+  src: url("../fonts/mplus-2p-bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "M+ 2p";
-  src: url("fonts/mplus-2p-heavy.ttf");
+  src: url("../fonts/mplus-2p-heavy.ttf");
   font-weight: 800;
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+    font-family: "RobotoMono";
+    src: url("../fonts/RobotoMono-Italic.ttf");
+    font-style: italic;
 }
 
 html,
@@ -28,10 +46,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-  overflow: hidden;
 }
 
 #tube-map {
@@ -60,10 +74,11 @@ tspan {
   position: absolute;
   height: 100%;
   width: 30%;
+  max-width: 600px;
   background-color: #f6f6f6;
   overflow: auto;
   border-right: 2px solid lightgray;
-  opacity: 0.95;
+  opacity: 0.96;
   display: none;
 }
 
@@ -74,7 +89,7 @@ img {
 }
 
 #sidebar-content {
-  font-family: "Roboto Mono";
+  font-family: "RobotoMono";
   padding: 10px 30px 100px 30px;
   overflow-wrap: break-word;
   font-size: 15px;
