@@ -85,12 +85,11 @@
       "id": 3772836700,
       "name": "Leopoldplatz",
       "label": " Leopoldplatz",
+      "wiki_cache": "02/04/2020",
       "position": {
         "lat": 52.5463833,
         "lon": 13.3591672
-      },
-      "wiki_cache": true
-
+      }
     },
     "Wedding": {
       "id": 2924245392,
@@ -1294,6 +1293,7 @@
       "id": 5219756618,
       "name": "Mierendorffplatz",
       "label": "Mierendorffplatz",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5263437,
         "lon": 13.3047721
@@ -1303,6 +1303,7 @@
       "id": 4644994619,
       "name": "Jungfernheide",
       "label": "Jungfernheide",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5307879,
         "lon": 13.3006301
@@ -1384,6 +1385,7 @@
       "id": 5726082246,
       "name": "Altstadt Spandau",
       "label": "Altstadt Spandau",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5388381,
         "lon": 13.2062573

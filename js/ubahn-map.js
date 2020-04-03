@@ -12,16 +12,31 @@ $(document).ready(function() {
 
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
-function getWikiData(station) {
-  var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)")
-  var wikiTitle = '<h1>U Bahn ' + station.name + '</h1>'
+function saveData(data, fileName) {
+    var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.style = "display: none";
 
-  if (station.wiki_cache === true) {
+    var json = JSON.stringify(data),
+        blob = new Blob([data], {type: "text/html;charset=utf-8"}),
+        url = window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = fileName;
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+
+function getWikiData(station) {
+  var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
+  var wikiTitle = '<h1>U Bahn ' + station.name + '</h1>';
+  var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
+
+  if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
     $.ajax({
       url: 'articles/' + station.name + '.html',
       success: function(data) {
         $("#sidebar").show();
-        $('#sidebar-content').html(wikiTitle.concat(data))
+        $('#sidebar-content').html(wikiTitle + data + wikiCached)
       }
     });
   }
@@ -49,6 +64,12 @@ function getWikiData(station) {
         var formattedWikiText = wikiText
           .split('<h2><span id="References">References</span></h2>')[0]
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
+
+        var toSave = '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
+                     '<a href="' + wikiUrl + '">' + wikiUrl + '</a>'
+
+        saveData(toSave, station.name + '.html')
+
         $("#sidebar").show();
         $("#sidebar-buttons").show();
         $('#sidebar-content').html(

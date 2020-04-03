@@ -130,3 +130,7 @@ a:hover, a:active {
   line-height: 16px;
   font-weight: bold;
 }
+
+.cached {
+  font-size: 12px;
+}
