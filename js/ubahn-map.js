@@ -6,6 +6,7 @@ var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.wi
 $(document).ready(function() {
   $("#close-button").click(function() {
     $("#sidebar").hide();
+    $("#sidebar-buttons").hide();
   });
 });
 
@@ -49,6 +50,7 @@ function getWikiData(station) {
           .split('<h2><span id="References">References</span></h2>')[0]
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
         $("#sidebar").show();
+        $("#sidebar-buttons").show();
         $('#sidebar-content').html(
           wikiTitle +
           '<img src=' + '"' + wikiImage + '">' + formattedWikiText +

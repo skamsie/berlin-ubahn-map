@@ -35,9 +35,9 @@
 }
 
 @font-face {
-    font-family: "RobotoMono";
-    src: url("../fonts/RobotoMono-Italic.ttf");
-    font-style: italic;
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono-Italic.ttf");
+  font-style: italic;
 }
 
 html,
@@ -46,6 +46,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "RobotoMono";
 }
 
 #tube-map {
@@ -66,10 +67,6 @@ tspan {
   white-space: pre;
 }
 
-#container {
-  position: relative;
-}
-
 #sidebar {
   position: absolute;
   height: 100%;
@@ -77,7 +74,7 @@ tspan {
   max-width: 600px;
   background-color: #f6f6f6;
   overflow: auto;
-  border-right: 2px solid lightgray;
+  border-right: 2px solid #D0D0D0;
   opacity: 0.96;
   display: none;
 }
@@ -89,7 +86,6 @@ img {
 }
 
 #sidebar-content {
-  font-family: "RobotoMono";
   padding: 10px 30px 100px 30px;
   overflow-wrap: break-word;
   font-size: 15px;
@@ -104,6 +100,33 @@ a:hover, a:active {
   font-size: 12px;
 }
 
-.hidden {
+#sidebar-buttons {
   display: none;
+}
+
+#close-button-container {
+  top: 3px;
+  position: absolute;
+  width: calc(30% + 28px);
+  max-width: 628px;
+  background-color: #D0D0D0;
+  border-radius: 6px;
+  border-color : transparent;
+  border: 6px;
+}
+
+#close-button {
+  float: right;
+  box-shadow: 0;
+  text-shadow: 0;
+  text-decoration: none;
+  background-color: #D0D0D0;
+  border-radius:6px;
+  border-color : transparent;
+  cursor: pointer;
+  color:#ffffff;
+  font-family: "RobotoMono";
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: bold;
 }
