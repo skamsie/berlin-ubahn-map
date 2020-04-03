@@ -131,6 +131,7 @@
       "id": 5198810677,
       "name": "Reinickendorfer Straße",
       "label": "Reinickendorfer\nStraße",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5400429,
         "lon": 13.3702888
@@ -185,6 +186,7 @@
       "id": 3869306768,
       "name": "Friedrichstraße",
       "label": "Friedrichstraße",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5202635,
         "lon": 13.3882862
@@ -194,6 +196,7 @@
       "id": 29058259,
       "name": "Französische Straße",
       "label": "Französische\nStraße",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5148248,
         "lon": 13.3891706
@@ -437,6 +440,7 @@
       "id": 4598414751,
       "name": "Alexanderplatz",
       "label": "Alexanderplatz ",
+      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5215849,
         "lon": 13.4139082
