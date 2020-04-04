@@ -13,36 +13,11 @@ $(document).ready(function() {
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
 function getPointsOfInterest(station, promisedData) {
-  var wikiData;
   var wikiTitle = '<h1>' + station.name + '</h1>';
-  var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
-  var lat = station.position.lat;
-  var lon = station.position.lon;
-  var aroundLocation = '(around:600,' + lat + ',' + lon + ');';
-  var qu = 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];(' +
-      'node[~"tourism|leisure"~"museum|gallery|attraction"]' + aroundLocation +
-      'way[~"tourism|leisure"~"museum|gallery|attraction"]' + aroundLocation +
-    ')->._;out;'
-
-  if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
-    wikiData = wikiTitle + promisedData + wikiCached
-  } else {
-    var resp = promisedData.query.pages[Object.keys(promisedData.query.pages)];
-    var wikiImage = resp.thumbnail.source
-    var wikiText = resp.extract
-    var wikiUrl = resp.fullurl
-
-    var formattedWikiText = wikiText
-      .split('<h2><span id="References">References</span></h2>')[0]
-      .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
-
-    wikiData = wikiTitle +
-      '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
-      '<a href="' + wikiUrl + '">' + wikiUrl + '</a>'
-  }
+  var wikiData = formatWikiData(station, promisedData);
 
   $.ajax({
-    url: qu,
+    url: overpassApiQuery(station.position.lat, station.position.lon),
     success: function(data) {
       var formattedData = [];
       var elem = data.elements.filter(function(e) {
@@ -65,15 +40,16 @@ function getPointsOfInterest(station, promisedData) {
         }
       });
 
-      var pointsOfInterest = '';
+      var pointsOfInterest = '<hr /> <h3>Around ' + station.name + '</h3>';
 
       $.each(formattedData, function(_, poi) {
-        $.each(poi, function(_, poiValue) {
-          pointsOfInterest += '<p>' + poiValue + '</p>'
-        })
+        address = poi.address ? poi.address + '<br />' : ''
+        website = poi.website ? '<a href="' + poi.website + '">' + poi.website + '</a><br />' : ''
+        pointsOfInterest += '<p><b>' + poi.name + '</b><br />' +
+          address + website + 'tags: ' + poi.tags
       })
 
-      showSidebar(wikiData + pointsOfInterest)
+      showSidebar(wikiTitle + wikiData + pointsOfInterest)
     }
   });
 };
@@ -134,7 +110,6 @@ function getWikiData(station) {
       })
     ).then(
       function(x) {
-        console.log(x)
         getPointsOfInterest(station, x);
       }
     )
@@ -181,3 +156,34 @@ function showSidebar(sidebarHtml) {
   $('#sidebar-content').html(sidebarHtml)
 }
 
+function overpassApiQuery(lat, lon) {
+  var aroundLocation = '(around:600,' + lat + ',' + lon + ');';
+  return 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];(' +
+         'node[~"tourism|leisure"~"museum|gallery|attraction"]' + aroundLocation +
+         'way[~"tourism|leisure"~"museum|gallery|attraction"]' + aroundLocation +
+         ')->._;out;'
+}
+
+function formatWikiData(station, stationWikiData) {
+  var wikiData;
+  var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
+
+  if (typeof(stationWikiData) === 'string') {
+    wikiData = stationWikiData + wikiCached
+  } else {
+    var resp = stationWikiData
+      .query.pages[Object.keys(stationWikiData.query.pages)];
+    var wikiImage = resp.thumbnail.source
+    var wikiText = resp.extract
+    var wikiUrl = resp.fullurl
+
+    var formattedWikiText = wikiText
+      .split('<h2><span id="References">References</span></h2>')[0]
+      .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
+
+    wikiData = '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
+      '<a class="small-links" href="' + wikiUrl + '">' + wikiUrl + '</a>'
+  }
+
+  return wikiData
+}

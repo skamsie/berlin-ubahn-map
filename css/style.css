@@ -96,7 +96,7 @@ a:hover, a:active {
   color: black;
 }
 
-#sidebar-content a {
+.small-links {
   font-size: 12px;
 }
 
