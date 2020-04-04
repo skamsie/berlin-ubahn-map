@@ -12,6 +12,57 @@ $(document).ready(function() {
 
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
+const getBarsAround = (data) => {
+  var lat = data.position.lat;
+  var lon = data.position.lon;
+  var aroundLocation = '(around:600,' + lat + ',' + lon + ');';
+  var qu = 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];(' +
+      'node[~"tourism|leisure"~"museum|gallery|attraction|park"]' + aroundLocation +
+      'way[~"tourism|leisure"~"museum|gallery|attraction|park"]' + aroundLocation +
+    ')->._;out;'
+
+  $.ajax({
+    url: qu,
+    success: function(data) {
+      var formattedData = [];
+      var elem = data.elements.filter(function(e) {
+        return (e.tags.name)
+      })
+
+      console.log(data)
+
+      $.each(elem, function( _, value ) {
+        var i = {};
+        i.name = value.tags.name
+        i.address = formatAddress(value.tags)
+        i.website = value.tags['contact:website'] || value.tags.website
+        i.tags = [fo(value.tags['tourism']), fo(value.tags['leisure'])]
+          .filter(function(i) { return i !== '' })
+          .join(', ')
+      });
+
+      console.log(formattedData)
+    }
+  });
+};
+
+// empty string if undefined
+function fo(e) {
+  return e === undefined ? '' : e
+}
+
+function formatAddress(e) {
+  console.log(e)
+  var street = (e["addr:street"] && e["addr:housenumber"]) ?
+    [e["addr:street"], e["addr:housenumber"]].join(", ") : ''
+  var postcode = fo(e["addr:postcode"])
+  var neighbourhood = fo(e["addr:suburb"])
+
+  return [street, postcode, neighbourhood]
+    .filter(function(i) { return i !== '' })
+    .join(', ')
+}
+
 function getWikiData(station) {
   var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
   var wikiTitle = '<h1>' + station.name + '</h1>';
@@ -20,9 +71,9 @@ function getWikiData(station) {
   if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
     $.ajax({
       url: 'articles/' + station.name + '.html',
+      dataType: 'jsonp',
       success: function(data) {
-        $("#sidebar").show();
-        $('#sidebar-content').html(wikiTitle + data + wikiCached)
+        console.log(data)
       }
     });
   }
@@ -68,7 +119,7 @@ var map = d3
   .width(width)
   .height(height)
   .on('click', function(name) {
-    getWikiData(name)
+    getBarsAround(name)
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
