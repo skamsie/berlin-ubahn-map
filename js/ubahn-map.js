@@ -12,13 +12,13 @@ $(document).ready(function() {
 
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
-const getBarsAround = (data) => {
+function getPointsOfInterest(data) {
   var lat = data.position.lat;
   var lon = data.position.lon;
   var aroundLocation = '(around:600,' + lat + ',' + lon + ');';
   var qu = 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];(' +
-      'node[~"tourism|leisure"~"museum|gallery|attraction|park"]' + aroundLocation +
-      'way[~"tourism|leisure"~"museum|gallery|attraction|park"]' + aroundLocation +
+      'node[~"tourism|leisure"~"museum|gallery|attraction"]' + aroundLocation +
+      'way[~"tourism|leisure"~"museum|gallery|attraction"]' + aroundLocation +
     ')->._;out;'
 
   $.ajax({
@@ -29,19 +29,30 @@ const getBarsAround = (data) => {
         return (e.tags.name)
       })
 
-      console.log(data)
-
       $.each(elem, function( _, value ) {
         var i = {};
         i.name = value.tags.name
         i.address = formatAddress(value.tags)
         i.website = value.tags['contact:website'] || value.tags.website
-        i.tags = [fo(value.tags['tourism']), fo(value.tags['leisure'])]
-          .filter(function(i) { return i !== '' })
-          .join(', ')
+        i.tags = formatTags(value.tags)
+
+        if (
+          formattedData.filter(
+            function(e) { return e.name === i.name }
+          ).length == 0
+        ) {
+          formattedData.push(i)
+        }
       });
 
-      console.log(formattedData)
+      var pointsOfInterest = '';
+      $.each(formattedData, function(_, poi) {
+        $.each(poi, function(_, poiValue) {
+          pointsOfInterest += '<p>' + poiValue + '</p>'
+        })
+      })
+
+      return pointsOfInterest
     }
   });
 };
@@ -51,8 +62,19 @@ function fo(e) {
   return e === undefined ? '' : e
 }
 
+function removeInvalid(e) {
+  return e.address || e.website
+}
+
+function formatTags(e) {
+  return ['tourism', 'leisure', 'historic']
+    .map(function(i) { return fo(e[i]) })
+    .filter(function(i) { return i !== '' })
+    .join(', ')
+    .replace('attraction', 'tourist attraction')
+}
+
 function formatAddress(e) {
-  console.log(e)
   var street = (e["addr:street"] && e["addr:housenumber"]) ?
     [e["addr:street"], e["addr:housenumber"]].join(", ") : ''
   var postcode = fo(e["addr:postcode"])
@@ -71,14 +93,14 @@ function getWikiData(station) {
   if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
     $.ajax({
       url: 'articles/' + station.name + '.html',
-      dataType: 'jsonp',
       success: function(data) {
         console.log(data)
+        $("#sidebar").show();
+        $("#sidebar-buttons").show();
+        $('#sidebar-content').html(wikiTitle + data + wikiCached)
       }
     });
-  }
-
-  else {
+  } else {
     $.ajax({
       url: 'https://en.wikipedia.org/w/api.php',
       data: {
@@ -102,13 +124,13 @@ function getWikiData(station) {
           .split('<h2><span id="References">References</span></h2>')[0]
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
 
-        $("#sidebar").show();
-        $("#sidebar-buttons").show();
-        $('#sidebar-content').html(
-          wikiTitle +
+        var wikiData = wikiTitle +
           '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
           '<a href="' + wikiUrl + '">' + wikiUrl + '</a>'
-        )
+
+        $("#sidebar").show();
+        $("#sidebar-buttons").show();
+        $('#sidebar-content').html(wikiData)
       }
     });
   }
@@ -118,8 +140,8 @@ var map = d3
   .tubeMap()
   .width(width)
   .height(height)
-  .on('click', function(name) {
-    getBarsAround(name)
+  .on('click', function(station) {
+    getWikiData(station)
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
