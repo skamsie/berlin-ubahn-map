@@ -1,16 +1,7 @@
 var isMobile = window.mobileAndTabletcheck()
 var container = d3.select('#ubahn-map');
-
 var currentStation;
 var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
-
-$(document).ready(function() {
-  $("#close-button").click(function() {
-    $("#sidebar").hide();
-    $("#sidebar-buttons").hide();
-  });
-});
-
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
 function getWikiData(station) {
@@ -34,7 +25,7 @@ function getWikiData(station) {
         action: 'query',
         titles: wikiStation,
         redirects: 1,
-        pithumbsize: 600,
+        pithumbsize: 800,
         exsectionformat: "raw",
         prop: 'extracts|pageimages|info',
         inprop: 'url',
@@ -42,6 +33,7 @@ function getWikiData(station) {
       },
       dataType: 'jsonp',
       success: function(data) {
+        $('#sidebar').scrollTop(0);
         var resp = data.query.pages[Object.keys(data.query.pages)];
         var wikiImage = resp.thumbnail.source
         var wikiText = resp.extract
@@ -65,8 +57,8 @@ var map = d3
   .width(width)
   .height(height)
   .on('click', function(station) {
-    $('#about-button').text('?')
     getWikiData(station);
+    $('#about-button').text('?')
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
@@ -96,6 +88,7 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
 });
 
 function showSidebar(sidebarHtml) {
+  $("#draggable-side").show();
   $("#sidebar-buttons").show();
   $("#sidebar").show();
   $("#about-content").hide();
@@ -131,6 +124,20 @@ function toggleAbout() {
   }
 }
 
-$("#about-button").click(function() {
-  toggleAbout()
-})
+$(document).ready(function() {
+  $('#draggable-side').resizable({
+    handles: 'e',
+    alsoResize: "#close-button-container,#sidebar,#about-button-container"
+  });
+
+  $("#close-button").click(function() {
+    $("#sidebar").hide();
+    $("#draggable-side").hide();
+    $("#sidebar-buttons").hide();
+  });
+
+  $("#about-button").click(function() {
+    toggleAbout()
+  })
+});
+

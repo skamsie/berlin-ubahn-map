@@ -1,8 +1,14 @@
 <html>
   <head>
-    <meta charset="utf-8"/>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Berlin Ubahn Map</title>
+    <link rel="stylesheet" href="css/vendor/jquery-ui.min.css" />
+
+    <meta name="author" content="https://skamsie.ro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="description" content="Interactive map of the Berlin metro system.">
+
+    <title>Berlin U-Bahn Map</title>
   </head>
 
   <body>
@@ -17,6 +23,8 @@
         </div>
       </div>
 
+      <div id="draggable-side"></div>
+
       <div id="sidebar">
         <div id="wiki-content" class="sidebar-content"> </div>
         <div id="about-content" class="sidebar-content"> </div>
@@ -26,6 +34,7 @@
     </div>
 
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/d3.v5.js"></script>
     <script src="js/d3-tube-map.js"></script>
     <script src="js/check_mobile.js"></script>

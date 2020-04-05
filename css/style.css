@@ -47,6 +47,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "RobotoMono";
+  overflow: auto;
 }
 
 #tube-map {
@@ -67,14 +68,22 @@ tspan {
   white-space: pre;
 }
 
+#draggable-side {
+  position: absolute;
+  height: 100%;
+  border-right: 2px solid #B8B8B8;
+  left: 35%;
+  max-width: calc(800px - 35%);
+  display: none;
+}
+
 #sidebar {
   position: absolute;
   height: 100%;
+  width: 35%;
   max-width: 800px;
-  width: 40%;
   background-color: #f6f6f6;
-  overflow: auto;
-  border-right: 2px solid #B8B8B8;
+  overflow: scroll;
   opacity: 0.96;
   display: none;
   z-index: 100;
@@ -117,7 +126,7 @@ a:hover, a:active {
   cursor: pointer;
   position: absolute;
   max-width: 820px;
-  width: calc(40% + 20px);
+  width: calc(35% + 20px);
   border-radius: 6px;
 }
 .button-container:hover{
