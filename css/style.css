@@ -70,13 +70,14 @@ tspan {
 #sidebar {
   position: absolute;
   height: 100%;
-  width: 30%;
-  max-width: 600px;
+  max-width: 800px;
+  width: 40%;
   background-color: #f6f6f6;
   overflow: auto;
-  border-right: 2px solid #D0D0D0;
+  border-right: 2px solid #B8B8B8;
   opacity: 0.96;
   display: none;
+  z-index: 100;
 }
 
 img {
@@ -104,34 +105,48 @@ a:hover, a:active {
   display: none;
 }
 
-#close-button-container {
-  top: 3px;
+.button-container {
   position: absolute;
-  width: calc(30% + 28px);
-  max-width: 628px;
-  background-color: #D0D0D0;
+  max-width: 820px;
+  width: calc(40% + 20px);
   border-radius: 6px;
-  border-color : transparent;
-  border: 6px;
 }
 
+#close-button-container {
+  top: 5px;
+}
+#about-button-container {
+  top: 35px;
+}
+
+#about-button,
+#wiki-button,
 #close-button {
+  background-color: #B8B8B8;
+}
+
+#about-button {
+  background-color: #E0E0E0;
+}
+
+#about-button-container {
+  top: 30px;
+}
+
+.button {
   float: right;
-  box-shadow: 0;
-  text-shadow: 0;
-  text-decoration: none;
-  background-color: #D0D0D0;
+  padding: 0 6px 2px 12px;
+  border: 1px solid white;
   border-radius:6px;
-  border-color : transparent;
   cursor: pointer;
-  color:#ffffff;
-  font-family: "RobotoMono";
-  font-size: 15px;
-  line-height: 16px;
+  font-size: 12px;
   font-weight: bold;
-  padding-bottom: 6px;
 }
 
 .cached {
   font-size: 12px;
+}
+
+#poi-button-container {
+  top: 120px;
 }

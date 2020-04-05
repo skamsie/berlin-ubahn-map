@@ -1,6 +1,7 @@
 var isMobile = window.mobileAndTabletcheck()
 var container = d3.select('#ubahn-map');
 
+var currentStation;
 var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
 
 $(document).ready(function() {
@@ -12,7 +13,7 @@ $(document).ready(function() {
 
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
-function getWikiData(station) {
+function showWikiData(station) {
   var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
   var wikiTitle = '<h1>' + station.name + '</h1>';
   var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
@@ -68,8 +69,8 @@ var map = d3
   .width(width)
   .height(height)
   .on('click', function(station) {
-    // getWikiData(station)
-    getPointsOfInterest(station)
+    currentStation = station;
+    showWikiData(station);
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
@@ -175,3 +176,19 @@ function formatAddress(e) {
     .filter(function(i) { return i !== '' })
     .join(', ')
 }
+
+function showAbout() {
+  showSidebar("<h2>ABOUT</h2>")
+}
+
+$('#about-button-container').click(function() {
+  var currentText = $(this).text().replace(/^\s+|\s+$/g, '')
+
+  if (currentText == '?') {
+    $('#about-button').text('i');
+    showAbout();
+  } else {
+    $('#about-button').text('?');
+    showWikiData(currentStation)
+  }
+})
