@@ -106,7 +106,12 @@ function showSidebar(sidebarHtml) {
 function showAbout() {
   $("#wiki-content").hide();
   $('#about-content').show();
-  $('#about-content').html("<h2>ABOUT</h2>")
+  $.ajax({
+    url: 'about.html',
+    success: function(data) {
+      $('#about-content').html(data)
+    }
+  })
 }
 
 function showWiki() {

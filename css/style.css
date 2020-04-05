@@ -105,11 +105,26 @@ a:hover, a:active {
   display: none;
 }
 
+.disable-selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Safari */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
 .button-container {
+  cursor: pointer;
   position: absolute;
   max-width: 820px;
   width: calc(40% + 20px);
   border-radius: 6px;
+}
+.button-container:hover{
+  padding-left: 2px;
+}
+.button:hover{
+  background-color: #D0D0D0;
 }
 
 #close-button-container {

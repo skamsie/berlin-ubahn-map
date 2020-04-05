@@ -1682,6 +1682,15 @@
         "lat": 52.5256744,
         "lon": 13.2414191
       }
+    },
+    "Deutsche Oper": {
+      "id": 29123763,
+      "name": "Deutsche Oper",
+      "label": "Deutsche\nOper",
+      "position": {
+        "lat": 52.511837,
+        "lon": 13.3105328
+      }
     }
   },
 
@@ -2094,6 +2103,11 @@
           "labelBold": true,
           "labelShiftCoords": [1.5, 0],
           "labelAngle": -45
+        },
+        {
+          "coords": [-13, -41],
+          "name": "Deutsche Oper",
+          "labelPos": "S"
         },
         {
           "coords": [-4, -41],
