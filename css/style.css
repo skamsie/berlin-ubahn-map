@@ -86,7 +86,7 @@ img {
   filter: grayscale(100%);
 }
 
-#sidebar-content {
+.sidebar-content {
   padding: 10px 30px 100px 30px;
   overflow-wrap: break-word;
   font-size: 15px;
@@ -113,40 +113,24 @@ a:hover, a:active {
 }
 
 #close-button-container {
-  top: 5px;
-}
-#about-button-container {
-  top: 35px;
-}
-
-#about-button,
-#wiki-button,
-#close-button {
-  background-color: #B8B8B8;
-}
-
-#about-button {
-  background-color: #E0E0E0;
+  top: 12px;
 }
 
 #about-button-container {
-  top: 30px;
+  top: 40px;
 }
 
 .button {
+  background-color: #B8B8B8;
   float: right;
   padding: 0 6px 2px 12px;
   border: 1px solid white;
   border-radius:6px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 .cached {
   font-size: 12px;
-}
-
-#poi-button-container {
-  top: 120px;
 }
