@@ -1,4 +1,6 @@
-var isMobile = window.mobileAndTabletcheck()
+//naive way of assuming mobile
+var isMobile = window.screen.width < window.screen.height ? true : false
+
 var container = d3.select('#ubahn-map');
 var currentStation;
 var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
