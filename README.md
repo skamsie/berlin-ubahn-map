@@ -6,4 +6,7 @@ An interactive way of displaying the Berlin Ubahn system, based on [this](https:
 
 
 I created the map using a modified version of [d3-tube-map](https://github.com/johnwalley/d3-tube-map).  
+
+![Alt text](/screenshots/map.png?raw=true "screenshot")
+
 Similar project: https://github.com/Joao-Pedrosa/GSDB
