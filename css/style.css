@@ -72,21 +72,24 @@ tspan {
   position: absolute;
   height: 100%;
   border-right: 2px solid #B8B8B8;
-  left: 35%;
-  max-width: calc(800px - 35%);
+  width: 40%;
+  max-width: 800px;
+  min-width: 400px;
   display: none;
 }
 
 #sidebar {
   position: absolute;
   height: 100%;
-  width: 35%;
+  width: 40%;
   max-width: 800px;
+  min-width: 400px;
   background-color: #f6f6f6;
   overflow: scroll;
   opacity: 0.96;
   display: none;
   z-index: 100;
+  text-align: justify;
 }
 
 img {
@@ -106,10 +109,6 @@ a:hover, a:active {
   color: black;
 }
 
-.small-links {
-  font-size: 12px;
-}
-
 #sidebar-buttons {
   display: none;
 }
@@ -126,7 +125,8 @@ a:hover, a:active {
   cursor: pointer;
   position: absolute;
   max-width: 820px;
-  width: calc(35% + 20px);
+  min-width: 420px;
+  width: calc(40% + 20px);
   border-radius: 6px;
 }
 .button-container:hover{
@@ -144,6 +144,9 @@ a:hover, a:active {
   top: 40px;
 }
 
+#wiki-content a {
+  font-size: 12px;
+}
 .button {
   background-color: #B8B8B8;
   float: right;
