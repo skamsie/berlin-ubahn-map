@@ -206,6 +206,7 @@
       "id": 3352091173,
       "name": "Stadtmitte",
       "label": "Stadtmitte",
+      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5121459,
         "lon": 13.3905632
@@ -892,6 +893,7 @@
       "id": 3870475231,
       "name": "Mohrenstraße",
       "label": "Mohrenstraße",
+      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5117915,
         "lon": 13.3850915
