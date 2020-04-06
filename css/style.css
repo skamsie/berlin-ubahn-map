@@ -85,7 +85,6 @@ tspan {
   max-width: 800px;
   min-width: 400px;
   background-color: #f6f6f6;
-  overflow: scroll;
   opacity: 0.96;
   display: none;
   z-index: 100;
@@ -99,9 +98,16 @@ img {
 }
 
 .sidebar-content {
-  padding: 10px 30px 100px 30px;
+  height: 92%;
+  top: 4%;
+  bottom: 4%;
+  overflow: scroll;
+  padding: 0 35px 0 35px;
   overflow-wrap: break-word;
   font-size: 15px;
+  background-color: #f6f6f6;
+  position: relative;
+  border: 2px solid red;
 }
 
 a:link, a:visited,
