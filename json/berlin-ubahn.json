@@ -517,6 +517,7 @@
       "id": 4940731304,
       "name": "Märkisches Museum",
       "label": "Märki-\nsches\nMuseum",
+      "wiki_cache": "06/04/2020 (from 2016 revision)",
       "position": {
         "lat": 52.5123348,
         "lon": 13.4101754
@@ -526,6 +527,7 @@
       "id": 3876077784,
       "name": "Klosterstraße",
       "label": "Klosterstraße",
+      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5172347,
         "lon": 13.4124323

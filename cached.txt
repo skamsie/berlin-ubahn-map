@@ -69,10 +69,10 @@ U2
   Stadtmitte: cached
   Hausvogteiplatz: cached
   Spittelmarkt: cached
-  Märkisches Museum
-  Klosterstraße
+  Märkisches Museum: cached
+  Klosterstraße: cached
   Alexanderplatz: cached
-  Rosa-Luxemburg-Platz
+  Rosa-Luxemburg-Platz: ok
   Senefelderplatz
   Eberswalder Straße
   Schönhauser Allee
