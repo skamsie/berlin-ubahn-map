@@ -6,12 +6,37 @@ var currentStation;
 var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
 
+function imageName(str) {
+  var umlautMap = {
+    '\u00dc': 'UE',
+    '\u00c4': 'AE',
+    '\u00d6': 'OE',
+    '\u00fc': 'ue',
+    '\u00e4': 'ae',
+    '\u00f6': 'oe',
+    '\u00df': 'ss',
+  }
+
+  return str
+    .replace(' ', '_')
+    .replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, function(a) {
+      var big = umlautMap[a.slice(0, 1)];
+      return big.charAt(0) + big.charAt(1).toLowerCase() + a.slice(1);
+    })
+    .replace(new RegExp('['+Object.keys(umlautMap).join('|')+']','g'),
+      function(a) { return umlautMap[a] }
+    );
+}
+
 function getWikiData(station) {
   var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
   var wikiTitle = '<h1>' + station.name + '</h1>';
   var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
 
   if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
+    var imagePath = preloadImage('articles/images/' + imageName(station.name) + '.jpg')
+    console.log(imagePath)
+
     $.ajax({
       url: 'articles/html/' + station.name + '.html',
       success: function(data) {
@@ -52,6 +77,12 @@ function getWikiData(station) {
       }
     });
   }
+}
+
+function preloadImage(url) {
+  var img = new Image();
+  img.src = url;
+  return img.src
 }
 
 var map = d3

@@ -1,13 +1,14 @@
-U55
+---
+U55:
   Brandenburger Tor
   Bundestag
   Hauptbahnhof
 
-U5-U55
+U5-U55:
   Alexanderplatz: cached
   Brandenburger Tor
 
-U1
+U1:
   Uhlandstraße
   Kurfürstendamm
   Wittenbergplatz
@@ -22,7 +23,7 @@ U1
   Schlesisches Tor
   Warschauer Straße
 
-U3
+U3:
   Krumme Lanke
   Onkel Toms Hütte
   Oskar-Helene-Heim
@@ -48,7 +49,7 @@ U3
   Schlesisches Tor
   Warschauer Straße
 
-U2
+U2:
   Ruhleben: cached
   Olympia-Stadion: cached
   Neu-Westend: cached
@@ -79,14 +80,14 @@ U2
   Vinetastraße
   Pankow
 
-U4
+U4:
   Nollendorfplatz
   Viktoria-Luise-Platz
   Bayerischer Platz
   Rathaus Schöneberg
   Innsbrucker Platz
 
-U5
+U5:
   Alexanderplatz: cached
   Schillingstraße
   Strausberger Platz
@@ -108,7 +109,7 @@ U5
   Louis-Lewin-Straße
   Hönow
 
-U6
+U6:
   Alt-Tegel
   Borsigwerke
   Holzhauser Straße
@@ -124,7 +125,7 @@ U6
   Schwartzkopffstraße
   Naturkundemuseum
   Oranienburger Tor
-  Friedrichstraße
+  Friedrichstraße: cached
   Französische Straße
   Stadtmitte
   Kochstraße
@@ -139,7 +140,7 @@ U6
   Westphalweg
   Alt Mariendorf
 
-U7
+U7:
   Rathaus Spandau
   Altstadt Spandau: cached
   Zitadelle
@@ -181,7 +182,7 @@ U7
   Zwickauer Damm
   Rudow
 
-U8
+U8:
   Wittenau
   Rathaus Reinickendorf
   Karl-Bonhoeffer-Nervenklinik
@@ -207,7 +208,7 @@ U8
   Leinestraße
   Hermannstraße
 
-U9
+U9:
   Osloer Straße
   Nauener Platz
   Leopoldplatz
@@ -216,7 +217,7 @@ U9
   Birkenstraße
   Turmstraße
   Hansaplatz
-  Zoologischer Garten
+  Zoologischer Garten: cached
   Kurfürstendamm
   Spichernstraße
   Güntzelstraße
