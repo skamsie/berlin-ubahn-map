@@ -460,7 +460,7 @@
       "id": 5713678269,
       "name": "Heinrich-Heine-Straße",
       "label": "Heinrich-Heine-Straße",
-      "wiki_cache": true,
+      "wiki_cache":"01/04/2020",
       "position": {
         "lat": 52.5104484,
         "lon": 13.4160272
@@ -497,6 +497,7 @@
       "id": 3947836158,
       "name": "Hausvogteiplatz",
       "label": "Hausvogtei-\nplatz",
+      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5133502,
         "lon": 13.395591
@@ -506,6 +507,7 @@
       "id": 3904674211,
       "name": "Spittelmarkt",
       "label": "Spittelmarkt",
+      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5112959,
         "lon": 13.4041155

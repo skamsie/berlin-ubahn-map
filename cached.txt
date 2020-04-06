@@ -4,7 +4,7 @@ U55
   Hauptbahnhof
 
 U5-U55
-  Alexanderplatz
+  Alexanderplatz: cached
   Brandenburger Tor
 
 U1
@@ -64,14 +64,14 @@ U2
   Bülowstraße: cached
   Gleisdreieck: cached
   Mendelssohn-Bartholdy-Park: cached
-  Potsdamer Platz
-  Mohrenstraße
-  Stadtmitte
-  Hausvogteiplatz
-  Spittelmarkt
+  Potsdamer Platz: cached
+  Mohrenstraße: cached
+  Stadtmitte: cached
+  Hausvogteiplatz: cached
+  Spittelmarkt: cached
   Märkisches Museum
   Klosterstraße
-  Alexanderplatz
+  Alexanderplatz: cached
   Rosa-Luxemburg-Platz
   Senefelderplatz
   Eberswalder Straße
@@ -80,14 +80,14 @@ U2
   Pankow
 
 U4
-  Nollendorfplatz 3
+  Nollendorfplatz
   Viktoria-Luise-Platz
   Bayerischer Platz
   Rathaus Schöneberg
   Innsbrucker Platz
 
 U5
-  Alexanderplatz
+  Alexanderplatz: cached
   Schillingstraße
   Strausberger Platz
   Weberwiese
@@ -118,9 +118,9 @@ U6
   Afrikanische Straße
   Rehberge
   Seestraße
-  Leopoldplatz
+  Leopoldplatz: cached
   Wedding
-  Reinickendorfer Straße
+  Reinickendorfer Straße: cached
   Schwartzkopffstraße
   Naturkundemuseum
   Oranienburger Tor
@@ -141,7 +141,7 @@ U6
 
 U7
   Rathaus Spandau
-  Altstadt Spandau
+  Altstadt Spandau: cached
   Zitadelle
   Haselhorst
   Paulsternstraße
@@ -149,8 +149,8 @@ U7
   Siemensdamm
   Halemweg
   Jakob-Kaiser-Platz
-  Jungfernheide
-  Mierendorffplatz
+  Jungfernheide: cached
+  Mierendorffplatz: cached
   Richard-Wagner-Platz
   Bismarckstraße
   Wilmersdorfer Straße
@@ -163,7 +163,7 @@ U7
   Eisenacher Straße
   Kleistpark
   Yorckstraße
-  Möckernbrücke 3
+  Möckernbrücke
   Mehringdamm
   Gneisenaustraße
   Südstern
@@ -196,9 +196,9 @@ U8
   Bernauer Straße
   Rosenthaler Platz
   Weinmeisterstraße
-  Alexanderplatz
+  Alexanderplatz: cached
   Jannowitzbrücke
-  Heinrich-Heine-Straße
+  Heinrich-Heine-Straße: cached
   Moritzplatz
   Kottbusser Tor
   Schönleinstraße
