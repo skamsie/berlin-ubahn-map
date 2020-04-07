@@ -67,7 +67,11 @@
     "wiki_cache": "06/04/2020",
     "image_cache": true
   },
-  "Rosa-Luxemburg-Platz": { },
+  "Rosa-Luxemburg-Platz": {
+    "wiki_cache": "07/04/2020",
+    "image_cache": true,
+    "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Rosa-Luxemburg-Platz_(7805077092).jpg"
+  },
   "Senefelderplatz": {
     "wiki_cache": "07/04/2020",
     "image_cache": true

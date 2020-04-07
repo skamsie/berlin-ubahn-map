@@ -79,6 +79,7 @@ function getWikiData(station) {
         var wikiData = wikiTitle +
           '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
           '<a href="' + wikiUrl + '">' + wikiUrl + '</a>'
+
         showSidebar(wikiData)
       }
     });
