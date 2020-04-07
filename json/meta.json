@@ -1,0 +1,278 @@
+{
+  "Bundestag": { },
+  "Hauptbahnhof": { },
+  "Brandenburger Tor": { },
+  "Uhlandstraße": { },
+  "Ruhleben": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Olympia-Stadion": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Neu-Westend": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Theodor-Heuss-Platz": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Kaiserdamm": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Sophie-Charlotte-Platz": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Deutsche Oper": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Ernst-Reuter-Platz": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Bülowstraße": {
+    "wiki_cache":"06/04/2020",
+    "image_cache": true
+  },
+  "Mendelssohn-Bartholdy-Park": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Potsdamer Platz": {
+    "wiki_cache":"06/04/2020",
+    "image_cache": true
+  },
+  "Mohrenstraße": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Hausvogteiplatz": {
+   "wiki_cache": "06/04/2020",
+   "image_cache": true
+  },
+  "Spittelmarkt": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Märkisches Museum": {
+    "wiki_cache": "06/04/2020 (from 2016 revision)",
+    "image_cache": true
+  },
+  "Klosterstraße": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Rosa-Luxemburg-Platz": { },
+  "Senefelderplatz": {
+    "wiki_cache": "07/04/2020",
+    "image_cache": true
+  },
+  "Eberswalder Straße": { },
+  "Schönhauser Allee": { },
+  "Vinetastraße": { },
+  "Pankow": { },
+  "Krumme Lanke": { },
+  "Onkel Toms Hütte": { },
+  "Oskar-Helene-Heim": { },
+  "Freie Universität (Thielplatz)": { },
+  "Dahlem-Dorf": { },
+  "Podbielskiallee": { },
+  "Breitenbachplatz": { },
+  "Rüdesheimer Platz": { },
+  "Heidelberger Platz": { },
+  "Hohenzollernplatz": { },
+  "Augsburger Straße": { },
+  "Wittenbergplatz": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Kurfürstenstraße": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Gleisdreieck": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Prinzenstraße": { },
+  "Görlitzer Bahnhof": { },
+  "Schlesisches Tor": { },
+  "Warschauer Straße": { },
+  "Nollendorfplatz": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Viktoria-Luise-Platz": { },
+  "Rathaus Schöneberg": { },
+  "Innsbrucker Platz": { },
+  "Schillingstraße": { },
+  "Strausberger Platz": { },
+  "Weberwiese": { },
+  "Frankfurter Tor": { },
+  "Samariterstraße": { },
+  "Frankfurter Allee": { },
+  "Magdalenenstraße": { },
+  "Lichtenberg": { },
+  "Friedrichsfelde": { },
+  "Tierpark": { },
+  "Biesdorf-Süd": { },
+  "Elsterwerdaer Platz": { },
+  "Wuhletal": { },
+  "Kaulsdorf-Nord": { },
+  "Kienberg (Gärten der Welt)": { },
+  "Cottbusser Platz": { },
+  "Hellersdorf": { },
+  "Louis-Lewin-Straße": { },
+  "Hönow": { },
+  "Alt-Tegel": { },
+  "Borsigwerke": { },
+  "Holzhauser Straße": { },
+  "Otisstraße": { },
+  "Scharnweberstraße": { },
+  "Kurt-Schumacher-Platz": { },
+  "Afrikanische Straße": { },
+  "Rehberge": { },
+  "Seestraße": { },
+  "Wedding": { },
+  "Reinickendorfer Straße": {
+    "wiki_cache": "03/04/2020",
+    "image_cache": true
+  },
+  "Schwartzkopffstraße": { },
+  "Naturkundemuseum": { },
+  "Oranienburger Tor": { },
+  "Friedrichstraße": {
+   "wiki_cache": "03/04/2020",
+   "image_cache": true
+  },
+  "Französische Straße": {
+    "wiki_cache": "03/04/2020",
+    "image_cache": true
+  },
+  "Stadtmitte": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Kochstraße": { },
+  "Hallesches Tor": { },
+  "Platz der Luftbrücke": { },
+  "Paradestraße": { },
+  "Tempelhof": { },
+  "Alt-Tempelhof": { },
+  "Kaiserin-Augusta-Straße": { },
+  "Ullsteinstraße": { },
+  "Westphalweg": { },
+  "Alt Mariendorf": { },
+  "Rathaus Spandau": { },
+  "Altstadt Spandau": {
+    "wiki_cache": "03/04/2020",
+    "image_cache": true
+  },
+  "Zitadelle": { },
+  "Haselhorst": { },
+  "Paulsternstraße": { },
+  "Rohrdamm": { },
+  "Siemensdamm": { },
+  "Halemweg": { },
+  "Jakob-Kaiser-Platz": { },
+  "Jungfernheide": {
+    "wiki_cache": "03/04/2020",
+    "image_cache": true
+  },
+  "Mierendorffplatz": {
+    "wiki_cache": "03/04/2020",
+    "image_cache": true
+  },
+  "Richard-Wagner-Platz": { },
+  "Bismarckstraße": {
+    "wiki_cache": "06/04/2020",
+    "image_cache": true
+  },
+  "Wilmersdorfer Straße": { },
+  "Adenauerplatz": { },
+  "Konstanzer Straße": { },
+  "Fehrbelliner Platz": { },
+  "Blissestraße": { },
+  "Bayerischer Platz": { },
+  "Eisenacher Straße": { },
+  "Kleistpark": { },
+  "Yorckstraße": { },
+  "Möckernbrücke": { },
+  "Mehringdamm": { },
+  "Gneisenaustraße": { },
+  "Südstern": { },
+  "Rathaus Neukölln": { },
+  "Karl-Marx-Straße": { },
+  "Neukölln": { },
+  "Grenzallee": { },
+  "Blaschkoallee": { },
+  "Parchimer Allee": { },
+  "Britz-Süd": { },
+  "Johannisthaler Chaussee": { },
+  "Lipschitzallee": { },
+  "Wutzkyallee": { },
+  "Zwickauer Damm": { },
+  "Rudow": { },
+  "Wittenau": { },
+  "Rathaus Reinickendorf": { },
+  "Karl-Bonhoeffer-Nervenklinik": { },
+  "Lindauer Allee": { },
+  "Paracelsus-Bad": { },
+  "Residenzstraße": { },
+  "Franz-Neumann-Platz": { },
+  "Pankstraße": { },
+  "Gesundbrunnen": { },
+  "Voltastraße": { },
+  "Bernauer Straße": { },
+  "Rosenthaler Platz": { },
+  "Weinmeisterstraße": { },
+  "Alexanderplatz": {
+      "wiki_cache": "03/04/2020",
+      "image_cache": true,
+      "photo_source": "own"
+  },
+  "Jannowitzbrücke": { },
+  "Heinrich-Heine-Straße": {
+    "wiki_cache": "01/04/2020",
+    "image_cache": true
+  },
+  "Moritzplatz": { },
+  "Kottbusser Tor": { },
+  "Schönleinstraße": { },
+  "Hermannplatz": { },
+  "Boddinstraße": { },
+  "Leinestraße": { },
+  "Hermannstraße": { },
+  "Osloer Straße": { },
+  "Nauener Platz": { },
+  "Leopoldplatz": {
+    "wiki_cache": "02/04/2020",
+    "image_cache": true
+  },
+  "Amrumer Straße": { },
+  "Westhafen": { },
+  "Birkenstraße": { },
+  "Turmstraße": { },
+  "Hansaplatz": { },
+  "Zoologischer Garten": {
+    "wiki_cache":"06/04/2020",
+    "image_cache": true
+  },
+  "Kurfürstendamm": {
+    "wiki_cache": "07/04/2020",
+    "image_cache": true
+  },
+  "Spichernstraße": { },
+  "Güntzelstraße": { },
+  "Berliner Straße": { },
+  "Bundesplatz": { },
+  "Friedrich-Wilhelm-Platz": { },
+  "Walther-Schreiber-Platz": { },
+  "Schloßstraße": { },
+  "Rathaus Steglitz": { }
+}

@@ -5,6 +5,11 @@ var container = d3.select('#ubahn-map');
 var currentStation;
 var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
+var meta;
+
+d3.json('./json/meta.json').then(function(data) {
+  meta = data;
+})
 
 function imageName(str) {
   var umlautMap = {
@@ -31,15 +36,17 @@ function imageName(str) {
 function getWikiData(station) {
   var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
   var wikiTitle = '<h1>' + station.name + '</h1>';
-  var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
+  var wikiCached = meta[station.name].wiki_cache
 
-  if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
+  if (wikiCached !== false && wikiCached !== undefined) {
     preloadImage('articles/images/' + imageName(station.name) + '.jpg')
+
+    var wikiCache = '<p class="cached">cached: ' + wikiCached + '</p>';
 
     $.ajax({
       url: 'articles/html/' + station.name + '.html',
       success: function(data) {
-        showSidebar(wikiTitle + data + wikiCached)
+        showSidebar(wikiTitle + data + wikiCache)
       }
     });
   }

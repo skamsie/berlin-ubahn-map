@@ -85,7 +85,6 @@
       "id": 3772836700,
       "name": "Leopoldplatz",
       "label": " Leopoldplatz",
-      "wiki_cache": "02/04/2020",
       "position": {
         "lat": 52.5463833,
         "lon": 13.3591672
@@ -131,7 +130,6 @@
       "id": 5198810677,
       "name": "Reinickendorfer Straße",
       "label": "Reinickendorfer\nStraße",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5400429,
         "lon": 13.3702888
@@ -186,7 +184,6 @@
       "id": 3869306768,
       "name": "Friedrichstraße",
       "label": "Friedrichstraße",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5202635,
         "lon": 13.3882862
@@ -196,7 +193,6 @@
       "id": 29058259,
       "name": "Französische Straße",
       "label": "Französische\nStraße",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5148248,
         "lon": 13.3891706
@@ -206,7 +202,6 @@
       "id": 3352091173,
       "name": "Stadtmitte",
       "label": "Stadtmitte",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5121459,
         "lon": 13.3905632
@@ -441,7 +436,6 @@
       "id": 4598414751,
       "name": "Alexanderplatz",
       "label": "Alexanderplatz ",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5215849,
         "lon": 13.4139082
@@ -460,7 +454,6 @@
       "id": 5713678269,
       "name": "Heinrich-Heine-Straße",
       "label": "Heinrich-Heine-Straße",
-      "wiki_cache":"01/04/2020",
       "position": {
         "lat": 52.5104484,
         "lon": 13.4160272
@@ -497,7 +490,6 @@
       "id": 3947836158,
       "name": "Hausvogteiplatz",
       "label": "Hausvogtei-\nplatz",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5133502,
         "lon": 13.395591
@@ -507,7 +499,6 @@
       "id": 3904674211,
       "name": "Spittelmarkt",
       "label": "Spittelmarkt",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5112959,
         "lon": 13.4041155
@@ -517,7 +508,6 @@
       "id": 4940731304,
       "name": "Märkisches Museum",
       "label": "Märki-\nsches\nMuseum",
-      "wiki_cache": "06/04/2020 (from 2016 revision)",
       "position": {
         "lat": 52.5123348,
         "lon": 13.4101754
@@ -527,7 +517,6 @@
       "id": 3876077784,
       "name": "Klosterstraße",
       "label": "Klosterstraße",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5172347,
         "lon": 13.4124323
@@ -546,7 +535,6 @@
       "id": 3916325095,
       "name": "Senefelderplatz",
       "label": "Senefelderplatz",
-      "wiki_cache": "07/04/2020",
       "position": {
         "lat": 52.5323899,
         "lon": 13.4126861
@@ -898,7 +886,6 @@
       "id": 3870475231,
       "name": "Mohrenstraße",
       "label": "Mohrenstraße",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5117915,
         "lon": 13.3850915
@@ -908,7 +895,6 @@
       "id": 3854591000,
       "name": "Potsdamer Platz",
       "label": "Potsdamer Platz",
-      "wiki_cache":"06/04/2020",
       "position": {
         "lat": 52.5091586,
         "lon": 13.3782147
@@ -918,7 +904,6 @@
       "id": 3933855820,
       "name": "Mendelssohn-Bartholdy-Park",
       "label": " Mendelssohn-\n Bartholdy-Park",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5039086,
         "lon": 13.3749852
@@ -928,7 +913,6 @@
       "id": 3906622702,
       "name": "Kurfürstenstraße",
       "label": "Kurfürstenstraße",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.4999599,
         "lon": 13.3619411
@@ -947,7 +931,6 @@
       "id": 2102139395,
       "name": "Gleisdreieck",
       "label": "Gleisdreieck",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.4995261,
         "lon": 13.3740318
@@ -966,7 +949,6 @@
       "id": 3946122064,
       "name": "Bülowstraße",
       "label": "Bülowstraße",
-      "wiki_cache":"06/04/2020",
       "position": {
         "lat": 52.4975858,
         "lon": 13.3632209
@@ -976,7 +958,6 @@
       "id": 3901824902,
       "name": "Nollendorfplatz",
       "label": "Nollendorfplatz",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.4995972,
         "lon": 13.3537297
@@ -1004,7 +985,6 @@
       "id": 3957757604,
       "name": "Wittenbergplatz",
       "label": "Wittenbergplatz",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5017976,
         "lon": 13.3430005
@@ -1095,7 +1075,6 @@
       "id": 29046450,
       "name": "Zoologischer Garten",
       "label": "Zoologischer Garten",
-      "wiki_cache":"06/04/2020",
       "position": {
         "lat": 52.5058669,
         "lon": 13.3330236
@@ -1285,7 +1264,6 @@
       "id": 29123764,
       "name": "Ernst-Reuter-Platz",
       "label": "Ernst-Reuter-\nPlatz",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5118853,
         "lon": 13.3221613
@@ -1295,7 +1273,6 @@
       "id": 31207787,
       "name": "Bismarckstraße",
       "label": "Bismarckstraße",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5115148,
         "lon": 13.3052393
@@ -1314,7 +1291,6 @@
       "id": 5219756618,
       "name": "Mierendorffplatz",
       "label": "Mierendorffplatz",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5263437,
         "lon": 13.3047721
@@ -1324,7 +1300,6 @@
       "id": 4644994619,
       "name": "Jungfernheide",
       "label": "Jungfernheide",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5307879,
         "lon": 13.3006301
@@ -1352,7 +1327,6 @@
       "id": 3900580952,
       "name": "Sophie-Charlotte-Platz",
       "label": "Sophie-Charlotte-\nPlatz",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5109137,
         "lon": 13.2963306
@@ -1407,7 +1381,6 @@
       "id": 5726082246,
       "name": "Altstadt Spandau",
       "label": "Altstadt Spandau",
-      "wiki_cache": "03/04/2020",
       "position": {
         "lat": 52.5388381,
         "lon": 13.2062573
@@ -1660,7 +1633,6 @@
       "id": 316021790,
       "name": "Kaiserdamm",
       "label": "Kaiserdamm",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5100921,
         "lon": 13.2831263
@@ -1670,7 +1642,6 @@
       "id": 29123754,
       "name": "Theodor-Heuss-Platz",
       "label": "Theodor-Heuss-Platz",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5099869,
         "lon": 13.2722217
@@ -1680,7 +1651,6 @@
       "id": 29123761,
       "name": "Neu-Westend",
       "label": "Neu-Westend",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5162154,
         "lon": 13.2592357
@@ -1690,7 +1660,6 @@
       "id": 5713678268,
       "name": "Olympia-Stadion",
       "label": "Olympia-Stadion",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5168643,
         "lon": 13.2504479
@@ -1700,7 +1669,6 @@
       "id": 27586255,
       "name": "Ruhleben",
       "label": "Ruhleben",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.5256744,
         "lon": 13.2414191
@@ -1710,7 +1678,6 @@
       "id": 29123763,
       "name": "Deutsche Oper",
       "label": "Deutsche\nOper",
-      "wiki_cache": "06/04/2020",
       "position": {
         "lat": 52.511837,
         "lon": 13.3105328
