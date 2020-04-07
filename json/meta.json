@@ -186,7 +186,8 @@
   },
   "Mierendorffplatz": {
     "wiki_cache": "03/04/2020",
-    "image_cache": true
+    "image_cache": true,
+    "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_U-Bahn_(22869425759).jpg"
   },
   "Richard-Wagner-Platz": { },
   "Bismarckstraße": {
@@ -234,7 +235,7 @@
   "Alexanderplatz": {
       "wiki_cache": "03/04/2020",
       "image_cache": true,
-      "photo_source": "own"
+      "image_source": "own"
   },
   "Jannowitzbrücke": { },
   "Heinrich-Heine-Straße": {
