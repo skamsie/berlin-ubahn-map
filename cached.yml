@@ -23,32 +23,6 @@ U1:
   Schlesisches Tor
   Warschauer Straße
 
-U3:
-  Krumme Lanke
-  Onkel Toms Hütte
-  Oskar-Helene-Heim
-  Freie Universität (Thielplatz)
-  Dahlem-Dorf
-  Podbielskiallee
-  Breitenbachplatz
-  Rüdesheimer Platz
-  Heidelberger Platz
-  Fehrbelliner Platz
-  Hohenzollernplatz
-  Spichernstraße
-  Augsburger Straße
-  Wittenbergplatz
-  Nollendorfplatz
-  Kurfürstenstraße: cached
-  Gleisdreieck
-  Möckernbrücke
-  Hallesches Tor
-  Prinzenstraße
-  Kottbusser Tor
-  Görlitzer Bahnhof
-  Schlesisches Tor
-  Warschauer Straße
-
 U2:
   Ruhleben: cached
   Olympia-Stadion: cached
@@ -74,11 +48,37 @@ U2:
   Klosterstraße: cached
   Alexanderplatz: cached
   Rosa-Luxemburg-Platz: ok
-  Senefelderplatz
+  Senefelderplatz: cached
   Eberswalder Straße
   Schönhauser Allee
   Vinetastraße
   Pankow
+
+U3:
+  Krumme Lanke
+  Onkel Toms Hütte
+  Oskar-Helene-Heim
+  Freie Universität (Thielplatz)
+  Dahlem-Dorf
+  Podbielskiallee
+  Breitenbachplatz
+  Rüdesheimer Platz
+  Heidelberger Platz
+  Fehrbelliner Platz
+  Hohenzollernplatz
+  Spichernstraße
+  Augsburger Straße
+  Wittenbergplatz
+  Nollendorfplatz
+  Kurfürstenstraße: cached
+  Gleisdreieck
+  Möckernbrücke
+  Hallesches Tor
+  Prinzenstraße
+  Kottbusser Tor
+  Görlitzer Bahnhof
+  Schlesisches Tor
+  Warschauer Straße
 
 U4:
   Nollendorfplatz

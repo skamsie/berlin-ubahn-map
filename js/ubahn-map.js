@@ -34,8 +34,7 @@ function getWikiData(station) {
   var wikiCached = '<p class="cached">cached: ' + station.wiki_cache + '</p>';
 
   if (station.wiki_cache !== false && station.wiki_cache !== undefined) {
-    var imagePath = preloadImage('articles/images/' + imageName(station.name) + '.jpg')
-    console.log(imagePath)
+    preloadImage('articles/images/' + imageName(station.name) + '.jpg')
 
     $.ajax({
       url: 'articles/html/' + station.name + '.html',
