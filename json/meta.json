@@ -4,101 +4,228 @@
   "Brandenburger Tor": { },
   "Uhlandstraße": { },
   "Ruhleben": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Ruhleben_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Ruhleben_Bahnsteig_2.jpg"
+    }
   },
   "Olympia-Stadion": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Olympia-Stadion_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:2009-04-07_Berlin_Olympiastadion_560.jpg"
+    }
   },
   "Neu-Westend": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Neu-Westend_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://en.wikipedia.org/wiki/Neu-Westend_(Berlin_U-Bahn)#/media/File:U-Bahnhof_Neu-Westend.jpg"
+    }
   },
   "Theodor-Heuss-Platz": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+    "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Theodor-Heuss-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://en.wikipedia.org/wiki/Theodor-Heuss-Platz_(Berlin_U-Bahn)"
+    }
   },
   "Kaiserdamm": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kaiserdamm_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Kaiserdamm,_Stationsschild_20141110_32.jpg"
+    }
   },
   "Sophie-Charlotte-Platz": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+    "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Sophie-Charlotte-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahn_Berlin_Sophie-Charlotte-Platz.JPG"
+    }
   },
   "Deutsche Oper": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Deutsche_Oper_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Deutsche_Oper_-_Linie_U2_(6420520007).jpg"
+    }
   },
   "Ernst-Reuter-Platz": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Ernst-Reuter-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahn_Berlin_U2_Ernst-Reuter-Platz_entrance.JPG"
+    }
   },
   "Bülowstraße": {
-    "wiki_cache":"06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/B%C3%BClowstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahn_Berlin_Bülowstraße.JPG"
+    },
+    "_note": "bad photo"
   },
   "Mendelssohn-Bartholdy-Park": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Mendelssohn-Bartholdy-Park_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Mendelssohn-Bartholdy-Park_-_Linie_U2_(7184540992).jpg"
+    }
   },
   "Potsdamer Platz": {
-    "wiki_cache":"06/04/2020",
-    "image_cache": true
+    "en_wiki_cache":"06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Potsdamer_Platz_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:150926-Mitte-U-Bahnhof_Potsdamer_Platz_(1).JPG"
+    }
   },
   "Mohrenstraße": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Mohrenstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof-Mohrenstrasse.Innenwand.jpg"
+    }
   },
   "Hausvogteiplatz": {
-   "wiki_cache": "06/04/2020",
-   "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Hausvogteiplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_Hausvogteiplatz_U2.jpg"
+    }
   },
   "Spittelmarkt": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Spittelmarkt_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Spittelmarkt.jpg"
+    }
   },
   "Märkisches Museum": {
-    "wiki_cache": "06/04/2020 (from 2016 revision)",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN) (from 2016 revision)": "https://en.wikipedia.org/w/index.php?title=Märkisches_Museum_(Berlin_U-Bahn)&oldid=735202950"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahn_Maerkmuseum.JPG"
+    }
   },
   "Klosterstraße": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Klosterstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahnhf_Klosterstr.JPG"
+    }
   },
   "Rosa-Luxemburg-Platz": {
-    "wiki_cache": "07/04/2020",
+    "en_wiki_cache": "07/04/2020",
+    "en_wiki_sources": {
+    "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Rosa-Luxemburg-Platz_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Rosa-Luxemburg-Platz_(7805077092).jpg"
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Rosa-Luxemburg-Platz_(7805077092).jpg"
+    }
   },
   "Senefelderplatz": {
-    "wiki_cache": "07/04/2020",
+    "en_wiki_cache": "07/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Senefelderplatz_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Senefelderplatz_(7804877920).jpg"
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Senefelderplatz_(7804877920).jpg"
+    }
   },
   "Eberswalder Straße": {
-    "wiki_cache": "08/04/2020",
+    "en_wiki_cache": "08/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Eberswalder_Straße",
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Eberswalder_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:141116_U-Bahnhof_Eberswalder_Straße_Nordeingang.jpg",
-    "note": "The content was translated from the <a href='https://de.wikipedia.org/wiki/U-Bahnhof_Eberswalder_Straße'>German Wikipedia</a> page"
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:141116_U-Bahnhof_Eberswalder_Straße_Nordeingang.jpg"
+    }
   },
   "Schönhauser Allee": {
-    "wiki_cache": "08/04/2020",
+    "en_wiki_cache": "08/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Sch%C3%B6nhauser_Allee_station"
+    },
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Schönhauser_Allee_-_Linie_U2_(7593086978).jpg"
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Schönhauser_Allee_-_Linie_U2_(7593086978).jpg"
+    }
   },
   "Vinetastraße": {
-    "wiki_cache": "08/04/2020",
+    "en_wiki_cache": "08/04/2020",
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Vinetastraße.jpg",
-    "note": "The content was translated from the <a href='https://de.wikipedia.org/wiki/U-Bahnhof_Eberswalder_Straße'>German Wikipedia</a> page"
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Vinetastra%C3%9Fe",
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Vinetastra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Vinetastraße.jpg"
+    }
   },
   "Pankow": {
-    "wiki_cache": "08/04/2020",
+    "en_wiki_cache": "08/04/2020",
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Pankow.jpg",
-    "note": "Contains some paragraphs translated from the <a href='https://de.wikipedia.org/wiki/Bahnhof_Berlin-Pankow'>German Wikipedia</a> page"
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/Bahnhof_Berlin-Pankow",
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin-Pankow_station"
+    },
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Pankow.jpg"
+    }
   },
   "Krumme Lanke": { },
   "Onkel Toms Hütte": { },
@@ -112,24 +239,66 @@
   "Hohenzollernplatz": { },
   "Augsburger Straße": { },
   "Wittenbergplatz": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Wittenbergplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Bahnhof_Wittenbergplatz.JPG"
+    }
   },
   "Kurfürstenstraße": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kurf%C3%BCrstenstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_Kurfürstenstraße_U1_tiles.jpg"
+    }
   },
   "Gleisdreieck": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Gleisdreieck_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Gleisdreieck_B-Kreuzberg_07-2017.jpg"
+    }
   },
   "Prinzenstraße": { },
-  "Görlitzer Bahnhof": { },
-  "Schlesisches Tor": { },
+  "Görlitzer Bahnhof": {
+    "en_wiki_cache": "09/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_G%C3%B6rlitzer_Bahnhof"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": "https://flic.kr/p/2iNoBnM"
+    }
+  },
+  "Schlesisches Tor": {
+    "en_wiki_cache": "09/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Schlesisches_Tor_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": "https://flic.kr/p/2iNpsuu"
+    }
+  },
   "Warschauer Straße": { },
   "Nollendorfplatz": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Nollendorfplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U1Nollendorfpl.JPG"
+    }
   },
   "Viktoria-Luise-Platz": { },
   "Rathaus Schöneberg": { },
@@ -137,9 +306,14 @@
   "Schillingstraße": { },
   "Strausberger Platz": { },
   "Weberwiese": {
-    "wiki_cache": "08/04/2020",
+    "en_wiki_cache": "08/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Weberwiese_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
-    "image_source": "own"
+    "image_source": {
+      "Own Work": "https://flic.kr/p/2iNnh2d"
+    }
   },
   "Frankfurter Tor": { },
   "Samariterstraße": { },
@@ -168,23 +342,47 @@
   "Seestraße": { },
   "Wedding": { },
   "Reinickendorfer Straße": {
-    "wiki_cache": "03/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Reinickendorfer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Reinickendorfer-ubahn.jpg"
+    }
   },
   "Schwartzkopffstraße": { },
   "Naturkundemuseum": { },
   "Oranienburger Tor": { },
   "Friedrichstraße": {
-   "wiki_cache": "03/04/2020",
-   "image_cache": true
+   "en_wiki_cache": "03/04/2020",
+   "en_wiki_sources": {
+     "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Friedrichstra%C3%9Fe_station"
+   },
+   "image_cache": true,
+   "image_source": {
+     "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Bahnhof_Berlin_Friedrichstraße_-_Detailansicht.jpg"
+   }
   },
   "Französische Straße": {
-    "wiki_cache": "03/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Franz%C3%B6sische_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+       "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubhf_Franz-str.JPG"
+    }
   },
   "Stadtmitte": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Stadtmitte_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahn-Stadtmitte-u2.JPG"
+    }
   },
   "Kochstraße": { },
   "Hallesches Tor": { },
@@ -198,8 +396,14 @@
   "Alt Mariendorf": { },
   "Rathaus Spandau": { },
   "Altstadt Spandau": {
-    "wiki_cache": "03/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Altstadt_Spandau_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:UBahnhf-Altstadt-spandau.JPG"
+    }
   },
   "Zitadelle": { },
   "Haselhorst": { },
@@ -209,18 +413,33 @@
   "Halemweg": { },
   "Jakob-Kaiser-Platz": { },
   "Jungfernheide": {
-    "wiki_cache": "03/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Jungfernheide_station"
+    },
+    "image_cache": true,
+    "image_source": "https://commons.wikimedia.org/wiki/File:Ubahnhf_Jungfernheide.JPG"
   },
   "Mierendorffplatz": {
-    "wiki_cache": "03/04/2020",
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Mierendorffplatz_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_U-Bahn_(22869425759).jpg"
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_U-Bahn_(22869425759).jpg"
+    }
   },
   "Richard-Wagner-Platz": { },
   "Bismarckstraße": {
-    "wiki_cache": "06/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Bismarckstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:UBahnhf_BismarckstrU2.JPG"
+    }
   },
   "Wilmersdorfer Straße": { },
   "Adenauerplatz": { },
@@ -261,14 +480,23 @@
   "Rosenthaler Platz": { },
   "Weinmeisterstraße": { },
   "Alexanderplatz": {
-      "wiki_cache": "03/04/2020",
-      "image_cache": true,
-      "image_source": "own"
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz_station"
+    },
+    "image_cache": true,
+    "image_source": {"Own Work": "https://www.flickr.com/photos/skamsie/49750103233/" }
   },
   "Jannowitzbrücke": { },
   "Heinrich-Heine-Straße": {
-    "wiki_cache": "01/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "01/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Heinrich-Heine-Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Heinr-heine-str.JPG"
+    }
   },
   "Moritzplatz": { },
   "Kottbusser Tor": { },
@@ -280,8 +508,14 @@
   "Osloer Straße": { },
   "Nauener Platz": { },
   "Leopoldplatz": {
-    "wiki_cache": "02/04/2020",
-    "image_cache": true
+    "en_wiki_cache": "02/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Leopoldplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:LeopoldplatzU6.JPG"
+    }
   },
   "Amrumer Straße": { },
   "Westhafen": { },
@@ -289,8 +523,14 @@
   "Turmstraße": { },
   "Hansaplatz": { },
   "Zoologischer Garten": {
-    "wiki_cache":"06/04/2020",
-    "image_cache": true
+    "en_wiki_cache":"06/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Zoologischer_Garten_railway_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahnu9Zoologgarten.JPG"
+    }
   },
   "Kurfürstendamm": {  },
   "Spichernstraße": { },

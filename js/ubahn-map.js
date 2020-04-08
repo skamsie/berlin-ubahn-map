@@ -34,25 +34,33 @@ function imageName(str) {
 }
 
 function getWikiData(station) {
-  var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
   var wikiTitle = '<h1>' + station.name + '</h1>';
-  var wikiCached = meta[station.name].wiki_cache
-  var note = meta[station.name].note ? '<br/>Note: ' + meta[station.name].note : ''
+  var wikiMeta = meta[station.name];
+  var imagePath = wikiMeta.image_cache ?
+    concat('articles/images/', imageName(station.name), '.jpg') :
+    null
 
-  if (wikiCached !== false && wikiCached !== undefined) {
-    preloadImage('articles/images/' + imageName(station.name) + '.jpg')
+  if (wikiMeta.image_cache) {
+    preloadImage(imagePath)
+  }
 
-    var addendum = '<p class="addendum">Cached: ' + wikiCached + note + '</p>';
-
+  if (wikiMeta.en_wiki_cache) {
     $.ajax({
       url: 'articles/html/' + station.name + '.html',
       success: function(data) {
-        showSidebar(wikiTitle + data + addendum)
+        showSidebar(
+          concat(
+            wikiTitle, '<img src="', imagePath, '">',
+            data, addendum(wikiMeta, 'en')
+          )
+        )
       }
     });
   }
 
   else {
+    var wikiStation = station.name.replace(" ", "_").concat("_(Berlin_U-Bahn)");
+
     $.ajax({
       url: 'https://en.wikipedia.org/w/api.php',
       data: {
@@ -69,7 +77,7 @@ function getWikiData(station) {
       success: function(data) {
         $('#sidebar').scrollTop(0);
         var resp = data.query.pages[Object.keys(data.query.pages)];
-        var wikiImage = resp.thumbnail.source
+        var wikiImage = imagePath ? imagePath : resp.thumbnail.source
         var wikiText = resp.extract
         var wikiUrl = resp.fullurl
 
@@ -77,9 +85,35 @@ function getWikiData(station) {
           .split('<h2><span id="References">References</span></h2>')[0]
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
 
-        var wikiData = wikiTitle +
+        function saveData(data, fileName) {
+            var a = document.createElement("a");
+            document.body.appendChild(a);
+            a.style = "display: none";
+
+            var json = JSON.stringify(data),
+                blob = new Blob([data], {type: "text/html;charset=utf-8"}),
+                url = window.URL.createObjectURL(blob);
+            a.href = url;
+            a.download = fileName;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        saveData(
           '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
-          '<a href="' + wikiUrl + '">' + wikiUrl + '</a>'
+          '<a href="' + wikiUrl + '">' + wikiUrl + '</a>', station.name + '.html'
+        )
+        var wikiData = concat(
+          wikiTitle, '<img src=', '"', wikiImage, '">', formattedWikiText,
+          addendum(
+            {
+              'en_wiki_sources': { 'Wikipedia (EN)': wikiUrl },
+              'image_cache': wikiMeta.image_cache,
+              'image_source': wikiMeta.image_source
+            },
+            'en'
+          )
+        )
 
         showSidebar(wikiData)
       }
@@ -163,6 +197,45 @@ function toggleAbout() {
     $('#about-button').text('?')
     showWiki()
   }
+}
+
+// return article addendum (article sources and image source)
+function addendum(addendumObject, language) {
+  wikiCache = addendumObject[language + '_wiki_cache']
+  wikiSources = addendumObject[language + '_wiki_sources']
+  imageSource = addendumObject.image_cache && addendumObject.image_source ?
+    addendumObject.image_source :
+    ''
+  addendumSection = '';
+  addendumSection += wikiCache ?
+    'Cached: ' + addendumObject[language + '_wiki_cache'] + '<br />' :
+    ''
+
+  if (wikiSources) {
+    addendumSection += 'Source: ';
+    var sources = [];
+    $.each(wikiSources, function(k, v) {
+      sources.push('<a href="' + v + '">' + k + '</a>')
+    });
+    addendumSection += sources.join(', ') + '<br />';
+  }
+
+  if (imageSource) {
+    addendumSection += concat(
+      'Image Source: <a href="', imageSource[Object.keys(imageSource)[0]],
+      '">', Object.keys(imageSource)[0], '</a>'
+    );
+  }
+
+  return concat('<p class="addendum">', addendumSection, '</p>')
+}
+
+function concat() {
+  concatenated = "";
+  for (var i = 0; i < arguments.length; i++) {
+    concatenated += arguments[i];
+  }
+  return concatenated;
 }
 
 $(document).ready(function() {

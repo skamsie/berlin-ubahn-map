@@ -161,4 +161,5 @@ a:hover, a:active {
 .addendum {
   font-size: 12px;
   font-style: italic;
+  text-align: left;
 }
