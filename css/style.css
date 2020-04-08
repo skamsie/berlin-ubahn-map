@@ -158,6 +158,7 @@ a:hover, a:active {
   font-weight: bold;
 }
 
-.cached {
+.addendum {
   font-size: 12px;
+  font-style: italic;
 }
