@@ -81,15 +81,25 @@
     "wiki_cache": "08/04/2020",
     "image_cache": true,
     "image_source": "https://commons.wikimedia.org/wiki/File:141116_U-Bahnhof_Eberswalder_Straße_Nordeingang.jpg",
-    "note": "The content is entirely translated from the <a href='https://de.wikipedia.org/wiki/U-Bahnhof_Eberswalder_Straße'>German Wikipedia</a> page"
+    "note": "The content was translated from the <a href='https://de.wikipedia.org/wiki/U-Bahnhof_Eberswalder_Straße'>German Wikipedia</a> page"
   },
   "Schönhauser Allee": {
     "wiki_cache": "08/04/2020",
     "image_cache": true,
     "image_source": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Schönhauser_Allee_-_Linie_U2_(7593086978).jpg"
   },
-  "Vinetastraße": { },
-  "Pankow": { },
+  "Vinetastraße": {
+    "wiki_cache": "08/04/2020",
+    "image_cache": true,
+    "image_source": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Vinetastraße.jpg",
+    "note": "The content was translated from the <a href='https://de.wikipedia.org/wiki/U-Bahnhof_Eberswalder_Straße'>German Wikipedia</a> page"
+  },
+  "Pankow": {
+    "wiki_cache": "08/04/2020",
+    "image_cache": true,
+    "image_source": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Pankow.jpg",
+    "note": "Contains some paragraphs translated from the <a href='https://de.wikipedia.org/wiki/Bahnhof_Berlin-Pankow'>German Wikipedia</a> page"
+  },
   "Krumme Lanke": { },
   "Onkel Toms Hütte": { },
   "Oskar-Helene-Heim": { },
@@ -126,7 +136,11 @@
   "Innsbrucker Platz": { },
   "Schillingstraße": { },
   "Strausberger Platz": { },
-  "Weberwiese": { },
+  "Weberwiese": {
+    "wiki_cache": "08/04/2020",
+    "image_cache": true,
+    "image_source": "own"
+  },
   "Frankfurter Tor": { },
   "Samariterstraße": { },
   "Frankfurter Allee": { },
