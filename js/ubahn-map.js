@@ -203,10 +203,17 @@ function addendum(addendumObject, language) {
   }
 
   if (imageSource) {
-    addendumSection += concat(
-      'Image Source: <a href="', imageSource[Object.keys(imageSource)[0]],
-      '">', Object.keys(imageSource)[0], '</a>'
-    );
+    var author = Object.keys(imageSource)[0];
+    var imagexEternalUrl = imageSource[author];
+
+    var imageSection = imagexEternalUrl ?
+      concat(
+        'Image Source: <a href="', imagexEternalUrl, '">',
+        author, '</a>'
+      ) :
+      'Image Source: '.concat(author)
+
+    addendumSection += imageSection
   }
 
   return concat('<p class="addendum">', addendumSection, '</p>')

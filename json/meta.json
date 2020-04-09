@@ -2,7 +2,12 @@
   "Bundestag": { },
   "Hauptbahnhof": { },
   "Brandenburger Tor": { },
-  "Uhlandstraße": { },
+  "Uhlandstraße": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Ruhleben": {
     "en_wiki_cache": "06/04/2020",
     "en_wiki_sources": {
@@ -245,7 +250,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Bahnhof_Wittenbergplatz.JPG"
+      "Own Work": ""
     }
   },
   "Kurfürstenstraße": {
@@ -255,7 +260,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_Kurfürstenstraße_U1_tiles.jpg"
+      "Own Work": ""
     }
   },
   "Gleisdreieck": {
@@ -265,10 +270,15 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Gleisdreieck_B-Kreuzberg_07-2017.jpg"
+      "Own Work": ""
     }
   },
-  "Prinzenstraße": { },
+  "Prinzenstraße": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Görlitzer Bahnhof": {
     "en_wiki_cache": "09/04/2020",
     "en_wiki_sources": {
@@ -289,7 +299,12 @@
       "Own Work": "https://flic.kr/p/2iNpsuu"
     }
   },
-  "Warschauer Straße": { },
+  "Warschauer Straße": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Nollendorfplatz": {
     "en_wiki_cache": "06/04/2020",
     "en_wiki_sources": {
@@ -297,7 +312,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U1Nollendorfpl.JPG"
+      "Own Work": ""
     }
   },
   "Viktoria-Luise-Platz": { },
@@ -385,7 +400,12 @@
     }
   },
   "Kochstraße": { },
-  "Hallesches Tor": { },
+  "Hallesches Tor": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Platz der Luftbrücke": { },
   "Paradestraße": { },
   "Tempelhof": { },
@@ -450,7 +470,12 @@
   "Eisenacher Straße": { },
   "Kleistpark": { },
   "Yorckstraße": { },
-  "Möckernbrücke": { },
+  "Möckernbrücke": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Mehringdamm": { },
   "Gneisenaustraße": { },
   "Südstern": { },
@@ -499,7 +524,12 @@
     }
   },
   "Moritzplatz": { },
-  "Kottbusser Tor": { },
+  "Kottbusser Tor": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Schönleinstraße": { },
   "Hermannplatz": { },
   "Boddinstraße": { },
@@ -532,7 +562,12 @@
       "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahnu9Zoologgarten.JPG"
     }
   },
-  "Kurfürstendamm": {  },
+  "Kurfürstendamm": {
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Spichernstraße": { },
   "Güntzelstraße": { },
   "Berliner Straße": { },
