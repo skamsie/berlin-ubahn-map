@@ -85,24 +85,6 @@ function getWikiData(station) {
           .split('<h2><span id="References">References</span></h2>')[0]
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
 
-        function saveData(data, fileName) {
-            var a = document.createElement("a");
-            document.body.appendChild(a);
-            a.style = "display: none";
-
-            var json = JSON.stringify(data),
-                blob = new Blob([data], {type: "text/html;charset=utf-8"}),
-                url = window.URL.createObjectURL(blob);
-            a.href = url;
-            a.download = fileName;
-            a.click();
-            window.URL.revokeObjectURL(url);
-        }
-
-        saveData(
-          '<img src=' + '"' + wikiImage + '">' + formattedWikiText +
-          '<a href="' + wikiUrl + '">' + wikiUrl + '</a>', station.name + '.html'
-        )
         var wikiData = concat(
           wikiTitle, '<img src=', '"', wikiImage, '">', formattedWikiText,
           addendum(
