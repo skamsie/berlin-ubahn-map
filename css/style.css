@@ -82,7 +82,9 @@ tspan {
   display: none;
   z-index: 100;
   text-align: justify;
-  height: calc(100% - 2px);
+  border-top: 2px solid #B8B8B8;
+  border-bottom: 2px solid #B8B8B8;
+  height: calc(100% - 4px);
 }
 
 .sidebar-content {
