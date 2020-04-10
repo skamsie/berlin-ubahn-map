@@ -473,7 +473,9 @@
       "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Jungfernheide_station"
     },
     "image_cache": true,
-    "image_source": "https://commons.wikimedia.org/wiki/File:Ubahnhf_Jungfernheide.JPG"
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahnhf_Jungfernheide.JPG"
+    }
   },
   "Mierendorffplatz": {
     "en_wiki_cache": "03/04/2020",
@@ -515,9 +517,36 @@
       "Own Work": ""
     }
   },
-  "Mehringdamm": { },
-  "Gneisenaustraße": { },
-  "Südstern": { },
+  "Mehringdamm": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Mehringdamm_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Gneisenaustraße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Gneisenaustra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Südstern": {
+    "en_wiki_cache": true,
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/S%C3%BCdstern_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Rathaus Neukölln": { },
   "Karl-Marx-Straße": { },
   "Neukölln": { },
@@ -574,7 +603,16 @@
     }
   },
   "Schönleinstraße": { },
-  "Hermannplatz": { },
+  "Hermannplatz": {
+    "en_wiki_cache": true,
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Hermannplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": "10/04/2020",
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Boddinstraße": { },
   "Leinestraße": { },
   "Hermannstraße": { },
