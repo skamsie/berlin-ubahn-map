@@ -444,8 +444,26 @@
   },
   "Zitadelle": { },
   "Haselhorst": { },
-  "Paulsternstraße": { },
-  "Rohrdamm": { },
+  "Paulsternstraße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Paulsternstra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rohrdamm": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Rohrdamm_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Siemensdamm": { },
   "Halemweg": { },
   "Jakob-Kaiser-Platz": { },
