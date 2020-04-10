@@ -77,9 +77,9 @@ function getWikiData(station) {
       success: function(data) {
         $('#sidebar').scrollTop(0);
         var resp = data.query.pages[Object.keys(data.query.pages)];
-        var wikiImage = imagePath ? imagePath : resp.thumbnail.source
-        var wikiText = resp.extract
-        var wikiUrl = resp.fullurl
+        var wikiImage = imagePath ? imagePath : resp.thumbnail.source;
+        var wikiText = resp.extract;
+        var wikiUrl = resp.fullurl;
 
         var formattedWikiText = wikiText
           .split('<h2><span id="References">References</span></h2>')[0]

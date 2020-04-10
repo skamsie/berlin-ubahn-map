@@ -3,6 +3,10 @@
   "Hauptbahnhof": { },
   "Brandenburger Tor": { },
   "Uhlandstraße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Uhlandstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
@@ -256,7 +260,8 @@
   "Kurfürstenstraße": {
     "en_wiki_cache": "06/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kurf%C3%BCrstenstra%C3%9Fe_(Berlin_U-Bahn)"
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kurf%C3%BCrstenstra%C3%9Fe_(Berlin_U-Bahn)",
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Kurf%C3%BCrstenstra%C3%9Fe"
     },
     "image_cache": true,
     "image_source": {
@@ -274,6 +279,10 @@
     }
   },
   "Prinzenstraße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Prinzenstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
@@ -300,6 +309,10 @@
     }
   },
   "Warschauer Straße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Warschauer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
@@ -401,6 +414,10 @@
   },
   "Kochstraße": { },
   "Hallesches Tor": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Hallesches_Tor_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
@@ -471,6 +488,10 @@
   "Kleistpark": { },
   "Yorckstraße": { },
   "Möckernbrücke": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/M%C3%B6ckernbr%C3%BCcke_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
@@ -525,6 +546,10 @@
   },
   "Moritzplatz": { },
   "Kottbusser Tor": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kottbusser_Tor_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
@@ -563,6 +588,10 @@
     }
   },
   "Kurfürstendamm": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kurf%C3%BCrstendamm_(Berlin_U-Bahn)"
+    },
     "image_cache": true,
     "image_source": {
       "Own Work": ""
