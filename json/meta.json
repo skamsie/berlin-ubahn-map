@@ -295,7 +295,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Own Work": "https://flic.kr/p/2iNoBnM"
+      "Own Work": ""
     }
   },
   "Schlesisches Tor": {
@@ -305,7 +305,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Own Work": "https://flic.kr/p/2iNpsuu"
+      "Own Work": ""
     }
   },
   "Warschauer Straße": {
@@ -340,7 +340,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Own Work": "https://flic.kr/p/2iNnh2d"
+      "Own Work": ""
     }
   },
   "Frankfurter Tor": { },
@@ -484,10 +484,19 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_U-Bahn_(22869425759).jpg"
+      "Own Work": ""
     }
   },
-  "Richard-Wagner-Platz": { },
+  "Richard-Wagner-Platz": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Richard-Wagner-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Bismarckstraße": {
     "en_wiki_cache": "06/04/2020",
     "en_wiki_sources": {
@@ -495,18 +504,99 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:UBahnhf_BismarckstrU2.JPG"
+      "Own Work": ""
     }
   },
-  "Wilmersdorfer Straße": { },
-  "Adenauerplatz": { },
-  "Konstanzer Straße": { },
-  "Fehrbelliner Platz": { },
-  "Blissestraße": { },
-  "Bayerischer Platz": { },
-  "Eisenacher Straße": { },
-  "Kleistpark": { },
-  "Yorckstraße": { },
+  "Wilmersdorfer Straße": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Wilmersdorfer_Stra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Adenauerplatz": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Adenauerplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Konstanzer Straße": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Konstanzer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Fehrbelliner Platz": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Fehrbelliner_Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Blissestraße": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Blissestra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Bayerischer Platz": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Bayerischer_Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Eisenacher Straße": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Eisenacher_Stra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Kleistpark": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kleistpark_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Yorckstraße": {
+    "en_wiki_cache": "11/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Yorckstra%C3%9Fe_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Möckernbrücke": {
     "en_wiki_cache": "10/04/2020",
     "en_wiki_sources": {
@@ -578,7 +668,9 @@
       "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz_station"
     },
     "image_cache": true,
-    "image_source": {"Own Work": "https://www.flickr.com/photos/skamsie/49750103233/" }
+    "image_source": {
+      "Own Work": ""
+    }
   },
   "Jannowitzbrücke": { },
   "Heinrich-Heine-Straße": {
@@ -655,7 +747,17 @@
   },
   "Spichernstraße": { },
   "Güntzelstraße": { },
-  "Berliner Straße": { },
+  "Berliner Straße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": ""
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": "https://en.wikipedia.org/wiki/Berliner_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    }
+
+  },
   "Bundesplatz": { },
   "Friedrich-Wilhelm-Platz": { },
   "Walther-Schreiber-Platz": { },
