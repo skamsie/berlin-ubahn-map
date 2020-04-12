@@ -693,13 +693,76 @@
       "Own Work": ""
     }
   },
-  "Rathaus Neukölln": { },
-  "Karl-Marx-Straße": { },
-  "Neukölln": { },
-  "Grenzallee": { },
-  "Blaschkoallee": { },
-  "Parchimer Allee": { },
-  "Britz-Süd": { },
+  "Rathaus Neukölln": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Rathaus_Neuk%C3%B6lln_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Karl-Marx-Straße": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Karl-Marx-Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Neukölln": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/Bahnhof_Berlin-Neuk%C3%B6lln#U-Bahnhof"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Grenzallee": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Grenzallee"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Blaschkoallee": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Blaschkoallee"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Parchimer Allee": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Parchimer_Allee"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Britz-Süd": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://en.wikipedia.org/wiki/Britz-S%C3%BCd_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Johannisthaler Chaussee": { },
   "Lipschitzallee": { },
   "Wutzkyallee": { },
