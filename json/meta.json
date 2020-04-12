@@ -431,7 +431,16 @@
   "Ullsteinstraße": { },
   "Westphalweg": { },
   "Alt Mariendorf": { },
-  "Rathaus Spandau": { },
+  "Rathaus Spandau": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Rathaus_Spandau_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Altstadt Spandau": {
     "en_wiki_cache": "03/04/2020",
     "en_wiki_sources": {
@@ -439,11 +448,30 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:UBahnhf-Altstadt-spandau.JPG"
+      "Own Work": ""
     }
   },
-  "Zitadelle": { },
-  "Haselhorst": { },
+  "Zitadelle": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Zitadelle_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Haselhorst": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://de.wikipedia.org/wiki/U-Bahnhof_Paulsternstra%C3%9Fe",
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Haselhorst"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Paulsternstraße": {
     "en_wiki_cache": "10/04/2020",
     "en_wiki_sources": {
@@ -464,9 +492,37 @@
       "Own Work": ""
     }
   },
-  "Siemensdamm": { },
-  "Halemweg": { },
-  "Jakob-Kaiser-Platz": { },
+  "Siemensdamm": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Siemensdamm_(Berlin_U-Bahn)",
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Siemensdamm"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Halemweg": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Halemweg_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons (cropped to 16:9)": "https://commons.wikimedia.org/wiki/File:UBahnhf_Halemweg.JPG"
+    }
+  },
+  "Jakob-Kaiser-Platz": {
+    "en_wiki_cache": "12/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Jakob-Kaiser-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Jungfernheide": {
     "en_wiki_cache": "03/04/2020",
     "en_wiki_sources": {
@@ -474,7 +530,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubahnhf_Jungfernheide.JPG"
+      "Own Work": ""
     }
   },
   "Mierendorffplatz": {
