@@ -763,11 +763,56 @@
       "Own Work": ""
     }
   },
-  "Johannisthaler Chaussee": { },
-  "Lipschitzallee": { },
-  "Wutzkyallee": { },
-  "Zwickauer Damm": { },
-  "Rudow": { },
+  "Johannisthaler Chaussee": {
+    "en_wiki_cache": "13/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Johannisthaler_Chaussee_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Lipschitzallee": {
+    "en_wiki_cache": "13/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Lipschitzallee_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Wutzkyallee": {
+    "en_wiki_cache": "13/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Wutzkyallee"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Zwickauer Damm": {
+    "en_wiki_cache": "13/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Zwickauer_Damm"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rudow": {
+    "en_wiki_cache": "13/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Rudow"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Wittenau": { },
   "Rathaus Reinickendorf": { },
   "Karl-Bonhoeffer-Nervenklinik": { },
