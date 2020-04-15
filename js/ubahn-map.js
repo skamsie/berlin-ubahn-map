@@ -115,7 +115,7 @@ var map = d3
   .height(height)
   .on('click', function(station) {
     getWikiData(station);
-    $('#about-button').text('?')
+    $('#about-link').text('?')
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
@@ -145,7 +145,6 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
 });
 
 function showSidebar(sidebarHtml) {
-  $("#draggable-side").show();
   $("#sidebar-buttons").show();
   $("#sidebar").show();
   $("#about-content").hide();
@@ -170,13 +169,13 @@ function showWiki() {
 }
 
 function toggleAbout() {
-  var currentText = $('#about-button').text().replace(/^\s+|\s+$/g, '')
+  var currentText = $('#about-link').text().replace(/^\s+|\s+$/g, '')
 
   if (currentText == '?') {
-    $('#about-button').text('i')
+    $('#about-link').text('i')
     showAbout()
   } else {
-    $('#about-button').text('?')
+    $('#about-link').text('?')
     showWiki()
   }
 }
@@ -228,18 +227,16 @@ function concat() {
 }
 
 $(document).ready(function() {
-  $('#draggable-side').resizable({
-    handles: 'e',
-    alsoResize: "#close-button-container,#sidebar,#about-button-container"
+  $('#sidebar').resizable({
+    handles: 'e'
   });
 
   $("#close-button").click(function() {
     $("#sidebar").hide();
-    $("#draggable-side").hide();
     $("#sidebar-buttons").hide();
   });
 
-  $("#about-button").click(function() {
+  $("#about-link").click(function() {
     toggleAbout()
   })
 });

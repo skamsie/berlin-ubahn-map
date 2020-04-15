@@ -12,26 +12,27 @@
   </head>
 
   <body>
-    <div id="container">
-      <div id="sidebar-buttons">
-        <div id="close-button-container" class="button-container no-selection">
+    <div id="sidebar">
+      <div id="sidebar-container">
+        <div id="sidebar-header">
+          <a id="about-link">about</a>
           <div class="button no-selection" id="close-button">x</div>
-        </div>
-
-        <div id="about-button-container" class="button-container no-selection">
           <div class="button no-selection" id="about-button">?</div>
         </div>
+
+        <div id="sidebar-content-container">
+          <div id="wiki-content"> </div>
+          <div id="about-content"> </div>
+        </div>
+
       </div>
 
-      <div id="draggable-side"></div>
-
-      <div id="sidebar">
-        <div id="wiki-content" class="sidebar-content"> </div>
-        <div id="about-content" class="sidebar-content"> </div>
+      <div id="sidebar-footer-container">
+        <div id="sidebar-footer">pula</div>
       </div>
-
-      <div id="ubahn-map"></div>
     </div>
+
+    <div id="ubahn-map"></div>
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/jquery-ui.min.js"></script>

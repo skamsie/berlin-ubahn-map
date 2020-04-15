@@ -74,29 +74,47 @@ tspan {
 }
 
 #sidebar {
+  height: 100%;
   position: absolute;
   width: 40%;
   max-width: 800px;
   min-width: 400px;
   background-color: #f6f6f6;
   display: none;
-  z-index: 100;
   text-align: justify;
-  border-top: 2px solid #B8B8B8;
-  border-bottom: 2px solid #B8B8B8;
-  height: calc(100% - 4px);
+  background-color: blue;
 }
 
-.sidebar-content {
-  height: 96%;
-  top: 2%;
-  bottom: 2%;
-  overflow: auto;
+#sidebar-header {
+  margin: 0 35px 0 35px;
+  height: 30px;
+  border-bottom: 1px solid #B8B8B8;
+  background-color: salmon;
+}
+
+#sidebar-footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: red;
+}
+
+#sidebar-footer{
+  border-top: 1px solid #B8B8B8;
+  background-color: fuchsia;
+  height: 29px;
+  margin: 0 35px 0 35px;
+}
+
+#sidebar-content-container {
   padding: 0 35px 0 35px;
+  position: absolute;
+  height: calc(100% - 31px);
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 15px;
   background-color: #f6f6f6;
-  position: relative;
   line-height: 21px;
 }
 
