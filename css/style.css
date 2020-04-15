@@ -82,27 +82,36 @@ tspan {
   background-color: #f6f6f6;
   display: none;
   text-align: justify;
-  background-color: blue;
+}
+
+#close-link-container {
+  float: right;
+}
+
+.fake-link {
+  font-size: 12px;
 }
 
 #sidebar-header {
   margin: 0 35px 0 35px;
-  height: 30px;
-  border-bottom: 1px solid #B8B8B8;
-  background-color: salmon;
+  height: 35px;
+  border-bottom: 2px solid #B8B8B8;
+  line-height: 40px;
+}
+
+#sidebar-footer {
+  padding-top: 8px;
 }
 
 #sidebar-footer-container {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 30px;
-  background-color: red;
+  height: 35px;
 }
 
 #sidebar-footer{
   border-top: 1px solid #B8B8B8;
-  background-color: fuchsia;
   height: 29px;
   margin: 0 35px 0 35px;
 }
@@ -110,7 +119,8 @@ tspan {
 #sidebar-content-container {
   padding: 0 35px 0 35px;
   position: absolute;
-  height: calc(100% - 31px);
+  top: 36px;
+  bottom: 35px;
   overflow: auto;
   overflow-wrap: break-word;
   font-size: 15px;
@@ -156,14 +166,6 @@ a:hover, a:active {
 }
 .button:hover{
   background-color: #D0D0D0;
-}
-
-#close-button-container {
-  top: 12px;
-}
-
-#about-button-container {
-  top: 40px;
 }
 
 #wiki-content a {
