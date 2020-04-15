@@ -17,6 +17,10 @@ var HIGHLIGHT_ON_HOVER = true;
       .endAngle(2 * Math.PI);
   }
 
+  function normalizeStationName(stationName) {
+    return stationName.replace(/[0-9]/g, '').trim()
+  }
+
   function line(data, xScale, yScale, lineWidth, lineWidthTickRatio) {
     var path = '';
 
@@ -307,6 +311,20 @@ var HIGHLIGHT_ON_HOVER = true;
     this.stations = stations;
   }
 
+  Lines.prototype.normalizedLines = function() {
+    var filteredLines = this.lines
+      .filter(line => line.dashed == false)
+      .map(function(line) {
+        return {
+          name: line.name,
+          stations: line.stations.map(station => normalizeStationName(station))
+        }
+      })
+
+    return filteredLines
+      .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+  }
+
   Stations.prototype.toArray = function() {
     var stations = [];
 
@@ -546,10 +564,12 @@ var HIGHLIGHT_ON_HOVER = true;
         .attr('fill', function(d) {
           return d.visited ? fgColor : bgColor;
         })
-        .on('click', function() {
-          var label = d3.select(this);
-          var name = label.attr('id');
-          listeners.call('click', this, name);
+        .on('click', function(d) {
+          listeners.call('click', this, {
+            current: d,
+            lines: _data.lines.normalizedLines(),
+            stations: _data.stations.stations
+          });
         })
         .on('mouseover', function (d) {
           toggleHighlight(this, d)
@@ -579,10 +599,12 @@ var HIGHLIGHT_ON_HOVER = true;
         .attr('id', function(d) {
           return d.name;
         })
-        .on('click', function() {
-          var label = d3.select(this);
-          var name = label.attr('id');
-          listeners.call('click', this, name);
+        .on('click', function(d) {
+          listeners.call('click', this, {
+            current: d,
+            lines: _data.lines.normalizedLines(),
+            stations: _data.stations.stations
+          });
         })
         .append('path')
         .attr('d', trainStop(lineWidth))
@@ -650,7 +672,11 @@ var HIGHLIGHT_ON_HOVER = true;
         })
         .classed('label', true)
         .on('click', function(d) {
-          listeners.call('click', this, d);
+          listeners.call('click', this, {
+            current: d,
+            lines: _data.lines.normalizedLines(),
+            stations: _data.stations.stations
+          });
         })
         .append('text')
         .text(function(d) {

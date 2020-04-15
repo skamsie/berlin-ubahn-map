@@ -306,9 +306,9 @@
         "lon": 13.3856905
       }
     },
-    "Alt Mariendorf": {
+    "Alt-Mariendorf": {
       "id": 3884823930,
-      "name": "Alt Mariendorf",
+      "name": "Alt-Mariendorf",
       "label": "Alt-Mariendorf",
       "position": {
         "lat": 52.4396754,
@@ -2597,7 +2597,7 @@
         },
         {
           "coords": [101, -128],
-          "name": "Alt Mariendorf",
+          "name": "Alt-Mariendorf",
           "labelPos": "E",
           "labelBold": true,
           "lineLabel": true,

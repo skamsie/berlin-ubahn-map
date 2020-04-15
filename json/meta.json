@@ -429,7 +429,7 @@
   "Kaiserin-Augusta-Straße": { },
   "Ullsteinstraße": { },
   "Westphalweg": { },
-  "Alt Mariendorf": { },
+  "Alt-Mariendorf": { },
   "Rathaus Spandau": {
     "en_wiki_cache": "12/04/2020",
     "en_wiki_sources": {
@@ -835,7 +835,16 @@
       "Own Work": ""
     }
   },
-  "Jannowitzbrücke": { },
+  "Jannowitzbrücke": {
+    "en_wiki_cache": "17/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Jannowitzbr%C3%BCcke_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Heinrich-Heine-Straße": {
     "en_wiki_cache": "01/04/2020",
     "en_wiki_sources": {
@@ -843,10 +852,19 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Heinr-heine-str.JPG"
+      "Own Work": ""
     }
   },
-  "Moritzplatz": { },
+  "Moritzplatz": {
+    "en_wiki_cache": "17/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Moritzplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Kottbusser Tor": {
     "en_wiki_cache": "10/04/2020",
     "en_wiki_sources": {
@@ -857,20 +875,56 @@
       "Own Work": ""
     }
   },
-  "Schönleinstraße": { },
-  "Hermannplatz": {
-    "en_wiki_cache": true,
+  "Schönleinstraße": {
+    "en_wiki_cache": "17/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Hermannplatz_(Berlin_U-Bahn)"
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Sch%C3%B6nleinstra%C3%9Fe"
     },
-    "image_cache": "10/04/2020",
+    "image_cache": true,
     "image_source": {
       "Own Work": ""
     }
   },
-  "Boddinstraße": { },
-  "Leinestraße": { },
-  "Hermannstraße": { },
+  "Hermannplatz": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Hermannplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Boddinstraße": {
+    "en_wiki_cache": "17/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Boddinstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Leinestraße": {
+    "en_wiki_cache": "17/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Leinestra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Hermannstraße": {
+    "en_wiki_cache": "17/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Hermannstra%C3%9Fe_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Osloer Straße": { },
   "Nauener Platz": { },
   "Leopoldplatz": {
