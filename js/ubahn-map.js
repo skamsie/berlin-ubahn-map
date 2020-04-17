@@ -36,6 +36,7 @@ function imageName(str) {
 }
 
 function getWikiData(station) {
+  $('#sidebar-content-container').html('')
   var wikiTitle = '<h1>' + station.name + '</h1>';
   var wikiMeta = meta[station.name];
   var imagePath = wikiMeta.image_cache ?
@@ -56,6 +57,7 @@ function getWikiData(station) {
             data, addendum(wikiMeta, 'en')
           )
         )
+        $(".main-footer").hide();
       }
     });
   }
@@ -77,7 +79,6 @@ function getWikiData(station) {
       },
       dataType: 'jsonp',
       success: function(data) {
-        $('#sidebar').scrollTop(0);
         var resp = data.query.pages[Object.keys(data.query.pages)];
         var wikiImage = imagePath ? imagePath : resp.thumbnail.source;
         var wikiText = resp.extract;
@@ -100,6 +101,7 @@ function getWikiData(station) {
         )
 
         showSidebar(wikiData)
+        $(".main-footer").hide();
       }
     });
   }
@@ -113,6 +115,14 @@ function preloadImage(url) {
 
 function normalizeStationName(stationName) {
   return stationName.replace(/[0-9]/g, '').trim()
+}
+
+function showOpenStreetMapLink(lat, lon) {
+  $('#sidebar-footer').html(
+    concat(
+      '<b>coordinates</b> <a href="https://www.openstreetmap.org/?mlat=',
+      lat, '&mlon=', lon, '&zoom=16" target="_blank">', lat, ', ', lon, '</a>')
+  )
 }
 
 var map = d3
@@ -131,8 +141,10 @@ var map = d3
     }
 
     drawLinesForStation(window.currentStation.lines)
-
-    $('#about-link').text('about')
+    showOpenStreetMapLink(
+      window.currentStation.current.position.lat,
+      window.currentStation.current.position.lon,
+    )
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
@@ -163,38 +175,10 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
 
 function showSidebar(sidebarHtml) {
   $("#sidebar").show();
-  $("#about-content").hide();
-  $('#wiki-content').html(sidebarHtml)
-  $("#wiki-content").show();
+  $('#sidebar-content-container').html(
+    concat('<div id="wiki-content">', sidebarHtml, '</div>')
+  )
 }
-
-function showAbout() {
-  $("#wiki-content").hide();
-  $('#about-content').show();
-  $.ajax({
-    url: 'about.html',
-    success: function(data) {
-      $('#about-content').html(data)
-    }
-  })
-}
-
-function showWiki() {
-  $("#about-content").hide();
-  $('#wiki-content').show();
-}
-
-function toggleAbout() {
-  var currentText = $('#about-link').text().replace(/^\s+|\s+$/g, '')
-
-  if (currentText == 'about') {
-    $('#about-link').text('back')
-    showAbout()
-  } else {
-    $('#about-link').text('about')
-    showWiki()
-  }
-  }
 
 // return article addendum (article sources and image source)
 function addendum(addendumObject, language) {
@@ -331,7 +315,11 @@ $('body').on('click', 'a.station-navigator', function() {
 
   getWikiData(newCurrentStation);
   drawLinesForStation(window.currentStation.lines)
-  $('#about-link').text('about')
+  showOpenStreetMapLink(
+    window.currentStation.current.position.lat,
+    window.currentStation.current.position.lon,
+  )
+
 });
 
 $(document).ready(function() {
@@ -346,11 +334,7 @@ $(document).ready(function() {
   }
 
   $("#close-link").click(function() {
+    $(".main-footer").show();
     $("#sidebar").hide();
   });
-
-  $("#about-link").click(function() {
-    toggleAbout()
-  })
 });
-

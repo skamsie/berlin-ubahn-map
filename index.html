@@ -14,7 +14,7 @@
   <body>
     <div id="sidebar">
       <div id="sidebar-container">
-        <div id="sidebar-header">
+        <div id="sidebar-header" class="header">
           <div id="lines-for-station-container">
             <span id="lines-for-station"></span>
           </div>
@@ -24,26 +24,32 @@
           </div>
 
           <div id="navigator-container">
-            <a href="" id="previous" class="fake-link station-navigator">previous</a>
-            <a href="" id="next" class="fake-link station-navigator">next</a>
+            <a href="" id="previous" class="fake-link station-navigator">&lt; previous</a>
+            <a href="" id="next" class="fake-link station-navigator">next &gt;</a>
           </div>
         </div>
 
         <div id="sidebar-content-container">
           <div id="wiki-content"> </div>
-          <div id="about-content"> </div>
         </div>
 
       </div>
 
-      <div id="sidebar-footer-container">
-        <div id="sidebar-footer">
-          <a href="" id="about-link" class="fake-link">about</a>
-        </div>
+      <div id="sidebar-footer-container" class="footer">
+        <div id="sidebar-footer"></div>
       </div>
     </div>
 
     <div id="ubahn-map"></div>
+
+    <div class="footer footer-container main-footer">
+      <div id=footer-left><a href="https://skamsie.ro">© 2020 skamsie | </a></div>
+      <div id=footer-center><a href="index.html">Berlin U-Bahn Map</a></div>
+      <div id=footer-right>
+        <span>|&nbsp;</span>
+        <a href="about.html">about</a>
+      </div>
+    </div>
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/jquery-ui.min.js"></script>

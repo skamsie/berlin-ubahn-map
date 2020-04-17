@@ -1,45 +1,113 @@
-<h1>Berlin U-Bahn Map</h1>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
 
-<p>
-  The Berlin U-Bahn ([uː.baːn]; short for Untergrundbahn, "underground railway") is a rapid transit railway in Berlin, the capital city of Germany, and a major part of the city's public transport system. Together with the S-Bahn, a network of suburban train lines, and a tram network that operates mostly in the eastern parts of the city, it serves as the main means of transport in the capital.
-</p>
+    <meta name="author" content="https://skamsie.ro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="description" content="About page of https://ubahn-map.com">
 
-<p>
-  Opened in 1902, the U-Bahn serves 173 stations spread across ten lines, with a total track length of 151.7 kilometres (94.3 mi), about 80% of which is underground. Trains run every two to five minutes during peak hours, every five minutes for the rest of the day and every ten minutes in the evening. The entire system is maintained and operated by the Berliner Verkehrsbetriebe, commonly known as the BVG.
-</p>
+    <title>About</title>
+  </head>
 
-<h2>About this project</h2>
+  <body id="about-page">
+    <div id="about-page-container">
+      <a class="fake-link" href="#" onclick="window.history.back()">back</a>
+      <h2>About</h2>
+      <h3>the project</h3>
+      <p>
+        This website is an interactive representation of the Berlin U-Bahn
+        system inspired by
+        <a href="https://raw.githubusercontent.com/skamsie/berlin-subway/master/U-Bahn_Berlin.png">this map</a>
+        from 2016, but updated to the 2020 namings and routes. The most notable
+        difference is that the Eastern terminus of U3 is now at Warschauer Straße.
+        A couple of stations are also called differently.
+      </p>
 
-<p>
-  This is an interactive representation of the Berlin U-bahn system, inspired by
-  <a href="https://raw.githubusercontent.com/skamsie/berlin-subway/master/U-Bahn_Berlin.png">this map</a>
-  from 2016, but updated to the 2020 namings and routes.
-</p>
+      <p>
+        The map is draggable and scalable. Clicking on a station label brings
+        up an image and information about the station. The information is
+        taken from the English or German
+        <a href="https://en.wikipedia.org/wiki/Wikipedia">Wikipedia</a>
+        page. At the bottom of each article there is a link to the source.
+        Since some of the pages are cached, the information might not be in
+        sync with the corresponding Wikipedia article. The sidebar that displays
+        the station information is resizable by dragging horizontally
+        (only on desktop).
+      </p>
 
-<p>
-  The map is draggable and scalable. Clicking on a station label brings up an image and information about the station. The information is taken exclusively from the English or German Wikipedia page. At the bottom of each article there is a link to the source.Since some of the pages are cached, the information might not be in sync with the corresponding Wikipedia article.
-</p>
+      <p>For the technical details, you can check out the project on
+        <a href="https://github.com/skamsie/berlin-ubahn-map">Github</a>.
+      </p>
 
-<p>
-  The left side bar that holds the article is resizable.
-</p>
+      <h3>the photos</h3>
+      <p>
+        In the begging of the project I was only using the default thumbnails
+        returned by the Wikipedia API. Some of the photos are old and do not
+        reflect the current condition or design of the stations (plus I became
+        more and more interested in the U-Bahn due to its rich history),
+        hence I decided to go photograph them myself.
+      </p>
 
-<p>
-  All the images used on the website are either my own work or taken from Wikimedia Commons and are licensed under Creative Commons.
-</p>
+      <p>
+        Currently the whole U1 line and almost all of the U2 and U7 use my own
+        photos. For the rest, there is either a link to the source (usually
+        <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>
+        ), or no link at all, which means the photo is the thumbnail of the
+        corresponding Wikipedia page.
+      </p>
 
-<p>
-  This project is available on <a href='https://github.com/skamsie/berlin-ubahn-map'>Github</a>
-</p>
+      <h3>the u-bahn</h3>
+      <p>
+        The Berlin U-Bahn ([uː.baːn]; short for Untergrundbahn, "underground
+        railway") is a rapid transit railway in Berlin, the capital city of
+        Germany, and a major part of the city's public transport system.
+        Together with the S-Bahn, a network of suburban train lines, and a
+        tram network that operates mostly in the eastern parts of the city,
+        it serves as the main means of transport in the capital.
+      </p>
 
-<p>
-  Last updated on 04.2020
-</p>
+      <p>
+        Opened in 1902, the U-Bahn serves 173 stations spread across ten lines,
+        with a total track length of 151.7 kilometres (94.3 mi), about 80% of
+        which is underground. Trains run every two to five minutes during peak
+        hours, every five minutes for the rest of the day and every ten minutes
+        in the evening. Over the course of a year, U-Bahn trains travel 132
+        million km (82.0 million mi), and carry over 400 million passengers. In
+        2017, 553.1 million passengers rode the U-Bahn. The entire system is
+        maintained and operated by the Berliner Verkehrsbetriebe, commonly
+        known as the BVG.
+        (<a href="https://en.wikipedia.org/wiki/Berlin_U-Bahn">Source</a>)
+      </p>
 
-<h2>Contact</h2>
+      <h3>me</h3>
 
-<p>
-  <a href='https://www.github.com/skamsie/'>github/skamsie/</a><br />
-  <a href='https://www.instagram.com/skamsie/'>instagram/skamsie/</a>
-</p>
+      <p>
+        I am a Romanian software developer living and working in Berlin, Germany. For
+        more information visit the links below.
+      </p>
 
+      <a href="https://skamsie.ro">skamsie.ro</a>
+      <br /><a href="https://github.com/skamsie">github/skamsie</a>
+      <br /><a href="https://instagram.com/skamsie">instagram/skamsie</a>
+    </div>
+
+    <div class="footer-container footer">
+      <div id=footer-left><a href="https://skamsie.ro">© 2020 skamsie | </a></div>
+      <div id=footer-center><a href="index.html">Berlin U-Bahn Map</a></div>
+      <div id=footer-right>
+        <span>|&nbsp;</span>
+        <a href="about.html">about</a>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.fake-link').click(function(event){
+          event.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>
