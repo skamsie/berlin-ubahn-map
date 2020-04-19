@@ -169,7 +169,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commans (modified)": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Klosterstra%C3%9Fe_-_Linie_U2_(6335506009).jpg"
+      "Wikimedia Commons (modified)": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Klosterstra%C3%9Fe_-_Linie_U2_(6335506009).jpg"
     }
   },
   "Rosa-Luxemburg-Platz": {
@@ -812,19 +812,136 @@
       "Own Work": ""
     }
   },
-  "Wittenau": { },
-  "Rathaus Reinickendorf": { },
-  "Karl-Bonhoeffer-Nervenklinik": { },
-  "Lindauer Allee": { },
-  "Paracelsus-Bad": { },
-  "Residenzstraße": { },
-  "Franz-Neumann-Platz": { },
-  "Pankstraße": { },
-  "Gesundbrunnen": { },
-  "Voltastraße": { },
-  "Bernauer Straße": { },
-  "Rosenthaler Platz": { },
-  "Weinmeisterstraße": { },
+  "Wittenau": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin-Wittenau_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rathaus Reinickendorf": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Rathaus_Reinickendorf"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Karl-Bonhoeffer-Nervenklinik": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Karl-Bonhoeffer-Nervenklinik"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Lindauer Allee": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Lindauer_Allee_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Paracelsus-Bad": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Paracelsus-Bad_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Residenzstraße": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Residenzstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Franz-Neumann-Platz": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Franz-Neumann-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Pankstraße": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Pankstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Gesundbrunnen": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Gesundbrunnen"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Voltastraße": {
+    "en_wiki_cache": "18/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Voltastra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Bernauer Straße": {
+    "en_wiki_cache": "18/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Bernauer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rosenthaler Platz": {
+    "en_wiki_cache": "18/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Rosenthaler_Platz"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Weinmeisterstraße": {
+    "en_wiki_cache": "18/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Weinmeisterstra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Alexanderplatz": {
     "en_wiki_cache": "03/04/2020",
     "en_wiki_sources": {
@@ -925,7 +1042,16 @@
       "Own Work": ""
     }
   },
-  "Osloer Straße": { },
+  "Osloer Straße": {
+    "en_wiki_cache": "19/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Osloer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Nauener Platz": { },
   "Leopoldplatz": {
     "en_wiki_cache": "02/04/2020",
