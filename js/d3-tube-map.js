@@ -453,12 +453,6 @@ var HIGHLIGHT_ON_HOVER = true;
         if (_data.river !== undefined) {
           drawRiver();
         }
-
-        drawLines();
-        drawStations();
-        drawLongStations();
-        drawLineLabels();
-        drawLabels();
       });
     }
 
@@ -479,6 +473,21 @@ var HIGHLIGHT_ON_HOVER = true;
       margin = m;
       return map;
     };
+
+    map.data = function() {
+      return {
+        lines: _data.lines.normalizedLines(),
+        stations: _data.stations.stations
+      }
+    }
+
+    map.drawAll = function() {
+      drawLines();
+      drawLineLabels();
+      drawStations();
+      drawLongStations();
+      drawLabels();
+    }
 
     map.on = function() {
       var value = listeners.on.apply(listeners, arguments);
@@ -565,11 +574,7 @@ var HIGHLIGHT_ON_HOVER = true;
           return d.visited ? fgColor : bgColor;
         })
         .on('click', function(d) {
-          listeners.call('click', this, {
-            current: d,
-            lines: _data.lines.normalizedLines(),
-            stations: _data.stations.stations
-          });
+          listeners.call('click', this, d)
         })
         .on('mouseover', function (d) {
           toggleHighlight(this, d)
@@ -600,11 +605,7 @@ var HIGHLIGHT_ON_HOVER = true;
           return d.name;
         })
         .on('click', function(d) {
-          listeners.call('click', this, {
-            current: d,
-            lines: _data.lines.normalizedLines(),
-            stations: _data.stations.stations
-          });
+          listeners.call('click', this, d)
         })
         .append('path')
         .attr('d', trainStop(lineWidth))
@@ -672,11 +673,7 @@ var HIGHLIGHT_ON_HOVER = true;
         })
         .classed('label', true)
         .on('click', function(d) {
-          listeners.call('click', this, {
-            current: d,
-            lines: _data.lines.normalizedLines(),
-            stations: _data.stations.stations
-          });
+          listeners.call('click', this, d)
         })
         .append('text')
         .text(function(d) {

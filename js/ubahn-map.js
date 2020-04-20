@@ -4,14 +4,9 @@ var isMobile = window.screen.width < window.screen.height ? true : false
 var container = d3.select('#ubahn-map');
 var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
 var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
-var meta;
 
-var currentStation;
+var focusStations;
 var mapData;
-
-d3.json('./json/meta.json').then(function(data) {
-  meta = data;
-})
 
 function imageName(str) {
   var umlautMap = {
@@ -35,10 +30,9 @@ function imageName(str) {
     );
 }
 
-function getWikiData(station) {
+function getWikiData(station, wikiMeta) {
   $('#sidebar-content-container').html('')
   var wikiTitle = '<h1>' + station.name + '</h1>';
-  var wikiMeta = meta[station.name];
   var imagePath = wikiMeta.image_cache ?
     concat('articles/images/', imageName(station.name), '.jpg') :
     null
@@ -117,12 +111,40 @@ function normalizeStationName(stationName) {
   return stationName.replace(/[0-9]/g, '').trim()
 }
 
-function showOpenStreetMapLink(lat, lon) {
-  $('#sidebar-footer').html(
-    concat(
-      '<b>coordinates</b> <a href="https://www.openstreetmap.org/?mlat=',
-      lat, '&mlon=', lon, '&zoom=16" target="_blank">', lat, ', ', lon, '</a>')
-  )
+function showWikiData(station) {
+  function showLinesForStation(lines) {
+    $('#lines-for-station').html(lines.join('&nbsp;'))
+  }
+
+  function showOpenStreetMapLink(lat, lon) {
+    $('#sidebar-footer').html(
+      concat(
+        '<b>coordinates</b> <a href="https://www.openstreetmap.org/?mlat=',
+        lat, '&mlon=', lon, '&zoom=16" target="_blank">', lat, ', ', lon, '</a>')
+    )
+  }
+
+  // if currentLine name is not defined, get the line with lowest number
+  var wikiMeta = window.mapData.meta[station.name];
+
+  station.currentLineName = station.currentLineName ||
+    getStationLines(station.name, window.mapData.lines)[0];
+  station.servingLinesNames = getStationLines(station.name, window.mapData.lines);
+
+  window.focusStations = stationSiblings(
+    station,
+    window.mapData.lines,
+    window.mapData.stations
+  );
+  window.focusStations.current = station;
+
+  getWikiData(station, wikiMeta);
+
+  showLinesForStation(station.servingLinesNames)
+  showOpenStreetMapLink(
+    station.position.lat,
+    station.position.lon,
+  );
 }
 
 var map = d3
@@ -130,47 +152,45 @@ var map = d3
   .width(width)
   .height(height)
   .on('click', function(data) {
-    var current = data.current;
-    current.lineName = getStationLines(current.name, data.lines)[0];
-    getWikiData(data.current);
-
-    window.currentStation = getStationData(current, data.lines, data.stations)
-    window.mapData = {
-      stations: data.stations,
-      lines: data.lines
-    }
-
-    drawLinesForStation(window.currentStation.lines)
-    showOpenStreetMapLink(
-      window.currentStation.current.position.lat,
-      window.currentStation.current.position.lon,
-    )
+    showWikiData(data);
   });
 
 d3.json('./json/berlin-ubahn.json').then(function(data) {
-  container.datum(data).call(map);
+  d3.json('./json/meta.json').then(function(metaData) {
+    container.datum(data).call(map);
+    var _data = map.data();
 
-  var svg = container.select('svg');
+    window.mapData = {
+      meta: metaData,
+      lines:  _data.lines,
+      stations: _data.stations
+    }
 
-  zoom = d3
-    .zoom()
-    .scaleExtent([0.7, 10])
-    .on('zoom', zoomed);
+    map.drawAll()
 
-  var zoomContainer = svg.call(zoom);
-  var initialScale = 1;
-  var initialTranslate = [0, height / 25];
+    var svg = container.select('svg');
 
-  zoom.scaleTo(zoomContainer, initialScale);
-  zoom.translateTo(
-    zoomContainer,
-    initialTranslate[0],
-    initialTranslate[1]
-  );
+    zoom = d3
+      .zoom()
+      .scaleExtent([0.7, 10])
+      .on('zoom', zoomed);
 
-  function zoomed() {
-    svg.select('g').attr('transform', d3.event.transform.toString());
-  }
+    var zoomContainer = svg.call(zoom);
+    var initialScale = 1;
+    var initialTranslate = [0, height / 25];
+
+    zoom.scaleTo(zoomContainer, initialScale);
+    zoom.translateTo(
+      zoomContainer,
+      initialTranslate[0],
+      initialTranslate[1]
+    );
+
+    function zoomed() {
+      svg.select('g').attr('transform', d3.event.transform.toString());
+    }
+  })
+
 });
 
 function showSidebar(sidebarHtml) {
@@ -226,44 +246,56 @@ function concat() {
   return concatenated;
 }
 
-function getStationData(station, lines, stations) {
-  var line = lines.find(l => l.name == station.lineName);
+// Get next and previous stations on the same line, or if
+// it's the first or last stop of the line, the siblings are
+// decided chronoligcally.
+//
+// Examples:
+//   for last station of U6, the next sibling is the first station of U7
+//   for the first station of U1, the previous sibling is the last station of U9
+function stationSiblings(station, lines, stations) {
+  var line = lines.find(l => l.name == station.currentLineName);
   var stationName = normalizeStationName(station.name);
   var indexOfStation = line.stations.indexOf(stationName);
   var indexOfLine = lines.indexOf(line);
-  var stationData = {};
+  var n;
+  var p;
 
   if (indexOfStation != 0 && indexOfStation != line.stations.length - 1) {
-    stationData.next = stations[line.stations[indexOfStation + 1]];
-    stationData.next.lineName = line.name;
-    stationData.previous = stations[line.stations[indexOfStation - 1]];
-    stationData.previous.lineName = line.name;
+    n = stations[line.stations[indexOfStation + 1]];
+    p = stations[line.stations[indexOfStation - 1]];
+    n.currentLineName = line.name;
+    p.currentLineName = line.name;
+
   } else if (indexOfStation == 0) {
-    stationData.next = stations[line.stations[indexOfStation + 1]]
-    stationData.next.lineName = line.name;
+    n = stations[line.stations[indexOfStation + 1]];
+    n.currentLineName = line.name;
+
     if (indexOfLine == 0) {
-      stationData.previous = stations[lines[lines.length - 1].stations.slice(-1)[0]]
-      stationData.previous.lineName = lines[lines.length - 1].name
+      p = stations[lines[lines.length - 1].stations.slice(-1)[0]];
+      p.currentLineName = lines[lines.length - 1].name;
     } else {
-      stationData.previous = stations[lines[indexOfLine - 1].stations.slice(-1)[0]]
-      stationData.previous.lineName = lines[indexOfLine - 1].name
+      p = stations[lines[indexOfLine - 1].stations.slice(-1)[0]]
+      p.currentLineName = lines[indexOfLine - 1].name
     }
+
   } else {
-    stationData.previous = stations[line.stations[indexOfStation - 1]]
-    stationData.previous.lineName = line.name
+    p = stations[line.stations[indexOfStation - 1]];
+    p.currentLineName = line.name;
+
     if (indexOfLine == lines.length - 1) {
-      stationData.next = stations[lines[0].stations[0]]
-      stationData.next.lineName = lines[0].name
+      n = stations[lines[0].stations[0]];
+      n.currentLineName = lines[0].name;
     } else {
-      stationData.next = stations[lines[indexOfLine + 1].stations[0]]
-      stationData.next.lineName = lines[indexOfLine + 1].name
+      n = stations[lines[indexOfLine + 1].stations[0]];
+      n.currentLineName = lines[indexOfLine + 1].name;
     }
   }
 
-  stationData.current = station
-  stationData.lines = getStationLines(stationName, lines)
-
-  return stationData;
+  return {
+    next: n,
+    previous: p
+  }
 }
 
 function getStationLines(stationName, lines) {
@@ -280,46 +312,11 @@ function getStationLines(stationName, lines) {
   return stationLines.sort();
 }
 
-function stationSiblings(stationName, lines, stations) {
-  var station = normalizeStationName(stationName);
-  var siblings = [];
-
-  for (var i = 0;  i < lines.length; i++) {
-    var indexOfStation = lines[i].stations.indexOf(station);
-
-    if (indexOfStation != -1) {
-      siblings.push(
-        {
-          name: lines[i].name,
-          previous: stations[lines[i].stations[indexOfStation - 1]] || null,
-          next: stations[lines[i].stations[indexOfStation + 1]] || null,
-        }
-      )
-    }
-  }
-
-  return siblings
-    .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-}
-
-function drawLinesForStation(lines) {
-  $('#lines-for-station').html(lines.join('&nbsp;'))
-}
-
 $('body').on('click', 'a.station-navigator', function() {
   var direction = $(this).attr('id');
-  var newCurrentStation = window.currentStation[direction];
+  var newCurrentStation = window.focusStations[direction];
 
-  window.currentStation = getStationData(
-    newCurrentStation, window.mapData.lines, window.mapData.stations);
-
-  getWikiData(newCurrentStation);
-  drawLinesForStation(window.currentStation.lines)
-  showOpenStreetMapLink(
-    window.currentStation.current.position.lat,
-    window.currentStation.current.position.lon,
-  )
-
+  showWikiData(newCurrentStation);
 });
 
 $(document).ready(function() {
