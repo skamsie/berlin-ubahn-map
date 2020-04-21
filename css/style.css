@@ -83,8 +83,11 @@ tspan {
   position: absolute;
   background-color: #f3f3f3;
   display: none;
-  text-align: justify;
   z-index: 100;
+}
+
+.wiki-body {
+  text-align: justify;
 }
 
 .fake-link,

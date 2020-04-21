@@ -20,14 +20,14 @@ function imageName(str) {
   }
 
   return str
-    .replace(' ', '_')
     .replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, function(a) {
       var big = umlautMap[a.slice(0, 1)];
       return big.charAt(0) + big.charAt(1).toLowerCase() + a.slice(1);
     })
     .replace(new RegExp('[' + Object.keys(umlautMap).join('|') + ']', 'g'),
       function(a) { return umlautMap[a] }
-    );
+    )
+    .replace(/ /g,'_');
 }
 
 function getWikiData(station, wikiMeta) {
@@ -47,8 +47,8 @@ function getWikiData(station, wikiMeta) {
       success: function(data) {
         showSidebar(
           concat(
-            wikiTitle, '<img src="', imagePath, '">',
-            data, addendum(wikiMeta, 'en')
+            wikiTitle, '<div class="wiki-body"><img src="', imagePath, '">',
+            data, '</div>', addendum(wikiMeta, 'en')
           )
         )
         $(".main-footer").hide();
@@ -83,7 +83,8 @@ function getWikiData(station, wikiMeta) {
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
 
         var wikiData = concat(
-          wikiTitle, '<img src=', '"', wikiImage, '">', formattedWikiText,
+          wikiTitle, '<div class="wiki-body"><img src=', '"',
+          wikiImage, '">', formattedWikiText, '</div>',
           addendum(
             {
               'en_wiki_sources': { 'Wikipedia (EN)': wikiUrl },

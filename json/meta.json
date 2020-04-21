@@ -235,17 +235,116 @@
       "Own Work": ""
     }
   },
-  "Krumme Lanke": { },
-  "Onkel Toms Hütte": { },
-  "Oskar-Helene-Heim": { },
-  "Freie Universität (Thielplatz)": { },
-  "Dahlem-Dorf": { },
-  "Podbielskiallee": { },
-  "Breitenbachplatz": { },
-  "Rüdesheimer Platz": { },
-  "Heidelberger Platz": { },
-  "Hohenzollernplatz": { },
-  "Augsburger Straße": { },
+  "Krumme Lanke": {
+    "en_wiki_cache": "22/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Krumme_Lanke_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Onkel Toms Hütte": {
+    "en_wiki_cache": "22/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Onkel_Toms_H%C3%BCtte_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Oskar-Helene-Heim": {
+    "en_wiki_cache": "22/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Oskar-Helene-Heim_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Freie Universität (Thielplatz)": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Freie_Universit%C3%A4t_(Thielplatz)_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Dahlem-Dorf": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://de.wikipedia.org/wiki/U-Bahnhof_Dahlem-Dorf"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Podbielskiallee": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Podbielskiallee_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Breitenbachplatz": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Breitenbachplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rüdesheimer Platz": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/R%C3%BCdesheimer_Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Heidelberger Platz": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Heidelberger_Platz_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Hohenzollernplatz": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)": "https://de.wikipedia.org/wiki/U-Bahnhof_Hohenzollernplatz"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Augsburger Straße": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Augsburger_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Wittenbergplatz": {
     "en_wiki_cache": "06/04/2020",
     "en_wiki_sources": {
@@ -327,9 +426,36 @@
       "Own Work": ""
     }
   },
-  "Viktoria-Luise-Platz": { },
-  "Rathaus Schöneberg": { },
-  "Innsbrucker Platz": { },
+  "Viktoria-Luise-Platz": {
+    "en_wiki_cache": "22/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Viktoria-Luise-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rathaus Schöneberg": {
+    "en_wiki_cache": "22/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Rathaus_Sch%C3%B6neberg_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Innsbrucker Platz": {
+    "en_wiki_cache": "22/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Innsbrucker_Platz_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Schillingstraße": { },
   "Strausberger Platz": { },
   "Weberwiese": {
@@ -1088,7 +1214,16 @@
       "Own Work": ""
     }
   },
-  "Spichernstraße": { },
+  "Spichernstraße": {
+    "en_wiki_cache": "21/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Spichernstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Güntzelstraße": { },
   "Berliner Straße": {
     "en_wiki_cache": "10/04/2020",
