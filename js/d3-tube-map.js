@@ -1,7 +1,7 @@
 // This file is a modfied version of John Valley's d3-tube-map
 // https://github.com/johnwalley/d3-tube-map
 
-var HIGHLIGHT_ON_HOVER = true;
+var HIGHLIGHT = true;
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3')) :
@@ -12,7 +12,7 @@ var HIGHLIGHT_ON_HOVER = true;
   function trainStop(lineWidth) {
     return d3.arc()
       .innerRadius(0)
-      .outerRadius(1.35 * lineWidth)
+      .outerRadius(1.37 * lineWidth)
       .startAngle(0)
       .endAngle(2 * Math.PI);
   }
@@ -577,10 +577,10 @@ var HIGHLIGHT_ON_HOVER = true;
           listeners.call('click', this, d)
         })
         .on('mouseover', function (d) {
-          toggleHighlight(this, d)
+          toggleHighlight(d, lineWidth)
         })
         .on('mouseout', function (d) {
-          toggleHighlight(this, d)
+          toggleHighlight(d, lineWidth)
         })
         .attr('stroke', function(d) {
           return d.visited ? bgColor : fgColor;
@@ -626,10 +626,10 @@ var HIGHLIGHT_ON_HOVER = true;
           return d.visited ? bgColor : fgColor;
         })
         .on('mouseover', function (d) {
-          toggleHighlight(this, d)
+          toggleHighlight(d, lineWidth)
         })
         .on('mouseout', function (d) {
-          toggleHighlight(this, d)
+          toggleHighlight(d, lineWidth)
         })
         .attr('class', function(d) {
           return 'station ' + classFromName(d.name)
@@ -685,10 +685,10 @@ var HIGHLIGHT_ON_HOVER = true;
           return d.labelBold ? '700' : '400'
         })
         .on('mouseover', function (d) {
-          toggleHighlight(this, d)
+          toggleHighlight(d, lineWidth)
         })
         .on('mouseout', function (d) {
-          toggleHighlight(this, d)
+          toggleHighlight(d, lineWidth)
         })
         .attr('dy', 0)
         .attr('x', function(d) {
@@ -900,43 +900,29 @@ var HIGHLIGHT_ON_HOVER = true;
       return currentName.replace(/[()0-9 ]/g,'');
     }
 
-    function toggleHighlight(element, d) {
-      if (HIGHLIGHT_ON_HOVER !== true) {
+    function toggleHighlight(d, lineWidth) {
+      if (HIGHLIGHT !== true) {
         return;
       }
 
-      var thisElement = d3.select(element)
-      var otherElementClass = thisElement.classed('label') ? 'station' : 'label'
-      var classNames = '.' + otherElementClass + '.' + classFromName(d.name)
+      var station = d3.selectAll('.station.'.concat(classFromName(d.name)));
+      var label = d3.selectAll('.label.'.concat(classFromName(d.name)));
 
-      if(otherElementClass == 'station') {
-        if (thisElement.attr('highlighted') === 'true') {
-          thisElement
-            .style('text-decoration', 'none')
-            .attr('highlighted', 'false')
-          d3.selectAll(classNames)
-            .attr('fill', 'white')
-        } else {
-          thisElement
-            .attr('highlighted', 'true')
-            .style('text-decoration', 'underline')
-          d3.selectAll(classNames)
-            .attr('fill', 'black')
-        }
+      if (station.attr('highlighted') === 'true') {
+        station
+          .attr('highlighted', 'false')
+          .attr('fill', station.attr('current') === 'true' ? 'black': 'white')
+          .attr('stroke-width', lineWidth / 4)
+        label
+          .attr('highlighted', 'false')
+          .style('text-decoration', 'none')
       } else {
-        if (thisElement.attr('highlighted') === 'true') {
-          thisElement
-            .attr('fill', 'white')
-            .attr('highlighted', 'false')
-          d3.selectAll(classNames)
-            .style('text-decoration', 'none')
-        } else {
-          d3.selectAll(classNames)
-            .style('text-decoration', 'underline')
-          thisElement
-            .attr('highlighted', 'true')
-            .attr('fill', 'black')
-        }
+        station
+          .attr('highlighted', 'true')
+          .attr('stroke-width', lineWidth / 2)
+        label
+          .attr('highlighted', 'false')
+          .style('text-decoration', 'underline')
       }
     }
 

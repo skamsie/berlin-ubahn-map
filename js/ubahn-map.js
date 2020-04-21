@@ -107,11 +107,33 @@ function preloadImage(url) {
   return img.src
 }
 
+function classFromName(currentName) {
+  return currentName.replace(/[()0-9 ]/g,'');
+}
+
 function normalizeStationName(stationName) {
   return stationName.replace(/[0-9]/g, '').trim()
 }
 
+function removeHighlight() {
+  var fs = window.focusStations;
+
+  if (fs) {
+    d3.selectAll('.station.'.concat(classFromName(fs.current.name)))
+      .attr('fill', 'white')
+      .attr('current', 'false')
+  }
+}
+
 function showWikiData(station) {
+  removeHighlight();
+
+  // highlight current station
+  d3
+    .selectAll('.station.'.concat(classFromName(station.name)))
+    .attr('fill', 'black')
+    .attr('current', true)
+
   function showLinesForStation(lines) {
     $('#lines-for-station').html(lines.join('&nbsp;'))
   }
@@ -314,9 +336,19 @@ function getStationLines(stationName, lines) {
 
 $('body').on('click', 'a.station-navigator', function() {
   var direction = $(this).attr('id');
-  var newCurrentStation = window.focusStations[direction];
+  showWikiData(window.focusStations[direction]);
+});
 
-  showWikiData(newCurrentStation);
+// navigate the stations with the left-right arrow keys
+$(document).on("keydown", 'body', function (event) {
+  if ($('#sidebar').is(':visible')) {
+    if (event.keyCode == 37) {
+      showWikiData(window.focusStations.previous);
+    }
+    if (event.keyCode == 39) {
+      showWikiData(window.focusStations.next);
+    }
+  }
 });
 
 $(document).ready(function() {
@@ -331,6 +363,7 @@ $(document).ready(function() {
   }
 
   $("#close-link").click(function() {
+    removeHighlight();
     $(".main-footer").show();
     $("#sidebar").hide();
   });
