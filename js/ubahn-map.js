@@ -1,13 +1,20 @@
 //naive way of assuming mobile
 var isMobile = window.screen.width < window.screen.height ? true : false
+var width = isMobile ?
+  window.devicePixelRatio * window.screen.width :
+  screen.width;
+var height = isMobile ?
+  window.devicePixelRatio * window.screen.height :
+  screen.height;
 
 var container = d3.select('#ubahn-map');
-var width = isMobile ? window.devicePixelRatio * window.screen.width : screen.width;
-var height = isMobile ? window.devicePixelRatio * window.screen.height : screen.height;
-
 var focusStations;
 var mapData;
 
+// replace spaces with underscores and german characters with
+// their English correspondent
+// Example:
+//   'Görlitzer Bahnhof' -> 'Goerlitzer_Bahnhof'
 function imageName(str) {
   var umlautMap = {
     '\u00dc': 'UE',
@@ -143,18 +150,21 @@ function showWikiData(station) {
     $('#sidebar-footer').html(
       concat(
         '<b>coordinates</b> <a href="https://www.openstreetmap.org/?mlat=',
-        lat, '&mlon=', lon, '&zoom=16" target="_blank">', lat, ', ', lon, '</a>')
+        lat, '&mlon=', lon, '&zoom=16" target="_blank">', lat, ', ',
+        lon, '</a>'
+      )
     )
   }
 
-  // if currentLine name is not defined, get the line with lowest number
+  // if current line name is not defined, get the line with lowest number
   var wikiMeta = window.mapData.meta[station.name];
 
   station.currentLineName = station.currentLineName ||
     getStationLines(station.name, window.mapData.lines)[0];
-  station.servingLinesNames = getStationLines(station.name, window.mapData.lines);
+  station.servingLinesNames = getStationLines(
+    station.name, window.mapData.lines);
 
-  window.focusStations = stationSiblings(
+  window.focusStations = stationNeighbours(
     station,
     window.mapData.lines,
     window.mapData.stations
@@ -261,6 +271,7 @@ function addendum(addendumObject, language) {
   return concat('<p class="addendum">', addendumSection, '</p>')
 }
 
+// Helper to concatenate strings without the plus sign
 function concat() {
   concatenated = "";
   for (var i = 0; i < arguments.length; i++) {
@@ -270,13 +281,14 @@ function concat() {
 }
 
 // Get next and previous stations on the same line, or if
-// it's the first or last stop of the line, the siblings are
+// it's the first or last stop of the line, the neighbours are
 // decided chronoligcally.
 //
 // Examples:
-//   for last station of U6, the next sibling is the first station of U7
-//   for the first station of U1, the previous sibling is the last station of U9
-function stationSiblings(station, lines, stations) {
+//   - for last station of U6, the next neighbour is the first station of U7
+//   - for the first station of U1, the previous neighbour is the last station
+//     of U9
+function stationNeighbours(station, lines, stations) {
   var line = lines.find(l => l.name == station.currentLineName);
   var stationName = normalizeStationName(station.name);
   var indexOfStation = line.stations.indexOf(stationName);

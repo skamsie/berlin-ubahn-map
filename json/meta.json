@@ -1178,7 +1178,16 @@
       "Own Work": ""
     }
   },
-  "Nauener Platz": { },
+  "Nauener Platz": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Nauener_Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Leopoldplatz": {
     "en_wiki_cache": "02/04/2020",
     "en_wiki_sources": {
@@ -1186,18 +1195,68 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:LeopoldplatzU6.JPG"
+      "Own Work": ""
     }
   },
-  "Amrumer Straße": { },
-  "Westhafen": { },
-  "Birkenstraße": { },
-  "Turmstraße": { },
-  "Hansaplatz": { },
+  "Amrumer Straße": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Amrumer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Westhafen": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Westhafen#U-Bahnhof"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Birkenstraße": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Birkenstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Turmstraße": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Turmstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Hansaplatz": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Hansaplatz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Zoologischer Garten": {
     "en_wiki_cache":"06/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Zoologischer_Garten_railway_station"
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Berlin_Zoologischer_Garten_railway_station"
     },
     "image_cache": true,
     "image_source": {
@@ -1207,7 +1266,8 @@
   "Kurfürstendamm": {
     "en_wiki_cache": "10/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Kurf%C3%BCrstendamm_(Berlin_U-Bahn)"
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Kurf%C3%BCrstendamm_(Berlin_U-Bahn)"
     },
     "image_cache": true,
     "image_source": {
@@ -1224,21 +1284,82 @@
       "Own Work": ""
     }
   },
-  "Güntzelstraße": { },
-  "Berliner Straße": {
-    "en_wiki_cache": "10/04/2020",
+  "Güntzelstraße": {
+    "en_wiki_cache": "23/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": ""
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/G%C3%BCntzelstra%C3%9Fe_(Berlin_U-Bahn)"
     },
     "image_cache": true,
     "image_source": {
-      "Own Work": "https://en.wikipedia.org/wiki/Berliner_Stra%C3%9Fe_(Berlin_U-Bahn)"
+      "Own Work": ""
     }
-
   },
-  "Bundesplatz": { },
-  "Friedrich-Wilhelm-Platz": { },
-  "Walther-Schreiber-Platz": { },
-  "Schloßstraße": { },
-  "Rathaus Steglitz": { }
+  "Berliner Straße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Berliner_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Bundesplatz": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Bundesplatz"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Friedrich-Wilhelm-Platz": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Friedrich-Wilhelm-Platz"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Walther-Schreiber-Platz": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://en.wikipedia.org/wiki/Walther-Schreiber-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Schloßstraße": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://en.wikipedia.org/wiki/Schlo%C3%9Fstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rathaus Steglitz": {
+    "en_wiki_cache": "23/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://en.wikipedia.org/wiki/Schlo%C3%9Fstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work":
+        ""
+    }
+  }
 }

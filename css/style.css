@@ -128,7 +128,10 @@ tspan {
   overflow-wrap: break-word;
   font-size: 15px;
   background-color: #f3f3f3;
-  line-height: 21px;
+}
+
+#sidebar-content-container p {
+  line-height: 20px;
 }
 
 img {
