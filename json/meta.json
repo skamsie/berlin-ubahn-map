@@ -537,7 +537,17 @@
       "Own Work": ""
     }
   },
-  "Kochstraße": { },
+  "Kochstraße": {
+    "en_wiki_cache": "10/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Kochstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Hallesches Tor": {
     "en_wiki_cache": "10/04/2020",
     "en_wiki_sources": {
@@ -548,14 +558,94 @@
       "Own Work": ""
     }
   },
-  "Platz der Luftbrücke": { },
-  "Paradestraße": { },
-  "Tempelhof": { },
-  "Alt-Tempelhof": { },
-  "Kaiserin-Augusta-Straße": { },
-  "Ullsteinstraße": { },
-  "Westphalweg": { },
-  "Alt-Mariendorf": { },
+  "Platz der Luftbrücke": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Platz_der_Luftbr%C3%BCcke_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Paradestraße": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Paradestra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Tempelhof": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Berlin-Tempelhof_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Alt-Tempelhof": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Alt-Tempelhof_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Kaiserin-Augusta-Straße": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Kaiserin-Augusta-Stra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Ullsteinstraße": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Ullsteinstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Westphalweg": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Westphalweg_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Alt-Mariendorf": {
+    "en_wiki_cache": "24/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Alt-Mariendorf_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Rathaus Spandau": {
     "en_wiki_cache": "12/04/2020",
     "en_wiki_sources": {
