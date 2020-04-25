@@ -456,8 +456,28 @@
       "Own Work": ""
     }
   },
-  "Schillingstraße": { },
-  "Strausberger Platz": { },
+  "Schillingstraße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Schillingstra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Strausberger Platz": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Strausberger_Platz"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Weberwiese": {
     "en_wiki_cache": "08/04/2020",
     "en_wiki_sources": {
@@ -484,47 +504,180 @@
   "Hellersdorf": { },
   "Louis-Lewin-Straße": { },
   "Hönow": { },
-  "Alt-Tegel": { },
-  "Borsigwerke": { },
-  "Holzhauser Straße": { },
-  "Otisstraße": { },
-  "Scharnweberstraße": { },
-  "Kurt-Schumacher-Platz": { },
-  "Afrikanische Straße": { },
-  "Rehberge": { },
-  "Seestraße": { },
-  "Wedding": { },
-  "Reinickendorfer Straße": {
-    "en_wiki_cache": "03/04/2020",
+  "Alt-Tegel": {
+    "en_wiki_cache": "25/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Reinickendorfer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Alt-Tegel_(Berlin_U-Bahn)"
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Reinickendorfer-ubahn.jpg"
+      "Own Work": ""
     }
   },
-  "Schwartzkopffstraße": { },
-  "Naturkundemuseum": { },
-  "Oranienburger Tor": { },
-  "Friedrichstraße": {
-   "en_wiki_cache": "03/04/2020",
-   "en_wiki_sources": {
-     "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Berlin_Friedrichstra%C3%9Fe_station"
+  "Borsigwerke": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Borsigwerke_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Holzhauser Straße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Holzhauser_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Otisstraße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Otisstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Scharnweberstraße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Scharnweberstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Kurt-Schumacher-Platz": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Kurt-Schumacher-Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Afrikanische Straße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Reinickendorfer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Rehberge": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Rehberge_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Seestraße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Seestra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Wedding": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/Bahnhof_Berlin-Wedding"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Reinickendorfer Straße": {
+    "en_wiki_cache": "03/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Reinickendorfer_Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Schwartzkopffstraße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Schwartzkopffstra%C3%9Fe_(Berlin_U-Bahn)"
    },
-   "image_cache": true,
-   "image_source": {
-     "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Bahnhof_Berlin_Friedrichstraße_-_Detailansicht.jpg"
-   }
+    "image_cache": true,
+    "image_source": {
+     "Own Work": ""
+    }
+  },
+  "Naturkundemuseum": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Naturkundemuseum_(Berlin_U-Bahn)"
+   },
+    "image_cache": true,
+    "image_source": {
+     "Own Work": ""
+    }
+  },
+  "Oranienburger Tor": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Oranienburger_Tor_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+     "Own Work": ""
+    }
+  },
+  "Friedrichstraße": {
+    "en_wiki_cache": "25/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Friedrichstra%C3%9Fe"
+   },
+    "image_cache": true,
+    "image_source": {
+     "Own Work": ""
+    }
   },
   "Französische Straße": {
     "en_wiki_cache": "03/04/2020",
     "en_wiki_sources": {
-      "Wikipedia (EN)": "https://en.wikipedia.org/wiki/Franz%C3%B6sische_Stra%C3%9Fe_(Berlin_U-Bahn)"
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Franz%C3%B6sische_Stra%C3%9Fe_(Berlin_U-Bahn)"
     },
     "image_cache": true,
     "image_source": {
-       "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Ubhf_Franz-str.JPG"
+      "Own Work": ""
     }
   },
   "Stadtmitte": {
