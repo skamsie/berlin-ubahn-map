@@ -1,7 +1,40 @@
 {
-  "Bundestag": { },
-  "Hauptbahnhof": { },
-  "Brandenburger Tor": { },
+  "Bundestag": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Bundestag_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons (modified)":
+        "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Bundestag_(22003394950).jpg"
+    }
+  },
+  "Hauptbahnhof": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Berlin_Hauptbahnhof"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons (modified)":
+        "https://commons.wikimedia.org/wiki/File:J00_347_Bf_Bln_Hbf_(U).jpg"
+    }
+  },
+  "Brandenburger Tor": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Brandenburger_Tor#U-Bahnhof"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons (modified)":
+        "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Brandenburger_Tor_der_U55_(6248022780).jpg"
+    }
+  },
   "Uhlandstraße": {
     "en_wiki_cache": "10/04/2020",
     "en_wiki_sources": {
@@ -488,22 +521,184 @@
       "Own Work": ""
     }
   },
-  "Frankfurter Tor": { },
-  "Samariterstraße": { },
-  "Frankfurter Allee": { },
-  "Magdalenenstraße": { },
-  "Lichtenberg": { },
-  "Friedrichsfelde": { },
-  "Tierpark": { },
-  "Biesdorf-Süd": { },
-  "Elsterwerdaer Platz": { },
-  "Wuhletal": { },
-  "Kaulsdorf-Nord": { },
-  "Kienberg (Gärten der Welt)": { },
-  "Cottbusser Platz": { },
-  "Hellersdorf": { },
-  "Louis-Lewin-Straße": { },
-  "Hönow": { },
+  "Frankfurter Tor": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Frankfurter_Tor_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Samariterstraße": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Samariterstra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Frankfurter Allee": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Frankfurter_Allee_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Magdalenenstraße": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Magdalenenstra%C3%9Fe_(Berlin_U-Bahn)",
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Magdalenenstra%C3%9Fe"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Lichtenberg": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/Bahnhof_Berlin-Lichtenberg"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Friedrichsfelde": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Friedrichsfelde_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Tierpark": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Tierpark_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Biesdorf-Süd": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Biesdorf-S%C3%BCd"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Elsterwerdaer Platz": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Elsterwerdaer_Platz_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Wuhletal": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Berlin_Wuhletal_station"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Kaulsdorf-Nord": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Kaulsdorf-Nord"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Kienberg (Gärten der Welt)": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Kienberg_(G%C3%A4rten_der_Welt)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Cottbusser Platz": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Cottbusser_Platz"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Hellersdorf": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (DE)":
+        "https://de.wikipedia.org/wiki/U-Bahnhof_Hellersdorf"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Louis-Lewin-Straße": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Louis-Lewin-Stra%C3%9Fe_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
+  "Hönow": {
+    "en_wiki_cache": "26/04/2020",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/H%C3%B6now_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Own Work": ""
+    }
+  },
   "Alt-Tegel": {
     "en_wiki_cache": "25/04/2020",
     "en_wiki_sources": {

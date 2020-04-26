@@ -1693,17 +1693,6 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
-          "coords": [70, -25],
-          "name": "Brandenburger Tor",
-          "labelPos": "S",
-          "labelBold": true
-        },
-        {
-          "coords": [65, -20],
-          "name": "Bundestag",
-          "labelPos": "SW"
-        },
-        {
           "coords": [60, -15],
           "name": "Hauptbahnhof",
           "labelPos": "SW",
@@ -1713,6 +1702,17 @@
           "lineLabelPos": "N",
           "lineLabelShiftX": -2,
           "lineLabelShiftY": 2.5
+        },
+        {
+          "coords": [65, -20],
+          "name": "Bundestag",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [70, -25],
+          "name": "Brandenburger Tor",
+          "labelPos": "S",
+          "labelBold": true
         }
       ]
     },

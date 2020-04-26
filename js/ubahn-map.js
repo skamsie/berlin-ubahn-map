@@ -11,7 +11,7 @@ var container = d3.select('#ubahn-map');
 var focusStations;
 var mapData;
 
-// replace spaces with underscores and german characters with
+// replace spaces with underscores and German characters with
 // their English correspondent
 // Example:
 //   'Görlitzer Bahnhof' -> 'Goerlitzer_Bahnhof'
