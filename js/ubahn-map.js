@@ -37,6 +37,13 @@ function imageName(str) {
     .replace(/ /g,'_');
 }
 
+function handleImageColor() {
+  if (Cookies.get('grayscale-photos') === 'true') {
+    $('.wiki-image').css(
+      {'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
+  }
+}
+
 function getWikiData(station, wikiMeta) {
   $('#sidebar-content-container').html('')
   var wikiTitle = '<h1>' + station.name + '</h1>';
@@ -54,10 +61,11 @@ function getWikiData(station, wikiMeta) {
       success: function(data) {
         showSidebar(
           concat(
-            wikiTitle, '<div class="wiki-body"><img src="', imagePath, '">',
-            data, '</div>', addendum(wikiMeta, 'en')
+            wikiTitle, '<div class="wiki-body"><img class="wiki-image" src="',
+            imagePath, '">', data, '</div>', addendum(wikiMeta, 'en')
           )
         )
+        handleImageColor()
         $(".main-footer").hide();
       }
     });
@@ -90,7 +98,7 @@ function getWikiData(station, wikiMeta) {
           .split('<h2><span id="Gallery">Gallery</span></h2>')[0]
 
         var wikiData = concat(
-          wikiTitle, '<div class="wiki-body"><img src=', '"',
+          wikiTitle, '<div class="wiki-body"><img class="wiki-image" src=', '"',
           wikiImage, '">', formattedWikiText, '</div>',
           addendum(
             {
@@ -103,6 +111,7 @@ function getWikiData(station, wikiMeta) {
         )
 
         showSidebar(wikiData)
+        handleImageColor()
         $(".main-footer").hide();
       }
     });
@@ -195,11 +204,11 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
 
     window.mapData = {
       meta: metaData,
-      lines:  _data.lines,
+      lines: _data.lines,
       stations: _data.stations
     }
 
-    map.drawAll()
+    map.drawAll(Cookies.get())
 
     var svg = container.select('svg');
 

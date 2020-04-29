@@ -449,10 +449,6 @@ var HIGHLIGHT = true;
           .style('height', '100%');
 
         gMap = svg.append('g');
-
-        if (_data.river !== undefined) {
-          drawRiver();
-        }
       });
     }
 
@@ -481,9 +477,12 @@ var HIGHLIGHT = true;
       }
     }
 
-    map.drawAll = function() {
+    map.drawAll = function(options) {
       drawLines();
       drawLineLabels();
+      if (options && options['show-wall'] === 'true') {
+        drawWall()
+      }
       drawStations();
       drawLongStations();
       drawLabels();
@@ -494,20 +493,65 @@ var HIGHLIGHT = true;
       return value === listeners ? map : value;
     };
 
-    function drawRiver() {
+    function drawWall() {
+      drawWallLabel()
       gMap
         .append('g')
-        .attr('class', 'river')
+        .attr('class', 'wall')
         .selectAll('path')
-        .data([_data.river])
+        .data([_data.wall])
         .enter()
         .append('path')
         .attr('d', function(d) {
           return line(d, xScale, yScale, lineWidth, lineWidthTickRatio);
         })
-        .attr('stroke', '#CCECF4')
+        .attr('stroke', 'grey')
+        .style('opacity', '0.4')
         .attr('fill', 'none')
-        .attr('stroke-width', 1.8 * lineWidth);
+        .attr('stroke-width', 0.4 * lineWidth);
+    }
+
+    function drawWallLabel() {
+      gMap
+        .append('g')
+        .selectAll('text')
+        .data(
+          [
+            {
+              "label": "Wall of Berlin",
+              "x": 206,
+              "y": -98,
+              "name": "Wall of Berlin",
+              "labelPos": "NE",
+              "labelAngle": 45,
+              "labelShiftX": 0,
+              "labelShiftY": 0
+            }
+          ]
+        )
+        .enter()
+        .append('g')
+        .classed('wall', true)
+        .append('text')
+        .text('Wall of Berlin (1961 - 1989)')
+        .attr('fill', 'grey')
+        .style('font-size', 3 * lineWidth + 'px')
+        .attr('dy', 0)
+        .attr('x', function(d) {
+          return xScale(d.x + d.labelShiftX) + textPos(d).pos[0];
+        })
+        .attr('y', function(d) {
+          return yScale(d.y + d.labelShiftY) - textPos(d).pos[1];
+        })
+        .attr('text-anchor', function(d) {
+          return textPos(d).textAnchor;
+        })
+        .attr('transform', function(d) {
+          var _x = xScale(d.x + d.labelShiftX) + textPos(d).pos[0];
+          var _y = yScale(d.y + d.labelShiftY) - textPos(d).pos[1];
+          return "rotate(" + d.labelAngle + "," + _x + "," + _y + ")"
+        })
+        .style('-webkit-user-select', 'none')
     }
 
     function drawLines() {
@@ -727,7 +771,7 @@ var HIGHLIGHT = true;
     function transformData(data) {
       return {
         raw: data.lines,
-        river: data.river,
+        wall: data.wall,
         stations: extractStations(data),
         lines: extractLines(data.lines),
       };

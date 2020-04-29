@@ -1833,7 +1833,7 @@
           "labelShiftCoords": [0, 2]
         },
         {
-          "coords": [152, -60],
+          "coords": [153, -60],
           "name": "Görlitzer Bahnhof",
           "labelPos": "NE",
           "labelAngle": -45,
@@ -1841,7 +1841,7 @@
           "stationSymbol": "double"
         },
         {
-          "coords": [164, -60],
+          "coords": [169, -60],
           "name": "Schlesisches Tor",
           "labelPos": "NE",
           "labelAngle": -45,
@@ -1849,7 +1849,7 @@
           "stationSymbol": "double"
         },
         {
-          "coords": [176, -60],
+          "coords": [186, -60],
           "name": "Warschauer Straße",
           "labelPos": "NE",
           "labelAngle": -45,
@@ -2014,19 +2014,19 @@
           "stationSymbol": false
         },
         {
-          "coords": [152, -62],
+          "coords": [153, -62],
           "name": "Görlitzer Bahnhof 2",
           "labelPos": "NE",
           "stationSymbol": false
         },
         {
-          "coords": [164, -62],
+          "coords": [169, -62],
           "name": "Schlesisches Tor 2",
           "labelPos": "NE",
           "stationSymbol": false
         },
         {
-          "coords": [176, -62],
+          "coords": [186, -62],
           "name": "Warschauer Straße 2",
           "labelPos": "NE",
           "stationSymbol": false,
@@ -3163,5 +3163,69 @@
         }
       ]
     }
-  ]
+  ],
+    "wall": {
+    "name": "Wall of Berlin",
+    "label": "Wall of Berlin",
+    "shiftCoords": [0, 0],
+    "nodes": [
+      {
+        "coords": [118, 60]
+      },
+      {
+        "coords": [118, 6]
+      },
+      {
+        "coords": [117, 4]
+      },
+      {
+        "coords": [114, 1]
+      },
+      {
+        "coords": [112, 0]
+      },
+      {
+        "coords": [83, 0]
+      },
+      {
+        "coords": [81, -1]
+      },
+      {
+        "coords": [68, -14]
+      },
+      {
+        "coords": [67, -16]
+      },
+      {
+        "coords": [67, -37]
+      },
+      {
+        "coords": [68, -39]
+      },
+      {
+        "coords": [74, -45]
+      },
+      {
+        "coords": [172, -45]
+      },
+      {
+        "coords": [174, -46]
+      },
+      {
+        "coords": [178, -50]
+      },
+      {
+        "coords": [179, -52]
+      },
+      {
+        "coords": [179, -70]
+      },
+      {
+        "coords": [180, -72]
+      },
+      {
+        "coords": [246, -138]
+      }
+    ]
+  }
 }

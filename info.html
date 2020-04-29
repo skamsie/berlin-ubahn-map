@@ -7,12 +7,27 @@
     <meta charset="utf-8"/>
     <meta name="description" content="About page of https://ubahn-map.com">
 
-    <title>About</title>
+    <title>Info</title>
   </head>
 
   <body id="about-page">
     <div id="about-page-container">
-      <a class="fake-link" href="#" onclick="window.history.back()">back</a>
+      <a href="index.html">back</a>
+
+      <h2>Settings</h2>
+
+      <div class="checkbox">
+        <input type="checkbox" id="show-wall">
+        <label for="show-wall">Show The Berlin Wall</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="grayscale-photos">
+        <label for="grayscale-photos">Grayscale Images</label>
+      </div>
+
+      <hr />
+
       <h2>About</h2>
       <h3>the project</h3>
       <p>
@@ -26,12 +41,12 @@
 
       <p>
         The map is draggable by dragging and scalable by zooming. Clicking on a
-        station label brings up an image and information about the station. The
-        information is taken from the English or German
+        station or its label brings up an image and information about the
+        station. The information is taken from the English or German
         <a href="https://en.wikipedia.org/wiki/Wikipedia">Wikipedia</a>
         page. At the bottom of each article there is a link to the source.
-        Since some of the pages are cached, the information might not be in
-        sync with the corresponding Wikipedia article.
+        Since the pages are cached, the information might not be in sync with
+        the corresponding Wikipedia article.
       </p>
 
       <p>
@@ -104,15 +119,29 @@
       <div id=footer-center><a href="index.html">Berlin U-Bahn Map</a></div>
       <div id=footer-right>
         <span>|&nbsp;</span>
-        <a href="about.html">about</a>
+        <a href="info.html">info</a>
       </div>
     </div>
 
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/js.cookie-2.2.1.min.js"></script>
     <script>
+      function getCheckBoxSetting(e) {
+        return Cookies.get(e.attr('id')) === "true" ? true : false
+      }
+      $('input[type=checkbox]').each(function() {
+        $(this).prop('checked', getCheckBoxSetting($(this)))
+      })
+
       $(document).ready(function() {
-        $('.fake-link').click(function(event){
-          event.preventDefault();
+
+        $('input[type="checkbox"]').click( function() {
+          if($(this).is(':checked')){
+            Cookies.set($(this).attr('id'), true, { expires: 30 })
+          }
+          else if($(this).is(':not(:checked)')){
+            Cookies.set($(this).attr('id'), false, { expires: 30 })
+          }
         });
       });
     </script>
