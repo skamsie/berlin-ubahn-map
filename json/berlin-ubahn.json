@@ -2467,7 +2467,7 @@
           "lineLabelShiftX": -2,
           "lineLabelShiftY": 3,
           "sBahn": true,
-          "sBahnLabelNoSpace": true
+          "sBahnLabelNoBeforeSpace": true
         },
         {
           "coords": [34, 41],
@@ -2790,7 +2790,8 @@
         {
           "coords": [73, -76],
           "name": "Yorckstraße",
-          "labelPos": "SE",
+          "labelPos": "E",
+          "labelShiftCoords": [0.3, -1.5],
           "sBahn": true
         },
         {
@@ -3024,7 +3025,8 @@
           "lineLabelShiftX": 0,
           "lineLabelShiftY": 3.2,
           "sBahn": true,
-          "sBahnLabelNoSpace": true
+          "sBahnLabelNoBeforeSpace": true,
+          "sBahnLabelAfterSpace": true
         },
         {
           "coords": [137, -34],

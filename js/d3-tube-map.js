@@ -775,8 +775,9 @@ var HIGHLIGHT = true;
         .style('fill', 'green')
         .text(function(d) {
           if (drawSbahn === true) {
-            var spacing = d.sBahnLabelNoSpace ? '' : ' '
-            return d.sBahn ? spacing.concat('S') : ''
+            var spacingBefore = d.sBahnLabelNoBeforeSpace ? '' : ' ';
+            var spacingAfter = d.sBahnLabelAfterSpace ? ' ' : '';
+            return d.sBahn ? concat(spacingBefore, 'S', spacingAfter) : ''
           }
         })
         .attr('dy', 0)
@@ -811,7 +812,8 @@ var HIGHLIGHT = true;
           station.y = d.coords[1];
           station.labelAngle = d.hasOwnProperty('labelAngle') ? d.labelAngle : 0;
           station.sBahn = d.sBahn === true ? true : false;
-          station.sBahnLabelNoSpace = d.sBahnLabelNoSpace === true ? true : false;
+          station.sBahnLabelNoBeforeSpace = d.sBahnLabelNoBeforeSpace === true ? true : false;
+          station.sBahnLabelAfterSpace = d.sBahnLabelNoBeforeSpace === true ? true : false;
           station.labelBold = d.hasOwnProperty('labelBold') ? d.labelBold : false
           station.stationSymbol = d.hasOwnProperty('stationSymbol') ? d.stationSymbol : 'single'
 
