@@ -485,7 +485,11 @@ var HIGHLIGHT = true;
       }
       drawStations();
       drawLongStations();
-      drawLabels();
+      if (options && options['show-sbahn'] === 'true') {
+        drawLabels(true);
+      } else {
+        drawLabels(false)
+      }
     }
 
     map.on = function() {
@@ -498,7 +502,7 @@ var HIGHLIGHT = true;
       gMap
         .append('g')
         .attr('class', 'wall')
-        .selectAll('path')
+        .selectAll('wall-path')
         .data([_data.wall])
         .enter()
         .append('path')
@@ -705,7 +709,7 @@ var HIGHLIGHT = true;
         })
     }
 
-    function drawLabels() {
+    function drawLabels(drawSbahn) {
       gMap
         .append('g')
         .selectAll('text')
@@ -765,7 +769,21 @@ var HIGHLIGHT = true;
         })
         .call(wrap, function(d) {
           return textPos(d).alignmentBaseline;
-        });
+        })
+        .append('tspan')
+        .classed('sbahn', true)
+        .style('fill', 'green')
+        .text(function(d) {
+          if (drawSbahn === true) {
+            var spacing = d.sBahnLabelNoSpace ? '' : ' '
+            return d.sBahn ? spacing.concat('S') : ''
+          }
+        })
+        .attr('dy', 0)
+        .style('font-weight', 400)
+        .call(wrap, function(d) {
+          return textPos(d).alignmentBaseline;
+        })
     }
 
     function transformData(data) {
@@ -792,6 +810,8 @@ var HIGHLIGHT = true;
           station.x = d.coords[0];
           station.y = d.coords[1];
           station.labelAngle = d.hasOwnProperty('labelAngle') ? d.labelAngle : 0;
+          station.sBahn = d.sBahn === true ? true : false;
+          station.sBahnLabelNoSpace = d.sBahnLabelNoSpace === true ? true : false;
           station.labelBold = d.hasOwnProperty('labelBold') ? d.labelBold : false
           station.stationSymbol = d.hasOwnProperty('stationSymbol') ? d.stationSymbol : 'single'
 

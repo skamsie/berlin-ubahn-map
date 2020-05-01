@@ -1074,7 +1074,7 @@
     "Zoologischer Garten": {
       "id": 29046450,
       "name": "Zoologischer Garten",
-      "label": "Zoologischer Garten",
+      "label": "Zoologischer\nGarten",
       "position": {
         "lat": 52.5058669,
         "lon": 13.3330236
@@ -1416,7 +1416,7 @@
     "Brandenburger Tor": {
       "id": 3862767512,
       "name": "Brandenburger Tor",
-      "label": "Brandenburger\nTor",
+      "label": "Brandenburger Tor",
       "position": {
         "lat": 52.5166047,
         "lon": 13.3809897
@@ -1695,13 +1695,15 @@
         {
           "coords": [60, -15],
           "name": "Hauptbahnhof",
-          "labelPos": "SW",
+          "labelPos": "W",
+          "labelShiftCoords": [0, -2.5],
           "labelBold": true,
           "lineLabel": true,
           "lineLabelPath": "labels/U55.svg",
           "lineLabelPos": "N",
           "lineLabelShiftX": -2,
-          "lineLabelShiftY": 2.5
+          "lineLabelShiftY": 2.5,
+          "sBahn": true
         },
         {
           "coords": [65, -20],
@@ -1711,8 +1713,14 @@
         {
           "coords": [70, -25],
           "name": "Brandenburger Tor",
-          "labelPos": "S",
-          "labelBold": true
+          "labelPos": "W",
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U55.svg",
+          "lineLabelPos": "NE",
+          "lineLabelShiftY": 3,
+          "sBahn": true,
+          "labelShiftCoords": [0, -2.5]
         }
       ]
     },
@@ -1733,12 +1741,14 @@
         {
           "coords": [70, -25],
           "name": "Brandenburger Tor",
-          "labelPos": "S",
+          "labelPos": "W",
           "labelBold": true,
           "lineLabel": true,
           "lineLabelPath": "labels/U55.svg",
           "lineLabelPos": "NE",
-          "lineLabelShiftY": 2.5
+          "lineLabelShiftY": 3,
+          "sBahn": true,
+          "labelShiftCoords": [0, -2.5]
         }
       ]
     },
@@ -1859,7 +1869,8 @@
           "lineLabelPath": "labels/U1.svg",
           "lineLabelPos": "E",
           "lineLabelShiftX": 1,
-          "lineLabelShiftY": 2.4
+          "lineLabelShiftY": 2.4,
+          "sBahn": true
         }
       ]
     },
@@ -1928,7 +1939,8 @@
           "coords": [-13, -94],
           "name": "Heidelberger Platz",
           "labelPos": "W",
-          "labelShiftCoords": [-0.5, 0]
+          "labelShiftCoords": [-0.5, 0],
+          "sBahn": true
         },
         {
           "coords": [-8, -89],
@@ -2111,7 +2123,8 @@
           "name": "Zoologischer Garten",
           "labelPos": "E",
           "labelBold": true,
-          "labelShiftCoords": [1, 0]
+          "labelShiftCoords": [2, 0.5],
+          "sBahn": true
         },
         {
           "coords": [18, -63]
@@ -2168,7 +2181,8 @@
         {
           "coords": [74, -45],
           "name": "Potsdamer Platz",
-          "labelPos": "NW"
+          "labelPos": "NW",
+          "sBahn": true
         },
         {
           "coords": [80, -39],
@@ -2190,7 +2204,8 @@
         {
           "coords": [115, -39],
           "name": "Spittelmarkt",
-          "labelPos": "S"
+          "labelPos": "S",
+          "labelShiftCoords": [0, -0.5]
         },
         {
           "coords": [120, -39]
@@ -2233,7 +2248,8 @@
         {
           "coords": [128, 14],
           "name": "Schönhauser Allee",
-          "labelPos": "E"
+          "labelPos": "E",
+          "sBahn": true
         },
         {
           "coords": [128, 22],
@@ -2249,7 +2265,8 @@
           "lineLabelPath": "labels/U2.svg",
           "lineLabelPos": "W",
           "lineLabelShiftX": -4,
-          "lineLabelShiftY": 2.2
+          "lineLabelShiftY": 2.2,
+          "sBahn": true
         }
       ]
     },
@@ -2290,7 +2307,8 @@
           "lineLabel": true,
           "lineLabelPath": "labels/U4.svg",
           "lineLabelPos": "S",
-          "lineLabelShiftX": -2.2
+          "lineLabelShiftX": -2.2,
+          "sBahn": true
         }
       ]
     },
@@ -2341,7 +2359,8 @@
           "coords": [172, -25],
           "name": "Frankfurter Allee",
           "labelPos": "NE",
-          "labelAngle": -45
+          "labelAngle": -45,
+          "sBahn": true
         },
         {
           "coords": [179, -25],
@@ -2353,7 +2372,8 @@
           "coords": [186, -25],
           "name": "Lichtenberg",
           "labelPos": "NE",
-          "labelAngle": -45
+          "labelAngle": -45,
+          "sBahn": true
         },
         {
           "coords": [193, -25],
@@ -2383,7 +2403,8 @@
           "coords": [221, -25],
           "name": "Wuhletal",
           "labelPos": "NE",
-          "labelAngle": -45
+          "labelAngle": -45,
+          "sBahn": true
         },
         {
           "coords": [228, -25],
@@ -2444,7 +2465,9 @@
           "lineLabelPath": "labels/U6.svg",
           "lineLabelPos": "N",
           "lineLabelShiftX": -2,
-          "lineLabelShiftY": 3
+          "lineLabelShiftY": 3,
+          "sBahn": true,
+          "sBahnLabelNoSpace": true
         },
         {
           "coords": [34, 41],
@@ -2495,7 +2518,8 @@
         {
           "coords": [71, 4],
           "name": "Wedding",
-          "labelPos": "E"
+          "labelPos": "E",
+          "sBahn": true
         },
         {
           "coords": [76, -1],
@@ -2520,8 +2544,9 @@
         {
           "coords": [96, -21],
           "name": "Friedrichstraße",
-          "labelPos": "SW",
-          "labelShiftCoords": [0, 0.8]
+          "labelPos": "W",
+          "labelShiftCoords": [-0.4, -1.5],
+          "sBahn": true
         },
         {
           "coords": [100, -25]
@@ -2573,7 +2598,8 @@
         {
           "coords": [101, -98],
           "name": "Tempelhof",
-          "labelPos": "E"
+          "labelPos": "E",
+          "sBahn": true
         },
         {
           "coords": [101, -104],
@@ -2624,7 +2650,8 @@
           "lineLabelPath": "labels/U7.svg",
           "lineLabelPos": "S",
           "lineLabelShiftX": -2.2,
-          "lineLabelShiftY": 0
+          "lineLabelShiftY": 0,
+          "sBahn": true
         },
         {
           "coords": [-79, -6],
@@ -2677,7 +2704,8 @@
         {
           "coords": [-26, -10],
           "name": "Jungfernheide",
-          "labelPos": "E"
+          "labelPos": "E",
+          "sBahn": true
         },
         {
           "coords": [-23, -13]
@@ -2762,7 +2790,8 @@
         {
           "coords": [73, -76],
           "name": "Yorckstraße",
-          "labelPos": "SE"
+          "labelPos": "SE",
+          "sBahn": true
         },
         {
           "coords": [82, -67]
@@ -2835,7 +2864,8 @@
         {
           "coords": [164, -98],
           "name": "Neukölln",
-          "labelPos": "NE"
+          "labelPos": "NE",
+          "sBahn": true
         },
         {
           "coords": [164, -104],
@@ -2910,7 +2940,8 @@
           "lineLabelPath": "labels/U8.svg",
           "lineLabelPos": "W",
           "lineLabelShiftX": -4,
-          "lineLabelShiftY": 2.5
+          "lineLabelShiftY": 2.5,
+          "sBahn": true
         },
         {
           "coords": [56, 47],
@@ -2956,7 +2987,8 @@
         {
           "coords": [93, 10],
           "name": "Gesundbrunnen",
-          "labelPos": "NE"
+          "labelPos": "NE",
+          "sBahn": true
         },
         {
           "coords": [100, 3],
@@ -2990,12 +3022,15 @@
           "lineLabelPath": "labels/U5.svg",
           "lineLabelPos": "NE",
           "lineLabelShiftX": 0,
-          "lineLabelShiftY": 3.2
+          "lineLabelShiftY": 3.2,
+          "sBahn": true,
+          "sBahnLabelNoSpace": true
         },
         {
           "coords": [137, -34],
           "name": "Jannowitzbrücke",
-          "labelPos": "E"
+          "labelPos": "E",
+          "sBahn": true
         },
         {
           "coords": [137, -42],
@@ -3044,7 +3079,8 @@
           "lineLabelPath": "labels/U8.svg",
           "lineLabelPos": "W",
           "lineLabelShiftX": -4,
-          "lineLabelShiftY": 2.5
+          "lineLabelShiftY": 2.5,
+          "sBahn": true
         }
       ]
     },
@@ -3084,7 +3120,8 @@
         {
           "coords": [46, -11],
           "name": "Westhafen",
-          "labelPos": "NW"
+          "labelPos": "NW",
+          "sBahn": true
         },
         {
           "coords": [36, -21],
@@ -3106,7 +3143,8 @@
           "name": "Zoologischer Garten",
           "labelPos": "E",
           "labelBold": true,
-          "labelShiftCoords": [1, 0]
+          "labelShiftCoords": [1, 0],
+          "sBahn": true
         },
         {
           "coords": [6, -60],
@@ -3133,7 +3171,8 @@
         {
           "coords": [6, -95],
           "name": "Bundesplatz",
-          "labelPos": "E"
+          "labelPos": "E",
+          "sBahn": true
         },
         {
           "coords": [6, -101],
@@ -3159,7 +3198,8 @@
           "lineLabelPath": "labels/U9.svg",
           "lineLabelPos": "W",
           "lineLabelShiftX": -4,
-          "lineLabelShiftY": 2.5
+          "lineLabelShiftY": 2.5,
+          "sBahn": true
         }
       ]
     }

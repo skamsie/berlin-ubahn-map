@@ -7,14 +7,19 @@
     <meta charset="utf-8"/>
     <meta name="description" content="About page of https://ubahn-map.com">
 
-    <title>Info</title>
+    <title>Information</title>
   </head>
 
-  <body id="about-page">
-    <div id="about-page-container">
+  <body id="info-page">
+    <div id="info-page-container">
       <a href="index.html">back</a>
 
-      <h2>Settings</h2>
+      <h2 id=settings>Settings</h2>
+
+      <div class="checkbox">
+        <input type="checkbox" id="show-sbahn">
+        <label for="show-sbahn">Show Sbahn Connection</label>
+      </div>
 
       <div class="checkbox">
         <input type="checkbox" id="show-wall">
@@ -26,9 +31,10 @@
         <label for="grayscale-photos">Grayscale Images</label>
       </div>
 
+
       <hr />
 
-      <h2>About</h2>
+      <h2 id="about">About</h2>
       <h3>the project</h3>
       <p>
         This website is an interactive representation of the Berlin U-Bahn
@@ -42,8 +48,7 @@
       <p>
         The map is movable by dragging and scalable by zooming. Clicking on a
         station or its label brings up an image and information about the
-        station. The information is taken from the English or German
-        <a href="https://en.wikipedia.org/wiki/Wikipedia">Wikipedia</a>
+        station. The information is taken from the English or German Wikipedia
         page. At the bottom of each article there is a link to the source.
         Since the pages are cached, the information might not be in sync with
         the corresponding Wikipedia article.
@@ -115,11 +120,14 @@
     </div>
 
     <div class="footer-container footer">
-      <div id=footer-left><a href="https://skamsie.ro">© 2020 skamsie | </a></div>
+      <div id=footer-left>
+        <a href="https://skamsie.ro">© 2020 skamsie</a>
+        <span>|</span>
+      </div>
       <div id=footer-center><a href="index.html">Berlin U-Bahn Map</a></div>
       <div id=footer-right>
         <span>|&nbsp;</span>
-        <a href="info.html">info</a>
+        <a href="information.html">information</a>
       </div>
     </div>
 

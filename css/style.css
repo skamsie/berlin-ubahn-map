@@ -33,6 +33,11 @@
   src: url("../fonts/Roboto-Bold.ttf");
   font-weight: bold;
 }
+@font-face {
+  font-family: "Glyphter";
+  src: url('../fonts/Glyphter.ttf') format('truetype');
+  font-weight: 400;
+}
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {
   #sidebar {
@@ -225,7 +230,7 @@ a:hover, a:active {
   flex: 1;
 }
 
-#about-page-container {
+#info-page-container {
   margin: 0 auto;
   max-width: 820px;
   padding: 30px;
@@ -238,7 +243,7 @@ a:hover, a:active {
   background-color: white;
 }
 
-#about-page {
+#info-page {
   background-color: #f3f3f3;
 }
 
@@ -300,4 +305,9 @@ label {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  cursor: pointer;
+}
+
+.sbahn {
+  font-family: Glyphter;
 }
