@@ -189,13 +189,31 @@
         "lon": 13.3882862
       }
     },
-    "Französische Straße": {
-      "id": 29058259,
-      "name": "Französische Straße",
-      "label": "Französische\nStraße",
+    "Unter den Linden": {
+      "id": null,
+      "name": "Unter den Linden",
+      "label": "Unter den Linden",
       "position": {
-        "lat": 52.5148248,
-        "lon": 13.3891706
+        "lat": 52.5170,
+        "lon": 13.3889
+      }
+    },
+    "Rotes Rathaus": {
+      "id": null,
+      "name": "Rotes Rathaus",
+      "label": "Rotes\nRathaus",
+      "position": {
+       "lat": 52.518889,
+       "lon": 13.408056
+      }
+    },
+    "Museumsinsel": {
+      "id": null,
+      "name": "Museumsinsel",
+      "label": "Museums-\ninsel",
+      "position": {
+        "lat": 52.517403,
+        "lon": 13.398203
       }
     },
     "Stadtmitte": {
@@ -1687,72 +1705,6 @@
 
   "lines": [
     {
-      "name": "U55",
-      "label": "U55",
-      "color": "#993301",
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [60, -15],
-          "name": "Hauptbahnhof",
-          "labelPos": "W",
-          "labelShiftCoords": [0, -2.5],
-          "labelBold": true,
-          "lineLabel": true,
-          "lineLabelPath": "labels/U55.svg",
-          "lineLabelPos": "N",
-          "lineLabelShiftX": -2,
-          "lineLabelShiftY": 2.5,
-          "sBahn": true
-        },
-        {
-          "coords": [65, -20],
-          "name": "Bundestag",
-          "labelPos": "SW"
-        },
-        {
-          "coords": [70, -25],
-          "name": "Brandenburger Tor",
-          "labelPos": "W",
-          "labelBold": true,
-          "lineLabel": true,
-          "lineLabelPath": "labels/U55.svg",
-          "lineLabelPos": "NE",
-          "lineLabelShiftY": 3,
-          "sBahn": true,
-          "labelShiftCoords": [0, -2.5]
-        }
-      ]
-    },
-    {
-      "name": "U5-U55",
-      "label": "U5-U55",
-      "color": "#993301",
-      "dashed": true,
-      "shiftCoords": [0, 0],
-      "nodes": [
-        {
-          "coords": [128, -25],
-          "name": "Alexanderplatz",
-          "labelPos": "NW",
-          "labelBold": true,
-          "labelShiftCoords": [-2, 0.5]
-        },
-        {
-          "coords": [70, -25],
-          "name": "Brandenburger Tor",
-          "labelPos": "W",
-          "labelBold": true,
-          "lineLabel": true,
-          "lineLabelPath": "labels/U55.svg",
-          "lineLabelPos": "NE",
-          "lineLabelShiftY": 3,
-          "sBahn": true,
-          "labelShiftCoords": [0, -2.5]
-        }
-      ]
-    },
-    {
       "name": "U1",
       "label": "U1",
       "color": "#008200",
@@ -2174,61 +2126,63 @@
           "coords": [62, -57]
         },
         {
-          "coords": [68, -51],
+          "coords": [66, -53],
           "name": "Mendelssohn-Bartholdy-Park",
           "labelPos": "E"
         },
         {
-          "coords": [74, -45],
+          "coords": [72, -47],
           "name": "Potsdamer Platz",
-          "labelPos": "NW",
+          "labelPos": "E",
+          "labelShiftCoords": [0, -1.5],
           "sBahn": true
         },
         {
-          "coords": [80, -39],
+          "coords": [77, -42],
           "name": "Mohrenstraße",
           "labelPos": "NW"
         },
         {
-          "coords": [101, -39],
+          "coords": [100, -42],
           "name": "Stadtmitte",
           "labelPos": "NW",
           "labelBold": true
         },
         {
-          "coords": [109, -39],
+          "coords": [109, -42],
           "name": "Hausvogteiplatz",
           "labelPos": "N",
           "labelShiftCoords": [0, 0.5]
         },
         {
-          "coords": [115, -39],
+          "coords": [115, -42],
           "name": "Spittelmarkt",
           "labelPos": "S",
           "labelShiftCoords": [0, -0.5]
         },
         {
-          "coords": [120, -39]
+          "coords": [120, -42]
         },
         {
-          "coords": [122, -38]
+          "coords": [122, -41]
         },
         {
-          "coords": [124, -36],
+          "coords": [124, -39],
           "name": "Märkisches Museum",
           "labelPos": "SE"
         },
         {
-          "coords": [128, -32],
+          "coords": [128, -35],
           "name": "Klosterstraße",
-          "labelPos": "NW"
+          "labelPos": "W",
+          "labelShiftCoords": [-0.2, 0]
         },
         {
           "coords": [128, -26],
           "name": "Alexanderplatz",
           "labelPos": "NW",
           "labelBold": true,
-          "labelShiftCoords": [-2, 0.5]
+          "labelShiftCoords": [-1.8, 0]
         },
         {
           "coords": [128, -10],
@@ -2319,11 +2273,71 @@
       "shiftCoords": [0, 0],
       "nodes": [
         {
+          "coords": [62, -17],
+          "name": "Hauptbahnhof",
+          "labelPos": "W",
+          "labelShiftCoords": [0.6, -2.5],
+          "labelBold": true,
+          "lineLabel": true,
+          "lineLabelPath": "labels/U5.svg",
+          "lineLabelPos": "N",
+          "lineLabelShiftX": -2,
+          "lineLabelShiftY": 2.5,
+          "sBahn": true
+        },
+        {
+          "coords": [68, -23],
+          "name": "Bundestag",
+          "labelPos": "SW"
+        },
+        {
+          "coords": [74, -29],
+          "name": "Brandenburger Tor",
+          "labelPos": "W",
+          "lineLabel": true,
+          "lineLabelPos": "NE",
+          "lineLabelShiftY": 3,
+          "sBahn": true,
+          "labelShiftCoords": [0, -2.5]
+        },
+        {
+          "coords": [76, -31]
+        },
+        {
+          "coords": [78, -32]
+        },
+        {
+          "coords": [101, -32],
+          "name": "Unter den Linden",
+          "labelBold": true,
+          "labelPos": "NW",
+          "labelShiftCoords": [0, 0.2]
+        },
+        {
+          "coords": [107, -32],
+          "name": "Museumsinsel",
+          "labelPos": "N",
+          "inactive": true,
+          "labelShiftCoords": [0, 0.5]
+        },
+        {
+          "coords": [120, -32]
+        },
+        {
+          "coords": [122, -31]
+        },
+        {
+          "coords": [124, -29],
+          "name": "Rotes Rathaus",
+          "labelPos": "NW",
+          "labelShiftCoords": [0, 0.2]
+        },
+        {
           "coords": [128, -25],
           "name": "Alexanderplatz",
           "labelPos": "NW",
           "labelBold": true,
-          "labelShiftCoords": [-1.8, 0.5]
+          "labelShiftCoords": [-1.8, 0]
         },
         {
           "coords": [137, -25],
@@ -2555,18 +2569,20 @@
           "coords": [101, -27]
         },
         {
-          "coords": [101, -30],
-          "name": "Französische Straße",
-          "labelPos": "W"
+          "coords": [101, -32],
+          "name": "Unter den Linden",
+          "labelBold": true,
+          "labelPos": "NW",
+          "labelShiftCoords": [0, 0.2]
         },
         {
-          "coords": [101, -39],
+          "coords": [101, -42],
           "name": "Stadtmitte",
           "labelPos": "W",
           "labelBold": true
         },
         {
-          "coords": [101, -48],
+          "coords": [101, -52],
           "name": "Kochstraße",
           "labelPos": "W"
         },
@@ -3018,12 +3034,7 @@
           "name": "Alexanderplatz",
           "labelPos": "NW",
           "labelBold": true,
-          "labelShiftCoords": [-2, 0.5],
-          "lineLabel": true,
-          "lineLabelPath": "labels/U5.svg",
-          "lineLabelPos": "NE",
-          "lineLabelShiftX": 0,
-          "lineLabelShiftY": 3.2,
+          "labelShiftCoords": [-1.8, 0],
           "sBahn": true,
           "sBahnLabelNoBeforeSpace": true,
           "sBahnLabelAfterSpace": true
@@ -3233,31 +3244,28 @@
         "coords": [81, -1]
       },
       {
-        "coords": [68, -14]
+        "coords": [71, -11]
       },
       {
-        "coords": [67, -16]
+        "coords": [70, -13]
       },
       {
-        "coords": [67, -37]
+        "coords": [70, -45]
       },
       {
-        "coords": [68, -39]
+        "coords": [71, -47]
       },
       {
-        "coords": [74, -45]
+        "coords": [172, -47]
       },
       {
-        "coords": [172, -45]
+        "coords": [174, -48]
       },
       {
-        "coords": [174, -46]
+        "coords": [178, -52]
       },
       {
-        "coords": [178, -50]
-      },
-      {
-        "coords": [179, -52]
+        "coords": [179, -54]
       },
       {
         "coords": [179, -70]

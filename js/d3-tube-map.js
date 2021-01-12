@@ -727,9 +727,11 @@ var HIGHLIGHT = true;
         .text(function(d) {
           return d.label;
         })
-        .attr('fill', 'black')
+        .attr('fill', function(d) {
+          return d.inactive ? 'grey' : 'black'
+        })
         .style('font-size', 3 * lineWidth + 'px')
-        .style('font-weight', function (d) {
+        .style('font-weight', function(d) {
           return d.labelBold ? '700' : '400'
         })
         .on('mouseover', function (d) {
@@ -815,6 +817,7 @@ var HIGHLIGHT = true;
           station.sBahnLabelNoBeforeSpace = d.sBahnLabelNoBeforeSpace === true ? true : false;
           station.sBahnLabelAfterSpace = d.sBahnLabelNoBeforeSpace === true ? true : false;
           station.labelBold = d.hasOwnProperty('labelBold') ? d.labelBold : false
+          station.inactive = d.hasOwnProperty('inactive') && d.inactive ? true : false
           station.stationSymbol = d.hasOwnProperty('stationSymbol') ? d.stationSymbol : 'single'
 
           if (d.lineLabel === true) {

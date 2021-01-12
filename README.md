@@ -17,4 +17,4 @@ Even if the application only uses client side javascript, you still need to run 
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 
-![Alt text](/png/Berlin-Ubahn-Map-May-2020.png?raw=true "berlin-uban-map")
+![Alt text](/png/screenshot.png?raw=true "berlin-uban-map")

@@ -1,37 +1,49 @@
 {
+  "Rotes Rathaus": {
+    "en_wiki_cache": "13/01/2021",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Rotes_Rathaus_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Mario Sixtus (CC BY-NC-SA 2.0)":
+        "https://www.flickr.com/photos/sixtus/50684422342/"
+    }
+  },
   "Bundestag": {
-    "en_wiki_cache": "26/04/2020",
+    "en_wiki_cache": "13/01/2021",
     "en_wiki_sources": {
       "Wikipedia (EN)":
         "https://en.wikipedia.org/wiki/Bundestag_(Berlin_U-Bahn)"
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons (modified)":
+      "Wikimedia Commons":
         "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Bundestag_(22003394950).jpg"
     }
   },
   "Hauptbahnhof": {
-    "en_wiki_cache": "26/04/2020",
+    "en_wiki_cache": "13/01/2021",
     "en_wiki_sources": {
       "Wikipedia (EN)":
         "https://en.wikipedia.org/wiki/Berlin_Hauptbahnhof"
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons (modified)":
+      "Wikimedia Commons":
         "https://commons.wikimedia.org/wiki/File:J00_347_Bf_Bln_Hbf_(U).jpg"
     }
   },
   "Brandenburger Tor": {
-    "en_wiki_cache": "26/04/2020",
+    "en_wiki_cache": "13/01/2021",
     "en_wiki_sources": {
       "Wikipedia (DE)":
         "https://de.wikipedia.org/wiki/Bahnhof_Berlin_Brandenburger_Tor#U-Bahnhof"
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons (modified)":
+      "Wikimedia Commons":
         "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Brandenburger_Tor_der_U55_(6248022780).jpg"
     }
   },
@@ -202,7 +214,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons (modified)": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Klosterstra%C3%9Fe_-_Linie_U2_(6335506009).jpg"
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:Berlin_-_U-Bahnhof_Klosterstra%C3%9Fe_-_Linie_U2_(6335506009).jpg"
     }
   },
   "Rosa-Luxemburg-Platz": {
@@ -864,15 +876,26 @@
      "Own Work": ""
     }
   },
-  "Französische Straße": {
-    "en_wiki_cache": "03/04/2020",
+  "Unter den Linden": {
+    "en_wiki_cache": "13/01/2021",
     "en_wiki_sources": {
       "Wikipedia (EN)":
-        "https://en.wikipedia.org/wiki/Franz%C3%B6sische_Stra%C3%9Fe_(Berlin_U-Bahn)"
+        "https://en.wikipedia.org/wiki/Unter_den_Linden_(Berlin_U-Bahn)"
     },
     "image_cache": true,
     "image_source": {
-      "Own Work": ""
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Unter_den_Linden_(50688502621).jpg"
+    }
+  },
+  "Museumsinsel": {
+    "en_wiki_cache": "13/01/2021",
+    "en_wiki_sources": {
+      "Wikipedia (EN)":
+        "https://en.wikipedia.org/wiki/Museumsinsel_(Berlin_U-Bahn)"
+    },
+    "image_cache": true,
+    "image_source": {
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:U-Bahnhof_Museumsinsel_Februar_2020.jpg"
     }
   },
   "Stadtmitte": {
@@ -1073,7 +1096,7 @@
     },
     "image_cache": true,
     "image_source": {
-      "Wikimedia Commons (modified)": "https://commons.wikimedia.org/wiki/File:UBahnhf_Halemweg.JPG"
+      "Wikimedia Commons": "https://commons.wikimedia.org/wiki/File:UBahnhf_Halemweg.JPG"
     }
   },
   "Jakob-Kaiser-Platz": {
