@@ -191,8 +191,8 @@ function showWikiData(station) {
 
 var map = d3
   .tubeMap()
-  .width(width)
-  .height(height)
+  .width(width * 0.9)
+  .height(height * 0.9)
   .on('click', function(data) {
     showWikiData(data);
   });
@@ -214,12 +214,12 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
 
     zoom = d3
       .zoom()
-      .scaleExtent([0.7, 10])
+      .scaleExtent([0.5, 10])
       .on('zoom', zoomed);
 
     var zoomContainer = svg.call(zoom);
     var initialScale = 1;
-    var initialTranslate = [0, height / 25];
+    var initialTranslate = [(width * 0.9) / 2, (height * 0.9) / 2];
 
     zoom.scaleTo(zoomContainer, initialScale);
     zoom.translateTo(
