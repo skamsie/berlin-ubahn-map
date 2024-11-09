@@ -197,6 +197,10 @@ var map = d3
     showWikiData(data);
   });
 
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
 d3.json('./json/berlin-ubahn.json').then(function(data) {
   d3.json('./json/meta.json').then(function(metaData) {
     container.datum(data).call(map);
@@ -222,11 +226,16 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
     var initialTranslate = [(width * 0.9) / 2, (height * 0.9) / 2];
 
     zoom.scaleTo(zoomContainer, initialScale);
-    zoom.translateTo(
-      zoomContainer,
-      initialTranslate[0],
-      initialTranslate[1]
-    );
+
+    if (isSafari() || isMobile) {
+      zoom.translateTo(zoomContainer, - 100, 0);
+    } else {
+      zoom.translateTo(
+        zoomContainer,
+        initialTranslate[0],
+        initialTranslate[1]
+      );
+    }
 
     function zoomed() {
       svg.select('g').attr('transform', d3.event.transform.toString());
