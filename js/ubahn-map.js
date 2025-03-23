@@ -209,7 +209,8 @@ d3.json('./json/berlin-ubahn.json').then(function(data) {
     window.mapData = {
       meta: metaData,
       lines: _data.lines,
-      stations: _data.stations
+      stations: _data.stations,
+      rawData: data
     }
 
     map.drawAll(Cookies.get())

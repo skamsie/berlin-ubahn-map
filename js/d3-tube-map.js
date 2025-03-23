@@ -497,6 +497,48 @@ var HIGHLIGHT = true;
       return value === listeners ? map : value;
     };
 
+    map.clearSegments = function() {
+      if (gMap) {
+        gMap.selectAll('.highlight-group').remove();
+      }
+    };
+
+    map.drawSegment = function(lineData, startStation, endStation, color = "red") {
+      const nodes = lineData.nodes;
+      const startIndex = nodes.findIndex(n => n.name === startStation);
+      const endIndex = nodes.findIndex(n => n.name === endStation);
+      if (startIndex === -1 || endIndex === -1) return;
+
+      const segmentNodes = startIndex <= endIndex
+        ? nodes.slice(startIndex, endIndex + 1)
+        : nodes.slice(endIndex, startIndex + 1).reverse();
+
+      const segmentLine = {
+        name: '__highlight',
+        label: '',
+        color: color,
+        shiftCoords: lineData.shiftCoords,
+        nodes: segmentNodes
+      };
+
+      gMap
+        .append('g')
+        .attr('class', 'highlight-group')
+        .selectAll('path')
+        .data([segmentLine])
+        .enter()
+        .append('path')
+        .attr('class', 'highlight-segment')
+        .attr('d', function(d) {
+          return line(d, xScale, yScale, lineWidth, lineWidthTickRatio);
+        })
+        .attr('stroke', color)
+        .attr('fill', 'none')
+        .attr('stroke-width', lineWidth * 1.4)
+        .attr('stroke-linecap', 'round')
+        .attr('stroke-linejoin', 'round');
+    };
+
     function drawWall() {
       drawWallLabel()
       gMap
