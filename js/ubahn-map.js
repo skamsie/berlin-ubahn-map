@@ -185,7 +185,7 @@ function showWikiData(station) {
   showLinesForStation(station.servingLinesNames)
   showOpenStreetMapLink(
     station.position.lat,
-    station.position.lon,
+    station.position.lon
   );
 }
 
