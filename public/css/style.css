@@ -1,4 +1,24 @@
 @font-face {
+  font-family: "M+ 2p";
+  src: url("../fonts/mplus-2p-regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "M+ 2p";
+  src: url("../fonts/mplus-2p-medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "M+ 2p";
+  src: url("../fonts/mplus-2p-bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "M+ 2p"; src: url("../fonts/mplus-2p-heavy.ttf");
+  font-weight: 800;
+}
+
+@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf");
   font-weight: 400;
@@ -50,7 +70,7 @@ body {
 }
 
 .label {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", sans-serif;
+  font-family: 'M+ 2p', sans-serif;
   font-size: 14px;
   cursor: pointer;
 }
