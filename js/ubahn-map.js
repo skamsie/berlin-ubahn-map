@@ -260,7 +260,7 @@ function addendum(addendumObject, language) {
     ''
   addendumSection = '';
   addendumSection += wikiCache ?
-    'Cached: ' + addendumObject[language + '_wiki_cache'] + '<br />' :
+    'Last update: ' + addendumObject[language + '_wiki_cache'] + '<br />' :
     ''
 
   if (wikiSources) {
