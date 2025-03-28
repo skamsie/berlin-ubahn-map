@@ -3,3 +3,4 @@
 .LSOverride
 .yarn.lock
 node_modules/
+route_finder
