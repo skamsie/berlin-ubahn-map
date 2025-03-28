@@ -1,4 +1,4 @@
-// This file is a modfied version of John Valley's d3-tube-map
+// This file is a modified version of John Valley's d3-tube-map
 // https://github.com/johnwalley/d3-tube-map
 
 var HIGHLIGHT = true;
