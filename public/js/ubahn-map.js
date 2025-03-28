@@ -172,6 +172,21 @@ function stationNeighbours(station, lines, stations) {
   return { previous, next };
 }
 
+async function fetchRoute(from, to) {
+  try {
+    const response = await fetch(`/find_route?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Route result:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching route:', error);
+  }
+}
+
 // === Map Setup ===
 const map = d3.tubeMap()
   .width(width * 0.9)

@@ -503,6 +503,7 @@ var HIGHLIGHT = true;
       }
     };
 
+    // lineData = mapData.rawData.lines.find(l => l.name === "U6");
     map.drawSegment = function(lineData, startStation, endStation, color = "red") {
       const nodes = lineData.nodes;
       const startIndex = nodes.findIndex(n => n.name === startStation);

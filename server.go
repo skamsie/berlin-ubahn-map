@@ -28,8 +28,8 @@ func main() {
 		cmd := exec.Command("./route_finder", "--json", from, to)
 		output, err := cmd.Output()
 		if err != nil {
-			return c.JSON(http.StatusInternalServerError, map[string]string{
-				"error": err.Error(),
+			return c.JSON(http.StatusUnprocessableEntity, map[string]string{
+				"error": "could not find route",
 			})
 		}
 
