@@ -232,6 +232,10 @@ $(document).on("keydown", function (e) {
   if (e.keyCode === 39) showWikiData(focusStations.next);
 });
 
+$('body').on('click', 'a.station-navigator', function() {
+  showWikiData(focusStations[$(this).attr('id')])
+});
+
 $(document).ready(function () {
   $('.fake-link').click(e => e.preventDefault());
 
