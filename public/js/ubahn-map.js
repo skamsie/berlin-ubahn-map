@@ -173,18 +173,31 @@ function stationNeighbours(station, lines, stations) {
 }
 
 async function fetchRoute(from, to) {
-  try {
-    const response = await fetch(`/find_route?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+  let url = `/find_route?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`
+  const response = await fetch(url);
 
-    const data = await response.json();
-    console.log('Route result:', data);
-    return data;
-  } catch (error) {
-    console.error('Error fetching route:', error);
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
   }
+
+  return response.json();
+}
+
+async function highlightRoute(from, to, index = 1) {
+  gMap.selectAll('g.lines path').attr('stroke', '#D0D0D0');
+  map.clearSegments();
+
+  const response = await fetchRoute(from, to);
+  const routeSteps = response.routes[index - 1].steps
+  console.log(routeSteps)
+
+  routeSteps.forEach(
+    step => {
+      step.line = mapData.rawData.lines.find(l => l.name === step.line.toUpperCase() )
+    }
+  )
+
+  map.drawRoute(routeSteps)
 }
 
 // === Map Setup ===

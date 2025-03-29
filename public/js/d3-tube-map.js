@@ -2,6 +2,7 @@
 // https://github.com/johnwalley/d3-tube-map
 
 var HIGHLIGHT = true;
+let gMap;
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3')) :
@@ -118,6 +119,7 @@ var HIGHLIGHT = true;
           path += 'L' + points[1][0] + ',' + points[1][1];
         } else if (Math.abs(xDiff) == 1 && Math.abs(yDiff) == 1) {
           direction = nextNode.dir.toLowerCase();
+          direction = (nextNode?.dir || 'S').toLowerCase();
 
           switch (direction) {
             case 'e':
@@ -378,7 +380,6 @@ var HIGHLIGHT = true;
     var lineWidthTickRatio = 1;
     var svg;
     var _data;
-    var gMap;
 
     var listeners = d3.dispatch('click');
 
@@ -503,11 +504,26 @@ var HIGHLIGHT = true;
       }
     };
 
-    // lineData = mapData.rawData.lines.find(l => l.name === "U6");
-    map.drawSegment = function(lineData, startStation, endStation, color = "red") {
+    map.drawRoute = function(routeSteps) {
+      routeSteps.forEach(
+        step => {
+          drawSegment(step.line, step.from, step.to)
+        }
+      )
+    }
+
+    function drawSegment(lineData, startStation, endStation, color = "hotpink") {
       const nodes = lineData.nodes;
-      const startIndex = nodes.findIndex(n => n.name === startStation);
-      const endIndex = nodes.findIndex(n => n.name === endStation);
+
+      const matchStation = (stationName, target) => {
+        const escaped = stationName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const pattern = new RegExp(`^${escaped}(?: \\d+)?$`);
+        return pattern.test(target);
+      };
+
+      const startIndex = nodes.findIndex(n => matchStation(startStation, n.name));
+      const endIndex = nodes.findIndex(n => matchStation(endStation, n.name));
+
       if (startIndex === -1 || endIndex === -1) return;
 
       const segmentNodes = startIndex <= endIndex
@@ -538,7 +554,7 @@ var HIGHLIGHT = true;
         .attr('stroke-width', lineWidth * 1.4)
         .attr('stroke-linecap', 'round')
         .attr('stroke-linejoin', 'round');
-    };
+    }
 
     function drawWall() {
       drawWallLabel()
