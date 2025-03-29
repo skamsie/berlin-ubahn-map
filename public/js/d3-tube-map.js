@@ -563,7 +563,11 @@ let gMap;
         .attr('stroke-linecap', 'round')
         .attr('stroke-linejoin', 'round');
 
-      updateStationColor(segmentNodes);
+      const normalStations = _data.stations.normalStations().filter(s => segmentNodes.some(station => matchStation(station.name, s.name)))
+      const longStations = _data.stations.longStations().filter(s => segmentNodes.some(station => matchStation(station.name, s.name)))
+
+      drawStations(normalStations, 'red', 'red');
+      drawLongStations(longStations, 'red', 'red');
     }
 
     function drawWall() {
@@ -655,10 +659,7 @@ let gMap;
         .classed('line', true);
     }
 
-    function drawLongStations(longStationsData) {
-      var fgColor = '#000000';
-      var bgColor = '#ffffff';
-
+    function drawLongStations(longStationsData, fgColor = '#000000', bgColor = '#ffffff', extraClass = '') {
       gMap
         .append('g')
         .selectAll('path')
@@ -703,15 +704,12 @@ let gMap;
           return d.visited ? bgColor : fgColor;
         })
         .attr('class', function(d) {
-          return 'station ' + classFromName(d.name)
+          return `station ${extraClass} ${classFromName(d.name)}`
         })
         .style('cursor', 'pointer');
     }
 
-    function drawStations(normalStationsData) {
-      var fgColor = '#000000';
-      var bgColor = '#ffffff';
-
+    function drawStations(normalStationsData, fgColor = '#000000', bgColor = '#ffffff', extraClass = '') {
       gMap
         .append('g')
         .selectAll('path')
@@ -749,7 +747,7 @@ let gMap;
           toggleHighlight(d, lineWidth)
         })
         .attr('class', function(d) {
-          return 'station ' + classFromName(d.name)
+          return `station ${extraClass} ${classFromName(d.name)}`
         })
         .style('cursor', 'pointer');
     }
