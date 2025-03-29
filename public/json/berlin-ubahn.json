@@ -2179,7 +2179,7 @@
           "labelShiftCoords": [-0.2, 0]
         },
         {
-          "coords": [128, -26],
+          "coords": [128, -25],
           "name": "Alexanderplatz",
           "labelPos": "NW",
           "labelBold": true,
