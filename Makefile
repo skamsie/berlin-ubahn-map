@@ -5,7 +5,7 @@ swipl:
 			echo >&2 "💡 Install it first and run this command again"; \
 			exit 1; \
 		}
-route_finder: swipl
+setup: swipl
 	@git clone https://github.com/skamsie/berlin-subway.git && \
 		cd berlin-subway && \
 		swipl --stand_alone=true -o route_finder -c main.pl && \

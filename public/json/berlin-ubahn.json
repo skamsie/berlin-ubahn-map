@@ -768,7 +768,7 @@
     "Prinzenstraße": {
       "id": 3881590700,
       "name": "Prinzenstraße",
-      "label": " Prinzenstraße",
+      "label": "Prinzenstraße",
       "position": {
         "lat": 52.4983972,
         "lon": 13.40591
@@ -2144,7 +2144,7 @@
           "labelPos": "NW"
         },
         {
-          "coords": [100, -42],
+          "coords": [102, -42],
           "name": "Stadtmitte",
           "labelPos": "NW",
           "labelBold": true

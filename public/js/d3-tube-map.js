@@ -18,8 +18,9 @@ let gMap;
       .endAngle(2 * Math.PI);
   }
 
-  function normalizeStationName(stationName) {
-    return stationName.replace(/[0-9]/g, '').trim()
+  // Helper function that removes a trailing space and digits
+  function normalizeStationName(name) {
+    return name.trim().replace(/ \d+$/, '');
   }
 
   function line(data, xScale, yScale, lineWidth, lineWidthTickRatio) {
@@ -484,8 +485,10 @@ let gMap;
       if (options && options['show-wall'] === 'true') {
         drawWall()
       }
-      drawStations();
-      drawLongStations();
+
+      drawStations(_data.stations.normalStations());
+      drawLongStations(_data.stations.longStations());
+
       if (options && options['show-sbahn'] === 'true') {
         drawLabels(true);
       } else {
@@ -498,28 +501,35 @@ let gMap;
       return value === listeners ? map : value;
     };
 
-    map.clearSegments = function() {
-      if (gMap) {
-        gMap.selectAll('.highlight-group').remove();
-      }
+    map.clearRoute = function() {
+      gMap.selectAll('.highlight-group').remove();
     };
 
     map.drawRoute = function(routeSteps) {
       routeSteps.forEach(
         step => {
-          drawSegment(step.line, step.from, step.to)
+          drawRouteSegment(step.line, step.from, step.to)
         }
       )
     }
 
-    function drawSegment(lineData, startStation, endStation, color = "hotpink") {
-      const nodes = lineData.nodes;
+    function matchStation(stationName, target) {
+      if (typeof stationName !== 'string' || typeof target !== 'string') {
+        return false;
+      }
+      // Normalize both names before comparing
+      return normalizeStationName(stationName) === normalizeStationName(target);
+    }
 
-      const matchStation = (stationName, target) => {
-        const escaped = stationName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const pattern = new RegExp(`^${escaped}(?: \\d+)?$`);
-        return pattern.test(target);
-      };
+    function updateStationColor(segmentNodes) {
+      gMap
+        .selectAll('.station')
+        .filter(s => segmentNodes.some(station => matchStation(station.name, s.name)))
+        .attr('fill', 'red');
+    }
+
+    function drawRouteSegment(lineData, startStation, endStation) {
+      const nodes = lineData.nodes;
 
       const startIndex = nodes.findIndex(n => matchStation(startStation, n.name));
       const endIndex = nodes.findIndex(n => matchStation(endStation, n.name));
@@ -532,8 +542,6 @@ let gMap;
 
       const segmentLine = {
         name: '__highlight',
-        label: '',
-        color: color,
         shiftCoords: lineData.shiftCoords,
         nodes: segmentNodes
       };
@@ -549,11 +557,13 @@ let gMap;
         .attr('d', function(d) {
           return line(d, xScale, yScale, lineWidth, lineWidthTickRatio);
         })
-        .attr('stroke', color)
+        .attr('stroke', lineData.color)
         .attr('fill', 'none')
         .attr('stroke-width', lineWidth * 1.4)
         .attr('stroke-linecap', 'round')
         .attr('stroke-linejoin', 'round');
+
+      updateStationColor(segmentNodes);
     }
 
     function drawWall() {
@@ -645,14 +655,14 @@ let gMap;
         .classed('line', true);
     }
 
-    function drawLongStations() {
+    function drawLongStations(longStationsData) {
       var fgColor = '#000000';
       var bgColor = '#ffffff';
 
       gMap
         .append('g')
         .selectAll('path')
-        .data(_data.stations.longStations())
+        .data(longStationsData)
         .enter()
         .append('g')
         .append('rect')
@@ -698,14 +708,14 @@ let gMap;
         .style('cursor', 'pointer');
     }
 
-    function drawStations() {
+    function drawStations(normalStationsData) {
       var fgColor = '#000000';
       var bgColor = '#ffffff';
 
       gMap
         .append('g')
         .selectAll('path')
-        .data(_data.stations.normalStations())
+        .data(normalStationsData)
         .enter()
         .append('g')
         .attr('id', function(d) {
