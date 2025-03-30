@@ -30,6 +30,7 @@ let gMap;
   }
 
   function normalizeStationName(name) {
+    if (typeof name !== 'string') return '';
     return name.trim().replace(/ \d+$/, '');
   }
 
@@ -353,6 +354,7 @@ let gMap;
       gMap.selectAll('.highlight-group').remove();
       gMap.selectAll('.routeStations').remove();
       gMap.selectAll('g.lines path').attr('stroke', '#D9D9D9');
+      gMap.selectAll('.label').attr('fill', '#C0C0C0');
     };
 
     /**
@@ -438,6 +440,16 @@ let gMap;
       });
     }
 
+    function highlightRouteLabels(segmentNodes) {
+      const normalizedSegmentNames = new Set(
+        segmentNodes.map(node => normalizeStationName(node.name))
+      );
+
+      gMap.selectAll('.label')
+        .filter(({ name }) => normalizedSegmentNames.has(normalizeStationName(name)))
+        .attr('fill', 'black');
+    }
+
     /**
      * Draw a highlighted segment of a route.
      * @param {Object} lineData - Data for the line.
@@ -472,6 +484,7 @@ let gMap;
         .attr('fill', 'none')
         .attr('stroke-width', lineWidth * 1.4);
 
+      highlightRouteLabels(segmentNodes);
       drawRouteStations(segmentNodes, stationRoles);
     }
 
