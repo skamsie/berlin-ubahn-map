@@ -507,16 +507,42 @@ let gMap;
 
     map.clearRoute = function() {
       gMap.selectAll('.highlight-group').remove();
+      gMap.selectAll('.routeStations').remove();
+
+      gMap.selectAll('g.lines path').attr('stroke', '#D9D9D9');
     };
 
     map.drawRoute = function(routeSteps) {
-      gMap.selectAll('.routeStations').remove();
+      this.clearRoute()
+
+      let stationRoles = {
+        first: null,
+        last: null,
+        nodes: []
+      }
+
+      stationRoles.first = routeSteps[0].from
+      stationRoles.last = routeSteps.at(-1).to
+
+      if (routeSteps.length > 1) {
+        stationRoles.nodes.push(routeSteps[0].to)
+        stationRoles.nodes.push(routeSteps.at(-1).from)
+        routeSteps.forEach((s, index, arr) => {
+          if (index === 0 || index === arr.length - 1) {
+             // Skip the first and last elements since we already have them from above
+            return;
+          }
+          stationRoles.nodes.push(s.from);
+          stationRoles.nodes.push(s.to);
+        });
+      }
+
+      stationRoles.nodes = [...new Set(stationRoles.nodes)]
 
       routeSteps.forEach(
         step => {
-          drawRouteSegment(step.line, step.from, step.to)
-        }
-      )
+          drawRouteSegment(step.line, step.from, step.to, stationRoles)
+        });
     }
 
     function matchStation(stationName, target) {
@@ -527,18 +553,45 @@ let gMap;
       return normalizeStationName(stationName) === normalizeStationName(target);
     }
 
-    function drawRouteStations(segmentNodes) {
-      const [normalStations, longStations] = ['normalStations', 'longStations'].map(type =>
-        _data.stations[type]().filter(s =>
-          segmentNodes.some(station => matchStation(station.name, s.name))
-        )
-      );
+    function drawRouteStations(segmentNodes, stationRoles) {
+      const colors = {
+        border: 'black',
+        first: '#39FF14',
+        last: '#FCE883',
+        node: '#C0C0C0',
+        normal: 'white'
+      }
 
-      drawStations(normalStations, 'red', 'red', 'routeStations');
-      drawLongStations(longStations, 'red', 'red', 'routeStations');
+      const stationTypes = ['normalStations', 'longStations'];
+      const stationDrawFns = {
+        normalStations: drawStations,
+        longStations: drawLongStations
+      };
+
+      const stationsData = stationTypes.map(type => ({
+        stations: _data.stations[type]().filter(s =>
+          segmentNodes.some(station => matchStation(station.name, s.name))
+        ),
+        drawFn: stationDrawFns[type]
+      }));
+
+      stationsData.forEach(({ stations, drawFn }) => {
+        drawFn(stations, colors.border, colors.normal, 'routeStations');
+
+        stations.forEach(s => {
+          const stationName = normalizeStationName(s.name);
+          if (stationName === stationRoles.first) {
+            drawFn([s], 'black', colors.first, 'routeStations');
+          } else if (stationName === stationRoles.last) {
+            drawFn([s], 'black', colors.last, 'routeStations');
+          } else if (stationRoles.nodes.includes(stationName)) {
+            drawFn([s], 'black', colors.node, 'routeStations');
+          }
+        });
+      });
     }
 
-    function drawRouteSegment(lineData, startStation, endStation) {
+    function drawRouteSegment(lineData, startStation, endStation, stationRoles) {
       const nodes = lineData.nodes;
 
       const startIndex = nodes.findIndex(n => matchStation(startStation, n.name));
@@ -568,10 +621,8 @@ let gMap;
         .attr('stroke', lineData.color)
         .attr('fill', 'none')
         .attr('stroke-width', lineWidth * 1.4)
-        .attr('stroke-linecap', 'round')
-        .attr('stroke-linejoin', 'round');
 
-      drawRouteStations(segmentNodes);
+      drawRouteStations(segmentNodes, stationRoles);
     }
 
     function drawWall() {

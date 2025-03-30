@@ -184,9 +184,6 @@ async function fetchRoute(from, to) {
 }
 
 async function highlightRoute(from, to, index = 1) {
-  gMap.selectAll('g.lines path').attr('stroke', '#D0D0D0');
-  map.clearRoute();
-
   const response = await fetchRoute(from, to);
   const routeSteps = response.routes[index - 1].steps
 
