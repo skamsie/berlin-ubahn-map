@@ -302,69 +302,73 @@ let gMap;
     return path;
   }
 
-  function Lines(lines) {
-    this.lines = lines;
+  class Lines {
+    constructor(lines) {
+      this.lines = lines;
+    }
+    normalizedLines() {
+      var filteredLines = this.lines
+        .filter(line => line.dashed == false)
+        .map(function (line) {
+          return {
+            name: line.name,
+            stations: line.stations.map(station => normalizeStationName(station))
+          };
+        });
+
+      return filteredLines
+        .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+    }
   }
 
   function lineList(lines) {
     return new Lines(lines);
   }
 
-  function Stations(stations) {
-    this.stations = stations;
-  }
-
-  Lines.prototype.normalizedLines = function() {
-    var filteredLines = this.lines
-      .filter(line => line.dashed == false)
-      .map(function(line) {
-        return {
-          name: line.name,
-          stations: line.stations.map(station => normalizeStationName(station))
-        }
-      })
-
-    return filteredLines
-      .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-  }
-
-  Stations.prototype.toArray = function() {
-    var stations = [];
-
-    for (var name in this.stations) {
-      if (this.stations.hasOwnProperty(name)) {
-        var station = this.stations[name];
-        station.name = name;
-        stations.push(station);
-      }
+  class Stations {
+    constructor(stations) {
+      this.stations = stations;
     }
+    toArray() {
+      var stations = [];
 
-    return stations;
-  };
+      for (var name in this.stations) {
+        if (this.stations.hasOwnProperty(name)) {
+          var station = this.stations[name];
+          station.name = name;
+          stations.push(station);
+        }
+      }
 
-  Stations.prototype.labeledStations = function() {
-    var doubles = this.toArray();
+      return stations;
+    }
+    labeledStations() {
+      var doubles = this.toArray();
 
-    return doubles.filter(function(station) {
-      return station.lineLabel === true
-    });
-  };
+      return doubles.filter(function (station) {
+        return station.lineLabel === true;
+      });
+    }
+    longStations() {
+      var doubles = this.toArray();
 
-  Stations.prototype.longStations = function() {
-    var doubles = this.toArray();
+      return doubles.filter(function (station) {
+        return station.stationSymbol !== 'single' && station.stationSymbol;
+      });
+    }
+    normalStations() {
+      var singles = this.toArray();
 
-    return doubles.filter(function(station) {
-      return station.stationSymbol !== 'single' && station.stationSymbol;
-    });
-  };
+      return singles.filter(function (station) {
+        return station.stationSymbol === 'single';
+      });
+    }
+  }
 
-  Stations.prototype.normalStations = function() {
-    var singles = this.toArray();
 
-    return singles.filter(function(station) {
-      return station.stationSymbol === 'single';
-    });
-  };
+
+
+
 
   function stationList(stations) {
     return new Stations(stations);
@@ -506,6 +510,8 @@ let gMap;
     };
 
     map.drawRoute = function(routeSteps) {
+      gMap.selectAll('.routeStations').remove();
+
       routeSteps.forEach(
         step => {
           drawRouteSegment(step.line, step.from, step.to)
@@ -521,11 +527,15 @@ let gMap;
       return normalizeStationName(stationName) === normalizeStationName(target);
     }
 
-    function updateStationColor(segmentNodes) {
-      gMap
-        .selectAll('.station')
-        .filter(s => segmentNodes.some(station => matchStation(station.name, s.name)))
-        .attr('fill', 'red');
+    function drawRouteStations(segmentNodes) {
+      const [normalStations, longStations] = ['normalStations', 'longStations'].map(type =>
+        _data.stations[type]().filter(s =>
+          segmentNodes.some(station => matchStation(station.name, s.name))
+        )
+      );
+
+      drawStations(normalStations, 'red', 'red', 'routeStations');
+      drawLongStations(longStations, 'red', 'red', 'routeStations');
     }
 
     function drawRouteSegment(lineData, startStation, endStation) {
@@ -533,8 +543,6 @@ let gMap;
 
       const startIndex = nodes.findIndex(n => matchStation(startStation, n.name));
       const endIndex = nodes.findIndex(n => matchStation(endStation, n.name));
-
-      if (startIndex === -1 || endIndex === -1) return;
 
       const segmentNodes = startIndex <= endIndex
         ? nodes.slice(startIndex, endIndex + 1)
@@ -563,11 +571,7 @@ let gMap;
         .attr('stroke-linecap', 'round')
         .attr('stroke-linejoin', 'round');
 
-      const normalStations = _data.stations.normalStations().filter(s => segmentNodes.some(station => matchStation(station.name, s.name)))
-      const longStations = _data.stations.longStations().filter(s => segmentNodes.some(station => matchStation(station.name, s.name)))
-
-      drawStations(normalStations, 'red', 'red');
-      drawLongStations(longStations, 'red', 'red');
+      drawRouteStations(segmentNodes);
     }
 
     function drawWall() {
