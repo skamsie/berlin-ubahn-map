@@ -354,7 +354,11 @@ let gMap;
       gMap.selectAll('.highlight-group').remove();
       gMap.selectAll('.routeStations').remove();
       gMap.selectAll('g.lines path').attr('stroke', '#D9D9D9');
-      gMap.selectAll('.label').attr('fill', '#C0C0C0');
+      gMap.selectAll('.label text, .label tspan')
+        .style('fill', '#C0C0C0')
+        .style('font-weight', function() {
+          return d3.select(this).classed('bold-label') ? '700' : '400';
+        });
     };
 
     /**
@@ -440,14 +444,23 @@ let gMap;
       });
     }
 
-    function highlightRouteLabels(segmentNodes) {
+    function highlightRouteLabels(segmentNodes, stationRoles) {
       const normalizedSegmentNames = new Set(
         segmentNodes.map(node => normalizeStationName(node.name))
       );
 
-      gMap.selectAll('.label')
-        .filter(({ name }) => normalizedSegmentNames.has(normalizeStationName(name)))
-        .attr('fill', 'black');
+      // Select both text and tspan elements within the .label groups.
+      gMap.selectAll('.label text, .label tspan')
+        .filter(d => normalizedSegmentNames.has(normalizeStationName(d.name)))
+        .style('fill', 'black')
+        .style('font-weight', d => {
+          const nName = normalizeStationName(d.name);
+          return (nName === stationRoles.first ||
+            nName === stationRoles.last ||
+            stationRoles.nodes.includes(nName))
+            ? '700'
+            : '400';
+        });
     }
 
     /**
@@ -484,7 +497,7 @@ let gMap;
         .attr('fill', 'none')
         .attr('stroke-width', lineWidth * 1.4);
 
-      highlightRouteLabels(segmentNodes);
+      highlightRouteLabels(segmentNodes, stationRoles);
       drawRouteStations(segmentNodes, stationRoles);
     }
 
