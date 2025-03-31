@@ -348,12 +348,16 @@ let gMap;
     };
 
     /**
-     * Clear any highlighted route and make all lines gray.
+     * Clear any highlighted route and gray out lines, stations and
+     * labels
      */
     mapRender.clearRoute = function() {
+      gMap.selectAll('.line-label rect').style('fill', '#adadad');
+      gMap.selectAll('.line-label path').style('fill', '#ffffff');
       gMap.selectAll('.highlight-group').remove();
       gMap.selectAll('.routeStations').remove();
       gMap.selectAll('g.lines path').attr('stroke', '#D9D9D9');
+      gMap.selectAll('.station').attr('stroke', '#D9D9D9');
       gMap.selectAll('.label text, .label tspan')
         .style('fill', '#C0C0C0')
         .style('font-weight', function() {
@@ -414,7 +418,7 @@ let gMap;
       const colors = {
         border: 'black',
         first: '#39FF14',
-        last: '#FCE883',
+        last: 'black',
         node: '#C0C0C0',
         normal: 'white'
       };
@@ -637,7 +641,9 @@ let gMap;
         })
         .append('path')
         .attr('d', trainStop(lineWidth))
-        .attr('transform', d => `translate(${xScale(d.x + d.shiftX * lineWidthMultiplier)},${yScale(d.y + d.shiftY * lineWidthMultiplier)})`)
+        .attr('transform', d => `translate(
+          ${xScale(d.x + d.shiftX * lineWidthMultiplier)},${yScale(d.y + d.shiftY * lineWidthMultiplier)})`
+        )
         .attr('stroke-width', lineWidth / 4)
         .attr('fill', d => d.visited ? fgColor : bgColor)
         .attr('stroke', d => d.visited ? bgColor : fgColor)
@@ -655,18 +661,27 @@ let gMap;
      * Draw image labels for lines.
      */
     function drawLineLabels() {
-      gMap.selectAll('image')
-        .data(_data.stations.labeledStations())
-        .enter()
-        .append('g')
-        .attr('id', d => d.name)
-        .append('image')
-        .attr('xlink:href', d => d.lineLabelPath)
-        .attr('width', lineWidth * 5.2)
-        .attr('height', lineWidth * 5.2)
-        .attr('dy', 0)
-        .attr('x', d => xScale(d.x + d.lineLabelShiftX) + lineLabelPos(d).pos[0])
-        .attr('y', d => yScale(d.y + d.lineLabelShiftY) - lineLabelPos(d).pos[1]);
+      const labelsData = _data.stations.labeledStations();
+
+      labelsData.forEach(d => {
+        const group = gMap.append("g")
+          .attr("class", "line-label")
+          .attr("id", d.name)
+          .attr("transform", () => {
+            const pos = lineLabelPos(d).pos;
+            return `translate(${xScale(d.x + d.lineLabelShiftX) + pos[0]},${yScale(d.y + d.lineLabelShiftY) - pos[1]})`;
+          });
+
+        d3.xml(d.lineLabelPath).then(xml => {
+          const importedSVG = xml.documentElement;
+          importedSVG.setAttribute("width", lineWidth * 5.2);
+          importedSVG.setAttribute("height", lineWidth * 5.2);
+          group.node().appendChild(importedSVG);
+        })
+          .catch(error => {
+            console.error("Error loading SVG for", d.name, error);
+          });
+      });
     }
 
     /**
@@ -914,7 +929,7 @@ let gMap;
 
       if (station.attr('highlighted') === 'true') {
         station.attr('highlighted', 'false')
-          .attr('fill', station.attr('current') === 'true' ? 'black' : 'white')
+        //.attr('fill', station.attr('current') === 'true' ? 'black' : 'white')
           .attr('stroke-width', lineWidth / 4);
         label.attr('highlighted', 'false')
           .style('text-decoration', 'none');

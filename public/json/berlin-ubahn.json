@@ -2295,9 +2295,6 @@
           "coords": [74, -29],
           "name": "Brandenburger Tor",
           "labelPos": "W",
-          "lineLabel": true,
-          "lineLabelPos": "NE",
-          "lineLabelShiftY": 3,
           "sBahn": true,
           "labelShiftCoords": [0, -2.5]
         },
