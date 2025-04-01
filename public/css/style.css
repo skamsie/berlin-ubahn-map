@@ -83,6 +83,77 @@ tspan {
   white-space: pre;
 }
 
+#route-planner {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  opacity: 0.95;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Make the form a flex container, and stretch items to the same height */
+#route-form {
+  display: flex;
+  align-items: stretch; /* Ensures the button is the same height as .input-container */
+  gap: 8px;            /* Space between input container and button */
+  margin: 0;
+}
+
+/* Stack the two inputs vertically */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Space between the two inputs */
+}
+
+#route-form input {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 2px;
+  font-size: 13px;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.train-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #e8e8e8;
+  cursor: pointer;
+  align-self: stretch;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.train-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.train-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.train-icon {
+  width: 31px;
+  height: 31px;
+  margin-top: 2px;
+  object-fit: contain;
+}
+
+.submit-text {
+  font-size: 9px;
+  font-weight: 800;
+  color: #333;
+}
+
 #sidebar {
   height: 100%;
   position: absolute;
