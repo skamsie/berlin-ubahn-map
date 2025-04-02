@@ -12,18 +12,20 @@
   </head>
 
   <body>
-    <div id="route-planner">
-      <form id="route-form">
-        <div class="input-container">
-          <input type="text" id="from" placeholder="from" name="from" required>
-          <input type="text" id="to" placeholder="to" name="to" required>
-        </div>
-        <button type="submit" class="train-btn">
-          <img src="/png/enter.png" alt="Train icon" class="train-icon">
-          <span class="submit-text"> </span>
-        </button>
-      </form>
-    </div>
+    <body>
+      <div id="route-planner">
+        <form id="route-form">
+          <input type="text" id="from" placeholder="from:" name="from" required spellcheck="false" autocorrect="off">
+          <br>
+          <input type="text" id="to" placeholder="to:" name="to" required spellcheck="false" autocorrect="off">
+          <br>
+          <div class="button-group">
+            <button class="find-route-btn" type="submit">Find Route</button>
+            <button class="reset-btn" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </body>
 
     <div id="sidebar">
       <div id="sidebar-container">

@@ -85,73 +85,62 @@ tspan {
 
 #route-planner {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 50;
+  left: 50;
   opacity: 0.95;
   background-color: #e8e8e8;
-  border-radius: 8px;
-  padding: 12px;
-}
-
-/* Make the form a flex container, and stretch items to the same height */
-#route-form {
-  display: flex;
-  align-items: stretch; /* Ensures the button is the same height as .input-container */
-  gap: 8px;            /* Space between input container and button */
-  margin: 0;
-}
-
-/* Stack the two inputs vertically */
-.input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 6px; /* Space between the two inputs */
+  padding: 12px 10px 0 10px;
 }
 
 #route-form input {
+  margin-bottom: 6px;
   border: 1px solid gray;
-  border-radius: 3px;
   padding: 2px;
-  font-size: 13px;
+  font-size: 14px;
   width: 160px;
+}
+
+#route-form button {
+  appearance: button;
+  border: 1px solid #000;
   box-sizing: border-box;
-}
-
-.train-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #e8e8e8;
+  color: #fff;
   cursor: pointer;
-  align-self: stretch;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: visible;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#route-form button:focus {
+  text-decoration: none;
+}
+#route-form button-50:hover {
+  text-decoration: none;
+}
+#route-form button:not([disabled]):active {
+  transform: translate(2px, 2px);
+}
+.button-group {
+  display: flex;
+  gap: 3px;
+}
+.button-group * {
+  flex: 1;
+  margin: 0
 }
 
-.train-btn:hover {
-  transform: translateY(2px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.reset-btn {
+  background-color: #484848;
 }
-
-.train-btn:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-}
-
-.train-icon {
-  width: 31px;
-  height: 31px;
-  margin-top: 2px;
-  object-fit: contain;
-}
-
-.submit-text {
-  font-size: 9px;
-  font-weight: 800;
-  color: #333;
+.find-route-btn {
+  background-color: gray;
 }
 
 #sidebar {
