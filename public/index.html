@@ -12,20 +12,34 @@
   </head>
 
   <body>
-    <body>
-      <div id="route-planner">
+    <div id="route-planner">
+      <div class="card">
         <form id="route-form">
-          <input type="text" id="from" placeholder="from:" name="from" required spellcheck="false" autocorrect="off">
-          <br>
-          <input type="text" id="to" placeholder="to:" name="to" required spellcheck="false" autocorrect="off">
-          <br>
+          <label class="floating-label">
+            <input
+                class="floating-label__field" id="from"
+                type="text" placeholder=" "
+                name="from" required spellcheck="false"
+                autocorrect="off"
+            />
+            <span class="floating-label__label">From</span>
+          </label>
+          <label class="floating-label">
+            <input
+              class="floating-label__field" id="to"
+              type="text" placeholder=" "
+              name="to" required spellcheck="false"
+              autocorrect="off"
+            />
+            <span class="floating-label__label">To</span>
+          </label>
           <div class="button-group">
             <button class="find-route-btn" type="submit">Find Route</button>
             <button class="reset-btn" type="reset">Reset</button>
           </div>
         </form>
       </div>
-    </body>
+    </div>
 
     <div id="sidebar">
       <div id="sidebar-container">

@@ -327,3 +327,8 @@ $(document).ready(function () {
     $("#sidebar").hide();
   });
 });
+
+$(document).ready(function(){
+  $("#route-planner").draggable();
+});
+
