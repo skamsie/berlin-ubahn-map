@@ -1,23 +1,21 @@
-// 1) Define some “minimum” design dimensions so the map/text never gets smaller
-const MIN_WIDTH = 1200;  // pick whatever fits your text best
-const MIN_HEIGHT = 900;  // likewise
+// --- 1. Define minimum design dimensions ---
+const MIN_WIDTH = 1200;   // Minimum width for the design scale
+const MIN_HEIGHT = 900;   // Minimum height for the design scale
 
-// 2) Detect the container size
+// --- 2. Get container dimensions and enforce minimums ---
 const containerEl = document.querySelector('#ubahn-map');
 let { width, height } = containerEl.getBoundingClientRect();
-
-// 3) If the container is smaller than your “design scale,” override
 if (width < MIN_WIDTH) width = MIN_WIDTH;
 if (height < MIN_HEIGHT) height = MIN_HEIGHT;
 
-// 4) Create the map with these final dimensions
-const map = d3.tubeMap()
-  .width(width)
-  .height(height)
-  .on('click', showWikiData);
-
+// --- 3. Set up the map using these dimensions (scaled by 0.9 if desired) ---
 const container = d3.select('#ubahn-map');
 let mapData, focusStations;
+
+const map = d3.tubeMap()
+  .width(width * 0.9)
+  .height(height * 0.9)
+  .on('click', showWikiData);
 
 // === Utilities ===
 function normalizeStationName(name) {
@@ -183,58 +181,58 @@ async function highlightRoute(from, to, index = 1) {
 
 // === Map Setup ===
 // Draw the map at the full container size
+// --- 4. Load data and render the map ---
 d3.json('./json/berlin-ubahn.json').then(data => {
   d3.json('./json/meta.json').then(meta => {
-    // Render the map
     container.datum(data).call(map);
     const mapDataInternal = map.data();
     mapData = {
-      meta,
+      meta: meta,
       lines: mapDataInternal.lines,
       stations: mapDataInternal.stations,
       rawData: data
     };
+
     map.drawAll(Cookies.get());
 
-    // 5) Setup D3 zoom
+    // --- 5. Set up zoom behavior ---
     const svg = container.select('svg');
     const zoom = d3.zoom()
       .scaleExtent([0.5, 10])
-      .on('zoom', function() {
-        if (d3.event.sourceEvent) d3.event.sourceEvent.preventDefault();
+      .on('zoom', () => {
         svg.select('g').attr('transform', d3.event.transform.toString());
       });
     svg.call(zoom);
 
-    // 6) Hide container to avoid seeing a “jump”
+    // --- 6. Center the map using a viewBox ---
+    // Hide the container until centering is complete to avoid any visual "jump"
     containerEl.style.opacity = 0;
 
+    // Delay a short time to ensure rendering is complete
     setTimeout(() => {
       const g = svg.select('g');
-
-      // OPTIONAL: If you want to ignore text in bounding box:
-      // const textEls = g.selectAll('text').style('display', 'none');
+      // Temporarily hide text so that text elements don't affect the bounding box measurement
+      const textEls = g.selectAll('text').style('display', 'none');
       const bounds = g.node().getBBox();
-      // textEls.style('display', null);
+      textEls.style('display', null);
 
-      // Compute the bounding box center
-      const xMid = bounds.x + bounds.width / 2;
-      const yMid = bounds.y + bounds.height / 2;
+      // Add a margin around the content so labels aren’t clipped
+      const margin = 50;
+      const viewX = bounds.x - margin;
+      const viewY = bounds.y - margin;
+      const viewW = bounds.width + margin * 2;
+      const viewH = bounds.height + margin * 2;
 
-      // 7) Force scale=1 so it never shrinks below your design scale
-      zoom.scaleTo(svg, 1);
+      // Set the viewBox and use "xMidYMid meet" to center the content
+      svg
+        .attr("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`)
+        .attr("preserveAspectRatio", "xMidYMid meet");
 
-      // 8) Then translate so that bounding box center is in the middle of your (final) width/height
-      // d3.zoom’s translateTo means “move the point (xMid, yMid) to the center of the viewport”
-      zoom.translateTo(svg, xMid, yMid);
-
-      // Reveal the map
+      // Reveal the container once centering is applied
       containerEl.style.opacity = 1;
     }, 100);
   });
 });
-
-// ... the rest of your code remains unchanged ...
 
 document.querySelector('#route-form').addEventListener('submit', async e => {
   e.preventDefault();
