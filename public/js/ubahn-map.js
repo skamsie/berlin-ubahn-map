@@ -1,10 +1,23 @@
+// 1) Define some “minimum” design dimensions so the map/text never gets smaller
+const MIN_WIDTH = 1200;  // pick whatever fits your text best
+const MIN_HEIGHT = 900;  // likewise
+
+// 2) Detect the container size
 const containerEl = document.querySelector('#ubahn-map');
-// Get container size
-const { width, height } = containerEl.getBoundingClientRect();
+let { width, height } = containerEl.getBoundingClientRect();
+
+// 3) If the container is smaller than your “design scale,” override
+if (width < MIN_WIDTH) width = MIN_WIDTH;
+if (height < MIN_HEIGHT) height = MIN_HEIGHT;
+
+// 4) Create the map with these final dimensions
+const map = d3.tubeMap()
+  .width(width)
+  .height(height)
+  .on('click', showWikiData);
 
 const container = d3.select('#ubahn-map');
-let mapData;
-let focusStations;
+let mapData, focusStations;
 
 // === Utilities ===
 function normalizeStationName(name) {
@@ -170,13 +183,9 @@ async function highlightRoute(from, to, index = 1) {
 
 // === Map Setup ===
 // Draw the map at the full container size
-const map = d3.tubeMap()
-  .width(width)
-  .height(height)
-  .on('click', showWikiData);
-
 d3.json('./json/berlin-ubahn.json').then(data => {
   d3.json('./json/meta.json').then(meta => {
+    // Render the map
     container.datum(data).call(map);
     const mapDataInternal = map.data();
     mapData = {
@@ -185,50 +194,47 @@ d3.json('./json/berlin-ubahn.json').then(data => {
       stations: mapDataInternal.stations,
       rawData: data
     };
-
     map.drawAll(Cookies.get());
 
-    // Set up zoom behavior for later panning/zooming if desired
+    // 5) Setup D3 zoom
     const svg = container.select('svg');
     const zoom = d3.zoom()
       .scaleExtent([0.5, 10])
-      .on('zoom', () => {
+      .on('zoom', function() {
+        if (d3.event.sourceEvent) d3.event.sourceEvent.preventDefault();
         svg.select('g').attr('transform', d3.event.transform.toString());
       });
     svg.call(zoom);
 
-    // Hide the container until centering is complete
+    // 6) Hide container to avoid seeing a “jump”
     containerEl.style.opacity = 0;
 
-    // Use a delay to ensure all rendering is complete
     setTimeout(() => {
       const g = svg.select('g');
 
-      // Temporarily hide text so they don't affect the bounding box measurement
-      const textEls = g.selectAll('text').style('display', 'none');
-
+      // OPTIONAL: If you want to ignore text in bounding box:
+      // const textEls = g.selectAll('text').style('display', 'none');
       const bounds = g.node().getBBox();
+      // textEls.style('display', null);
 
-      // Restore text visibility
-      textEls.style('display', null);
+      // Compute the bounding box center
+      const xMid = bounds.x + bounds.width / 2;
+      const yMid = bounds.y + bounds.height / 2;
 
-      // Add a margin so text labels will not be clipped (adjust as needed)
-      const margin = 50;
-      const viewX = bounds.x - margin;
-      const viewY = bounds.y - margin;
-      const viewW = bounds.width + margin * 2;
-      const viewH = bounds.height + margin * 2;
+      // 7) Force scale=1 so it never shrinks below your design scale
+      zoom.scaleTo(svg, 1);
 
-      // Set the viewBox so the non-text content is centered in the container
-      svg
-        .attr("viewBox", `${viewX} ${viewY} ${viewW} ${viewH}`)
-        .attr("preserveAspectRatio", "xMidYMid meet");
+      // 8) Then translate so that bounding box center is in the middle of your (final) width/height
+      // d3.zoom’s translateTo means “move the point (xMid, yMid) to the center of the viewport”
+      zoom.translateTo(svg, xMid, yMid);
 
-      // Reveal the container
+      // Reveal the map
       containerEl.style.opacity = 1;
     }, 100);
   });
 });
+
+// ... the rest of your code remains unchanged ...
 
 document.querySelector('#route-form').addEventListener('submit', async e => {
   e.preventDefault();
