@@ -95,8 +95,9 @@ tspan {
 
 #route-planner {
   position: absolute;
-  top: 40;
-  left: 40;
+  top: 6vh; /* 6% from the top */
+  left: calc(88vw - 300px);
+  width: 300px; /* ensure this matches your element's actual width */
   padding: 12px 10px 0 10px;
 }
 
