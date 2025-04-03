@@ -387,14 +387,27 @@ label {
   font-family: Glyphter;
 }
 
-/* Card container */
 .card {
+  position: relative; /* Establishes a positioning context */
   width: 210px;
   margin: 0 auto;
   padding: 1.4rem;
   border: 1px solid #484848;
   background-color: #fff;
   opacity: 0.94;
+}
+
+/* Style for the title placed on the border */
+.card-title {
+  position: absolute;
+  top: 0;           /* Align at the top */
+  left: 50%;        /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to overlap the border */
+  background: #fff; /* Match the card background to "erase" the border behind */
+  padding: 0 10px;  /* Some horizontal padding */
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
 }
 /* The floating-label wrapper */
 .floating-label {

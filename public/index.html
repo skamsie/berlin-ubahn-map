@@ -14,38 +14,27 @@
   <body>
     <div id="route-planner">
       <div class="card">
+        <p class="card-title">Route Planner</p>
         <form id="route-form">
+          <!-- form content here -->
           <label class="floating-label">
-            <input
-                class="floating-label__field" id="from"
-                type="text" placeholder=" "
-                name="from" required spellcheck="false"
-                autocorrect="off"
-            />
+            <input class="floating-label__field" id="from" type="text" placeholder=" " name="from" required spellcheck="false" autocorrect="off" />
             <span class="floating-label__label">From</span>
           </label>
           <label class="floating-label">
-            <input
-              class="floating-label__field" id="to"
-              type="text" placeholder=" "
-              name="to" required spellcheck="false"
-              autocorrect="off"
-            />
+            <input class="floating-label__field" id="to" type="text" placeholder=" " name="to" required spellcheck="false" autocorrect="off" />
             <span class="floating-label__label">To</span>
           </label>
-
           <div class="button-group">
             <button class="find-route-btn" type="submit">Find Route</button>
             <button class="reset-btn" type="reset">Reset</button>
           </div>
-
           <div id="route-navigation">
             <hr />
             <button id="prev-route" type="button">&larr;</button>
             <button id="current-route" type="button">1</button>
             <button id="next-route" type="button">&rarr;</button>
           </div>
-
         </form>
       </div>
     </div>
