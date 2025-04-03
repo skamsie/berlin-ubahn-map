@@ -101,10 +101,19 @@ tspan {
   padding: 12px 10px 0 10px;
 }
 
+#route-navigation {
+  display:none;
+  text-align:center;
+  margin-top: 10px;
+}
+#route-navigation button {
+  padding: 2px 6px 2px 6px;
+  background-color: salmon;
+}
+
 /* Buttons */
 button {
   padding: 0.5rem 1rem;
-  background-color: #fab700;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -381,12 +390,11 @@ label {
 /* Card container */
 .card {
   width: 210px;
-  height: 140px;
   margin: 0 auto;
   padding: 1.4rem;
-  border: 2px solid #484848;
-  box-shadow: 0.3rem 0.3rem 0 #484848;
+  border: 1px solid #484848;
   background-color: #fff;
+  opacity: 0.94;
 }
 /* The floating-label wrapper */
 .floating-label {
@@ -400,9 +408,9 @@ label {
   width: 100%;
   line-height: 28px;
   font-size: 14px;
-  color: #484848;
+  color: black;
   background: transparent;
-  border: 2px solid #484848;
+  border: 1px solid #484848;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -425,5 +433,5 @@ label {
 .floating-label__field:focus + .floating-label__label,
 .floating-label__field:not(:placeholder-shown) + .floating-label__label {
   transform: translate(0.25rem, -0.9rem) scale(0.8);
-  color: #fab700;
+  color: #484848;
 }

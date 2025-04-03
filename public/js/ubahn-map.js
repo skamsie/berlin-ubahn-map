@@ -12,6 +12,62 @@ if (height < MIN_HEIGHT) height = MIN_HEIGHT;
 const container = d3.select('#ubahn-map');
 let mapData, focusStations;
 
+class RoutePlanner {
+  constructor(from, to) {
+    this.from = from;
+    this.to = to;
+    this.response = null;
+    this.index = 0;       // start with the first route (index 0)
+    this.totalRoutes = 0;
+  }
+
+  async fetchRoute() {
+    const url = `/find_route?from=${encodeURIComponent(this.from)}&to=${encodeURIComponent(this.to)}`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    this.response = await res.json();
+    this.totalRoutes = this.response.routes.length;
+    this.index = 0;  // reset the index on every new fetch
+  }
+
+  // Draws the route corresponding to the current index
+  async showCurrentRoute() {
+    if (!this.response) {
+      await this.fetchRoute();
+    }
+    const currentRoute = this.response.routes[this.index];
+    if (!currentRoute) {
+      console.warn(`No route found at index ${this.index}`);
+      return;
+    }
+    // Clone each step so we don't modify the original data
+    const routeSteps = currentRoute.steps.map(step => ({ ...step }));
+
+    routeSteps.forEach(step => {
+      // Only call toUpperCase if step.line is a string
+      if (typeof step.line === "string") {
+        step.line = mapData.rawData.lines.find(l => l.name === step.line.toUpperCase());
+      }
+    });
+
+    map.drawRoute(routeSteps);
+  }
+
+  // Advances to the next route (cycles to 0 after the last route)
+  async nextRoute() {
+    this.index = (this.index + 1) % this.totalRoutes;
+    await this.showCurrentRoute();
+  }
+
+  // Goes to the previous route (cycles to the last one if at index 0)
+  async prevRoute() {
+    this.index = (this.index - 1 + this.totalRoutes) % this.totalRoutes;
+    await this.showCurrentRoute();
+  }
+}
+
 const map = d3.tubeMap()
   .width(width * 0.9)
   .height(height * 0.9)
@@ -161,27 +217,8 @@ function stationNeighbours(station, lines, stations) {
   return { previous, next };
 }
 
-async function fetchRoute(from, to) {
-  let url = `/find_route?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
-  }
-  return response.json();
-}
-
-async function highlightRoute(from, to, index = 1) {
-  const response = await fetchRoute(from, to);
-  const routeSteps = response.routes[index - 1].steps;
-  routeSteps.forEach(step => {
-    step.line = mapData.rawData.lines.find(l => l.name === step.line.toUpperCase());
-  });
-  map.drawRoute(routeSteps);
-}
-
 // === Map Setup ===
 // Draw the map at the full container size
-// --- 4. Load data and render the map ---
 d3.json('./json/berlin-ubahn.json').then(data => {
   d3.json('./json/meta.json').then(meta => {
     container.datum(data).call(map);
@@ -238,12 +275,37 @@ document.querySelector('#route-form').addEventListener('submit', async e => {
   e.preventDefault();
   const from = document.querySelector('#from').value;
   const to = document.querySelector('#to').value;
+  // Store in a global variable so that the navigation buttons can access it
+  window.planner = new RoutePlanner(from, to);
   try {
-    await highlightRoute(from, to);
+    await window.planner.fetchRoute();
+    await window.planner.showCurrentRoute();
+    updateRouteIndexDisplay();
+    // Reveal the navigation UI (if initially hidden)
+    document.getElementById('route-navigation').style.display = 'block';
   } catch (error) {
     console.error('Error fetching route:', error);
   }
 });
+
+document.getElementById('prev-route').addEventListener('click', async () => {
+  if (!window.planner) return;
+  await window.planner.prevRoute();
+  updateRouteIndexDisplay();
+});
+
+document.getElementById('next-route').addEventListener('click', async () => {
+  if (!window.planner) return;
+  await window.planner.nextRoute();
+  updateRouteIndexDisplay();
+});
+
+function updateRouteIndexDisplay() {
+  if (window.planner) {
+    // Display the current route number (index + 1) out of the total routes
+    document.getElementById('current-route').textContent = window.planner.index + 1;
+  }
+}
 
 $(document).on("keydown", function (e) {
   if (!$('#sidebar').is(':visible')) return;
@@ -270,59 +332,3 @@ $(document).ready(function () {
 $(document).ready(function(){
   $("#route-planner").draggable();
 });
-
-function mutateForm(shape) {
-  const $card = $('#route-planner .card');
-  const $form = $('#route-form');
-  const $existingToggleBtn = $('#route-toggle-btn');
-  const $existingInfo = $('#route-info-text');
-  if (shape === 'button') {
-    if ($existingToggleBtn.length) return;
-    $form.fadeOut(200, function () {
-      const $btn = $('<button>')
-        .attr('id', 'route-toggle-btn')
-        .text('Plan Route')
-        .css({
-          position: 'absolute',
-          top: '10px',
-          left: '10px',
-          padding: '0.5rem 1rem',
-          backgroundColor: '#fab700',
-          border: 'none',
-          color: '#fff',
-          fontWeight: 'bold',
-          cursor: 'pointer',
-          fontSize: '14px',
-        })
-        .on('click', function () {
-          mutateForm('form');
-        });
-      const $info = $('<p>')
-        .attr('id', 'route-info-text')
-        .html(`
-          <p>Rathaus Spandau U7 (12) -> Bismarckstraße (direction: Rudow)</p>
-          <p>Bismarckstraße U2 (5) -> Nollendorfplatz (direction: Pankow)</p>
-          <p>Nollendorfplatz U1 (8) -> Schlesisches Tor (direction: Warschauer Straße)</p>
-        `)
-        .css({
-          marginTop: '3rem',
-          fontSize: '13px',
-          fontStyle: 'italic',
-          color: '#484848'
-        });
-      $card.append($btn.hide(), $info.hide());
-      $btn.fadeIn(200);
-      $info.fadeIn(200);
-    });
-  }
-  if (shape === 'form') {
-    if ($form.is(':visible')) return;
-    $existingToggleBtn.fadeOut(200, function () {
-      $existingToggleBtn.remove();
-    });
-    $existingInfo.fadeOut(200, function () {
-      $existingInfo.remove();
-    });
-    $form.fadeIn(200);
-  }
-}
