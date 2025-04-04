@@ -22,10 +22,11 @@ class RoutePlanner {
   }
 
   async fetchRoute() {
-    const url = '/find_route?from=' + encodeURIComponent(this.from) + '&to=' + encodeURIComponent(this.to);
+    const url = `/find_route?from=${encodeURIComponent(this.from)}`
+              + `&to=${encodeURIComponent(this.to)}`;
     const res = await fetch(url);
     if (!res.ok) {
-      throw new Error('HTTP error! Status: ' + res.status);
+      throw new Error(`HTTP error! Status: ${res.status}`);
     }
     this.response = await res.json();
     this.totalRoutes = this.response.routes.length;
@@ -39,7 +40,7 @@ class RoutePlanner {
     }
     const currentRoute = this.response.routes[this.index];
     if (!currentRoute) {
-      console.warn('No route found at index ' + this.index);
+      console.warn(`No route found at index ${this.index}`);
       return;
     }
     // Clone each step so we don't modify the original data
@@ -309,37 +310,38 @@ function isSafari() {
 // ========================================================
 // Event Handlers & Initialization
 // ========================================================
-document.querySelector('#route-form').addEventListener('submit', async function(e) {
+$('#route-form').on('submit', async function(e) {
   e.preventDefault();
-  const from = document.querySelector('#from').value;
-  const to = document.querySelector('#to').value;
+  const from = $('#from').val();
+  const to = $('#to').val();
   planner = new RoutePlanner(from, to);
   try {
     await planner.fetchRoute();
     await planner.showCurrentRoute();
     updateRouteIndexDisplay();
-    document.getElementById('route-navigation').style.display = 'block';
+    $('#route-navigation').css('display', 'block');
   } catch (error) {
     console.error('Error fetching route:', error);
   }
 });
 
-document.getElementById('prev-route').addEventListener('click', async function() {
-  if (!planner) return;
+// route planner handlers
+$('#prev-route').on('click', async () => {
   await planner.prevRoute();
   updateRouteIndexDisplay();
 });
-
-document.getElementById('next-route').addEventListener('click', async function() {
-  if (!planner) return;
+$('#next-route').on('click', async () => {
   await planner.nextRoute();
   updateRouteIndexDisplay();
 });
+$('.reset-btn').on('click', () => {
+  map.reset(Cookies.get());
+  $('#route-navigation').hide();
+});
 
 function updateRouteIndexDisplay() {
-  if (planner) {
-    document.getElementById('current-route').textContent = planner.index + 1;
-  }
+  $('#current-route').text(planner.index + 1);
+  $('#total-routes').text(`Number of routes found: ${planner.totalRoutes}`)
 }
 
 $(document).on("keydown", function(e) {

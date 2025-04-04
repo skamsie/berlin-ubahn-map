@@ -146,7 +146,9 @@ let gMap;
         ) {
           const controlPoints = computeControlPoints(xDiff, points);
           if (controlPoints) {
-            path += `C${controlPoints[0]},${controlPoints[1]},${controlPoints[0]},${controlPoints[1]},${points[1][0]},${points[1][1]}`;
+            path += `C${controlPoints[0]},${controlPoints[1]},
+                      ${controlPoints[0]},${controlPoints[1]},
+                      ${points[1][0]},${points[1][1]}`;
           }
         }
       } else {
@@ -339,6 +341,11 @@ let gMap;
       }
     };
 
+    mapRender.reset = function(options) {
+      gMap.selectAll('*').remove();
+      mapRender.drawAll(options);
+    }
+
     /**
      * Attach event listeners.
      */
@@ -465,6 +472,8 @@ let gMap;
             ? '700'
             : '400';
         });
+      gMap.selectAll('.sbahn tspan').style('fill', '#D9D9D9');
+
     }
 
     /**
@@ -737,7 +746,7 @@ let gMap;
           return '';
         })
         .attr('dy', 0)
-        .style('font-weight', 400)
+        .style('font-weight', 800)
         .call(wrap, d => textPos(d).alignmentBaseline);
     }
 

@@ -106,10 +106,24 @@ tspan {
   text-align:center;
   margin-top: 10px;
 }
-#route-navigation button {
-  padding: 2px 6px 2px 6px;
-  background-color: salmon;
+
+#route-navigation a {
+  text-decoration: none;
 }
+
+#total-routes {
+  font-size: 12px;
+  font-style: italic;
+  padding-bottom: 6px;
+}
+
+#current-route {
+  display: inline-block;
+  width: 2em;
+  text-align: center;
+  color: salmon;
+}
+
 
 /* Buttons */
 button {
