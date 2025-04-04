@@ -208,6 +208,31 @@ const map = d3.tubeMap()
     sidebarManager.updateStation(station);
   });
 
+function initAutocomplete(stationNames) {
+  $("#from, #to").autocomplete({
+    source: function(request, response) {
+      // Create a RegExp that only matches items starting with the term (case-insensitive)
+      var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+      response($.grep(stationNames, function(value) {
+        return matcher.test(value);
+      }));
+    },
+    autoFocus: true, // Automatically highlight the first item
+    delay: 0,
+    minLength: 1
+  }).on("keydown", function(e) {
+    // Intercept the Tab key to cycle through autocomplete items if the menu is open.
+    if (e.keyCode === $.ui.keyCode.TAB) {
+      var autocompleteInstance = $(this).autocomplete("instance");
+      if (autocompleteInstance.menu.active) {
+        e.preventDefault();
+        // Move selection to the next item in the menu.
+        autocompleteInstance.menu.next(new $.Event("keydown", { keyCode: $.ui.keyCode.TAB }));
+      }
+    }
+  });
+}
+
 function initMap() {
   d3.json('./json/berlin-ubahn.json').then(function(data) {
     d3.json('./json/meta.json').then(function(meta) {
@@ -223,6 +248,8 @@ function initMap() {
       sidebarManager = new SidebarManager(mapData);
       map.drawAll(Cookies.get());
       setupZoomAndCenter();
+
+      initAutocomplete(allStationNames());
     });
   });
 }

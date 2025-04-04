@@ -462,3 +462,8 @@ label {
   transform: translate(0.25rem, -0.9rem) scale(0.8);
   color: #484848;
 }
+
+.ui-menu .ui-menu-item-wrapper.ui-state-active {
+  border: 1px solid gray;
+  background: gray;
+}
