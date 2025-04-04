@@ -1,5 +1,3 @@
-import './custom-autocomplete.js';
-
 const MIN_WIDTH = 1200;   // Minimum width for the design scale
 const MIN_HEIGHT = 900;   // Minimum height for the design scale
 
