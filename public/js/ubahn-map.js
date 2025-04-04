@@ -1,7 +1,9 @@
+import './custom-autocomplete.js';
+
 const MIN_WIDTH = 1200;   // Minimum width for the design scale
 const MIN_HEIGHT = 900;   // Minimum height for the design scale
 
-let mapData, focusStations;
+let mapData;
 let planner = null;       // Will hold the current RoutePlanner instance
 let sidebarManager = null; // Will hold the SidebarManager instance
 
@@ -209,27 +211,56 @@ const map = d3.tubeMap()
   });
 
 function initAutocomplete(stationNames) {
+  // Initialize the autocomplete normally.
   $("#from, #to").autocomplete({
     source: function(request, response) {
-      // Create a RegExp that only matches items starting with the term (case-insensitive)
-      var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+      const matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
       response($.grep(stationNames, function(value) {
         return matcher.test(value);
       }));
     },
-    autoFocus: true, // Automatically highlight the first item
+    autoFocus: true,
     delay: 0,
-    minLength: 1
-  }).on("keydown", function(e) {
-    // Intercept the Tab key to cycle through autocomplete items if the menu is open.
-    if (e.keyCode === $.ui.keyCode.TAB) {
-      var autocompleteInstance = $(this).autocomplete("instance");
-      if (autocompleteInstance.menu.active) {
-        e.preventDefault();
-        // Move selection to the next item in the menu.
-        autocompleteInstance.menu.next(new $.Event("keydown", { keyCode: $.ui.keyCode.TAB }));
-      }
+    minLength: 1,
+    select: function(event, ui) {
+      // Only confirm selection on Enter.
+      $(this).val(ui.item.value);
+      return false;
     }
+  });
+
+  // Attach a capturing keydown event listener so it fires before jQuery UI's handler.
+  $("#from, #to").each(function() {
+    this.addEventListener("keydown", function(e) {
+      if (e.keyCode === $.ui.keyCode.TAB) {
+        var widget = $(this).data("ui-autocomplete");
+        if (widget && widget.menu.element.is(":visible")) {
+          // Stop default Tab handling.
+          e.preventDefault();
+          e.stopPropagation();
+
+          var menuItems = widget.menu.element.find("li:not(.ui-state-disabled)");
+          if (menuItems.length > 1) {
+            // More than one option: cycle through them.
+            if (widget.menu.active) {
+              var next = widget.menu.active.next("li");
+              if (!next.length) {
+                next = menuItems.first();
+              }
+              widget.menu.focus(e, next);
+            } else {
+              widget.menu.focus(e, menuItems.first());
+            }
+          } else if (menuItems.length === 1) {
+            // If only one option exists, confirm it.
+            widget.menu.focus(e, menuItems.first());
+            var item = menuItems.first().data("ui-autocomplete-item");
+            widget._trigger("select", e, { item: item });
+            widget.close();
+          }
+        }
+      }
+    }, true); // use capturing
   });
 }
 
