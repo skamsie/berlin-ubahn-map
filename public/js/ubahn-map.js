@@ -220,7 +220,7 @@ function initAutocomplete(stationNames) {
     autoFocus: true,
     delay: 0,
     minLength: 1,
-    select: function(event, ui) {
+    select: function(_event, ui) {
       // Only confirm selection on Enter.
       $(this).val(ui.item.value);
       return false;
@@ -375,9 +375,11 @@ $('#route-form').on('submit', async function(e) {
     await planner.fetchRoute();
     await planner.showCurrentRoute();
     updateRouteIndexDisplay();
+    $('#route-error').hide();
     $('#route-navigation').css('display', 'block');
   } catch (error) {
-    console.error('Error fetching route:', error);
+    $('#route-navigation').hide();
+    $('#route-error').show();
   }
 });
 

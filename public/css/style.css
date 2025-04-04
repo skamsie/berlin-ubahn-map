@@ -101,17 +101,16 @@ tspan {
   padding: 12px 10px 0 10px;
 }
 
-#route-navigation {
-  display:none;
-  text-align:center;
+#route-navigation, #route-error {
+  display: none;
+  text-align: center;
   margin-top: 10px;
 }
-
 #route-navigation a {
   text-decoration: none;
 }
 
-#total-routes {
+#total-routes, #route-error {
   font-size: 12px;
   font-style: italic;
   padding-bottom: 6px;
@@ -121,6 +120,8 @@ tspan {
   display: inline-block;
   width: 2em;
   text-align: center;
+}
+#current-route, #route-error {
   color: salmon;
 }
 
