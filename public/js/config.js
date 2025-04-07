@@ -3,7 +3,7 @@ const config = {
     routeStations: {
      border: 'black',
      first: '#39FF14',
-     last: '#FFBF00',
+     last: '#F88379',
      node: '#C0C0C0',
      normal: 'white'
     },

@@ -129,6 +129,14 @@ class SidebarManager {
     $.get('articles/html/' + station.name + '.html', showContent);
   }
 
+  addHighlight(station) {
+    if (!station) return;
+
+    d3.selectAll('.station.' + classFromName(station.name))
+      .attr('fill', 'black')
+      .attr('current', true);
+  }
+
   removeHighlight() {
     if (!this.focusStations.current) return;
 
@@ -153,6 +161,8 @@ class SidebarManager {
     d3.select(`.station.${currentStationClass}`)
       .attr('fill', 'white')
       .attr('current', 'false');
+
+    this.focusStations = {}
   }
 
   getStationLines(name) {
@@ -189,11 +199,7 @@ class SidebarManager {
 
   updateStation(station) {
     this.removeHighlight();
-
-    // Highlight the new station
-    d3.selectAll('.station.' + classFromName(station.name))
-      .attr('fill', 'black')
-      .attr('current', true);
+    this.addHighlight(station);
 
     // Retrieve meta and station lines
     const meta = this.mapData.meta[station.name];
@@ -414,8 +420,9 @@ $('#next-route').on('click', async () => {
   updateRouteIndexDisplay();
 });
 $('.reset-btn').on('click', () => {
-  map.reset(Cookies.get());
   $('#route-navigation').hide();
+  map.reset(Cookies.get());
+  sidebarManager.addHighlight(sidebarManager.focusStations?.current);
 });
 
 function updateRouteIndexDisplay() {
