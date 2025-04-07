@@ -7,17 +7,20 @@
     <meta charset="utf-8"/>
     <meta name="description" content="About page of https://ubahn-map.com">
 
-    <title>Information</title>
+    <title>Settings & About</title>
   </head>
 
   <body id="info-page">
     <div id="info-page-container">
       <a href="index.html">back</a>
 
-      <h2 id=settings>Settings</h2>
+      <h2 id="settings">
+        <img src="./png/settings.png" alt="settings icon" class="icon" />
+        settings
+      </h2>
 
       <div class="checkbox">
-        <input type="checkbox" id="show-sbahn">
+        <input type="checkbox" id="show-sbahn" checked>
         <label for="show-sbahn">Show Sbahn Connection</label>
       </div>
 
@@ -31,9 +34,20 @@
         <label for="grayscale-photos">Grayscale Images</label>
       </div>
 
+      <div class="checkbox">
+        <input type="checkbox" id="always-hide-route-finder" checked>
+        <label for="always-hide-route-finder">Always hide the Route Finder</label>
+      </div>
+
+      <br />
+
       <hr />
 
-      <h2 id="about">About</h2>
+      <h2 id="about">
+        <img src="./png/about.png" alt="about icon" class="icon" />
+        about
+      </h2>
+
       <h3>the project</h3>
       <p>
         This website is an interactive representation of the Berlin U-Bahn
@@ -58,6 +72,12 @@
         dragging horizontally, but only on desktop. Once the sidebar is open,
         the 'previous' and 'next' links (or the ← and → keys on the keyboard)
         can be used for moving between stations.
+      </p>
+
+      <p>
+        In april 2025 I also added a 'route finder' functionality (not
+        available on small screens). The alghoritm was written in Prolog and is
+        available <a href="https://github.com/skamsie/berlin-subway">here</a>.
       </p>
 
       <p>For the implementation details, you can check out the project on
@@ -113,27 +133,37 @@
 
       <p>
         I am a Romanian web developer living and working in Berlin,
-        Germany. For more information visit the links below.
+        Germany. You can find me at the links below:
       </p>
 
       <a href="https://skamsie.ro">skamsie.ro</a>
       <br /><a href="https://github.com/skamsie">github/skamsie</a>
       <br /><a href="https://instagram.com/skamsie">instagram/skamsie</a>
 
-      <h3>updates</h3>
+      <br />
 
-      <p>13.01.2021 - Update U5 line and remove U55</p>
+      <hr />
+
+      <h2 id="major-updates">
+        <img src="./png/updates.png" alt="updates icon" class="icon" />
+        major updates
+      </h2>
+
+      <p>01/2021 - Update U5 line and remove U55</p>
+      <p>04/2025 - Add route finder</p>
     </div>
 
-    <div class="footer-container footer">
-      <div id=footer-left>
-        <a href="https://skamsie.ro">© 2020 skamsie</a>
+    <div class="footer footer-container">
+      <div id="footer-left">
+        <a href="https://skamsie.ro">© skamsie 2020-2025</a>
         <span>|</span>
       </div>
-      <div id=footer-center><a href="index.html">Berlin U-Bahn Map</a></div>
-      <div id=footer-right>
+      <div id="footer-center">
+        <a href="index.html">Berlin U-Bahn Map</a>
+      </div>
+      <div id="footer-right">
         <span>|&nbsp;</span>
-        <a href="information.html">information</a>
+        <a href="settings_and_about.html">settings & about</a>
       </div>
     </div>
 

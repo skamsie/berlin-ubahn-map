@@ -466,6 +466,10 @@ $(document).ready(function() {
   $("#route-planner input").on("touchstart", function(e) {
     e.stopPropagation();
   });
+
+  if (Cookies.get('always-hide-route-finder') != 'true') {
+    $('#route-planner').show();
+  }
 });
 
 // ========================================================

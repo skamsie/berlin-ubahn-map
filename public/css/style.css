@@ -101,6 +101,7 @@ tspan {
 }
 
 #route-planner {
+  display: none;
   position: absolute;
   top: 6vh; /* 6% from the top */
   left: calc(88vw - 300px);
@@ -290,12 +291,12 @@ a:hover, a:active {
   width: 100%;
   opacity: 0.94;
   color: #101010;
+  font-size: 0.83rem;
 }
 
 .main-footer {
   position: fixed;
   bottom: 0;
-  font-size: 0.83rem;
 }
 
 .header a,
@@ -491,4 +492,10 @@ label {
 .ui-menu .ui-menu-item-wrapper.ui-state-active {
   border: 1px solid gray;
   background: gray;
+}
+
+.icon {
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.4em;
 }
