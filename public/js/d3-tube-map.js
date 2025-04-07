@@ -359,14 +359,15 @@ let gMap;
      * labels
      */
     mapRender.clearRoute = function() {
-      gMap.selectAll('.line-label rect').style('fill', '#adadad');
-      gMap.selectAll('.line-label path').style('fill', '#ffffff');
+      const colors = config.colors.routeMap
+      gMap.selectAll('.line-label rect').style('fill', colors.lineLabel.background);
+      gMap.selectAll('.line-label path').style('fill', colors.lineLabel.letter);
       gMap.selectAll('.highlight-group').remove();
       gMap.selectAll('.routeStations').remove();
-      gMap.selectAll('g.lines path').attr('stroke', '#D9D9D9');
-      gMap.selectAll('.station').attr('stroke', '#D9D9D9');
+      gMap.selectAll('g.lines path').attr('stroke', colors.line);
+      gMap.selectAll('.station').attr('stroke', colors.station);
       gMap.selectAll('.label text, .label tspan')
-        .style('fill', '#C0C0C0')
+        .style('fill', colors.label)
         .style('font-weight', function() {
           return d3.select(this).classed('bold-label') ? '700' : '400';
         });
@@ -399,6 +400,8 @@ let gMap;
       routeSteps.forEach(step => {
         drawRouteSegment(step.line, step.from, step.to, stationRoles);
       });
+
+      return stationRoles;
     };
 
     // --- Drawing Helper Functions ---
@@ -422,14 +425,7 @@ let gMap;
      * @param {Object} stationRoles - Object defining roles (first, last, nodes).
      */
     function drawRouteStations(segmentNodes, stationRoles) {
-      const colors = {
-        border: 'black',
-        first: '#39FF14',
-        last: 'black',
-        node: '#C0C0C0',
-        normal: 'white'
-      };
-
+      const colors = config.colors.routeStations
       const stationTypes = ['normalStations', 'longStations'];
       const stationDrawFns = {
         normalStations: drawStations,
@@ -445,11 +441,11 @@ let gMap;
         stations.forEach(s => {
           const stationName = normalizeStationName(s.name);
           if (stationName === stationRoles.first) {
-            stationDrawFns[type]([s], 'black', colors.first, 'routeStations');
+            stationDrawFns[type]([s], colors.border, colors.first, 'routeStations');
           } else if (stationName === stationRoles.last) {
-            stationDrawFns[type]([s], 'black', colors.last, 'routeStations');
+            stationDrawFns[type]([s], colors.border, colors.last, 'routeStations');
           } else if (stationRoles.nodes.includes(stationName)) {
-            stationDrawFns[type]([s], 'black', colors.node, 'routeStations');
+            stationDrawFns[type]([s], colors.border, colors.node, 'routeStations');
           }
         });
       });
@@ -526,7 +522,7 @@ let gMap;
         .enter()
         .append('path')
         .attr('d', d => line(d, xScale, yScale, lineWidth, lineWidthTickRatio))
-        .attr('stroke', 'grey')
+        .attr('stroke', config.colors.wall)
         .style('opacity', '0.4')
         .attr('fill', 'none')
         .attr('stroke-width', 0.4 * lineWidth);

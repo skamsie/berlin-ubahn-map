@@ -19,6 +19,7 @@ class RoutePlanner {
     this.response = null;
     this.index = 0;       // Start with the first route (index 0)
     this.totalRoutes = 0;
+    this.stationRoles = null;
   }
 
   async fetchRoute() {
@@ -54,7 +55,8 @@ class RoutePlanner {
         });
       }
     });
-    map.drawRoute(routeSteps);
+
+    this.stationRoles = map.drawRoute(routeSteps);
   }
 
   // Advances to the next route (cycles to 0 after the last route)
@@ -129,7 +131,26 @@ class SidebarManager {
 
   removeHighlight() {
     if (!this.focusStations.current) return;
-    d3.selectAll('.station.' + classFromName(this.focusStations.current.name))
+
+    const currentStation = this.focusStations.current.name;
+    const currentStationClass = classFromName(this.focusStations.current.name);
+
+    if (planner) {
+      let fillColor = 'white';
+
+      if (currentStation == planner.stationRoles.first) {
+        fillColor = config.colors.routeStations.first;
+      } else if (currentStation == planner.stationRoles.last) {
+        fillColor = config.colors.routeStations.last;
+      } else if (planner.stationRoles.nodes.includes(currentStation)) {
+        fillColor = config.colors.routeStations.node
+      }
+
+      d3.selectAll(`.routeStations.${currentStationClass}`)
+        .attr('fill', fillColor)
+    }
+
+    d3.select(`.station.${currentStationClass}`)
       .attr('fill', 'white')
       .attr('current', 'false');
   }
