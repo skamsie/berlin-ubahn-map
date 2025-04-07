@@ -216,7 +216,7 @@ class SidebarManager {
     // Update additional sidebar info
     $("#lines-for-station").html(station.servingLinesNames.join("&nbsp;"));
     $("#sidebar-footer").html(
-      '<b>coordinates</b>' +
+      '<b>coordinates&nbsp;</b>' +
       '<a href="https://www.openstreetmap.org/?mlat=' + station.position.lat +
       '&mlon=' + station.position.lon +
       '&zoom=16" target="_blank">' +
@@ -424,6 +424,9 @@ $('.reset-btn').on('click', () => {
   map.reset(Cookies.get());
   sidebarManager.addHighlight(sidebarManager.focusStations?.current);
 });
+$('#close-route-planner').on('click', async () => {
+  $('#route-planner').hide();
+});
 
 function updateRouteIndexDisplay() {
   $('#current-route').text(planner.index + 1);
@@ -459,6 +462,10 @@ $(document).ready(function() {
     $("#sidebar").hide();
   });
   $("#route-planner").draggable();
+
+  $("#route-planner input").on("touchstart", function(e) {
+    e.stopPropagation();
+  });
 });
 
 // ========================================================

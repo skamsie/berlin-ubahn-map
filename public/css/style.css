@@ -39,10 +39,17 @@
   font-weight: 400;
 }
 
+
+@media screen and (max-width: 1000px) and (pointer: coarse) {
+  #route-planner { display: none; }
+  #route-planner { display: none; }
+}
+
 @media screen and (max-width: 1000px) and (orientation: portrait) {
   #sidebar {
     width: 100%;
   }
+
 }
 @media screen and (max-width: 1000px) and (orientation: landscape) {
   #sidebar {
@@ -281,7 +288,6 @@ a:hover, a:active {
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 12px;
   opacity: 0.94;
   color: #101010;
 }
@@ -289,6 +295,7 @@ a:hover, a:active {
 .main-footer {
   position: fixed;
   bottom: 0;
+  font-size: 0.83rem;
 }
 
 .header a,
@@ -403,7 +410,7 @@ label {
 }
 
 .card {
-  position: relative; /* Establishes a positioning context */
+  position: relative;
   width: 210px;
   margin: 0 auto;
   padding: 1.4rem;
@@ -412,17 +419,34 @@ label {
   opacity: 0.94;
 }
 
-/* Style for the title placed on the border */
 .card-title {
   position: absolute;
-  top: 0;           /* Align at the top */
-  left: 50%;        /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust to overlap the border */
-  background: #fff; /* Match the card background to "erase" the border behind */
-  padding: 0 10px;  /* Some horizontal padding */
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 0 10px;
   font-size: 14px;
   font-weight: 600;
   margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-title p {
+  margin: 0;
+}
+.close {
+  padding-bottom: 2px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #888;
 }
 /* The floating-label wrapper */
 .floating-label {

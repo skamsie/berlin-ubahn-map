@@ -14,7 +14,10 @@
   <body>
     <div id="route-planner">
       <div class="card">
-        <p class="card-title">Route Finder</p>
+        <div class="card-title">
+          <p>Route Finder</p>
+          <a class="close" id="close-route-planner">&times;</a>
+        </div>
         <form id="route-form">
           <!-- form content here -->
           <label class="floating-label">
@@ -72,21 +75,24 @@
     <div id="ubahn-map"></div>
 
     <div class="footer footer-container main-footer">
-      <div id=footer-left>
-        <a href="https://skamsie.ro">© 2020-2022 skamsie</a>
+      <div id="footer-left">
+        <a href="https://skamsie.ro">© skamsie 2025</a>
         <span>|</span>
       </div>
-      <div id=footer-center><a href="index.html">Berlin U-Bahn Map</a></div>
-      <div id=footer-right>
+      <div id="footer-center">
+        <a href="index.html">Berlin U-Bahn Map</a>
+      </div>
+      <div id="footer-right">
         <span>|&nbsp;</span>
-        <a href="information.html">information</a>
+        <a href="information.html">settings / about</a>
       </div>
     </div>
 
     <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/js.cookie-2.2.1.min.js"></script>
     <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/jquery-ui-touchpunch.min.js"></script>
     <script src="js/vendor/d3.v5.js"></script>
+    <script src="js/vendor/js.cookie-2.2.1.min.js"></script>
     <script src="js/config.js"></script>
     <script src="js/d3-tube-map.js"></script>
     <script src="js/ubahn-map.js"></script>
