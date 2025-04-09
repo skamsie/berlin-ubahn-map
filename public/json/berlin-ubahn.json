@@ -768,7 +768,7 @@
     "Prinzenstraße": {
       "id": 3881590700,
       "name": "Prinzenstraße",
-      "label": " Prinzenstraße",
+      "label": "Prinzenstraße",
       "position": {
         "lat": 52.4983972,
         "lon": 13.40591
@@ -2106,7 +2106,8 @@
           "labelPos": "S"
         },
         {
-          "coords": [60, -64]
+          "coords": [60, -64],
+          "dir": "S"
         },
         {
           "coords": [61, -63],
@@ -2143,7 +2144,7 @@
           "labelPos": "NW"
         },
         {
-          "coords": [100, -42],
+          "coords": [101, -42],
           "name": "Stadtmitte",
           "labelPos": "NW",
           "labelBold": true
@@ -2178,7 +2179,7 @@
           "labelShiftCoords": [-0.2, 0]
         },
         {
-          "coords": [128, -26],
+          "coords": [128, -25],
           "name": "Alexanderplatz",
           "labelPos": "NW",
           "labelBold": true,
@@ -2294,9 +2295,6 @@
           "coords": [74, -29],
           "name": "Brandenburger Tor",
           "labelPos": "W",
-          "lineLabel": true,
-          "lineLabelPos": "NE",
-          "lineLabelShiftY": 3,
           "sBahn": true,
           "labelShiftCoords": [0, -2.5]
         },

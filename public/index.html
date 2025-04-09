@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/vendor/jquery-ui.min.css" />
+
+    <meta name="author" content="https://skamsie.ro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="description" content="Interactive map of the Berlin metro system.">
+
+    <title>Berlin U-Bahn Map</title>
+  </head>
+
+  <body>
+    <div id="route-planner">
+      <div class="card">
+        <div class="card-title">
+          <p>Route Finder</p>
+          <a class="close" id="close-route-planner">&times;</a>
+        </div>
+        <form id="route-form">
+          <!-- form content here -->
+          <label class="floating-label">
+            <input class="floating-label__field" id="from" type="text" placeholder=" " name="from" required spellcheck="false" autocorrect="off" />
+            <span class="floating-label__label">From</span>
+          </label>
+          <label class="floating-label">
+            <input class="floating-label__field" id="to" type="text" placeholder=" " name="to" required spellcheck="false" autocorrect="off" />
+            <span class="floating-label__label">To</span>
+          </label>
+          <div class="button-group">
+            <button class="find-route-btn" type="submit">Find Route</button>
+            <button class="reset-btn" type="reset">Reset</button>
+          </div>
+          <div id="route-error">Could not find a route. Check your inputs.</div>
+          <div id="route-navigation">
+            <hr />
+            <div id="total-routes"></div>
+            <a href="" id="prev-route" class="fake-link">&#9664;</a>
+            <div id="current-route"></div>
+            <a href="" id="next-route" class="fake-link">&#9654;</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div id="sidebar-container">
+        <div id="sidebar-header" class="header">
+          <div id="lines-for-station-container">
+            <span id="lines-for-station"></span>
+          </div>
+
+          <div id="close-link-container">
+            <a href="" id="close-link" class="fake-link">close</a>
+          </div>
+
+          <div id="navigator-container">
+            <a href="" id="previous" class="fake-link station-navigator">&#9664; previous</a>
+            <a href="" id="next" class="fake-link station-navigator">next &#9654;</a>
+          </div>
+        </div>
+
+        <div id="sidebar-content-container">
+          <div id="wiki-content"> </div>
+        </div>
+
+      </div>
+
+      <div id="sidebar-footer-container" class="footer">
+        <div id="sidebar-footer"></div>
+      </div>
+    </div>
+
+    <div id="ubahn-map"></div>
+
+    <div class="footer footer-container main-footer">
+      <div id="footer-left">
+        <a href="https://skamsie.ro">© skamsie 2020-2025</a>
+        <span>|</span>
+      </div>
+      <div id="footer-center">
+        <a href="index.html">Berlin U-Bahn Map</a>
+      </div>
+      <div id="footer-right">
+        <span>|&nbsp;</span>
+        <a href="settings_and_about.html">settings & about</a>
+      </div>
+    </div>
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/jquery-ui-touchpunch.min.js"></script>
+    <script src="js/vendor/d3.v5.js"></script>
+    <script src="js/vendor/js.cookie-2.2.1.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/d3-tube-map.js"></script>
+    <script src="js/ubahn-map.js"></script>
+  </body>
+</html>
