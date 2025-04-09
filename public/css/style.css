@@ -39,9 +39,13 @@
   font-weight: 400;
 }
 
+@media screen and (max-width: 1000px) {
+  .footer-container {
+    font-size: 0.73rem !important;
+  }
+}
 
 @media screen and (max-width: 1000px) and (pointer: coarse) {
-  #route-planner { display: none; }
   #route-planner { display: none; }
 }
 

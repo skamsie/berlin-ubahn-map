@@ -467,7 +467,9 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
-  if (Cookies.get('always-hide-route-finder') != 'true') {
+ // Only show the route planner if the cookie is set AND the screen is large enough.
+  if (Cookies.get('always-hide-route-finder') != 'true' &&
+      !window.matchMedia("(max-width: 1000px) and (pointer: coarse)").matches) {
     $('#route-planner').show();
   }
 });
