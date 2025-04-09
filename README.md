@@ -2,19 +2,27 @@
 
 https://ubahn-map.com/
 
-An interactive way of displaying the Berlin Ubahn system, based on [this](https://raw.githubusercontent.com/skamsie/berlin-subway/master/U-Bahn_Berlin.png) official map from 2016. Clicking on the stations, brings up wiki info about it.
+An interactive way of displaying the Berlin Ubahn system, based on [this](https://raw.githubusercontent.com/skamsie/berlin-subway/master/U-Bahn_Berlin.png) official map from 2016.
 
-
-I created the map using a modified version of [d3-tube-map](https://github.com/johnwalley/d3-tube-map).
+- clicking on the stations brings up wiki info about it and a photo taken at the respective station
+- there is also a route finder (from A to B) based on a small Prolog alghoritm
 
 ### Run locally
 
-Even if the application only uses client side javascript, you still need to run a small web server to prevent *CORS* errors, because of loading *json* files from the local filesystem. A simple option would be Python's `SimpleHTTPServer` (or `http.server`, depending on the version of Python installed.). More about it [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server)
+Assuming `go` and `swipl` are installed:
 
-```bash
-> cd berlin-ubahn-map
-> python -m http.server
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+```shell
+# build the binaries for the route finder and the server
+make all
+
+# run the server on the default port (1323)
+./ubahn-map-server
 ```
 
-![Screenshot of berlin-ubahn-map](/png/screenshot.png?raw=true "berlin-ubahn-map")
+### About
+
+- I created the map using a modified version of [d3-tube-map](https://github.com/johnwalley/d3-tube-map)
+- the server is a small go application running on [echo](https://echo.labstack.com/)
+- the route finder alghoritm is a Prolog program from a separate repository: [skamsie/berlin-subway](https://github.com/skamsie/berlin-subway)
+
+![Screenshot of berlin-ubahn-map](public/png/screenshot.png?raw=true "berlin-ubahn-map")
