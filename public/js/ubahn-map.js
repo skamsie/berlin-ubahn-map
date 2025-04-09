@@ -23,7 +23,7 @@ class RoutePlanner {
   }
 
   async fetchRoute() {
-    const url = `/find_route?from=${encodeURIComponent(this.from)}`
+    const url = `/api/find_route?from=${encodeURIComponent(this.from)}`
               + `&to=${encodeURIComponent(this.to)}`;
     const res = await fetch(url);
     if (!res.ok) {
