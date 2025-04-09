@@ -45,8 +45,8 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (pointer: coarse) {
-  #route-planner { display: none; }
+@media screen and (max-device-width: 700px) and (pointer: coarse) {
+  #route-planner { display: none !important; }
 }
 
 @media screen and (max-width: 1000px) and (orientation: portrait) {

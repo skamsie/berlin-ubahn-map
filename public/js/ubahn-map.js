@@ -468,8 +468,7 @@ $(document).ready(function() {
   });
 
  // Only show the route planner if the cookie is set AND the screen is large enough.
-  if (Cookies.get('always-hide-route-finder') != 'true' &&
-      !window.matchMedia("(max-width: 1000px) and (pointer: coarse)").matches) {
+  if (Cookies.get('always-hide-route-finder') != 'true') {
     $('#route-planner').show();
   }
 });
