@@ -386,18 +386,20 @@ function preloadImage(url) {
   return img.src;
 }
 
-function isSafari() {
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-}
-
 // ========================================================
 // Event Handlers & Initialization
 // ========================================================
 $('#route-form').on('submit', async function(e) {
   e.preventDefault();
+
+  const $submitButton = $(this).find('.find-route-btn');
+
+  $submitButton.prop('disabled', true).text("Loading...");
+
   const from = $('#from').val();
   const to = $('#to').val();
   planner = new RoutePlanner(from, to);
+
   try {
     await planner.fetchRoute();
     await planner.showCurrentRoute();
@@ -407,6 +409,8 @@ $('#route-form').on('submit', async function(e) {
   } catch (error) {
     $('#route-navigation').hide();
     $('#route-error').show();
+  } finally {
+    $submitButton.prop('disabled', false).text("Find Route");
   }
 });
 
