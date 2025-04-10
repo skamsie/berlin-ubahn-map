@@ -2,8 +2,9 @@ const MIN_WIDTH = 1200;   // Minimum width for the design scale
 const MIN_HEIGHT = 900;   // Minimum height for the design scale
 
 let mapData;
-let planner = null;       // Will hold the current RoutePlanner instance
+let planner = null; // Will hold the current RoutePlanner instance
 let sidebarManager = null; // Will hold the SidebarManager instance
+let displayedRouteStations = {}; // Keep track of stations currently shown
 
 const containerEl = document.querySelector('#ubahn-map');
 const rect = containerEl.getBoundingClientRect();
@@ -57,6 +58,7 @@ class RoutePlanner {
     });
 
     this.stationRoles = map.drawRoute(routeSteps);
+    displayedRouteStations = this.stationRoles;
   }
 
   // Advances to the next route (cycles to 0 after the last route)
@@ -143,14 +145,14 @@ class SidebarManager {
     const currentStation = this.focusStations.current.name;
     const currentStationClass = classFromName(this.focusStations.current.name);
 
-    if (planner) {
+    if (Object.keys(displayedRouteStations).length > 0) {
       let fillColor = 'white';
 
-      if (currentStation == planner.stationRoles.first) {
+      if (currentStation == displayedRouteStations.first) {
         fillColor = config.colors.routeStations.first;
-      } else if (currentStation == planner.stationRoles.last) {
+      } else if (currentStation == displayedRouteStations.last) {
         fillColor = config.colors.routeStations.last;
-      } else if (planner.stationRoles.nodes.includes(currentStation)) {
+      } else if (displayedRouteStations.nodes.includes(currentStation)) {
         fillColor = config.colors.routeStations.node
       }
 
